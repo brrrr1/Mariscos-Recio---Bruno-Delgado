@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Saludo y enlace</title>
+</head>
+
+<body>
+
+			<h1 th:text="${saludo}"> </h1>
+			<p th:text="${mensaje}"></p>
+			<p>
+				<a class="btn btn-primary btn-lg" target="_blank" th:href="${url}" role="button">Learn more &raquo;</a>
+			</p>
+
+</body>
+
+</html>

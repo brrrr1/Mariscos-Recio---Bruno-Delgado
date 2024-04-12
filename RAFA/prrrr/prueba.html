@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mariscos Recio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <style>
+    #recio {
+      padding: 0;
+      /* Elimina el padding */
+      margin: 0;
+      /* Elimina el margen */
+    }
+
+    #recio img {
+      width: 100%;
+      /* Establece que la imagen ocupe el 100% del ancho del div */
+      height: auto;
+      /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+    }
+
+
+    .botones {
+      padding-top: 100px;
+    }
+
+    .botones button {
+      font-size: 60px;
+      padding: 20px;
+      margin: 10px;
+      width: calc(50% - 20px);
+      height: 150px;
+    }
+
+    #banner img {
+      margin-top: 100px;
+      margin-bottom: 100px;
+      width: 100%;
+      height: auto;
+    }
+
+    .botones-container {
+      display: flex;
+      flex-wrap: wrap;
+      /* Permite que los botones se envuelvan en filas */
+      justify-content: center;
+      /* Centra los botones horizontalmente */
+    }
+
+    .titulo-grande {
+      font-size: 3rem;
+      /* Tamaño de fuente grande */
+    }
+
+    #btnScrollToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      font-size: 24px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #dc3545;
+      /* Color de fondo del botón */
+      color: white;
+      /* Color del texto del botón */
+      border: none;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    #btnScrollToTop:hover {
+      background-color: #c82333;
+      /* Cambia el color de fondo al pasar el mouse */
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+      <div class="container">
+        <!-- Reemplaza "Logo" con una imagen -->
+        <a class="navbar-brand" href="#">
+          <img src="logo.png" alt="Logo" width="50" height="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pescado</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Marisco</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Lotes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Merchandising</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sobre-nosotros">Sobre Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#trabaja-con-nosotros">Trabaja Con Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#oferta-semana">Oferta de la Semana</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Carrito</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Cuenta</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-4 bg-light p-4">
+          <img src="logo.png" alt="Imagen Cuadrada" class="img-fluid mx-auto d-block">
+          <div class="text-center">
+            <h1>Mariscos Recio</h1>
+            <h3>El mar al mejor precio</h3>
+            <p>Ubicados en la Avenida del Paraíso 7, somos la mejor pescadería de España. Con premios
+              como el bogavante de oro y el honor de distribuir marisco a la casa real, estamos emocionados de abrirnos
+              a
+              todos nuestros clientes con esta tienda online.</p>
+          </div>
+        </div>
+        <div class="col-lg-8 bg-danger" id="recio">
+          <img src="presentacion.png" alt="Imagen Rectangular" class="img-fluid mx-auto d-block">
+        </div>
+      </div>
+    </div>
+
+    <div id="banner" class="container-fluid">
+      <img src="banner completo.png" alt="Banner rojo">
+    </div>
+
+    <div class="container botones text-center mt-5">
+      <div class="botones-container">
+        <button class="btn btn-danger btn-lg">Pescado</button>
+        <button class="btn btn-danger btn-lg">Marisco</button>
+        <button class="btn btn-danger btn-lg">Lotes</button>
+        <button class="btn btn-danger btn-lg">Merchandising</button>
+      </div>
+    </div>
+
+    <div id="banner" class="container-fluid">
+      <img src="banner completo.png" alt="Banner rojo">
+    </div>
+
+
+
+    <section class="container my-5" id="sobre-nosotros">
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <h2 class="fw-bold titulo-grande">Sobre Nosotros</h2>
+          <p class="fs-4">Mariscos Recio es la empresa líder en el sector del congelado. Con nuestra moderna y amplia
+            flota de
+            camiones servimos a primerísima hora de la mañana pescados y mariscos fresquísimos y de primera calidad.
+          </p>
+          <img src="laqueseavecina1-a.jpg" alt="Sobre Nosotros" class="img-fluid" style="width: 100%;">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <h2 class="fw-bold titulo-grande">Bogavante De Oro</h2>
+          <p class="fs-4">Mariscos Recio y su emperador Antonio Recio han sido galardonados con el Bogavante de Oro al
+            mayorista del año y la mejor pescadería/marisquería de España.
+          </p>
+          <img src="bogavantedeoro.jpg" alt="Sobre Nosotros" class="img-fluid" style="width: 100%;">
+          <img src="recio balon de oro.webp" alt="Sobre Nosotros" class="img-fluid" style="width: 100%;">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <h2 class="fw-bold titulo-grande">El Imperio Recio</h2>
+          <p class="fs-4">Mariscos Recio Enterprises engloba toda la división del pescado y marisco, desde su
+            comercialización en todo el continente europeo hasta el I+D+i.
+          </p>
+          <img src="recioenterprise.jpg" alt="El Imperio Recio" class="img-fluid" style="width: 100%;">
+          <p class="fs-4">Mariscos Recio Enterprises acaba de cerrar un acuerdo de globalización para expandirse por el
+            mercado nipón.
+          </p>
+          <img src="negocio-frustrado-japones_MDSVID20110711_0115_3.png" alt="El Imperio Recio" class="img-fluid"
+            style="width: 100%;">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <h2 class="fw-bold titulo-grande">Antonio, el fundador</h2>
+          <p class="fs-4">Antonio Recio Matamoros (7 de mayo de 1966) es el fundador de Mariscos Recio.
+          </p>
+          <img src="marisco-recio--644x362.jpg" alt="Antonio Recio" class="img-fluid" style="width: 100%;">
+          <p class="fs-4">Aún teniendo una infancia dificil Antonio se antepuso a todas las adversidades y reveses de
+            la vida y levantó el Imperio Recio desde la nada.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div id="banner" class="container-fluid">
+      <img src="banner completo.png" alt="Banner rojo">
+    </div>
+
+
+    <section class="container my-5" id="trabaja-con-nosotros">
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <h2 class="fw-bold fs-1">Trabaja con Nosotros</h2>
+          <p><u>Puesto vacante:</u> Pescadero</p>
+          <p><u>Requisitos:</u> Aprenderse el nombre del género y tener ganas de trabajar.</p>
+          <p><u>Sueldo:</u> 500€ brutos</p>
+          <p><u>Horario:</u> Media jornada (12 horas)</p>
+          <div class="card p-3">
+            <form>
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" required>
+              </div>
+              <div class="mb-3">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="apellido" required>
+              </div>
+              <div class="mb-3">
+                <label for="dni" class="form-label">DNI</label>
+                <input type="text" class="form-control" id="dni" required>
+              </div>
+              <div class="mb-3">
+                <label for="correo" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="correo" required>
+              </div>
+              <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" id="telefono" required>
+              </div>
+              <button type="submit" class="btn btn-danger">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="banner" class="container-fluid">
+      <img src="banner completo.png" alt="Banner rojo">
+    </div>
+
+  </main>
+
+
+
+  <section class="container my-5" id="oferta-semana">
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <h2 class="fw-bold titulo-grande">Oferta de la semana</h2>
+        <img src="oferta.png" alt="Sobre Nosotros" class="img-fluid" style="width: 100%;">
+      </div>
+    </div>
+    <button id="btnScrollToTop" onclick="window.scrollTo(0, 0);" title="Volver arriba">&#8679;</button>
+</body>
+
+
+
+
+</html>

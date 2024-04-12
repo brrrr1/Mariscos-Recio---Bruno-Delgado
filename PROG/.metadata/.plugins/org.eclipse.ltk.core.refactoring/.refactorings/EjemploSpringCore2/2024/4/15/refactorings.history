@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.salesianostriana.dam.ejemplospringcore.EjemploSpringCoreApplication.java&apos; to &apos;EjemploSpringCore2Application.java&apos;&#x0D;&#x0A;- Original project: &apos;EjemploSpringCore2&apos;&#x0D;&#x0A;- Original element: &apos;com.salesianostriana.dam.ejemplospringcore.EjemploSpringCoreApplication.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.salesianostriana.dam.ejemplospringcore.EjemploSpringCore2Application.java&apos;" description="Rename compilation unit &apos;EjemploSpringCoreApplication.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.salesianostriana.dam.ejemplospringcore{EjemploSpringCoreApplication.java" name="EjemploSpringCore2Application.java" references="false" stamp="1712908074047" version="1.0"/>
+</session>

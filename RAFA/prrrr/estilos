@@ -1,0 +1,75 @@
+  <style>
+
+
+    .custom-header {
+      background-color: #dc3545;
+      /* Danger red */
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    .navbar {
+      background-color: #dc3545;
+      /* Danger red */
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+      color: white;
+    }
+
+    .custom-container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100vw;
+      /* Ocupa todo el ancho de la ventana */
+      height: calc(100vh - 56px);
+      /* Resta la altura del header */
+      margin: 0;
+      /* Elimina márgenes */
+      padding: 0;
+      /* Elimina padding */
+    }
+
+    .left-section {
+      flex: 1;
+      text-align: center;
+      padding: 20px;
+      color: black;
+      /* Texto negro en la parte cuadrada */
+      height: 640px;
+      /* Ajusta la altura según necesites */
+    }
+
+    .right-section {
+      flex: 2;
+      background-color: #dc3545;
+      /* Danger red */
+      text-align: center;
+      padding: 20px;
+      color: white;
+      height: 640px;
+      /* Ajusta la altura según necesites */
+    }
+
+    .left-section img,
+    .right-section img {
+      max-width: 100%;
+      max-height: 100%;
+      /* Ajusta el tamaño máximo de las imágenes */
+      display: block;
+      margin: auto;
+      /* Centra las imágenes horizontalmente */
+    }
+
+    .button-container {
+      width: 100%;
+      text-align: center;
+
+      /* Margen inferior para acercar los botones al div de arriba */
+    }
+
+    .custom-btn {
+      margin: 10px;
+      padding: 15px 30px;
+      font-size: 18px;
+    }

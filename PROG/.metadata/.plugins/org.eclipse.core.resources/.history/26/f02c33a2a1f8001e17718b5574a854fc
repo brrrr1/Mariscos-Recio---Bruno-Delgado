@@ -1,0 +1,14 @@
+package com.salesianostriana.dam.ejemplospringcore;
+
+public class MainDeMentira {
+
+
+	private Saludator saludador;
+	
+
+	public void init() {
+			
+		saludador.imprimirSaludo();
+	}
+	
+}

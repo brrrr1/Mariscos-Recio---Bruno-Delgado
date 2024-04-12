@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página Web</title>
+  <!-- Enlazar Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Estilos para el rectángulo */
+    #rectangulo {
+      overflow: hidden;
+      /* Para ocultar cualquier contenido que se desborde */
+      /* Definir proporciones del rectángulo */
+      width: 1280px;
+      /* Ancho relativo */
+      height: 720px;
+      margin-left: 226px;
+      display: flex;
+      justify-content: center;
+    }
+
+
+    /* Estilos para la imagen */
+    #recio img {
+      width: 100%;
+      /* Ocupar todo el ancho del contenedor */
+      height: auto;
+      /* Ajustar automáticamente la altura para mantener la proporción */
+    }
+
+    #botones button {
+      font-size: 36px;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <!-- Navbar utilizando Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+      <div class="container">
+        <a class="navbar-brand" href="#">MiTienda</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pescado</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Marisco</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Packs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Merchandising</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Carrito</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Cuenta</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <!-- Contenido de la página -->
+    <div class="container ">
+      <!-- Título en negrita y centrado -->
+      <!--<h1 class="text-center font-weight-bold">Mariscos Recio</h1>
+  <p class="text-center font-weight-bold">El mar al mejor precio</p>-->
+
+      <div class="izquierda text-danger">
+      </div>
+      <!-- Rectángulo rojo con bordes redondeados -->
+      <div class="red-rectangle bg-danger text-white p-4" id="rectangulo">
+        <div class="row">
+          <!--<div class="col-md-6 d-flex align-items-center flex-column justify-content-center">
+        <img src="Mariscos_Recio_Logotipo.webp" alt="Imagen 1" class="img-fluid mb-3" />
+        <p class="text-center">Ubicados en la Avenida del Paraíso 7, somos la mejor pescadería de España. Con premios como el bogavante de oro y el honor de distribuir marisco a la casa real, estamos emocionados de abrirnos a todos nuestros clientes con esta tienda online.</p>
+      </div>-->
+          <div class="col-md-6 d-flex align-items-center justify-content-center" id="recio">
+            <img src="RECIO SIN FONDO.png" alt="Imagen 2" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Botones más grandes con clase personalizada y esquinas redondeadas -->
+      <div class="row mt-4" id="botones">
+        <div class="col-md-6 mb-3">
+          <button class="btn btn-danger btn-block btn-lg rounded">Pescado</button>
+        </div>
+        <div class="col-md-6 mb-3">
+          <button class="btn btn-danger btn-block btn-lg rounded">Marisco</button>
+        </div>
+        <div class="col-md-6 mb-3">
+          <button class="btn btn-danger btn-block btn-lg rounded">Lotes</button>
+        </div>
+        <div class="col-md-6 mb-3">
+          <button class="btn btn-danger btn-block btn-lg rounded">Merchandising</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Enlazar Bootstrap JS y jQuery (para funcionalidad de Bootstrap) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

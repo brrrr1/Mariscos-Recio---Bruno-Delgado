@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página Web</title>
+  <!-- Enlazar Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Estilos para aumentar tamaño de fuente */
+    .nav-link {
+      font-size: 18px; /* Tamaño de fuente más grande */
+    }
+
+    /* Estilos para el rectángulo rojo */
+    .red-rectangle {
+      background-color: #dc3545; /* Rojo similar a Bootstrap */
+      border-radius: 20px; /* Bordes redondeados */
+      padding: 30px; /* Espaciado interno */
+      color: white; /* Color de texto */
+      margin-top: 20px; /* Espacio superior */
+    }
+
+    /* Estilos para las imágenes */
+    .custom-img {
+      max-width: 100%; /* Ancho máximo */
+      height: 100%; /* Altura al 100% del contenedor */
+      object-fit: cover; /* Cubrir el contenedor */
+    }
+
+    /* Estilos para el título h1 */
+    h1 {
+      font-size: 36px; /* Tamaño de fuente grande */
+      font-weight: bold; /* Negrita */
+    }
+
+    /* Estilos para el párrafo p */
+    p {
+      font-size: 24px; /* Tamaño de fuente grande */
+      text-align: center; /* Centrar texto */
+    }
+
+    /* Estilos para el contenedor de la imagen en la columna derecha */
+    .right-img-container {
+      height: 400px; /* Altura fija */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Estilos para aumentar tamaño de botones */
+    .btn-lg-custom {
+      padding: 30px 60px; /* Aumentar padding */
+      font-size: 36px; /* Aumentar tamaño de fuente */
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar utilizando Bootstrap -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <div class="container">
+    <a class="navbar-brand" href="#">MiTienda</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pescado</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Marisco</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Packs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Merchandising</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Carrito</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Cuenta</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Contenido de la página -->
+<div class="container mt-4">
+  <h1 class="text-center">Mariscos Recio</h1>
+  <p class="text-center">El mar al mejor precio</p>
+
+  <!-- Rectángulo rojo con bordes redondeados -->
+  <div class="red-rectangle">
+    <div class="row">
+      <div class="col-md-6 d-flex align-items-center justify-content-center flex-column">
+        <img src="Mariscos_Recio_Logotipo.webp" alt="Imagen 1" class="img-fluid custom-img mb-3" />
+        <p class="text-center">Ubicados en la Avenida del Paraíso 7, somos la mejor pescadería de España. Con premios como el bogavante de oro y el honor de distribuir marisco a la casa real, estamos emocionados de abrirnos a todos nuestros clientes con esta tienda online.</p>
+      </div>
+      <div class="col-md-6">
+        <div class="right-img-container">
+          <img src="RECIO SIN FONDO.png" alt="Imagen 2" class="img-fluid custom-img" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botones -->
+  <div class="row mt-4">
+    <div class="col-md-6 mb-3">
+      <button class="btn btn-danger btn-block btn-lg btn-lg-custom">Pescado</button>
+    </div>
+    <div class="col-md-6 mb-3">
+      <button class="btn btn-danger btn-block btn-lg btn-lg-custom">Marisco</button>
+    </div>
+    <div class="col-md-6 mb-3">
+      <button class="btn btn-danger btn-block btn-lg btn-lg-custom">Lotes</button>
+    </div>
+    <div class="col-md-6 mb-3">
+      <button class="btn btn-danger btn-block btn-lg btn-lg-custom">Merchandising</button>
+    </div>
+  </div>
+</div>
+
+<!-- Enlazar Bootstrap JS y jQuery (para funcionalidad de Bootstrap) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

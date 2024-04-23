@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Ejemplo 2 Operadores y condicionales</title>
+
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1 class="text-center">Ejemplos de uso de operadores,
+					condiciones y comparaciones</h1>
+				<hr />
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+
+				<!-- La mayoría de los operadores en Th funcionan igual que en Java o 
+					cualquier otro lenguaje. Alguno detalles: 
+				
+				Los decimales se ponen con .
+				Se pueden mostrar muestran en texto con ${operación a realizar}
+				Veremos más adelante la forma de formatear decimales
+				-->
+
+				<h2>Operadores aritméticos</h2>
+				<ul>
+					<li><strong>Suma (${4 + 0.2}):</strong> <span th:text="${4 + 0.2}">número</span></li>
+					<li><strong>Resta (${3 - 0.12}):</strong> <span th:text="${3 - 0.12}">número</span></li>
+					<li><strong>Multiplicación (${4 * 3}):</strong> <span th:text="${4 * 3}">número</span></li>
+					<li><strong>Divisón entera (${4 / 3}):</strong> <span th:text="${4 / 3}">número</span></li>
+					<li><strong>Resto (${5 % 3}):</strong> <span th:text="${5 % 3}">número</span></li>
+					<li><strong>Divisón no entera (${4 / 3.0}):</strong> <span th:text="${4 / 3.0}">número</span></li>
+				 	<li><strong>Potencia (${4^3}):</strong> <span th:text="${4^3}">número</span></li>
+					<li><strong>Cambio de signo (${-(-2)}):</strong> <span th:text="${-(-2)}">número</span></li>
+				</ul>
+			</div>
+		</div>
+		
+		
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Operadores textuales</h2>
+				<ul>
+					<li><strong>Concatenación (${'Hola ' + 'mundo'}):</strong>
+						<span th:text="${' Hola ' + 'mundo'}">texto</span></li>
+						
+					<li><strong>Sustitución de literales (|Mi nombre es ${nombre}|):</strong>
+						<span th:text="|Mi nombre es ${nombre}|">texto</span></li>
+				</ul>
+			</div>
+		</div>
+		 
+		<!--
+			Se pueden usar indistintamente los símbolos o las abreviaturas
+			le: less or equals
+			gt: greater than
+			...
+		-->
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Operadores relacionales</h2>
+				<ul>
+					<li><strong>Menor (${3 < 2}):</strong><span th:text="${3<2}">resultado</span></li>
+					<li><strong>Menor o igual (${3 le 3}):</strong><span th:text="${3 le 3}">resultado</span></li>
+					<li><strong>Mayor (${3 gt 2}):</strong><span th:text="${3 gt 2}">resultado</span></li>
+					<li><strong>Mayor o igual (${3 >= 3}):</strong><span th:text="${3 >= 3}">resultado</span></li>
+					<li><strong>Igual (${'hola' eq 'Hola'}):</strong><span
+							th:text="${'hola' eq 'Hola'}">resultado</span></li>
+					<li><strong>Distinto (${'hola' ne 'Hola'}):</strong><span
+							th:text="${'hola' ne 'Hola'}">resultado</span></li>
+				</ul>
+			</div>
+		</div>
+		
+		
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Operadores booleanos</h2>
+				<ul>
+					<li><strong>And (${(3 < 4) and (4 < 5)}):</strong><span
+									th:text="${(3 < 4) and (4 < 5)}">resultado</span></li>
+					<li><strong>Or (${(3 > 4) or (4 < 5)}):</strong><span
+									th:text="${(3 > 4) or (4 < 5)}">resultado</span></li>
+					<li><strong>Negacion (${ not (3 < 4) }):</strong><span th:text="${not (3 < 4) }">resultado</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Comparaciones</h2>
+				<p>Si el número de productos en la lista es mayor o igual que
+					uno, mostramos el nombre del primero. En otro caso, un mensaje
+					estándar.</p>
+
+		<!-- Condicional: La estructura es parecida Java, para la negación se usa not y en este caso, 
+			pasamos la lista (este nombre debe ser el que hemos dado a la lista en el addAttribute 
+			del controller) al método isEmpty, 
+			si no está vacía, entra dentro del if y hacemos todo lo que haya dentro del div en el 
+			que está el if, en este ejemplo, mostrar el primer producto. 
+			Se puede usar también el operador (este no lo hemos visto en java, unless). 
+			Ojo, si te fijas en la condición del unless es la misma que la del if
+			aunque sea para "en otro caso", es decir, cuando la lista esté vacía, 
+			es algo así como el inverso de if.
+			Podéis probar vosotros la parte de then y else
+
+		-->
+
+				<div th:if="${not #lists.isEmpty(lista)}">
+					<p th:text="|Nombre del producto: ${lista[0].nombre}|">nombre</p>
+				</div>
+				<div th:unless="${not #lists.isEmpty(lista)}">
+					<p>No hay productos disponibles en la lista</p>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Operadores condicionales</h2> 
+				<p>Realizamos la operación anterior, pero de forma mucho más resumida</p>
+				
+				<!-- Usando el operador Elvis "?" Apartado 4.12 tutorial 1 de th-->
+				<p
+					th:text="${not #lists.isEmpty(lista)} ? |Nombre del producto: ${lista[0].nombre}| : 'No hay productos disponibles en la lista'">
+					nombre</p>
+			</div>
+		</div>
+		
+		<!--
+			Dentro del contexto donde está "definido" el objeto, en nuestro caso el div donde hemos 
+			puesto th:object="${producto}" podremos usar los atributos dle mismo
+			sin necesidad de poner antes el nombre del objeto, es decir, 
+			sin tener que escribir th:text="${producto.nombre}" aunque
+			se pueden mezclar los dos tipos de sintaxis
+			Si no se ha seleccionado ningún objeto, la sintaxis de 
+			$ y de * son equivalentes (ver apartado 4.3 del tutorial usingthymeleaf)
+		-->	
+		
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Expresiones por defecto</h2>
+				
+				<div th:object="${producto}">
+					<p><strong th:text="*{nombre}">Nombre</strong> (<span th:text="*{precio}">precio</span> €)</p>
+					<p
+						th:text="*{descripcion}?: 'Si quiere más información sobre nuestro productos, no dude en contactar con nosotros'">
+						texto</p>
+				</div>
+				
+				<div th:object="${producto2}">
+					<p><strong th:text="*{nombre}">Nombre</strong> (<span th:text="*{precio}">precio</span> €)</p>
+					<p
+						th:text="*{descripcion}?: 'Si quiere más información sobre nuestro productos, no dude en contactar con nosotros'">
+						texto</p>
+				</div>
+				
+				<div th:object="${producto2}">
+					<p><strong th:text="*{nombre}">Nombre</strong> (<span th:text="*{precio}">precio</span> €)</p>
+					<p th:text="*{descripcion}?: _">Si quiere más información sobre nuestro productos, no dude en
+						contactar con nosotros</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

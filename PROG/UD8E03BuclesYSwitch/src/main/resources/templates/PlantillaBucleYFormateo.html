@@ -1,0 +1,130 @@
+<!doctype html>
+
+<!-- Recordad que para poder usar Thymeleaf dentro de la plantilla HTML, es decir, 
+	que se reconozcan las etiquetas propias de th añadimos la siguiente línea, 
+	se llama espacio de nombres -->
+
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+	<!-- Agregamos el link para el css (es uno cutre usado por un tutorial antiguo de Th)
+
+		Para añadir los ficheros css, hay que crear una carpeta (new/Foler) 
+		dentro de la carpeta static llamada css y dentro crear un nuevo File 
+		con el nombre del archivo css y la extensión .css
+		 
+		Para los css:
+		- Los que son "internos", deben llevar dos href: uno sin th y otro con th 
+		con la ruta adecuada, por ejemplo, en este caso, desde el main.css hay que subir un nivel (..)
+		entrar en static (/static), entrar en css (/css) y el nombre del archivo con la extensión
+		
+		- Para los que son "externos", por ejemplo, los cdn de Bootstrap, aunque pueden llevar los dos, 
+		pondremos solo un href, sin th, ya que se verán igual de ambas formas
+
+		Por otro lado, dentro de la carpeta static deben ir todas las carpetas 
+		para guardar imágenes, css, javaScript, fonts...
+
+		Podéis ver cómo la ruta a escribir en el href cuando usamos th: 
+		parte directamente desde static (ya que es el raiz que usa Spring) 
+		por lo tanto no es necesario ni subir con .. ni escribir /static y a partir de ahí, 
+		sí hay que escribir obligatoriamente la barra / y el nombre de las carpetas que 
+		tengamos dentro, hasta llegar al nombre del archivo con extensión .css
+		
+		Por último, debemos notar también que al ser url, debemos usar la sintaxis de thymeleaf
+		@{} 
+ -->
+
+	<link rel="stylesheet" href="../static/css/main.css" th:href="@{/css/main.css}" />
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS 
+		Sin en algún ejemplo se cuela algo relacionado con webjars, no le debéis prestar
+		atención, es algo antiguo que no usaremos nosotros
+		Para los href de Bootstrap, agregaremos el href del cdn
+	 -->
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<title>Bucle y formateo</title>
+</head>
+
+<body>
+
+	<h1>Ejemplo 3: Bucles</h1>
+	<h2>Lista de productos</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Número</th>
+				<th>Descripción</th>
+				<th>Precio</th>
+				<th>Disponible desde</th>
+				<th>Oferta</th>
+			</tr>
+		</thead>
+		<tbody>
+
+			<!-- Para mostrar varios productos o partes de varios productos, como puede ser un listado,
+            se usará un bucle que pintará una fila en cada iteración, que en Thymeleaf (en adelante usaré 
+            solo Th para nombrar Thyemelaf por facilidad de escritura) se escribe con la etiqueta th:each.
+            
+            Tiene la misma estructura que un for each de Java, es decir, "objeto sacado de la lista: 
+            (al que en nuestro caso llamamos product y dentro del bucle debemos usar esta palabra para 
+            acceder a cada elemento que se saca de la lista) {nombre de la lista (debe ser el mismo nombre 
+            que hemos dado a la lista dentro del método addAttribute que atiende la petición en la clase Controller}
+            
+            Como ya vimos en el ejemplo 1, mostramos el atributo description de cada producto 
+            que se "vaya sacando" de la lista en cada iteración mediante un punto después 
+			del nombre del objeto (es como llamar a getDescription pero sin necesidad de usar la palabra get)
+            
+            Cada each lleva internamente una serie de información que podemos mostrar
+            como puede ser el índice del elemento de la lista (empieza en cero), 
+            el count (número de "elemento" que empieza en uno y al que se accede directamente 
+            sin necesidad de ponerlo como atributo), etc. 
+            Se puede ver más en el apartado 6.2 del tutorial usinthymeleaf
+			OJO: Aquí no vale lo del * para poner solo el nombre del atributo 
+            -->
+
+			<tr th:each="product : ${productList}">
+				<td th:text="${productStat.count}"></td>
+				<td th:text="${product.description}">Red chair</td>
+
+				<!-- Para mostrar un número con decimales y cierto formato podemos usar esta forma: 
+					(Apartado 19 apéndice B del tutorial 1 using thyemelaf)
+                    Escribirmos #numbers.formatDecimal (número a mostrar -en nuestro caso, precio de un producto-,
+                    número de enteros (1, si tiene más pone ceros a la izquierda, probad con un 6), 
+					número de cifras decimales (2)) 
+					En caso de no haber valor se mostrará la parte estática, que es $350 
+                    
+                    Se puede ver que para concatenar cadenas también se usa el signo más, 
+                    pero lo que se quiere mostrar tan cual, va entre comillas 
+                    simples, en nuestro caso el símbolo del euro que concatenamos al final del precio
+				-->	
+				<td th:text="${#numbers.formatDecimal(product.price, 1, 2)+' €'}">$350</td>
+				
+				<!--Para la impresión de fechas, usaremos las clases de vistas en el tema 5,
+				más adelante se explican más cosas con un ejemplo completo, pero de momento, 
+				se muestran como aparece aquí debajo, usando #temporals
+				y el método format (de nuevo puede verse en el apéndice B del tutorial 1)
+				-->
+
+
+				<td th:text="${#temporals.format(product.date, 'dd-MM-YY HH:mm')}">8-July-1976</td>
+				<td><span class="offer">Special offer!</span></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

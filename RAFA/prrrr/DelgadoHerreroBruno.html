@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>TeleBocata</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+
+    
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Contenido principal -->
+        <main class="container-fluid">
+            <h1>TeleBocata</h1>
+            <div class="row">
+                <div class="col-lg-10">                    
+                    <form role="form"  id="formulario" >
+                        <div class="row mt-1">
+                            <div class="form-group col-lg-3">
+                                <label for="tamano">Tamaño</label>
+                                <select class="form-select " id="tamano" name="tamano">
+                                    <option value="p">Pequeño</option>
+                                    <option value="m">Mediano</option>
+                                    <option value="g">Grande</option>
+                                </select>
+
+                            </div>    
+                            <div class="form-group col-lg-2">
+                                <label for="cantidad">Cantidad</label>
+                                <input type="number" class="form-control " id="cantidad" name="cantidad" min="0" max="20">
+                            </div>                                
+                        </div>                        
+                        <div class="row mt-1">
+                            <div class="form-group col-lg-3">
+                                <label for="bocata">Bocadillo</label>
+                                <select class="form-select " id="bocata" name="bocata">
+                                    <option value="Jamón y queso">Jamón y queso</option>
+                                    <option value="Filete empanado">Filete empanado</option>
+                                    <option value="Pollo alioli">Pollo alioli</option>
+                                    <option value="Bocapizza">Bocapizza</option>            
+                                </select>                                                                       
+                            </div>       
+                        </div>  
+                        <div class="row mt-1">
+                            <div class="form-group col-lg-3">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" class="form-control " id="nombre" name="nombre">
+                            </div> 
+                            <div class="form-group col-lg-3">
+                                <label for="apellidos">Apellidos</label>
+                                <input type="text" class="form-control " id="apellidos" name="apellidos">
+                            </div>                             
+                            <div class="form-group col-lg-3">
+                                <label for="pwd">Contraseña</label></i>
+                                <div class="input-group">
+                                    <input type="password" class="form-control " id="pwd" name="pwd">
+                                    <i id="verPwd" class="input-group-text bi bi-eye-fill"></i>
+                                </div>
+                            </div>                               
+                        </div>          
+                        <div class="row mt-1">
+                            <div class="form-group col-lg-3">
+                                <input id="actualizar" class="btn btn-info" type="button" value="Actualizar pedido">
+                            </div>
+                            <div class="form-group col-lg-3">
+                                <input id="tramitar" class="btn btn-info" type="button" value="Tramitar pedido" data-bs-toggle="modal" data-bs-target="#modalPedido">
+                            </div>
+                        </div>                            
+                    </form>                       
+                    
+                </div>
+
+                <div id="carrito" class="col-lg-2">
+                    <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCarrito" aria-controls="offcanvasCarrito">
+                      Ver carrito <i class="bi bi-basket2"></i>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCarrito" aria-labelledby="offcanvasCarritoLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasCarritoLabel">Tu cesta de la compra</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <div id="numBocatas">
+                <!-- aquí debes indicar el número de bocadillos en carrito-->              
+            </div>
+            <table class="table table-stripped">
+                <tr>
+                    <th class="w-50">Bocadillo</th>
+                    <th class="w-25">Tamaño</th>
+                    <th class="w-25">Cantidad</th>
+                </tr>
+            </table>
+          </div>
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="modalPedido" aria-labelledby="modalPedidoLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modalPedidoLabel">Confirme su pedido</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>TEXTO</p>
+              </div>
+              <div class="modal-footer">                
+                <button id="botonModal" type="button" class="btn btn-success" data-bs-dismiss="modal">TEXTO BOTON</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script src="examencorregido.js" defer></script>
+    
+    
+</body>
+
+</html>

@@ -11,7 +11,7 @@ import com.salesianostriana.dam.pruebaproyecto.repositorios.MerchRepositorio;
 @Service
 public class MerchService {
 	
-	
+	private MerchRepositorio repo;
 
 	public List<Merch> getLista(){
 
@@ -41,6 +41,9 @@ public class MerchService {
 				.likes(5)
 				.stock(50)
 				.build();
+		
+
+		
 				
 		return Arrays.asList(
 				m1,m2,m3	

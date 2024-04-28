@@ -26,7 +26,7 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger" th:replace="nav :: nav">
       <div class="container">
         <a class="navbar-brand" href="#">
 			<img src="../../static/img/logo.png" th:src="@{/img/logo.png}" alt="Logo" width="50" height="50">
@@ -105,6 +105,10 @@
       </div>
     </div>
   </div>
+  
+  <footer th:replace="footer :: footer">
+	
+  </footer>
 </body>
 
 

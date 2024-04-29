@@ -32,6 +32,9 @@
       margin: 10px;
       width: calc(50% - 20px);
       height: 150px;
+      background-color: #dc3545; /* Rojo */
+      border: none;
+      color: white;
     }
 
     #banner img {
@@ -45,6 +48,10 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+    }
+
+    .botones button:hover {
+      background-color: #dc3545; /* Rojo sin cambio en hover */
     }
 
     .titulo-grande {
@@ -74,6 +81,30 @@
       width: 100%;
     }
   </style>
+    <script>
+      // Obtenemos los botones por su id
+      const btnPescado = document.getElementById('btnPescado');
+      const btnMarisco = document.getElementById('btnMarisco');
+      const btnLotes = document.getElementById('btnLotes');
+      const btnMerch = document.getElementById('btnMerch');
+  
+      // Agregamos un event listener para cada botón
+      btnPescado.addEventListener('click', function() {
+        window.location.href = 'pagina_pescado.html';
+      });
+  
+      btnMarisco.addEventListener('click', function() {
+        window.location.href = 'pagina_marisco.html';
+      });
+  
+      btnLotes.addEventListener('click', function() {
+        window.location.href = 'pagina_lotes.html';
+      });
+  
+      btnMerch.addEventListener('click', function() {
+        window.location.href = 'merch.html';
+      });
+    </script>
 </head>
 
 <body>
@@ -147,10 +178,10 @@
 
     <div class="container botones text-center mt-5">
       <div class="botones-container">
-        <button class="btn btn-danger btn-lg">Pescado</button>
-        <button class="btn btn-danger btn-lg">Marisco</button>
-        <button class="btn btn-danger btn-lg">Lotes</button>
-        <button class="btn btn-danger btn-lg">Merchandising</button>
+        <button onclick="window.location.href='pagina_pescado.html'" class="btn btn-lg">Pescado</button>
+        <button onclick="window.location.href='pagina_marisco.html'" class="btn btn-lg">Marisco</button>
+        <button onclick="window.location.href='pagina_lotes.html'" class="btn btn-lg">Lotes</button>
+        <button onclick="window.location.href='merch.html'" class="btn btn-lg">Merchandising</button>
       </div>
     </div>
 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formulario</title>
+</head>
+
+<body>
+	<form method="POST" th:action="addProducto" th:object="productoForm">
+		<table>
+			<tr>
+				<td><label for="nombre">Nombre</label></td>
+				<td><input type="text" th:field="*{name}" /></td>
+			</tr>
+
+			<tr>
+				<textarea class="form-control" id="textarea" name="textarea"
+					th:field="*{description}">default text</textarea>
+			</tr>
+
+			<tr>
+				<td><label for="precio">Precio</label></td>
+				<td><input type="text" th:field="*{price}" /></td>
+			</tr>
+			
+			<tr>
+				<ul>
+					<li th:each="tipoProducto : ${tipos}">
+						<input type="radio" th:field="{tipo}" th:value="${}">
+					</li>
+				</ul>
+			</tr>
+			<tr>
+				<td>Fecha de caducidad:</td>
+				<td th:text="${#temporals.format(producto.FCaducidad)}">Caducidad</td>
+			</tr>
+
+			<tr>
+				<td><input type="submit" value="Submit" /></td>
+			</tr>
+		</table>
+	</form>
+</body>
+
+</html>

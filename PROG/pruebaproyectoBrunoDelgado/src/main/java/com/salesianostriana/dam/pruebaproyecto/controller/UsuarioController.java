@@ -32,7 +32,7 @@ public class UsuarioController {
 	@PostMapping("/addUsuario")
 	public String submit(@ModelAttribute("usuarioForm") Usuario usuario, Model model) {
 		model.addAttribute("usuario", usuario);
-
+		servicioUsuario.save(usuario);
 		return "view";
 	}
 }

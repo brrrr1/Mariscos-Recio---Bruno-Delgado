@@ -88,7 +88,6 @@
 <body>
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-danger" th:replace="~{fragmentos/nav::nav}">
-
 		</nav>
 	</header>
 	<main>
@@ -126,7 +125,7 @@
 				<button onclick="window.location.href='pagina_pescado.html'" class="btn btn-lg">Pescado</button>
 				<button onclick="window.location.href='pagina_marisco.html'" class="btn btn-lg">Marisco</button>
 				<button onclick="window.location.href='pagina_lotes.html'" class="btn btn-lg">Lotes</button>
-				<button onclick="window.location.href='merch.html'" class="btn btn-lg">Merchandising</button>
+				<button onclick="window.location.href='/merch'"th:action="merch" class="btn btn-lg">Merchandising</button>
 			</div>
 		</div>
 

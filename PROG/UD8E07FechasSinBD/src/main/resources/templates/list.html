@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Listado de alumnos con fechas</title>
+</head>
+<body>
+	<a href="#" th:href="@{/nuevo}">Insertar un nuevo alumno</a>
+	<br/><br/>
+	<table>
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Apellidos</th>
+				<th>Email</th>
+				<th>Fecha de nacimiento</th>
+				<th>Fecha de último acceso</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="alumno : ${alumnos}">
+				<td th:text="${alumno.nombre}">Nombre</td>
+				<td th:text="${alumno.apellidos}">Apellidos</td>
+				<td th:text="${alumno.email}">Email</td>
+				
+<!-- 
+	Al igual que en th usábamos th:text="${'$' + #numbers.formatDecimal(product.price, 1, 2)}" 
+	para números para "pintar" fechas del tipo LocalDate usaremos 
+	#temporals.format (dato fecha a mostrar)
+	En el primer caso, la fecha de nacimiento con un formato concreto
+	dd/MMM/yyyy HH:mm y en el segundo caso, fecha de último acceso
+	formato por defecto, coge el local
+	
+	Podéis consultar la documentación de las diversas opciones y formatos en
+	el apéndice B del tutorial using Thymeleaf o en
+	https://github.com/thymeleaf/thymeleaf-extras-java8time 
+-->
+				<td th:text="${#temporals.format(alumno.fechaNacimiento, 'dd/MMM/yyyy HH:mm')}">F Nacimiento</td>
+				<td th:text="${#temporals.format(alumno.fechaUltimoAcceso)}">Último acceso</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

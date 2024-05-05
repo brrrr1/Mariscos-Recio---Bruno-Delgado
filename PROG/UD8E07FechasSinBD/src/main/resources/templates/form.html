@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario con fechas</title>
+
+	<link rel="stylesheet" href="../static/css/main.css" th:href="@{/css/main.css}" />
+
+</head>
+
+<!-- 
+	Para trabajar con fechas en Th, basta con usar el campo type 
+	como date para recoger la fecha del formulario y esta, 
+	se puede tratar como un campo cualquiera correspondiente al del objeto entidad, en este caso, 
+	en nuestra clase alumno es el atributo fechaNacimiento del tipo LocalDate
+-->
+
+<body>
+	<form method="POST" action="#" th:action="@{/nuevo/submit}" th:object="${alumno}">
+		<input type="text" name="nombre" th:field="*{nombre}" placeholder="Nombre..." />
+		<input type="text" name="apellidos" th:field="*{apellidos}" placeholder="Apellidos..." />
+		<input type="email" name="email" th:field="*{email}" placeholder="Email..." />
+		<input type="date" name="fechaNacimiento" th:field="*{fechaNacimiento}" />
+		<input type="submit" name="enviar" value="Enviar" />
+
+	</form>
+
+</body>
+
+</html>

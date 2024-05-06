@@ -1,0 +1,17 @@
+Dejar los lotes como el merch (editar, borrar...)
+Meter empleado (como usuarios)
+Asociacion empleado y pedido
+
+
+[===================================================]
+
+
+Hacer LineDePedido
+Asociación LineaDePedido y Producto
+Composicion LineaDePedido y Pedido
+
+
+[===================================================]
+
+
+Hacer Marisco y Pescado

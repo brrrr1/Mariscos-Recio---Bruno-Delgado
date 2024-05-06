@@ -28,7 +28,7 @@ public class MerchController {
 		return "merch";
 	}
 
-	@GetMapping({ "/", "/list" })
+	@GetMapping("/listaMerch")
 	public String listarTodos(Model model) {
 		model.addAttribute("listaMerch", servicio.findAll());
 		return "merchIndex";
@@ -46,7 +46,7 @@ public class MerchController {
 		servicio.save(merch);
 		model.addAttribute("merch", merch);
 
-		return "redirect:/";
+		return "redirect:/listaMerch";
 	}
 
 	@GetMapping("/editar/{id}")
@@ -61,7 +61,7 @@ public class MerchController {
 		} else {
 			// No existe ningún alumno con el Id proporcionado.
 			// Redirigimos hacia el listado.
-			return "redirect:/";
+			return "redirect:/listaMerch";
 		}
 
 	}
@@ -69,14 +69,14 @@ public class MerchController {
 	@PostMapping("/editar/submit")
 	public String procesarFormularioEdicion(@ModelAttribute("merch") Merch m) {
 		servicio.edit(m);
-		return "redirect:/";// Volvemos a redirigir la listado a través del controller
+		return "redirect:/listaMerch";// Volvemos a redirigir la listado a través del controller
 		// para pintar la lista actualizada con la modificación hecha
 	}
 
 	@GetMapping("/borrar/{id}")
 	public String borrar(@PathVariable("id") long id) {
-		servicio.deleteById(servicio.findById(id));
-		return "redirect:/";
+		servicio.deleteById(id);
+		return "redirect:/listaMerch";
 	}
 
 }

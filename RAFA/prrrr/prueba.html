@@ -10,6 +10,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
+  <script src="librerias/granim.js-2.0.0/dist/granim.min.js"></script>
   <style>
     #recio {
       padding: 0;
@@ -32,7 +33,8 @@
       margin: 10px;
       width: calc(50% - 20px);
       height: 150px;
-      background-color: #dc3545; /* Rojo */
+      background-color: #dc3545;
+      /* Rojo */
       border: none;
       color: white;
     }
@@ -51,7 +53,8 @@
     }
 
     .botones button:hover {
-      background-color: #dc3545; /* Rojo sin cambio en hover */
+      background-color: #dc3545;
+      /* Rojo sin cambio en hover */
     }
 
     .titulo-grande {
@@ -77,34 +80,37 @@
       background-color: #c82333;
     }
 
-    footer{
+    footer {
       width: 100%;
     }
+
+    #canvas-basic {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
   </style>
-    <script>
-      // Obtenemos los botones por su id
-      const btnPescado = document.getElementById('btnPescado');
-      const btnMarisco = document.getElementById('btnMarisco');
-      const btnLotes = document.getElementById('btnLotes');
-      const btnMerch = document.getElementById('btnMerch');
-  
-      // Agregamos un event listener para cada botón
-      btnPescado.addEventListener('click', function() {
-        window.location.href = 'pagina_pescado.html';
-      });
-  
-      btnMarisco.addEventListener('click', function() {
-        window.location.href = 'pagina_marisco.html';
-      });
-  
-      btnLotes.addEventListener('click', function() {
-        window.location.href = 'pagina_lotes.html';
-      });
-  
-      btnMerch.addEventListener('click', function() {
-        window.location.href = 'merch.html';
-      });
-    </script>
+  <script>
+    var granimInstance = new Granim({
+      element: '.btn', // Selector de tu botón
+      direction: 'diagonal', // Dirección del degradado
+      states: {
+        "default-state": {
+          gradients: [
+            ['#4CAF50', '#FFC107'], // Colores del degradado
+            ['#FF5252', '#FF1744'],
+            ['#00BCD4', '#3F51B5']
+          ],
+          transitionSpeed: 7000 // Velocidad de transición
+        }
+      }
+    });
+  </script>
 </head>
 
 <body>
@@ -178,6 +184,7 @@
 
     <div class="container botones text-center mt-5">
       <div class="botones-container">
+        
         <button onclick="window.location.href='pagina_pescado.html'" class="btn btn-lg">Pescado</button>
         <button onclick="window.location.href='pagina_marisco.html'" class="btn btn-lg">Marisco</button>
         <button onclick="window.location.href='pagina_lotes.html'" class="btn btn-lg">Lotes</button>
@@ -303,12 +310,12 @@
 
   </section>
 
-    <footer class="text-center py-4 bg-danger text-white">
-      <div class="container">
-          <h5><span><img src=""></span> Derechos de autor © 2024 Mariscos Recio Enterprises.
-              Todos los derechos reservados.<span><img src=""></span></h5>
-      </div>
-    </footer>
+  <footer class="text-center py-4 bg-danger text-white">
+    <div class="container">
+      <h5><span><img src=""></span> Derechos de autor © 2024 Mariscos Recio Enterprises.
+        Todos los derechos reservados.<span><img src=""></span></h5>
+    </div>
+  </footer>
 
 </body>
 

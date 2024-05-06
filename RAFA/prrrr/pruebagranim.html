@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Botón con degradado en movimiento</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+  <button id="animated-btn" class="btn btn-primary">Botón con degradado en movimiento</button>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.min.js"></script>
+<script>
+  $(document).ready(function(){
+    var granimInstance = new Granim({
+      element: '#animated-btn',
+      direction: 'diagonal',
+      states : {
+        "default-state": {
+          gradients: [
+            ['#FF5F6D', '#FFC371'],
+            ['#FFFFFF', '#49C628'],
+            ['#73C8A9', '#373B44']
+          ],
+          transitionSpeed: 2000
+        }
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

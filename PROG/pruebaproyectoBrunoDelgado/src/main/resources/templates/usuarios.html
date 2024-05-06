@@ -29,8 +29,10 @@
 											<div class="price col-md-12">
 												<h5 th:text="${usuario.nombre + ' ' + usuario.apellido}">Nombre</h5>
 												<p th:text="${usuario.email}">Email</p>
-												<div class="price-text-color">
-												</div>
+												<p th:text="${usuario.dni}">DNI</p>
+												<p th:number="${usuario.numPedidos}">Nº de Pedidos</p>
+												<p th:text="${usuario.direccion}">Dirección</p>
+												<p th:text="${usuario.esAdmin}">Admin</p>
 											</div>
 											</div>
 	

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mariscos Recio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <style>
+    /* Estilos personalizados */
+    .navbar-custom {
+      height: 200px; /* Altura personalizada del navbar */
+      display: flex; /* Utilizar flexbox en el navbar */
+      align-items: center; /* Centrar verticalmente los elementos del navbar */
+    }
+
+    .navbar-logo-container {
+      position: relative; /* Establecer posición relativa para posicionar la imagen absolutamente */
+      width: 300px; /* Ancho del contenedor del logo */
+      height: 300px; /* Alto del contenedor del logo */
+      margin-right: 15px; /* Espacio entre el logo y las opciones a la derecha */
+      margin-top: 100px; /* Desplazamiento hacia abajo */
+    }
+
+    .navbar-logo {
+      width: 100%; /* Ancho del círculo */
+      height: 100%; /* Alto del círculo */
+      border-radius: 50%;
+      overflow: hidden; /* Para ocultar el exceso de la imagen */
+      background-color: var(--bs-danger); /* Color "danger" de Bootstrap */
+    }
+
+    .navbar-logo img {
+      position: absolute; /* Posición absoluta para solapar encima del círculo */
+      top: 50%; /* Alinear la imagen verticalmente al centro */
+      left: 50%; /* Alinear la imagen horizontalmente al centro */
+      transform: translate(-50%, -50%); /* Centrar la imagen exactamente */
+      width: 80%; /* Ajustar el tamaño de la imagen según sea necesario */
+      height: auto;
+    }
+
+    /* Opciones del navbar a la izquierda */
+    .navbar-nav-left {
+      flex: 1; /* Ocupa el 50% del espacio disponible */
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    /* Opciones del navbar a la derecha */
+    .navbar-nav-right {
+      flex: 1; /* Ocupa el 50% del espacio disponible */
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    /* Estilos personalizados para las letras del menú */
+    .navbar-nav a {
+      font-size: 24px; /* Tamaño de fuente más grande para las letras del menú */
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger navbar-custom">
+      <div class="container">
+        <!-- Opciones a la izquierda -->
+        <div class="navbar-nav navbar-nav-left">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pescado</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Marisco</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Lotes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Merchandising</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Logo en el centro -->
+        <div class="navbar-logo-container">
+          <div class="navbar-logo"></div>
+        </div>
+        <!-- Opciones a la derecha -->
+        <div class="navbar-nav navbar-nav-right">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#sobre-nosotros">Sobre Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#trabaja-con-nosotros">Trabaja Con Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#oferta-semana">Oferta de la Semana</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Carrito</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Cuenta</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+</body>
+
+</html>

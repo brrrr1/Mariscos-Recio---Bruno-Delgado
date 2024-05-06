@@ -15,6 +15,8 @@
 </head>
 
 <body>
+
+	<!--
 	<div class="d-flex justify-content-center" id="login">
 		<img src="../../static/img/logo.png" th:src="@{/img/logo.png}" alt="Logo">
 		<form method="POST" th:action="addMerch" th:object="${merchForm}">
@@ -44,6 +46,50 @@
 			</div>
 			<button type="submit" class="btn btn-primary">Submit</button>
 		</form>
+
+		-->
+
+	<!-- AAAAAAAAAAAAAAAAAAAAAAAA -->
+
+	<div id="menu">
+		<a th:href="@{/list}">Inicio</a> | <a th:href="@{/nuevo}">Nuevo
+			alumno</a>
+	</div>
+	<div class="d-flex justify-content-center" id="merchForm">
+		<div id="formulario">
+			<img src="../../static/img/logo.png" th:src="@{/img/logo.png}" alt="Logo">
+			<form th:action="${merch.id != 0} ? @{/editar/submit} : @{/addMerch}" th:object="${merch}" method="post">
+				<div class="row mb-3">
+					<div class="col">
+						<input th:if="${merch.id != 0}" type="hidden" name="id" th:field="*{id}" />
+					</div>
+				</div>
+				<div class="row mb-3">
+					<div class="col">
+						<input type="text" name="nombre" th:field="*{nombre}" placeholder="Nombre" />
+					</div>
+				</div>
+				<div class="row mb-3">
+					<div class="col">
+						<input type="text" name="descripcion" th:field="*{descripcion}" placeholder="Descripción" />
+					</div>
+				</div>
+				<div class="row mb-3">
+					<div class="col">
+						<input type="number	" name="precio" th:field="*{precio}" placeholder="Precio">
+					</div>
+				</div>
+				<div class="row mb-3">
+					<div class="col">
+						<input type="number" name="stock" th:field="*{stock}" placeholder="Unidades">
+					</div>
+				</div>
+
+				<button type="submit" class="btn btn-primary">Submit</button>
+				<input type="submit" name="enviar" value="Enviar" />
+			</form>
+		</div>
+	</div>
 	</div>
 
 

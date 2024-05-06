@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplo de un CRUD completo</title>
+</head>
+
+<body>
+	<div id="menu">
+		<a th:href="@{/list}">Inicio</a> | <a th:href="@{/mform}">Nuevo producto</a>
+	</div>
+	<br /><br />
+	<table border=1>
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Nombre</th>
+				<th>Descripción</th>
+				<th>Likes</th>
+				<th>Foto</th>
+				<th>Precio</th>
+				<th>Stock</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="merch : ${listaMerch}">
+				<td th:text="${merch.id}">1</td>
+				<td th:text="${merch.nombre}">Nombre</td>
+				<td th:text="${merch.descripcion}">Descripción</td>
+				<td th:text="${merch.likes}">Likes</td>
+				<td th:text="${merch.foto}">Foto (URL)</td>
+				<td th:text="${merch.precio}">Precio</td>
+				<td th:text="${merch.stock}">Stock</td>
+				<td>
+					<a href="#" th:href="@{/editar/{id}(id=${merch.id})}">Editar</a> |
+					<a href="#" th:href="@{/borrar/{id}(id=${merch.id})}">Borrar</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+
+</html>

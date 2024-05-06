@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplo de un CRUD completo</title>
+	<link rel="stylesheet" href="../static/css/main.css" th:href="@{/css/main.css}" />
+
+</head>
+
+<body>
+	<div id="menu">
+		<a th:href="@{/list}">Inicio</a> | <a th:href="@{/nuevo}">Nuevo
+			alumno</a>
+	</div>
+	<div id="formulario">
+
+	<!-- 
+	Como siempre, el th:action espera el enlace del método del controlador 
+	anotado con postMapping que procesará el formulario
+	En este caso, estamos usando el operador ternario. 
+	Si el id del alumno es distinto de cero, significa que hay alumno por lo que 
+	mandaremos al controller editar (ruta escrita en el postMapping). 
+	Si el id es cero, significa que no hay alumno por lo que mandamos 
+	al controlador de añadir un alumno nuevo
+	En ambos casos, como no es buena práctica mostrar los id 
+	en la gestión de formularios están en un campo oculto (type: "hidden")
+	 -->
+		<form th:action="${alumno.id != 0} ? @{/editar/submit} : @{/nuevo/submit}" th:object="${alumno}" method="post">
+			<input th:if="${alumno.id != 0}" type="hidden" name="id" th:field="*{id}" />
+			<input type="text" name="nombre" th:field="*{nombre}" placeholder="Nombre" />
+			<input type="text" name="apellidos" th:field="*{apellidos}" placeholder="Apellidos" />
+			<input type="email" name="email" th:field="*{email}" placeholder="Email" />
+			<input type="submit" name="enviar" value="Enviar" />
+		</form>
+	</div>
+</body>
+
+</html>

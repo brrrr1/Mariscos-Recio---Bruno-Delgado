@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+#formulario {
+	width: 500px;
+	padding-top: 20px;
+}
+
+#formulario input {
+	margin-top: 10px;
+	display: block;
+}
+
+input[type="text"],input[type="email"] {
+	width: 100%;
+}

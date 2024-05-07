@@ -35,7 +35,7 @@ public class Pedido {
 	@JoinColumn(name = "usuario_id") // nombre de la columna en la tabla Pedido que referencia a Usuario
 	private Usuario usuario;
 
-	private int estado;
+	private EstadoPedido estado;
 
 	/*
 	 * MÉTODOS HELPER PARA LA ASOCIACIÓN CON USUARIO

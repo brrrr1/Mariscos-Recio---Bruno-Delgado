@@ -15,49 +15,13 @@
 </head>
 
 <body>
-
-	<!--
-	<div class="d-flex justify-content-center" id="login">
-		<img src="../../static/img/logo.png" th:src="@{/img/logo.png}" alt="Logo">
-		<form method="POST" th:action="addMerch" th:object="${merchForm}">
-			<div class="row mb-3">
-				<div class="col">
-					<label for="Nombre" class="form-label text-white">Nombre:</label>
-					<input type="text" th:field="*{nombre}" class="form-control" placeholder="Nombre">
-				</div>
-			</div>
-			<div class="row mb-3">
-				<div class="col">
-					<label for="Descripcion" class="form-label text-white">Descripción:</label>
-					<input type="text" class="form-control" placeholder="Descripcion" th:field="*{descripcion}">
-				</div>
-			</div>
-			<div class="row mb-3">
-				<div class="col">
-					<label for="Precio" class="form-label text-white">Precio:</label>
-					<input type="text" th:field="*{precio}" class="form-control" placeholder="Precio">
-				</div>
-			</div>
-			<div class="row mb-3">
-				<div class="col">
-					<label for="Unidades" class="form-label text-white">Unidades disponibles:</label>
-					<input type="number" class="form-control" placeholder="Unidades" th:field="*{stock}">
-				</div>
-			</div>
-			<button type="submit" class="btn btn-primary">Submit</button>
-		</form>
-
-		-->
-
-	<!-- AAAAAAAAAAAAAAAAAAAAAAAA -->
-
 	<div id="menu">
 		<a th:href="@{/list}">Inicio</a>
 	</div>
 	<div class="d-flex justify-content-center" id="merchForm">
 		<div id="formulario">
 			<img src="../../static/img/logo.png" th:src="@{/img/logo.png}" alt="Logo">
-			<form th:action="${merch.id != 0} ? @{/editar/submit} : @{/addMerch}" th:object="${merch}" method="post">
+			<form th:action="${merch.id != 0} ? @{/editarMerch/submit} : @{/addMerch}" th:object="${merch}" method="post">
 				<div class="row mb-3">
 					<div class="col">
 						<input th:if="${merch.id != 0}" type="hidden" name="id" th:field="*{id}" />

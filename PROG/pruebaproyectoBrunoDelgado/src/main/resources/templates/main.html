@@ -124,8 +124,9 @@
 			<div class="botones-container">
 				<button onclick="window.location.href='pagina_pescado.html'" class="btn btn-lg">Pescado</button>
 				<button onclick="window.location.href='pagina_marisco.html'" class="btn btn-lg">Marisco</button>
-				<button onclick="window.location.href='pagina_lotes.html'" class="btn btn-lg">Lotes</button>
-				<button onclick="window.location.href='/merch'"th:action="merch" class="btn btn-lg">Merchandising</button>
+				<button onclick="window.location.href='/lotes'" th:action="lotes" class="btn btn-lg">Lotes</button>
+				<button onclick="window.location.href='/merch'" th:action="merch"
+					class="btn btn-lg">Merchandising</button>
 			</div>
 		</div>
 
@@ -191,69 +192,9 @@
 				</div>
 			</div>
 		</section>
-
-		<div id="banner" class="container-fluid">
-			<img src="../../static/img/banner completo.png" th:src="@{/img/banner completo.png}"
-				class="img-fluid mx-auto d-block">
-		</div>
-
-
-		<section class="container my-5" id="trabaja-con-nosotros">
-			<div class="row">
-				<div class="col-lg-6 mb-4">
-					<h2 class="fw-bold fs-1">Trabaja con Nosotros</h2>
-					<p><u>Puesto vacante:</u> Pescadero</p>
-					<p><u>Requisitos:</u> Aprenderse el nombre del género y tener ganas de trabajar.</p>
-					<p><u>Sueldo:</u> 500€ brutos</p>
-					<p><u>Horario:</u> Media jornada (12 horas)</p>
-					<div class="card p-3">
-						<form>
-							<div class="mb-3">
-								<label for="nombre" class="form-label">Nombre</label>
-								<input type="text" class="form-control" id="nombre" required>
-							</div>
-							<div class="mb-3">
-								<label for="apellido" class="form-label">Apellido</label>
-								<input type="text" class="form-control" id="apellido" required>
-							</div>
-							<div class="mb-3">
-								<label for="dni" class="form-label">DNI</label>
-								<input type="text" class="form-control" id="dni" required>
-							</div>
-							<div class="mb-3">
-								<label for="correo" class="form-label">Correo Electrónico</label>
-								<input type="email" class="form-control" id="correo" required>
-							</div>
-							<div class="mb-3">
-								<label for="telefono" class="form-label">Teléfono</label>
-								<input type="tel" class="form-control" id="telefono" required>
-							</div>
-							<button type="submit" class="btn btn-danger">Enviar</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<div id="banner" class="container-fluid">
-			<img src="../../static/img/banner completo.png" th:src="@{/img/banner completo.png}"
-				class="img-fluid mx-auto d-block">
-		</div>
-
 	</main>
 
-
-
-	<section class="container my-5" id="oferta-semana">
-		<div class="row">
-			<div class="col-lg-6 mb-4">
-				<h2 class="fw-bold titulo-grande">Oferta de la semana</h2>
-				<img src="oferta.png" alt="Sobre Nosotros" class="img-fluid" style="width: 100%;">
-			</div>
-		</div>
-		<button id="btnScrollToTop" onclick="window.scrollTo(0, 0);" title="Volver arriba">&#8679;</button>
-
-	</section>
+	<button id="btnScrollToTop" onclick="window.scrollTo(0, 0);" title="Volver arriba">&#8679;</button>
 
 	<footer th:replace="~{fragmentos/footer::footer}">
 

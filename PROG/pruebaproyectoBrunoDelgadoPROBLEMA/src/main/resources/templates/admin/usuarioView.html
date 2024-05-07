@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Usuarios</title>
+</head>
+
+<body>
+	<table>
+		<tr>
+			<td>Nombre:</td>
+			<td th:text="${usuario.nombre}"></td>
+		</tr>
+
+		<tr>
+			<td>Contraseña:</td>
+			<td th:text="${usuario.contrasenia}"></td>
+		</tr>
+		
+		<tr>
+			<td>DNI:</td>
+			<td th:text="${usuario.dni}"></td>
+		</tr>
+
+		<tr>
+			<td>Email:</td>
+			<td th:text="${usuario.email}"></td>
+		</tr>
+		
+		<tr>
+			<td>Contraseá:</td>
+			<td th:text="${usuario.contrasenia}"></td>
+		</tr>
+
+	</table>
+</body>
+
+</html>

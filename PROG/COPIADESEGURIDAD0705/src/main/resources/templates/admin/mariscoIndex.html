@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplo de un CRUD completo</title>
+</head>
+
+<body>
+	<div id="menu">
+		<a th:href="@{listaMarisco}">Inicio</a> | <a th:href="@{mariscoForm}">Nuevo producto</a>
+	</div>
+	<br /><br />
+	<table border=1>
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Nombre</th>
+				<th>Descripción</th>
+				<th>Likes</th>
+				<th>Foto</th>
+				<th>Precio</th>
+				<th>Stock</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="marisco : ${listaMarisco}">
+				<td th:text="${marisco.id}">1</td>
+				<td th:text="${marisco.nombre}">Nombre</td>
+				<td th:text="${marisco.descripcion}">Descripción</td>
+				<td th:text="${marisco.likes}">Likes</td>
+				<td th:text="${marisco.foto}">Foto (URL)</td>
+				<td th:text="${marisco.precio}">Precio</td>
+				<td th:text="${marisco.stock}">Stock</td>
+				<td>
+					<a href="#" th:href="@{/admin/marisco/editarMarisco/{id}(id=${marisco.id})}">Editar</a> |
+					<a href="#" th:href="@{/admin/marisco/borrarMarisco/{id}(id=${marisco.id})}">Borrar</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+
+</html>

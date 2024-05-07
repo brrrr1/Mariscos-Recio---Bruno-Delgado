@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+
+<body>
+<form method="post">
+    <table>
+        <div class="row mb-3">
+            <div class="col">
+                <input th:if="${empleado.id != 0}" type="hidden" name="id" th:field="*{id}" />
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col">
+                <label for="Nombre" class="form-label text-white">Nombre:</label>
+                <input type="text" th:field="*{nombre}" class="form-control" placeholder="Nombre">
+            </div>
+            <div class="col">
+                <label for="Apellido" class="form-label text-white">Apellido:</label>
+                <input type="text" th:field="*{apellido}" class="form-control" placeholder="Apellido">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col">
+                <label for="sueldo" class="form-label text-white">DNI:</label>
+                <input type="number	" name="sueldo" th:field="*{sueldo}" placeholder="Sueldo">
+            </div>
+        </div>
+        <div class="mb-3 mt-3 pt-5">
+            <label for="text" class="form-label text-white">Correo:</label>
+            <input type="email" th:field="*{email}" class="form-control" id="email" placeholder="Enter email"
+                name="email">
+        </div>
+
+        <div class="mb-3 mt-3 pt-5">
+            <label for="fecha" class="form-label text-white">Fecha de Ingreso:</label>
+            <input type="date" th:field="*{fechaIngreso}" class="form-control" id="fechaIngreso" placeholder="Fecha de Ingreso"
+                name="fechaIngreso">
+                <td th:text="${#temporals.format(producto.FCaducidad)}">Caducidad</td>
+        </div>
+
+        <tr>
+            <td><input type="submit" value="Submit" /></td>
+        </tr>
+    </table>
+</form>
+</body>
+
+</html>

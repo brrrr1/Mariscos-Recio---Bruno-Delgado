@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lotes</title>
+</head>
+
+<body>
+	<table>
+		
+		<tr>
+			<td>Nombre:</td>
+			<td th:text="${lote.nombre}"></td>
+		</tr>
+
+		<tr>
+			<td>Descripción:</td>
+			<td th:text="${lote.descripcion}"></td>
+		</tr>
+		
+		<tr>
+			<td>Precio:</td>
+			<td th:text="${lote.precio}"></td>
+		</tr>
+
+		<tr>
+			<td>Unidades disponibles:</td>
+			<td th:text="${lote.stock}"></td>
+		</tr>
+		
+	</table>
+</body>
+
+</html>

@@ -19,6 +19,13 @@ public class PescadoController {
 	@Autowired
 	private PescadoService servicioPescado;
 
+	@GetMapping("/pescado")
+	public String controladorPescado(Model model) {
+		model.addAttribute("listaPescado", servicioPescado.findAll());
+
+		return "pescado";
+	}
+
 	@GetMapping("/listaPescado")
 	public String listarTodos(Model model) {
 		model.addAttribute("listaPescado", servicioPescado.findAll());

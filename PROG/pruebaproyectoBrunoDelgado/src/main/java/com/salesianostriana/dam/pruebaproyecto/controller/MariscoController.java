@@ -19,6 +19,13 @@ public class MariscoController {
 	@Autowired
 	private MariscoService servicioMarisco;
 
+	@GetMapping("/marisco")
+	public String controladorMarisco(Model model) {
+		model.addAttribute("listaMarisco", servicioMarisco.findAll());
+
+		return "marisco";
+	}
+
 	@GetMapping("/listaMarisco")
 	public String listarTodos(Model model) {
 		model.addAttribute("listaMarisco", servicioMarisco.findAll());

@@ -18,6 +18,12 @@ public class LotesController {
 	@Autowired
 	private LoteService servicioLote;
 
+	@GetMapping("/lotes")
+	public String controladorLotes(Model model) {
+		model.addAttribute("listaLotes", servicioLote.findAll());
+		return "lotes";
+	}
+
 	@GetMapping("/listaLotes")
 	public String listarTodos(Model model) {
 		model.addAttribute("listaLotes", servicioLote.findAll());

@@ -21,7 +21,7 @@ public class EmpleadoController {
 
 	@GetMapping("/empleados")
 	public String controladorEmpleados(Model model) {
-		model.addAttribute("listaEmpleado", servicioEmpleado.findAll());
+		model.addAttribute("listaEmpleados", servicioEmpleado.findAll());
 		return "admin/empleados";
 	}
 

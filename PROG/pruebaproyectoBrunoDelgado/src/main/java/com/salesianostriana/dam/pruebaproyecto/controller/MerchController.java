@@ -19,6 +19,12 @@ public class MerchController {
 	@Autowired
 	private MerchService servicio;
 
+	@GetMapping("/merch")
+	public String controladorMerch(Model model) {
+		model.addAttribute("listaMerch", servicio.findAll());
+		return "merch";
+	}
+
 	@GetMapping("/listaMerch")
 	public String listarTodos(Model model) {
 		model.addAttribute("listaMerch", servicio.findAll());

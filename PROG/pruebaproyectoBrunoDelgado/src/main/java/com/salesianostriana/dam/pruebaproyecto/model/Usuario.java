@@ -33,6 +33,7 @@ public class Usuario {
 	private int numPedidos;
 	private String direccion;
 	private boolean esAdmin;
+	private boolean esEmpleado;
 
 	@OneToMany(mappedBy = "usuario", fetch = FetchType.EAGER)
 	@Builder.Default

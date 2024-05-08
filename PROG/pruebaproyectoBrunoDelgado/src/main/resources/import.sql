@@ -1,4 +1,4 @@
-insert into empleado (id, nombre, apellido, sueldo, foto, fecha_ingreso, fecha_salida) values (1, 'Rosario', 'Parrales', '200', 'https://static.wikia.nocookie.net/seriesspain/images/9/99/Rosario.jpg/revision/latest?cb=20111112091309&path-prefix=es', '2010-08-02', '2014-03-10');
+insert into empleado (id, nombre, apellido, sueldo, foto, fecha_ingreso, fecha_salida) values (1, 'Rosario', 'Parrales', '200', 'https://i.imgur.com/UhWAG9g.png', '2010-08-02', '2014-03-10');
 insert into empleado (id, nombre, apellido, sueldo, foto, fecha_ingreso, fecha_salida) values (2, 'Coque', 'Calatrava', '300', 'https://pbs.twimg.com/profile_images/3680406347/2dbbdb6aee547a6a800c5ef6b07be668_400x400.jpeg', '2011-05-05', '2018-06-15');
 
 ALTER SEQUENCE empleado_seq RESTART WITH (52);

@@ -69,4 +69,16 @@ public class LotesController {
 		servicioLote.deleteById(id);
 		return "redirect:/admin/lotes/listaLotes";
 	}
+
+	@GetMapping("/productoLote/{id}")
+	public String mostrarPaginaProductoLote(@PathVariable("id") long id, Model model) {
+		if (servicioLote.findById(id).isPresent()) {
+			model.addAttribute("lote", servicioLote.findById(id).get());
+			return "compraLote";
+		} else {
+
+			return "redirect:/admin/lotes/listaLotes";
+		}
+
+	}
 }

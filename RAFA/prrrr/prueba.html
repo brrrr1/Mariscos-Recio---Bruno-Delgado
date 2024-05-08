@@ -11,6 +11,8 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
   <script src="librerias/granim.js-2.0.0/dist/granim.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <style>
     #recio {
       padding: 0;
@@ -95,22 +97,7 @@
       left: 0;
     }
   </style>
-  <script>
-    var granimInstance = new Granim({
-      element: '.btn', // Selector de tu botón
-      direction: 'diagonal', // Dirección del degradado
-      states: {
-        "default-state": {
-          gradients: [
-            ['#4CAF50', '#FFC107'], // Colores del degradado
-            ['#FF5252', '#FF1744'],
-            ['#00BCD4', '#3F51B5']
-          ],
-          transitionSpeed: 7000 // Velocidad de transición
-        }
-      }
-    });
-  </script>
+  
 </head>
 
 <body>
@@ -178,13 +165,13 @@
       </div>
     </div>
 
-    <div id="banner" class="container-fluid">
+    <div id="banner" class="container-fluid" data-aos="fade-right">
       <img src="banner completo.png" alt="Banner rojo">
     </div>
 
     <div class="container botones text-center mt-5">
       <div class="botones-container">
-        
+
         <button onclick="window.location.href='pagina_pescado.html'" class="btn btn-lg">Pescado</button>
         <button onclick="window.location.href='pagina_marisco.html'" class="btn btn-lg">Marisco</button>
         <button onclick="window.location.href='pagina_lotes.html'" class="btn btn-lg">Lotes</button>
@@ -192,7 +179,7 @@
       </div>
     </div>
 
-    <div id="banner" class="container-fluid">
+    <div id="banner" class="container-fluid" data-aos="fade-left">
       <img src="banner completo.png" alt="Banner rojo">
     </div>
 
@@ -249,7 +236,7 @@
       </div>
     </section>
 
-    <div id="banner" class="container-fluid">
+    <div id="banner" class="container-fluid" data-aos="fade-right">
       <img src="banner completo.png" alt="Banner rojo">
     </div>
 
@@ -316,6 +303,10 @@
         Todos los derechos reservados.<span><img src=""></span></h5>
     </div>
   </footer>
+
+  <script>
+    AOS.init();
+  </script>
 
 </body>
 

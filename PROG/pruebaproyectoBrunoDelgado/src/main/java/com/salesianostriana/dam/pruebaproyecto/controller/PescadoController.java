@@ -70,4 +70,16 @@ public class PescadoController {
 		servicioPescado.deleteById(id);
 		return "redirect:/admin/pescado/listaPescado";
 	}
+
+	@GetMapping("/productoPescado/{id}")
+	public String mostrarPaginaProductoPescado(@PathVariable("id") long id, Model model) {
+		if (servicioPescado.findById(id).isPresent()) {
+			model.addAttribute("pescado", servicioPescado.findById(id).get());
+			return "compraPescado";
+		} else {
+
+			return "redirect:/admin/pescado/listaPescado";
+		}
+
+	}
 }

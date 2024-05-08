@@ -1,0 +1,14 @@
+        .img-cuadrada {
+            width: 600px; /* Ajusta el ancho de la imagen */
+            height: 600px; /* Ajusta la altura de la imagen */
+            border-radius: 15px; /* Aumenta el radio del borde */
+            border: 3px solid #ccc; /* Aumenta el grosor del borde */
+            padding: 10px; /* Aumenta el espacio interno del borde */
+            object-fit: cover;
+        }
+
+        .contenedor-imagen {
+            max-width: 100%; /* Ajusta el ancho máximo del contenedor */
+            text-align: center; /* Centra la imagen horizontalmente */
+			padding-bottom: 100px;
+        }

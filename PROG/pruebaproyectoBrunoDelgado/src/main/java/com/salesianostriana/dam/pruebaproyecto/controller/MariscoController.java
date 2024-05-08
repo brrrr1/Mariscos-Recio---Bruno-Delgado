@@ -71,4 +71,16 @@ public class MariscoController {
 		return "redirect:/admin/marisco/listaMarisco";
 	}
 
+	@GetMapping("/productoMarisco/{id}")
+	public String mostrarPaginaProductoMarisco(@PathVariable("id") long id, Model model) {
+		if (servicioMarisco.findById(id).isPresent()) {
+			model.addAttribute("marisco", servicioMarisco.findById(id).get());
+			return "compraMarisco";
+		} else {
+
+			return "redirect:/admin/marisco/listaMarisco";
+		}
+
+	}
+
 }

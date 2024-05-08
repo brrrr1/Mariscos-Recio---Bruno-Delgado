@@ -70,4 +70,16 @@ public class MerchController {
 		return "redirect:/admin/merch/listaMerch";
 	}
 
+	@GetMapping("/productoMerch/{id}")
+	public String mostrarPaginaProducto(@PathVariable("id") long id, Model model) {
+		if (servicio.findById(id).isPresent()) {
+			model.addAttribute("merch", servicio.findById(id).get());
+			return "compraMerch";
+		} else {
+
+			return "redirect:/admin/merch/listaMerch";
+		}
+
+	}
+
 }

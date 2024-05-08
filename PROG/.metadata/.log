@@ -3294,3 +3294,381 @@ java.lang.NullPointerException: Cannot invoke "org.eclipse.m2e.core.project.IMav
 
 !ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:05:55.712
 !MESSAGE Boot project ADDED: COPIARAMAS
+!SESSION 2024-05-08 12:12:03.138 -----------------------------------------------
+eclipse.buildId=4.22.0.202403071427
+java.version=17.0.10
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.emf.ecore 2 0 2024-05-08 12:12:04.804
+!MESSAGE Both 'org.eclipse.jst.j2ee.core' and 'org.eclipse.jst.j2ee.core' register a package for 'application.xmi'
+
+!ENTRY ch.qos.logback.classic 1 0 2024-05-08 12:12:05.069
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-05-08 12:12:08.342
+!MESSAGE Logback config file: C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.0.20240217-1525.xml
+
+!ENTRY org.eclipse.ui 2 0 2024-05-08 12:12:08.778
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-05-08 12:12:08.778
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2024-05-08 12:12:09.091
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-05-08 12:12:09.091
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-05-08 12:12:12.835
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\delgado.hebru24_tria'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:12:13.284
+!MESSAGE Boot project ADDED: COPIADESEGURIDAD0705
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:12:13.284
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:12:13.763
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:12:13.764
+!MESSAGE Boot project ADDED: COPIARAMAS
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:12:13.767
+!MESSAGE Boot project ADDED: Ejemplo01HolaMundo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:12:13.767
+!MESSAGE Boot project ADDED: Ejemplo03BuclesYSwitch
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:12:13.768
+!MESSAGE Boot project ADDED: EjemploFormularios01
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:12:13.769
+!MESSAGE Boot project ADDED: EjemploFormularios02
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:12:13.772
+!MESSAGE Boot project ADDED: EjemploFragmentos
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:12:13.773
+!MESSAGE Boot project ADDED: EjemploSpringCore
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:12:13.774
+!MESSAGE Boot project ADDED: EjemploSpringCore2
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:12:13.776
+!MESSAGE Boot project ADDED: EjemploSpringCoreWeb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:12:13.777
+!MESSAGE Boot project ADDED: SeguridadEnMemoria
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:12:13.777
+!MESSAGE Boot project ADDED: UD8E01HolaMundo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:12:13.778
+!MESSAGE Boot project ADDED: UD8E02OperacionesYCondiciones
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:12:13.781
+!MESSAGE Boot project ADDED: UD8E03BuclesYSwitch
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:12:13.781
+!MESSAGE Boot project ADDED: UD8E07FechasSinBD
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:12:13.782
+!MESSAGE Boot project ADDED: UD8E08CRUDCompleto
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:12:13.783
+!MESSAGE Boot project ADDED: UD8E09ListadosBasicos
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:12:13.784
+!MESSAGE Boot project ADDED: pruebaproyectoBrunoDelgado
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:12:13.784
+!MESSAGE Boot project ADDED: pruebaproyectoBrunoDelgadoCOPIADESEGURIDAD
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:12:13.785
+!MESSAGE Boot project ADDED: pruebaproyectoBrunoDelgadoCOPIADESEGURIDAD(HERENCIA)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:12:13.787
+!MESSAGE Boot project ADDED: pruebaproyectoBrunoDelgadoPROBLEMA
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-08 12:12:13.834
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+C:\Users\delgado.hebru24_tria\Downloads\sts-4.22.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\jre\bin\javaw.exe
+-cp
+C:\Users\delgado.hebru24_tria\Downloads\sts-4.22.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.53.0.202403071323\servers\spring-boot-language-server\BOOT-INF\classes;C:\Users\delgado.hebru24_tria\Downloads\sts-4.22.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.53.0.202403071323\servers\spring-boot-language-server\BOOT-INF\lib\*
+-Dsts.lsp.client=eclipse
+-Dlsp.completions.indentation.enable=true
+-Xmx1024m
+-XX:+HeapDumpOnOutOfMemoryError
+-XX:TieredStopAtLevel=1
+-Xlog:jni+resolve=off
+-Dspring.config.location=file:C:\Users\delgado.hebru24_tria\Downloads\sts-4.22.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.53.0.202403071323\servers\spring-boot-language-server\BOOT-INF\classes\application.properties
+-XX:ErrorFile=C:/Users/delgado.hebru24_tria/Desktop/prrr/PROG/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1715163133833
+org.springframework.ide.vscode.boot.app.BootLanguageServerBootApp
+--languageserver.hover-timeout=225
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:12:13.834
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-08 12:12:14.091
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 4956
+!SESSION 2024-05-08 12:14:08.556 -----------------------------------------------
+eclipse.buildId=4.22.0.202403071427
+java.version=17.0.10
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.emf.ecore 2 0 2024-05-08 12:14:10.677
+!MESSAGE Both 'org.eclipse.jst.j2ee.core' and 'org.eclipse.jst.j2ee.core' register a package for 'application.xmi'
+
+!ENTRY ch.qos.logback.classic 1 0 2024-05-08 12:14:10.896
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-05-08 12:14:14.206
+!MESSAGE Logback config file: C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.0.20240217-1525.xml
+
+!ENTRY org.eclipse.ui 2 0 2024-05-08 12:14:14.668
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-05-08 12:14:14.668
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2024-05-08 12:14:14.965
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-05-08 12:14:14.965
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-08 12:14:19.292
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+C:\Users\delgado.hebru24_tria\Downloads\sts-4.22.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\jre\bin\javaw.exe
+-cp
+C:\Users\delgado.hebru24_tria\Downloads\sts-4.22.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.53.0.202403071323\servers\spring-boot-language-server\BOOT-INF\classes;C:\Users\delgado.hebru24_tria\Downloads\sts-4.22.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.53.0.202403071323\servers\spring-boot-language-server\BOOT-INF\lib\*
+-Dsts.lsp.client=eclipse
+-Dlsp.completions.indentation.enable=true
+-Xmx1024m
+-XX:+HeapDumpOnOutOfMemoryError
+-XX:TieredStopAtLevel=1
+-Xlog:jni+resolve=off
+-Dspring.config.location=file:C:\Users\delgado.hebru24_tria\Downloads\sts-4.22.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.53.0.202403071323\servers\spring-boot-language-server\BOOT-INF\classes\application.properties
+-XX:ErrorFile=C:/Users/delgado.hebru24_tria/Desktop/prrr/PROG/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1715163259292
+org.springframework.ide.vscode.boot.app.BootLanguageServerBootApp
+--languageserver.hover-timeout=225
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:14:19.292
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-08 12:14:19.417
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 15488
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-05-08 12:14:21.218
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\delgado.hebru24_tria'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:14:21.325
+!MESSAGE Boot project ADDED: COPIADESEGURIDAD0705
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:14:21.325
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:14:21.327
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:14:21.328
+!MESSAGE Boot project ADDED: COPIARAMAS
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:14:21.328
+!MESSAGE Boot project ADDED: Ejemplo01HolaMundo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:14:21.329
+!MESSAGE Boot project ADDED: Ejemplo03BuclesYSwitch
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:14:21.329
+!MESSAGE Boot project ADDED: EjemploFormularios01
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:14:21.330
+!MESSAGE Boot project ADDED: EjemploFormularios02
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:14:21.330
+!MESSAGE Boot project ADDED: EjemploFragmentos
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:14:21.331
+!MESSAGE Boot project ADDED: EjemploSpringCore
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:14:21.331
+!MESSAGE Boot project ADDED: EjemploSpringCore2
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:14:21.332
+!MESSAGE Boot project ADDED: EjemploSpringCoreWeb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:14:21.333
+!MESSAGE Boot project ADDED: SeguridadEnMemoria
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:14:21.333
+!MESSAGE Boot project ADDED: UD8E01HolaMundo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:14:21.334
+!MESSAGE Boot project ADDED: UD8E02OperacionesYCondiciones
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:14:21.335
+!MESSAGE Boot project ADDED: UD8E03BuclesYSwitch
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:14:21.335
+!MESSAGE Boot project ADDED: UD8E07FechasSinBD
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:14:21.336
+!MESSAGE Boot project ADDED: UD8E08CRUDCompleto
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:14:21.336
+!MESSAGE Boot project ADDED: UD8E09ListadosBasicos
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:14:21.337
+!MESSAGE Boot project ADDED: pruebaproyectoBrunoDelgado
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:14:21.338
+!MESSAGE Boot project ADDED: pruebaproyectoBrunoDelgadoCOPIADESEGURIDAD
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:14:21.339
+!MESSAGE Boot project ADDED: pruebaproyectoBrunoDelgadoCOPIADESEGURIDAD(HERENCIA)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:14:21.339
+!MESSAGE Boot project ADDED: pruebaproyectoBrunoDelgadoPROBLEMA
+!SESSION 2024-05-08 12:15:26.847 -----------------------------------------------
+eclipse.buildId=4.22.0.202403071427
+java.version=17.0.10
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.emf.ecore 2 0 2024-05-08 12:15:28.489
+!MESSAGE Both 'org.eclipse.jst.j2ee.core' and 'org.eclipse.jst.j2ee.core' register a package for 'application.xmi'
+
+!ENTRY ch.qos.logback.classic 1 0 2024-05-08 12:15:28.723
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-05-08 12:15:32.655
+!MESSAGE Logback config file: C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.0.20240217-1525.xml
+
+!ENTRY org.eclipse.ui 2 0 2024-05-08 12:15:33.092
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-05-08 12:15:33.092
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2024-05-08 12:15:33.409
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-05-08 12:15:33.409
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-08 12:15:37.666
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+C:\Users\delgado.hebru24_tria\Downloads\sts-4.22.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143\jre\bin\javaw.exe
+-cp
+C:\Users\delgado.hebru24_tria\Downloads\sts-4.22.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.53.0.202403071323\servers\spring-boot-language-server\BOOT-INF\classes;C:\Users\delgado.hebru24_tria\Downloads\sts-4.22.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.53.0.202403071323\servers\spring-boot-language-server\BOOT-INF\lib\*
+-Dsts.lsp.client=eclipse
+-Dlsp.completions.indentation.enable=true
+-Xmx1024m
+-XX:+HeapDumpOnOutOfMemoryError
+-XX:TieredStopAtLevel=1
+-Xlog:jni+resolve=off
+-Dspring.config.location=file:C:\Users\delgado.hebru24_tria\Downloads\sts-4.22.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.53.0.202403071323\servers\spring-boot-language-server\BOOT-INF\classes\application.properties
+-XX:ErrorFile=C:/Users/delgado.hebru24_tria/Desktop/prrr/PROG/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1715163337665
+org.springframework.ide.vscode.boot.app.BootLanguageServerBootApp
+--languageserver.hover-timeout=225
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:15:37.667
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-08 12:15:37.671
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 7932
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-05-08 12:15:39.170
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\delgado.hebru24_tria'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:15:39.245
+!MESSAGE Boot project ADDED: COPIADESEGURIDAD0705
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:15:39.247
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:15:39.248
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:15:39.248
+!MESSAGE Boot project ADDED: COPIARAMAS
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:15:39.250
+!MESSAGE Boot project ADDED: Ejemplo01HolaMundo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:15:39.251
+!MESSAGE Boot project ADDED: Ejemplo03BuclesYSwitch
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:15:39.252
+!MESSAGE Boot project ADDED: EjemploFormularios01
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:15:39.254
+!MESSAGE Boot project ADDED: EjemploFormularios02
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:15:39.254
+!MESSAGE Boot project ADDED: EjemploFragmentos
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:15:39.255
+!MESSAGE Boot project ADDED: EjemploSpringCore
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:15:39.255
+!MESSAGE Boot project ADDED: EjemploSpringCore2
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:15:39.256
+!MESSAGE Boot project ADDED: EjemploSpringCoreWeb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:15:39.256
+!MESSAGE Boot project ADDED: SeguridadEnMemoria
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:15:39.257
+!MESSAGE Boot project ADDED: UD8E01HolaMundo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:15:39.258
+!MESSAGE Boot project ADDED: UD8E02OperacionesYCondiciones
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:15:39.259
+!MESSAGE Boot project ADDED: UD8E03BuclesYSwitch
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:15:39.259
+!MESSAGE Boot project ADDED: UD8E07FechasSinBD
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:15:39.260
+!MESSAGE Boot project ADDED: UD8E08CRUDCompleto
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:15:39.260
+!MESSAGE Boot project ADDED: UD8E09ListadosBasicos
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:15:39.261
+!MESSAGE Boot project ADDED: pruebaproyectoBrunoDelgado
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:15:39.261
+!MESSAGE Boot project ADDED: pruebaproyectoBrunoDelgadoCOPIADESEGURIDAD
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:15:39.262
+!MESSAGE Boot project ADDED: pruebaproyectoBrunoDelgadoCOPIADESEGURIDAD(HERENCIA)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-08 12:15:39.262
+!MESSAGE Boot project ADDED: pruebaproyectoBrunoDelgadoPROBLEMA

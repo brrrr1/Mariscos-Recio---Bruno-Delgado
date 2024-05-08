@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplo de un CRUD completo</title>
+</head>
+
+<body>
+	<div id="menu">
+		<a th:href="@{listaUsuarios}">Inicio</a> | <a th:href="@{uform}">Nuevo usuario</a>
+	</div>
+	<br /><br />
+	<table border=1>
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Nombre</th>
+				<th>Apellido</th>
+				<th>dni</th>
+				<th>email</th>
+				<th>contrasenia</th>
+				<th>Nº de Pedidos</th>
+				<th>Dirección</th>
+				<th>Admin</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="usuario : ${listaUsuarios}">
+				<td th:text="${usuario.id}">1</td>
+				<td th:text="${usuario.nombre}">Nombre</td>
+				<td th:text="${usuario.apellido}">Descripción</td>
+				<td th:text="${usuario.dni}">DNI</td>
+				<td th:text="${usuario.email}">email</td>
+				<td th:text="${usuario.contrasenia}">Contraseña</td>
+				<td th:text="${usuario.numPedidos}">Nº de Pedidos</td>
+				<td th:text="${usuario.direccion}">direccion</td>
+				<td th:text="${usuario.esAdmin}">Admin</td>
+				<td>
+					<a href="#" th:href="@{/admin/usuarios/editarUsuario/{id}(id=${usuario.id})}">Editar</a> |
+					<a href="#" th:href="@{/admin/usuarios/borrarUsuario/{id}(id=${usuario.id})}">Borrar</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+
+</html>

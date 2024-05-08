@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	<style>
+		body {
+			background-color: #dc3545;
+
+		}
+	</style>
+</head>
+
+<body>
+	<!--<div id="menu">
+		<a th:href="@{/listaMerch}">Inicio</a>
+	</div>-->
+	<div class="d-flex justify-content-center" id="merchForm">
+		<div id="formulario">
+			<img src="../../static/img/logo.png" th:src="@{/img/logo.png}" alt="Logo">
+			<form th:action="${merch.id != 0} ? @{submit} : @{addMerch}"
+				th:object="${merch}" method="post">
+				<div class="row mb-3">
+					<div class="col">
+						<input th:if="${merch.id != 0}" type="hidden" name="id" th:field="*{id}" />
+					</div>
+				</div>
+				<div class="row mb-3">
+					<div class="col">
+						<input type="text" name="nombre" th:field="*{nombre}" placeholder="Nombre" />
+					</div>
+				</div>
+				<div class="row mb-3">
+					<div class="col">
+						<input type="text" name="descripcion" th:field="*{descripcion}" placeholder="Descripción" />
+					</div>
+				</div>
+				<div class="row mb-3">
+					<div class="col">
+						<input type="number	" name="precio" th:field="*{precio}" placeholder="Precio">
+					</div>
+				</div>
+				<div class="row mb-3">
+					<div class="col">
+						<input type="number" name="stock" th:field="*{stock}" placeholder="Unidades">
+					</div>
+				</div>
+
+				<button type="submit" class="btn btn-primary">Submit</button>
+				<input type="submit" name="enviar" value="Enviar" />
+			</form>
+		</div>
+	</div>
+	</div>
+
+
+	</form>
+</body>
+
+</html>

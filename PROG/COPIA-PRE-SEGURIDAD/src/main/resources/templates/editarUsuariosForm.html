@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formulario</title>
+</head>
+
+<body>
+	<form th:action="${usuario.id != 0} ? @{/editarUsuario/submit} : @{/addUsuario}" th:object="${usuario}"
+		method="post">
+		<table>
+			<div class="row mb-3">
+				<div class="col">
+					<input th:if="${usuario.id != 0}" type="hidden" name="id" th:field="*{id}" />
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="col">
+					<label for="Nombre" class="form-label text-white">Nombre:</label>
+					<input type="text" th:field="*{nombre}" class="form-control" placeholder="Nombre">
+				</div>
+				<div class="col">
+					<label for="Apellido" class="form-label text-white">Apellido:</label>
+					<input type="text" th:field="*{apellido}" class="form-control" placeholder="Apellido">
+				</div>
+			</div>
+			<div class="row mb-3">
+				<div class="col">
+					<label for="DNI" class="form-label text-white">DNI:</label>
+					<input type="text" th:field="*{dni}" class="form-control" placeholder="DNI">
+				</div>
+			</div>
+			<div class="mb-3 mt-3 pt-5">
+				<label for="text" class="form-label text-white">Correo:</label>
+				<input type="email" th:field="*{email}" class="form-control" id="email" placeholder="Enter email"
+					name="email">
+			</div>
+			<div class="mb-3">
+				<label for="pwd" class="form-label text-white">Contraseña:</label>
+				<input type="password" th:field="*{contrasenia}" class="form-control" id="pwd"
+					placeholder="Enter password" name="pswd">
+			</div>
+			<div class="row mb-3">
+				<div class="col">
+					<label for="direccion" class="form-label text-white">Dirección:</label>
+					<input type="text" th:field="*{direccion}" class="form-control" placeholder="direccion">
+				</div>
+				<tr>
+					<td><input type="submit" value="Submit" /></td>
+				</tr>
+		</table>
+	</form>
+</body>
+
+</html>

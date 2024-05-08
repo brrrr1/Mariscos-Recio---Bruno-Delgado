@@ -24,4 +24,6 @@
     <fullyQualifiedTypeName name="org.springframework.security.provisioning.InMemoryUserDetailsManager"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Entity"/>
     <fullyQualifiedTypeName name="jakarta.persistence.DiscriminatorValue"/>
+    <fullyQualifiedTypeName name="com.salesianostriana.dam.pruebaproyecto.model.Empleado"/>
+    <fullyQualifiedTypeName name="com.salesianostriana.dam.pruebaproyecto.model.Usuario"/>
 </qualifiedTypeNameHistroy>

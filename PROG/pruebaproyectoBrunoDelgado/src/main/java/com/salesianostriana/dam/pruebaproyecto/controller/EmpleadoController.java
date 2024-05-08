@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.salesianostriana.dam.pruebaproyecto.model.Empleado;
 import com.salesianostriana.dam.pruebaproyecto.service.EmpleadoService;
+import com.salesianostriana.dam.pruebaproyecto.service.UsuarioService;
 
 @Controller
 @RequestMapping("/admin/empleados")
@@ -18,6 +19,9 @@ public class EmpleadoController {
 
 	@Autowired
 	private EmpleadoService servicioEmpleado;
+
+	@Autowired
+	private UsuarioService servicioUsuario;
 
 	@GetMapping("/empleados")
 	public String controladorEmpleados(Model model) {
@@ -41,6 +45,7 @@ public class EmpleadoController {
 	@PostMapping("/addEmpleado")
 	public String submit(@ModelAttribute("empleado") Empleado empleado, Model model) {
 		servicioEmpleado.save(empleado);
+		servicioUsuario.save(servicioEmpleado.generarUsuario(empleado));
 		model.addAttribute("empleado", empleado);
 		return "redirect:/admin/empleados/listaEmpleados";
 	}

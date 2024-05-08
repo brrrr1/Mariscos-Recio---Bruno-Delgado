@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Empleados</title>
+</head>
+
+<body>
+	<div id="menu">
+		<a th:href="@{listaEmpleados}">Inicio</a> | <a th:href="@{eform}">Nuevo empleado</a>
+	</div>
+	<br /><br />
+	<table border=1>
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Nombre</th>
+				<th>Apellido</th>
+				<th>Sueldo</th>
+				<th>Fecha de Ingreso</th>
+				<th>Fecha de Salida</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="empleado : ${listaEmpleados}">
+				<td th:text="${empleado.id}">1</td>
+				<td th:text="${empleado.nombre}">Nombre</td>
+				<td th:text="${empleado.apellido}">Apellido</td>
+				<td th:text="${empleado.sueldo}">Sueldo</td>
+				<td th:text="${#temporals.format(empleado.fechaIngreso)}">Fecha de Ingreso</td>
+				<td th:text="${#temporals.format(empleado.fechaSalida)}">Fecha de Salida</td>
+				<td>
+					<a href="#" th:href="@{/admin/empleados/editarEmpleado/{id}(id=${empleado.id})}">Editar</a> |
+					<a href="#" th:href="@{/admin/empleados/borrarEmpleado/{id}(id=${empleado.id})}">Borrar</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+
+</html>

@@ -14,3 +14,8 @@ insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype
 insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype) values (7, 'Bogavante', 'Si quiere una cena elegante... ¡Llévese un bogavante!', 120, 'https://www.gastronomiavasca.net/uploads/image/file/3235/w700_bogavante.jpg', 75, 130, 'MAR');
 
 ALTER SEQUENCE producto_seq RESTART WITH (57);
+
+insert into usuario (id, nombre, apellido, dni, email, contrasenia, num_pedidos, direccion, es_admin, es_empleado) values (1, 'Antonio', 'Recio', '12345678A', 'antonio@mariscosrecio.es', 'pizarro1234', '0', 'Mirador de Montepinar 7 1ºC', true, false);
+insert into usuario (id, nombre, apellido, dni, email, contrasenia, num_pedidos, direccion, es_admin, es_empleado) values (2, 'Fermín', 'Trujillo', '12345678B', 'ferminespetos69@gmail.com', 'motoespeto', '0', 'Mirador de Montepinar 7 2ºB', false, false);
+
+ALTER SEQUENCE empleado_seq RESTART WITH (52);

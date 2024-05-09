@@ -41,18 +41,25 @@ public class SecurityConfig {
 	}
 
 	@Bean
-	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-		
-		http.authorizeHttpRequests(
-				(authz) -> authz
-				.requestMatchers("/css/**", "/js/**").permitAll()
-				.anyRequest().authenticated())
-			.formLogin((loginz) -> loginz
-					.loginPage("/login").permitAll());
+	SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+		http.authorizeHttpRequests((authz) -> authz.requestMatchers("/css/**", "/js/**", "/h2-console/**").permitAll()
+				/* .requestMatchers("/empleado/***").hasAnyRole("EMPLEADO") */
+				.requestMatchers("/admin/***").hasAnyRole("ADMIN").anyRequest().authenticated())
+				.formLogin((loginz) -> loginz.loginPage("/login")
+						.permitAll()/*
+									 * para cambiar la ruta .loginProcessingUrl("/ruta GetMapping") NO EL HTML, LA
+									 * RUTA DEL CONTROLADOR
+									 */ );
+		// aquí tendría que meter lo que puede hacer el empleado
+		// .hasAnyRole("ADMIN", "EMPLEADO") para sitios de los dos o
+		// .hasAnyRole("EMPLEADO") para sitios de empleados.
+
+		// Añadimos esto para poder seguir accediendo a la consola de H2
+		// con Spring Security habilitado.
+		http.csrf(csrfz -> csrfz.disable());
+		http.headers(headersz -> headersz.frameOptions(frameOptionsz -> frameOptionsz.disable()));
 
 		return http.build();
 	}
-	
-	
 
 }

@@ -13769,3 +13769,146 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact antlr:antlr:j
 2024-05-09 17:00:17,150 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2024-05-09 17:00:17,157 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
 2024-05-09 17:00:17,169 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 17:33:11,118 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-05-09 17:34:17,356 [Worker-10: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.salesianostriana.dam:pruebaproyecto:0.0.1-SNAPSHOT @ C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\COPIADESEGURIDAD-ANTES-DE-SECURITY\pom.xml.
+2024-05-09 17:34:17,846 [Worker-10: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.salesianostriana.dam:pruebaproyecto:0.0.1-SNAPSHOT @ C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\pom.xml.
+2024-05-09 17:34:18,043 [Worker-10: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.salesianostriana.dam:ud8e09listadosbasicos:0.0.1-SNAPSHOT @ C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\UD8E09ListadosBasicos\pom.xml.
+2024-05-09 17:34:20,159 [Worker-10: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pruebaproyectoBrunoDelgado/src/main/java
+2024-05-09 17:34:20,161 [Worker-10: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pruebaproyectoBrunoDelgado/src/main/resources
+2024-05-09 17:34:20,163 [Worker-10: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pruebaproyectoBrunoDelgado/src/main/resources
+2024-05-09 17:34:20,165 [Worker-10: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pruebaproyectoBrunoDelgado/src/test/java
+2024-05-09 17:34:20,166 [Worker-10: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pruebaproyectoBrunoDelgado/src/test/resources
+2024-05-09 17:34:20,846 [Worker-10: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /UD8E09ListadosBasicos/src/main/java
+2024-05-09 17:34:20,848 [Worker-10: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /UD8E09ListadosBasicos/src/main/resources
+2024-05-09 17:34:20,849 [Worker-10: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /UD8E09ListadosBasicos/src/main/resources
+2024-05-09 17:34:20,849 [Worker-10: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /UD8E09ListadosBasicos/src/test/java
+2024-05-09 17:34:20,850 [Worker-10: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /UD8E09ListadosBasicos/src/test/resources
+2024-05-09 17:34:21,414 [Worker-10: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 3 project(s) in 5 sec
+2024-05-09 17:34:21,943 [Worker-5: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2024-05-09 17:34:22,929 [Worker-5: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.salesianostriana.dam:pruebaproyecto:0.0.1-SNAPSHOT @ C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\COPIADESEGURIDAD-ANTES-DE-SECURITY\pom.xml.
+2024-05-09 17:34:23,320 [Worker-5: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.salesianostriana.dam:ud8e09listadosbasicos:0.0.1-SNAPSHOT @ C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\UD8E09ListadosBasicos\pom.xml.
+2024-05-09 17:34:23,480 [Worker-5: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.salesianostriana.dam:pruebaproyecto:0.0.1-SNAPSHOT @ C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\pom.xml.
+2024-05-09 17:34:24,871 [Worker-5: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /COPIADESEGURIDAD-ANTES-DE-SECURITY/src/main/java
+2024-05-09 17:34:24,872 [Worker-5: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /COPIADESEGURIDAD-ANTES-DE-SECURITY/src/main/resources
+2024-05-09 17:34:24,879 [Worker-5: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /COPIADESEGURIDAD-ANTES-DE-SECURITY/src/main/resources
+2024-05-09 17:34:24,883 [Worker-5: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /COPIADESEGURIDAD-ANTES-DE-SECURITY/src/test/java
+2024-05-09 17:34:24,884 [Worker-5: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /COPIADESEGURIDAD-ANTES-DE-SECURITY/src/test/resources
+2024-05-09 17:34:25,504 [Worker-5: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /UD8E09ListadosBasicos/src/main/java
+2024-05-09 17:34:25,506 [Worker-5: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /UD8E09ListadosBasicos/src/main/resources
+2024-05-09 17:34:25,506 [Worker-5: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /UD8E09ListadosBasicos/src/main/resources
+2024-05-09 17:34:25,507 [Worker-5: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /UD8E09ListadosBasicos/src/test/java
+2024-05-09 17:34:25,508 [Worker-5: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /UD8E09ListadosBasicos/src/test/resources
+2024-05-09 17:34:25,969 [Worker-5: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pruebaproyectoBrunoDelgado/src/main/java
+2024-05-09 17:34:25,970 [Worker-5: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pruebaproyectoBrunoDelgado/src/main/resources
+2024-05-09 17:34:25,971 [Worker-5: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pruebaproyectoBrunoDelgado/src/main/resources
+2024-05-09 17:34:25,972 [Worker-5: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pruebaproyectoBrunoDelgado/src/test/java
+2024-05-09 17:34:25,972 [Worker-5: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pruebaproyectoBrunoDelgado/src/test/resources
+2024-05-09 17:34:26,686 [Worker-5: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 3 poms: local refresh takes 0,00 sec, refresh facades takes 2,00 sec, update config takes 1,00 sec 
+2024-05-09 17:34:27,976 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 17:34:28,013 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 36 resources from src\main\resources to target\classes
+2024-05-09 17:34:28,071 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\COPIADESEGURIDAD-ANTES-DE-SECURITY\src\test\resources
+2024-05-09 17:34:28,870 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 17:34:28,889 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 5 resources from src\main\resources to target\classes
+2024-05-09 17:34:28,903 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\UD8E09ListadosBasicos\src\test\resources
+2024-05-09 17:34:29,444 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 17:34:29,455 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 17:34:29,516 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 17:36:17,762 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 17:36:17,769 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 17:36:17,782 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 17:36:44,408 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 17:36:44,418 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 17:36:44,431 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 17:37:11,338 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 17:37:11,347 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 17:37:11,361 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 17:37:18,007 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 17:37:18,011 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 17:37:18,024 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 17:37:35,464 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 17:37:35,473 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 17:37:35,493 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 17:37:45,053 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 17:37:45,061 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 17:37:45,072 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 17:37:54,703 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 17:37:54,710 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 17:37:54,722 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 17:38:31,891 [Worker-3: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.salesianostriana.dam:12_SeguridadEnMemoria:0.0.1-SNAPSHOT @ C:\Users\bruno\OneDrive\Escritorio\CLASE\BBDD\bbdd-2024\Material\12_SeguridadEnMemoria\pom.xml.
+2024-05-09 17:38:32,276 [Worker-3: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.salesianostriana.dam:13_SeguridadConUDS:0.0.1-SNAPSHOT @ C:\Users\bruno\OneDrive\Escritorio\CLASE\BBDD\bbdd-2024\Material\13_SeguridadConUDS\pom.xml.
+2024-05-09 17:38:34,149 [Worker-3: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /12_SeguridadEnMemoria/src/main/java
+2024-05-09 17:38:34,149 [Worker-3: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /12_SeguridadEnMemoria/src/main/resources
+2024-05-09 17:38:34,150 [Worker-3: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /12_SeguridadEnMemoria/src/main/resources
+2024-05-09 17:38:34,150 [Worker-3: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /12_SeguridadEnMemoria/src/test/java
+2024-05-09 17:38:34,151 [Worker-3: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /12_SeguridadEnMemoria/src/test/resources
+2024-05-09 17:38:35,227 [Worker-3: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /13_SeguridadConUDS/src/main/java
+2024-05-09 17:38:35,228 [Worker-3: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /13_SeguridadConUDS/src/main/resources
+2024-05-09 17:38:35,228 [Worker-3: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /13_SeguridadConUDS/src/main/resources
+2024-05-09 17:38:35,229 [Worker-3: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /13_SeguridadConUDS/src/test/java
+2024-05-09 17:38:35,230 [Worker-3: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /13_SeguridadConUDS/src/test/resources
+2024-05-09 17:38:36,144 [Worker-3: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 2 project(s) in 4 sec
+2024-05-09 17:38:36,732 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-05-09 17:38:36,732 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2024-05-09 17:38:36,743 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2024-05-09 17:38:36,756 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-05-09 17:38:36,756 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\BBDD\bbdd-2024\Material\12_SeguridadEnMemoria\src\test\resources
+2024-05-09 17:38:37,372 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-05-09 17:38:37,374 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2024-05-09 17:38:37,386 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2024-05-09 17:38:37,405 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2024-05-09 17:38:37,405 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\BBDD\bbdd-2024\Material\13_SeguridadConUDS\src\test\resources
+2024-05-09 17:38:53,497 [Worker-11: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.salesianostriana.dam:serviciobase:0.0.1-SNAPSHOT @ C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\BBDD\WS\ServicioBase\pom.xml.
+2024-05-09 17:38:54,531 [Worker-11: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /serviciobase/src/main/java
+2024-05-09 17:38:54,531 [Worker-11: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /serviciobase/src/main/resources
+2024-05-09 17:38:54,537 [Worker-11: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /serviciobase/src/main/resources
+2024-05-09 17:38:54,544 [Worker-11: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /serviciobase/src/test/java
+2024-05-09 17:38:54,545 [Worker-11: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /serviciobase/src/test/resources
+2024-05-09 17:38:55,420 [Worker-11: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 2 sec
+2024-05-09 17:38:55,760 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 17:38:55,778 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2024-05-09 17:38:55,786 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\BBDD\WS\ServicioBase\src\test\resources
+2024-05-09 17:39:32,072 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 17:39:32,078 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 17:39:32,092 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 17:40:09,480 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 17:40:09,486 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 17:40:09,499 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 17:41:09,717 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 17:41:09,724 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 17:41:09,735 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 17:41:12,556 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 17:41:12,564 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 17:41:12,576 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 17:43:01,115 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 17:43:01,123 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 17:43:01,137 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 17:43:09,779 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 17:43:09,787 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 17:43:09,798 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 17:43:32,030 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 17:43:32,038 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 17:43:32,050 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 17:43:33,317 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 17:43:33,328 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 17:43:33,352 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 17:43:35,474 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 17:43:35,480 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 17:43:35,492 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 17:44:27,595 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 17:44:27,604 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 17:44:27,621 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 17:44:46,049 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 17:44:46,056 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 17:44:46,068 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 17:44:58,405 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 17:44:58,413 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 17:44:58,426 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 17:45:33,300 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 17:45:33,307 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 17:45:33,319 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 17:45:35,473 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 17:45:35,479 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 17:45:35,492 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 17:45:37,588 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 17:45:37,594 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 17:45:37,606 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources

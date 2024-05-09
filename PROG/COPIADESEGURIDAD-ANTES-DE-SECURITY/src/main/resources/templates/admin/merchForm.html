@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	<title>Formulario Merch</title>
+	<style>
+		body {
+			background-color: #dc3545;
+		}
+		
+	</style>
+</head>
+
+<body>
+	<div class="d-flex justify-content-center" id="merchsForm">
+		<img src="../../static/img/logo.png" th:src="@{/img/logo.png}" alt="Logo">
+		<form th:action="${merch.id != 0} ? @{submit} : @{addMerch}" th:object="${merch}" method="post">
+				<div class="row mb-3">
+					<div class="col">
+						<input th:if="${merch.id != 0}" type="hidden" name="id" th:field="*{id}" />
+					</div>
+				</div>
+				<div class="row mb-3">
+					<div class="col">
+						<input th:if="${merch.id != 0}" type="hidden" name="likes" th:field="*{likes}" />
+					</div>
+				</div>
+				<div class="row mb-3">
+					<div class="col">
+						<label for="Nombre" class="form-label text-white">Nombre:</label>
+						<input type="text" th:field="*{nombre}" class="form-control" placeholder="Nombre">
+					</div>
+				</div>
+				<div class="row mb-3">
+					<div class="col">
+						<label for="Descripcion" class="form-label text-white">Descripción:</label>
+						<input type="text" class="form-control" placeholder="Descripcion" th:field="*{descripcion}">
+					</div>
+				</div>
+				<div class="row mb-3">
+					<div class="col">
+						<label for="Foto" class="form-label text-white">Foto:</label>
+						<input type="text" class="form-control" placeholder="Foto" th:field="*{foto}">
+					</div>
+				</div>
+				<div class="row mb-3">
+					<div class="col">
+						<label for="Precio" class="form-label text-white">Precio:</label>
+						<input type="text" th:field="*{precio}" class="form-control" placeholder="Precio">
+					</div>
+				</div>
+				<div class="row mb-3">
+					<div class="col">
+						<label for="Unidades" class="form-label text-white">Unidades disponibles:</label>
+						<input type="number" class="form-control" placeholder="Unidades" th:field="*{stock}">
+					</div>
+				</div>
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+	</div>
+</body>
+
+</html>

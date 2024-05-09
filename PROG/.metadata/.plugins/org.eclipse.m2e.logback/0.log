@@ -12679,3 +12679,506 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact antlr:antlr:j
 2024-05-08 19:16:23,400 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2024-05-08 19:16:23,411 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 35 resources from src\main\resources to target\classes
 2024-05-08 19:16:23,422 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 08:00:31,795 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-05-09 08:01:14,405 [Worker-11: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.salesianostriana.dam:pruebaproyecto:0.0.1-SNAPSHOT @ C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\COPIA-PRE-SEGURIDAD\pom.xml.
+2024-05-09 08:01:17,131 [Worker-11: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.salesianostriana.dam:pruebaproyecto:0.0.1-SNAPSHOT @ C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\pom.xml.
+2024-05-09 08:01:17,393 [Worker-11: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.salesianostriana.dam:seguridadenmemoria:0.0.1-SNAPSHOT @ C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\SeguridadEnMemoria\pom.xml.
+2024-05-09 08:01:17,832 [Worker-11: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.salesianostriana.dam:ud8e09listadosbasicos:0.0.1-SNAPSHOT @ C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\UD8E09ListadosBasicos\pom.xml.
+2024-05-09 08:01:25,305 [Worker-11: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /SeguridadEnMemoria/src/main/java
+2024-05-09 08:01:25,308 [Worker-11: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /SeguridadEnMemoria/src/main/resources
+2024-05-09 08:01:25,309 [Worker-11: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /SeguridadEnMemoria/src/main/resources
+2024-05-09 08:01:25,311 [Worker-11: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /SeguridadEnMemoria/src/test/java
+2024-05-09 08:01:25,312 [Worker-11: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /SeguridadEnMemoria/src/test/resources
+2024-05-09 08:01:26,440 [Worker-11: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pruebaproyectoBrunoDelgado/src/main/java
+2024-05-09 08:01:26,442 [Worker-11: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pruebaproyectoBrunoDelgado/src/main/resources
+2024-05-09 08:01:26,443 [Worker-11: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pruebaproyectoBrunoDelgado/src/main/resources
+2024-05-09 08:01:26,448 [Worker-11: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pruebaproyectoBrunoDelgado/src/test/java
+2024-05-09 08:01:26,449 [Worker-11: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pruebaproyectoBrunoDelgado/src/test/resources
+2024-05-09 08:01:27,386 [Worker-11: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /UD8E09ListadosBasicos/src/main/java
+2024-05-09 08:01:27,388 [Worker-11: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /UD8E09ListadosBasicos/src/main/resources
+2024-05-09 08:01:27,392 [Worker-11: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /UD8E09ListadosBasicos/src/main/resources
+2024-05-09 08:01:27,393 [Worker-11: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /UD8E09ListadosBasicos/src/test/java
+2024-05-09 08:01:27,394 [Worker-11: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /UD8E09ListadosBasicos/src/test/resources
+2024-05-09 08:01:27,894 [Worker-11: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 4 project(s) in 20 sec
+2024-05-09 08:01:28,604 [Worker-11: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2024-05-09 08:01:29,118 [Worker-11: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.salesianostriana.dam:pruebaproyecto:0.0.1-SNAPSHOT @ C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\pom.xml.
+2024-05-09 08:01:30,095 [Worker-11: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pruebaproyectoBrunoDelgado/src/main/java
+2024-05-09 08:01:30,096 [Worker-11: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pruebaproyectoBrunoDelgado/src/main/resources
+2024-05-09 08:01:30,099 [Worker-11: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pruebaproyectoBrunoDelgado/src/main/resources
+2024-05-09 08:01:30,106 [Worker-11: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pruebaproyectoBrunoDelgado/src/test/java
+2024-05-09 08:01:30,109 [Worker-11: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pruebaproyectoBrunoDelgado/src/test/resources
+2024-05-09 08:01:31,444 [Worker-11: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0,00 sec, refresh facades takes 1,00 sec, update config takes 0,00 sec 
+2024-05-09 08:01:31,466 [Worker-11: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2024-05-09 08:01:32,767 [Worker-11: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.salesianostriana.dam:pruebaproyecto:0.0.1-SNAPSHOT @ C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\COPIA-PRE-SEGURIDAD\pom.xml.
+2024-05-09 08:01:33,851 [Worker-11: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.salesianostriana.dam:seguridadenmemoria:0.0.1-SNAPSHOT @ C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\SeguridadEnMemoria\pom.xml.
+2024-05-09 08:01:34,334 [Worker-11: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.salesianostriana.dam:ud8e09listadosbasicos:0.0.1-SNAPSHOT @ C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\UD8E09ListadosBasicos\pom.xml.
+2024-05-09 08:01:35,819 [Worker-11: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /COPIA-PRE-SEGURIDAD/src/main/java
+2024-05-09 08:01:35,820 [Worker-11: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /COPIA-PRE-SEGURIDAD/src/main/resources
+2024-05-09 08:01:35,829 [Worker-11: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /COPIA-PRE-SEGURIDAD/src/main/resources
+2024-05-09 08:01:35,837 [Worker-11: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /COPIA-PRE-SEGURIDAD/src/test/java
+2024-05-09 08:01:35,838 [Worker-11: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /COPIA-PRE-SEGURIDAD/src/test/resources
+2024-05-09 08:01:36,415 [Worker-11: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /SeguridadEnMemoria/src/main/java
+2024-05-09 08:01:36,416 [Worker-11: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /SeguridadEnMemoria/src/main/resources
+2024-05-09 08:01:36,417 [Worker-11: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /SeguridadEnMemoria/src/main/resources
+2024-05-09 08:01:36,417 [Worker-11: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /SeguridadEnMemoria/src/test/java
+2024-05-09 08:01:36,418 [Worker-11: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /SeguridadEnMemoria/src/test/resources
+2024-05-09 08:01:36,953 [Worker-11: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /UD8E09ListadosBasicos/src/main/java
+2024-05-09 08:01:36,954 [Worker-11: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /UD8E09ListadosBasicos/src/main/resources
+2024-05-09 08:01:36,954 [Worker-11: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /UD8E09ListadosBasicos/src/main/resources
+2024-05-09 08:01:36,955 [Worker-11: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /UD8E09ListadosBasicos/src/test/java
+2024-05-09 08:01:36,956 [Worker-11: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /UD8E09ListadosBasicos/src/test/resources
+2024-05-09 08:01:37,629 [Worker-11: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 3 poms: local refresh takes 0,00 sec, refresh facades takes 4,00 sec, update config takes 1,00 sec 
+2024-05-09 08:01:37,746 [Worker-11: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2024-05-09 08:01:38,195 [Worker-11: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.salesianostriana.dam:pruebaproyecto:0.0.1-SNAPSHOT @ C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\COPIA-PRE-SEGURIDAD\pom.xml.
+2024-05-09 08:01:38,930 [Worker-11: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /COPIA-PRE-SEGURIDAD/src/main/java
+2024-05-09 08:01:38,931 [Worker-11: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /COPIA-PRE-SEGURIDAD/src/main/resources
+2024-05-09 08:01:38,932 [Worker-11: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /COPIA-PRE-SEGURIDAD/src/main/resources
+2024-05-09 08:01:38,932 [Worker-11: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /COPIA-PRE-SEGURIDAD/src/test/java
+2024-05-09 08:01:38,933 [Worker-11: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /COPIA-PRE-SEGURIDAD/src/test/resources
+2024-05-09 08:01:39,532 [Worker-11: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0,00 sec, refresh facades takes 1,00 sec, update config takes 0,00 sec 
+2024-05-09 08:01:42,104 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 08:01:42,198 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 35 resources from src\main\resources to target\classes
+2024-05-09 08:01:42,338 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\COPIA-PRE-SEGURIDAD\src\test\resources
+2024-05-09 08:01:43,604 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 08:01:43,626 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 4 resources from src\main\resources to target\classes
+2024-05-09 08:01:43,647 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\SeguridadEnMemoria\src\test\resources
+2024-05-09 08:01:44,170 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 08:01:44,277 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 5 resources from src\main\resources to target\classes
+2024-05-09 08:01:44,334 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\UD8E09ListadosBasicos\src\test\resources
+2024-05-09 08:01:44,811 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 08:01:44,827 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 35 resources from src\main\resources to target\classes
+2024-05-09 08:01:44,878 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 08:02:26,019 [Worker-10: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.salesianostriana.dam:SeguridadEnUDS:0.0.1-SNAPSHOT @ C:\Users\delgado.hebru24_tria\Desktop\CLASE\BBDD\bbdd-2024\SeguridadEnUDS\pom.xml.
+2024-05-09 08:02:26,904 [Worker-10: Importing Maven projects] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-security/3.2.4/spring-boot-starter-security-3.2.4.pom
+2024-05-09 08:02:26,942 [Worker-10: Importing Maven projects] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-security/3.2.4/spring-boot-starter-security-3.2.4.pom
+2024-05-09 08:02:26,976 [Worker-10: Importing Maven projects] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-config/6.2.3/spring-security-config-6.2.3.pom
+2024-05-09 08:02:26,999 [Worker-10: Importing Maven projects] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-config/6.2.3/spring-security-config-6.2.3.pom
+2024-05-09 08:02:27,017 [Worker-10: Importing Maven projects] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-core/6.2.3/spring-security-core-6.2.3.pom
+2024-05-09 08:02:27,035 [Worker-10: Importing Maven projects] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-core/6.2.3/spring-security-core-6.2.3.pom
+2024-05-09 08:02:27,051 [Worker-10: Importing Maven projects] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-crypto/6.2.3/spring-security-crypto-6.2.3.pom
+2024-05-09 08:02:27,069 [Worker-10: Importing Maven projects] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-crypto/6.2.3/spring-security-crypto-6.2.3.pom
+2024-05-09 08:02:27,085 [Worker-10: Importing Maven projects] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-web/6.2.3/spring-security-web-6.2.3.pom
+2024-05-09 08:02:27,102 [Worker-10: Importing Maven projects] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-web/6.2.3/spring-security-web-6.2.3.pom
+2024-05-09 08:02:27,510 [Worker-10: Importing Maven projects] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-test/6.2.3/spring-security-test-6.2.3.pom
+2024-05-09 08:02:27,535 [Worker-10: Importing Maven projects] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-test/6.2.3/spring-security-test-6.2.3.pom
+2024-05-09 08:02:27,670 [Worker-10: Importing Maven projects] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-security/3.2.4/spring-boot-starter-security-3.2.4.jar
+2024-05-09 08:02:27,702 [Worker-10: Importing Maven projects] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-security/3.2.4/spring-boot-starter-security-3.2.4.jar
+2024-05-09 08:02:27,715 [BasicRepositoryConnector-repo.maven.apache.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-config/6.2.3/spring-security-config-6.2.3.jar
+2024-05-09 08:02:27,743 [BasicRepositoryConnector-repo.maven.apache.org-0-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-web/6.2.3/spring-security-web-6.2.3.jar
+2024-05-09 08:02:27,748 [BasicRepositoryConnector-repo.maven.apache.org-0-3] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-core/6.2.3/spring-security-core-6.2.3.jar
+2024-05-09 08:02:27,755 [BasicRepositoryConnector-repo.maven.apache.org-0-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-crypto/6.2.3/spring-security-crypto-6.2.3.jar
+2024-05-09 08:02:27,782 [BasicRepositoryConnector-repo.maven.apache.org-0-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-test/6.2.3/spring-security-test-6.2.3.jar
+2024-05-09 08:02:27,883 [BasicRepositoryConnector-repo.maven.apache.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-config/6.2.3/spring-security-config-6.2.3.jar
+2024-05-09 08:02:27,892 [BasicRepositoryConnector-repo.maven.apache.org-0-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-crypto/6.2.3/spring-security-crypto-6.2.3.jar
+2024-05-09 08:02:27,900 [BasicRepositoryConnector-repo.maven.apache.org-0-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-web/6.2.3/spring-security-web-6.2.3.jar
+2024-05-09 08:02:27,903 [BasicRepositoryConnector-repo.maven.apache.org-0-3] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-core/6.2.3/spring-security-core-6.2.3.jar
+2024-05-09 08:02:27,914 [BasicRepositoryConnector-repo.maven.apache.org-0-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-test/6.2.3/spring-security-test-6.2.3.jar
+2024-05-09 08:02:28,764 [Worker-10: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /SeguridadEnUDS/src/main/java
+2024-05-09 08:02:28,764 [Worker-10: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /SeguridadEnUDS/src/main/resources
+2024-05-09 08:02:28,774 [Worker-10: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /SeguridadEnUDS/src/main/resources
+2024-05-09 08:02:28,783 [Worker-10: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /SeguridadEnUDS/src/test/java
+2024-05-09 08:02:28,784 [Worker-10: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /SeguridadEnUDS/src/test/resources
+2024-05-09 08:02:29,297 [Worker-7: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-security/3.2.4/spring-boot-starter-security-3.2.4-sources.jar
+2024-05-09 08:02:29,345 [Worker-7: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-security/3.2.4/spring-boot-starter-security-3.2.4-sources.jar
+2024-05-09 08:02:29,348 [Worker-7: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-starter-security:3.2.4
+2024-05-09 08:02:29,403 [Worker-7: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-config/6.2.3/spring-security-config-6.2.3-sources.jar
+2024-05-09 08:02:29,503 [Worker-7: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-config/6.2.3/spring-security-config-6.2.3-sources.jar
+2024-05-09 08:02:29,506 [Worker-7: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.security:spring-security-config:6.2.3
+2024-05-09 08:02:29,566 [Worker-7: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-web/6.2.3/spring-security-web-6.2.3-sources.jar
+2024-05-09 08:02:29,634 [Worker-7: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-web/6.2.3/spring-security-web-6.2.3-sources.jar
+2024-05-09 08:02:29,637 [Worker-7: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.security:spring-security-web:6.2.3
+2024-05-09 08:02:29,702 [Worker-7: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-test/6.2.3/spring-security-test-6.2.3-sources.jar
+2024-05-09 08:02:29,737 [Worker-7: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-test/6.2.3/spring-security-test-6.2.3-sources.jar
+2024-05-09 08:02:29,740 [Worker-7: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.security:spring-security-test:6.2.3
+2024-05-09 08:02:29,796 [Worker-7: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-core/6.2.3/spring-security-core-6.2.3-sources.jar
+2024-05-09 08:02:29,861 [Worker-7: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-core/6.2.3/spring-security-core-6.2.3-sources.jar
+2024-05-09 08:02:29,863 [Worker-7: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.security:spring-security-core:6.2.3
+2024-05-09 08:02:29,923 [Worker-7: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-crypto/6.2.3/spring-security-crypto-6.2.3-sources.jar
+2024-05-09 08:02:29,957 [Worker-7: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-crypto/6.2.3/spring-security-crypto-6.2.3-sources.jar
+2024-05-09 08:02:29,960 [Worker-7: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.security:spring-security-crypto:6.2.3
+2024-05-09 08:02:31,036 [Worker-10: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 5 sec
+2024-05-09 08:02:32,583 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 08:02:32,604 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2024-05-09 08:02:32,614 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\CLASE\BBDD\bbdd-2024\SeguridadEnUDS\src\test\resources
+2024-05-09 08:12:07,565 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 08:12:07,573 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 35 resources from src\main\resources to target\classes
+2024-05-09 08:12:07,588 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 08:15:23,349 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 08:15:23,356 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 08:15:23,361 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 08:42:28,091 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 08:42:28,096 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 08:42:28,102 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 08:42:40,835 [Worker-12: Launching pruebaproyectoBrunoDelgado - PruebaproyectoApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 08:42:40,843 [Worker-12: Launching pruebaproyectoBrunoDelgado - PruebaproyectoApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 35 resources from src\main\resources to target\classes
+2024-05-09 08:42:40,856 [Worker-12: Launching pruebaproyectoBrunoDelgado - PruebaproyectoApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 08:44:17,698 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 08:44:17,703 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 08:44:17,709 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 08:48:36,577 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 08:48:36,584 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 08:48:36,589 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 08:49:00,819 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 08:49:00,824 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 08:49:00,832 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 08:54:05,480 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 08:54:05,487 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 08:54:05,492 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 08:54:34,476 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 08:54:34,482 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 08:54:34,488 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 08:54:44,861 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 08:54:44,865 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 08:54:44,870 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 08:56:58,595 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 08:56:58,600 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 08:56:58,605 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 08:56:59,923 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 08:56:59,928 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 08:56:59,933 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 08:58:30,887 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 08:58:30,892 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 08:58:30,897 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 08:58:35,895 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 08:58:35,900 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 08:58:35,905 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 08:59:55,876 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 08:59:55,881 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 08:59:55,887 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 09:00:23,729 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 09:00:23,734 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 09:00:23,739 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 09:01:10,970 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 09:01:10,975 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 09:01:10,979 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 09:01:48,355 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 09:01:48,360 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 09:01:48,367 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 09:06:38,125 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 09:06:38,130 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 09:06:38,135 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 09:06:43,602 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 09:06:43,607 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 09:06:43,612 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 09:07:41,313 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 09:07:41,318 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 09:07:41,323 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 09:08:15,079 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 09:08:15,084 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 09:08:15,088 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 09:11:12,257 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 09:11:12,262 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 09:11:12,267 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 09:11:27,703 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 09:11:27,708 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 09:11:27,713 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 09:14:43,051 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 09:14:43,057 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 09:14:43,062 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:01:44,131 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:01:44,136 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:01:44,141 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:11:00,835 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:11:00,839 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:11:00,844 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:16:08,586 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:16:08,591 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:16:08,596 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:21:18,371 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:21:18,377 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:21:18,382 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:27:00,301 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:27:00,306 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:27:00,311 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:27:49,093 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:27:49,122 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 36 resources from src\main\resources to target\classes
+2024-05-09 10:27:49,138 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:28:45,763 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:28:45,794 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 36 resources from src\main\resources to target\classes
+2024-05-09 10:28:45,806 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:29:36,004 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:29:36,008 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:29:36,013 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:31:22,425 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:31:22,430 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:31:22,435 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:31:36,262 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:31:36,267 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:31:36,273 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:31:50,561 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:31:50,567 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:31:50,573 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:31:58,662 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:31:58,667 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:31:58,672 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:32:05,553 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:32:05,557 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:32:05,563 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:32:14,873 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:32:14,879 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:32:14,885 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:32:40,049 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:32:40,055 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:32:40,060 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:33:19,431 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:33:19,436 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:33:19,443 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:33:45,751 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:33:45,759 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:33:45,765 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:33:53,581 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:33:53,587 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 36 resources from src\main\resources to target\classes
+2024-05-09 10:33:53,598 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:36:25,530 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:36:25,536 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:36:25,541 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:44:36,889 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:44:36,895 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:44:36,900 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:46:25,524 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:46:25,530 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:46:25,534 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:50:06,777 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:50:06,782 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:50:06,787 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:50:14,288 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:50:14,292 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:50:14,297 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:50:56,314 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:50:56,318 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:50:56,324 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:51:14,487 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:51:14,493 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:51:14,497 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:51:49,979 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:51:49,984 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:51:49,989 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:52:36,473 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:52:36,478 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:52:36,483 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:52:58,662 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:52:58,667 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:52:58,671 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:53:01,814 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:53:01,818 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:53:01,823 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:53:48,394 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:53:48,399 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:53:48,404 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:54:55,490 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:54:55,497 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:54:55,502 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:55:16,452 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:55:16,457 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:55:16,462 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:56:23,106 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:56:23,111 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:56:23,117 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:56:24,298 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:56:24,303 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:56:24,308 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:58:14,608 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:58:14,613 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:58:14,617 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 10:58:24,348 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 10:58:24,353 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 10:58:24,358 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 11:31:40,618 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 11:31:40,623 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 11:31:40,628 [Worker-81: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 11:37:02,723 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 11:37:02,727 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 11:37:02,732 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 11:39:17,385 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 11:39:17,390 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 11:39:17,396 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 12:04:19,503 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 12:04:19,504 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 12:04:19,510 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\UD8E09ListadosBasicos\src\test\resources
+2024-05-09 12:05:08,810 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 12:05:08,815 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 12:05:08,819 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 12:05:37,415 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 12:05:37,419 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 12:05:37,425 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 12:05:44,920 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 12:05:44,931 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 36 resources from src\main\resources to target\classes
+2024-05-09 12:05:44,946 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 12:06:40,035 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 12:06:40,040 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 36 resources from src\main\resources to target\classes
+2024-05-09 12:06:40,051 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 12:06:45,061 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 12:06:45,101 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 36 resources from src\main\resources to target\classes
+2024-05-09 12:06:45,115 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 12:06:50,391 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 12:06:50,397 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 12:06:50,401 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 12:08:32,857 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 12:08:32,861 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 12:08:32,866 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 12:08:53,690 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 12:08:53,699 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 36 resources from src\main\resources to target\classes
+2024-05-09 12:08:53,710 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 12:09:41,593 [Worker-82: Launching pruebaproyectoBrunoDelgado - PruebaproyectoApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 12:09:41,598 [Worker-82: Launching pruebaproyectoBrunoDelgado - PruebaproyectoApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 5 resources from src\main\resources to target\classes
+2024-05-09 12:09:41,609 [Worker-82: Launching pruebaproyectoBrunoDelgado - PruebaproyectoApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 12:41:19,690 [Worker-99: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.salesianostriana.dam:pruebaproyecto:0.0.1-SNAPSHOT @ C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\COPIADESEGURIDAD-ANTES-DE-SECURITY\pom.xml.
+2024-05-09 12:41:23,608 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 12:41:23,622 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 36 resources from src\main\resources to target\classes
+2024-05-09 12:41:23,666 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\COPIADESEGURIDAD-ANTES-DE-SECURITY\src\test\resources
+2024-05-09 12:41:23,737 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 12:41:23,742 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 12:41:23,745 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 12:41:25,109 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 12:41:25,111 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 36 resources from src\main\resources to target\classes
+2024-05-09 12:41:25,166 [Worker-100: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\COPIADESEGURIDAD-ANTES-DE-SECURITY\src\test\resources
+2024-05-09 12:46:34,338 [Worker-105: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.salesianostriana.dam:pruebaproyecto:0.0.1-SNAPSHOT @ C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\pom.xml.
+2024-05-09 12:46:35,584 [Worker-105: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 12:46:35,588 [Worker-105: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 12:46:35,593 [Worker-105: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 12:46:36,943 [Worker-102: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 12:46:36,957 [Worker-102: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 36 resources from src\main\resources to target\classes
+2024-05-09 12:46:37,001 [Worker-102: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 12:47:20,934 [Worker-102: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.salesianostriana.dam:pruebaproyecto:0.0.1-SNAPSHOT @ C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\pom.xml.
+2024-05-09 12:47:22,098 [Worker-102: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 12:47:22,103 [Worker-102: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 12:47:22,107 [Worker-102: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 12:47:23,546 [Worker-106: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 12:47:23,559 [Worker-106: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 36 resources from src\main\resources to target\classes
+2024-05-09 12:47:23,603 [Worker-106: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 12:48:38,481 [Worker-108: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.salesianostriana.dam:pruebaproyecto:0.0.1-SNAPSHOT @ C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\pom.xml.
+2024-05-09 12:48:39,427 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 12:48:39,432 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 12:48:39,435 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 12:48:40,726 [Worker-105: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 12:48:40,736 [Worker-105: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 36 resources from src\main\resources to target\classes
+2024-05-09 12:48:40,779 [Worker-105: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 12:48:47,365 [Worker-107: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.salesianostriana.dam:pruebaproyecto:0.0.1-SNAPSHOT @ C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\pom.xml.
+2024-05-09 12:48:48,330 [Worker-107: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 12:48:48,335 [Worker-107: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 12:48:48,339 [Worker-107: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 12:48:49,747 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 12:48:49,759 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 36 resources from src\main\resources to target\classes
+2024-05-09 12:48:49,802 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 12:55:33,685 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2024-05-09 12:56:36,905 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 12:56:36,925 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 36 resources from src\main\resources to target\classes
+2024-05-09 12:56:36,941 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 12:58:33,447 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 12:58:33,455 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 36 resources from src\main\resources to target\classes
+2024-05-09 12:58:33,467 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 12:59:49,593 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 12:59:49,600 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 36 resources from src\main\resources to target\classes
+2024-05-09 12:59:49,612 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 12:59:56,469 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 12:59:56,476 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 36 resources from src\main\resources to target\classes
+2024-05-09 12:59:56,488 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:01:07,112 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:01:07,119 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 36 resources from src\main\resources to target\classes
+2024-05-09 13:01:07,132 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:01:16,994 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:01:17,001 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 36 resources from src\main\resources to target\classes
+2024-05-09 13:01:17,018 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:01:28,721 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:01:28,728 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 36 resources from src\main\resources to target\classes
+2024-05-09 13:01:28,742 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:01:43,600 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:01:43,614 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 36 resources from src\main\resources to target\classes
+2024-05-09 13:01:43,630 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:02:23,919 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:02:23,927 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 36 resources from src\main\resources to target\classes
+2024-05-09 13:02:23,937 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:02:47,137 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:02:47,143 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 36 resources from src\main\resources to target\classes
+2024-05-09 13:02:47,158 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:03:36,640 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 13:03:36,646 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:03:36,650 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:04:10,800 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 13:04:10,805 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:04:10,810 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:04:12,216 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 13:04:12,220 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:04:12,225 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:04:36,083 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 13:04:36,090 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:04:36,095 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:04:40,103 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 13:04:40,108 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:04:40,112 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:04:55,911 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:04:55,918 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 37 resources from src\main\resources to target\classes
+2024-05-09 13:04:55,930 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:04:57,752 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:04:57,757 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 37 resources from src\main\resources to target\classes
+2024-05-09 13:04:57,769 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:06:00,165 [Worker-4: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.salesianostriana.dam:pruebaproyecto:0.0.1-SNAPSHOT @ C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\pom.xml.
+2024-05-09 13:06:00,758 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 13:06:00,763 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 13:06:00,767 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:06:02,640 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:06:02,654 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 37 resources from src\main\resources to target\classes
+2024-05-09 13:06:02,700 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:06:29,919 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 13:06:29,926 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:06:29,930 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:06:31,473 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 13:06:31,479 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:06:31,483 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:08:25,782 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 13:08:25,787 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:08:25,791 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:08:43,264 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 13:08:43,269 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:08:43,273 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:09:25,323 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:09:25,329 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 13:09:25,341 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:09:35,756 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:09:35,763 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 13:09:35,779 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:09:50,104 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 13:09:50,109 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:09:50,113 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:12:41,290 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:12:41,297 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 13:12:41,308 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:12:48,457 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:12:48,465 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 13:12:48,477 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:14:15,494 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:14:15,500 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 13:14:15,513 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:21:24,837 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:21:24,844 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 13:21:24,858 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:21:31,939 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 13:21:31,944 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:21:31,948 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:21:55,788 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 13:21:55,793 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:21:55,797 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:22:01,643 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-09 13:22:01,649 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:22:01,653 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:22:08,481 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:22:08,488 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 13:22:08,499 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:25:50,710 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:25:50,715 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 13:25:50,727 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:26:19,125 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:26:19,132 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 13:26:19,144 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:26:38,440 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:26:38,447 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 13:26:38,459 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:26:40,560 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:26:40,568 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 13:26:40,623 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:26:43,079 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:26:43,088 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 13:26:43,099 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-09 13:27:30,478 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-09 13:27:30,484 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 38 resources from src\main\resources to target\classes
+2024-05-09 13:27:30,494 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources

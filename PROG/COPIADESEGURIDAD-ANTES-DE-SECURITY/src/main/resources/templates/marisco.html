@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mariscos Recio - Merch</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+	<link href="../../static/css/estiloTarjetas.css" th:href="@{/css/estiloTarjetas.css}" rel="stylesheet" />
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-danger" th:replace="~{fragmentos/nav::nav}">
+		</nav>
+	</header>
+
+	<div class="container-fluid py-4">
+		<div class="container">
+			<div class="row">
+				<aside class="col-md-3">
+					<!-- Aside para filtros -->
+				</aside>
+				<div class="col-md-9">
+					<h1 class="text-center mb-5">Merchandising Oficial</h1>
+					<div class="row">
+						<div class="col-md-4" data-aos="flip-left" th:each="marisco : ${listaMarisco}">
+							<div class="card mb-4">
+								<div class="card-body">
+									<img th:src="${not (#strings.isEmpty(marisco.foto))} ? ${marisco.foto} : 'https://llerena.org/wp-content/uploads/2017/11/imagen-no-disponible.jpg'"
+										class="img-responsive icono-categoria" alt="imagen" />
+									<h5 class="card-title" th:text="${marisco.nombre}">Taza</h5>
+									<p class="card-text" th:text="${#numbers.formatDecimal(marisco.precio, 1, 2)+' €'}">
+										200leuros</p>
+										<div class="d-flex justify-content-between align-items-start">
+											<a href="#" th:href="@{/productoMarisco/{id}(id=${marisco.id})}"> <button
+													class="btn btn-danger"><i class="bi bi-cart-plus"></i>
+													Comprar</button></a>
+										
+											<button type="button" class="btn btn-danger btn-lg">
+												<i class="bi bi-heart-fill me-2"></i>Me Gusta
+												<span class="badge bg-secondary" th:text="${marisco.likes}"></span>
+											</button>
+										</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<footer th:replace="~{fragmentos/footer::footer}">
+
+	</footer>
+	
+	<script>
+	  AOS.init();
+	</script>
+	
+</body>
+
+
+</html>

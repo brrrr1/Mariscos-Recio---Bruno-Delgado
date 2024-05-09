@@ -11,27 +11,31 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
+import lombok.RequiredArgsConstructor;
+
 @Configuration
 @EnableWebSecurity
+@RequiredArgsConstructor
 public class SecurityConfig {
+
 	private final UserDetailsService userDetailsService;
 	private final PasswordEncoder passwordEncoder;
 
 	@Bean
-	public DaoAuthenticationProvider daoAuthenticationProvider() {
-		DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
-		provider.setUserDetailsService(userDetailsService);
-		provider.setPasswordEncoder(passwordEncoder);
-		return provider;
-	}
-
-	@Bean
-	public AuthenticationManager authenticationManager(HttpSecurity http) throws Exception {
+	AuthenticationManager authenticationManager(HttpSecurity http) throws Exception {
 
 		AuthenticationManagerBuilder authBuilder = http.getSharedObject(AuthenticationManagerBuilder.class);
 
 		return authBuilder.authenticationProvider(daoAuthenticationProvider()).build();
 
+	}
+
+	@Bean
+	DaoAuthenticationProvider daoAuthenticationProvider() {
+		DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
+		provider.setUserDetailsService(userDetailsService);
+		provider.setPasswordEncoder(passwordEncoder);
+		return provider;
 	}
 
 	@Bean
@@ -55,5 +59,18 @@ public class SecurityConfig {
 
 		return http.build();
 	}
+
+	/*
+	 * @Bean SecurityFilterChain securityFilterChain(HttpSecurity http) throws
+	 * Exception { http.authorizeHttpRequests( (authz) ->
+	 * authz.requestMatchers("/admin/**").hasRole("ADMIN").anyRequest().permitAll())
+	 * .formLogin((loginz) ->
+	 * loginz.loginPage("/login").defaultSuccessUrl("/").permitAll());
+	 * 
+	 * http.csrf(csrfz -> csrfz.disable()); http.headers(headersz ->
+	 * headersz.frameOptions(frameOptionsz -> frameOptionsz.disable()));
+	 * 
+	 * return http.build(); }
+	 */
 
 }

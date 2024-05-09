@@ -8,6 +8,6 @@ import com.salesianostriana.dam.pruebaproyecto.model.Usuario;
 
 public interface UsuarioRepositorio extends JpaRepository<Usuario, Long> {
 
-	Optional<Usuario> findFirstByName(String nombre);
+	Optional<Usuario> findFirstByUsername(String username);
 
 }

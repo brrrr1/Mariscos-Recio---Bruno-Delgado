@@ -1,4 +1,4 @@
-package com.salesianostriana.dam.pruebaproyecto.service;
+package com.salesianostriana.dam.pruebaproyecto.security;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -16,8 +16,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 	private final UsuarioRepositorio repo;
 
 	@Override
-	public UserDetails loadUserByUsername(String name) throws UsernameNotFoundException {
-		return repo.findFirstByName(name)
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		return repo.findFirstByUsername(username)
 				.orElseThrow(() -> new UsernameNotFoundException("Error al buscar el usuario"));
 	}
 

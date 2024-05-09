@@ -30,11 +30,13 @@ public class Usuario implements UserDetails {
 	@Id
 	@GeneratedValue
 	private long id;
+	private String username;
 	private String nombre;
 	private String apellido;
 	private String dni;
 	private String email;
 	private String contrasenia;
+	private String password;
 	private int numPedidos;
 	private String direccion;
 	private boolean esAdmin;
@@ -52,18 +54,6 @@ public class Usuario implements UserDetails {
 		role += (esAdmin) ? "ADMIN" : "USER";
 		role += (esEmpleado) ? "EMPLEADO" : "USER";
 		return List.of(new SimpleGrantedAuthority(role));
-	}
-
-	@Override
-	public String getPassword() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public String getUsername() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 	@Override
@@ -89,4 +79,5 @@ public class Usuario implements UserDetails {
 		// TODO Auto-generated method stub
 		return true;
 	}
+
 }

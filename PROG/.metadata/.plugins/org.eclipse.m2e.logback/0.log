@@ -15121,3 +15121,22 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact antlr:antlr:j
 2024-05-10 11:00:14,665 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 39 resources from src\main\resources to target\classes
 2024-05-10 11:00:14,677 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
 >>>>>>> 816c37d10c81ccb8fea96f1ad25a823773200cc4
+2024-05-10 11:35:33,541 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-05-10 11:35:54,474 [Worker-7: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.salesianostriana.dam:pruebaproyecto:0.0.1-SNAPSHOT @ C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\pom.xml.
+2024-05-10 11:35:59,567 [Worker-7: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pruebaproyectoBrunoDelgado/src/main/java
+2024-05-10 11:35:59,569 [Worker-7: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pruebaproyectoBrunoDelgado/src/main/resources
+2024-05-10 11:35:59,571 [Worker-7: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pruebaproyectoBrunoDelgado/src/main/resources
+2024-05-10 11:35:59,572 [Worker-7: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pruebaproyectoBrunoDelgado/src/test/java
+2024-05-10 11:35:59,573 [Worker-7: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pruebaproyectoBrunoDelgado/src/test/resources
+2024-05-10 11:36:00,344 [Worker-7: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 7 sec
+2024-05-10 11:36:01,382 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2024-05-10 11:36:02,134 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.salesianostriana.dam:pruebaproyecto:0.0.1-SNAPSHOT @ C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\pom.xml.
+2024-05-10 11:36:03,119 [Worker-0: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pruebaproyectoBrunoDelgado/src/main/java
+2024-05-10 11:36:03,120 [Worker-0: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pruebaproyectoBrunoDelgado/src/main/resources
+2024-05-10 11:36:03,121 [Worker-0: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pruebaproyectoBrunoDelgado/src/main/resources
+2024-05-10 11:36:03,122 [Worker-0: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pruebaproyectoBrunoDelgado/src/test/java
+2024-05-10 11:36:03,123 [Worker-0: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /pruebaproyectoBrunoDelgado/src/test/resources
+2024-05-10 11:36:04,220 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0,00 sec, refresh facades takes 1,00 sec, update config takes 0,00 sec 
+2024-05-10 11:36:11,044 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-10 11:36:11,061 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 39 resources from src\main\resources to target\classes
+2024-05-10 11:36:11,133 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\delgado.hebru24_tria\Desktop\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources

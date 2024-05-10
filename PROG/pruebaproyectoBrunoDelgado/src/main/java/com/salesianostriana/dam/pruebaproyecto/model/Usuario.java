@@ -51,8 +51,13 @@ public class Usuario implements UserDetails {
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		String role = "ROLE_";
-		role += (esAdmin) ? "ADMIN" : "USER";
-		role += (esEmpleado) ? "EMPLEADO" : "USER";
+
+		if (esAdmin) {
+			role += "ADMIN";
+		} else if (esEmpleado) {
+			role += "EMPLEADO";
+		}
+
 		return List.of(new SimpleGrantedAuthority(role));
 	}
 

@@ -15,7 +15,10 @@ insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype
 
 ALTER SEQUENCE producto_seq RESTART WITH (57);
 
-insert into usuario (id, username, nombre, apellido, dni, email, password, num_pedidos, direccion, es_admin, es_empleado) values (1, 'admin', 'Antonio','Recio', '12345678A', 'antonio@mariscosrecio.es', '{bcrypt}$2y$10$wpXa1B8IRW0d/1..KPY5/.B2O8ZMa1GiRh.Zl1H/OpTLjDV0Ul3WC', '0', 'Mirador de Montepinar 7 1ºC', true, false);
-insert into usuario (id, username, nombre, apellido, dni, email, password, num_pedidos, direccion, es_admin, es_empleado) values (2, 'user', 'Fermín','Trujillo', '12345678B', 'ferminespetos69@gmail.com', '{bcrypt}$2y$10$2iYT.xzHjlcDAE28.74YneNx52704u1/N88bgrqcZUN.6cSkmUPS.', '0', 'Mirador de Montepinar 7 2ºB', false, false);
 
-ALTER SEQUENCE empleado_seq RESTART WITH (52);
+
+
+insert into usuario (id, username, nombre, apellido, dni, email, password, num_pedidos, direccion, es_admin, es_empleado) values (1, 'admin', 'Antonio','Recio', '12345678A', 'antonio@mariscosrecio.es', '{bcrypt}$2y$10$wpXa1B8IRW0d/1..KPY5/.B2O8ZMa1GiRh.Zl1H/OpTLjDV0Ul3WC', '0', 'Mirador de Montepinar 7 1ºC', true, false);
+insert into usuario (id, username, nombre, apellido, dni, email, password, num_pedidos, direccion, es_admin, es_empleado) values (2, 'user', 'Fermín','Trujillo', '12345678B', 'ferminespetos69@gmail.com', '{bcrypt}$2y$10$2iYT.xzHjlcDAE28.74YneNx52704u1/N88bgrqcZUN.6cSkmUPS.', '0', 'Mirador de Montepinar 7 2ºB', false, true);
+
+ALTER SEQUENCE usuario_seq RESTART WITH (52);

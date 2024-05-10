@@ -41,9 +41,14 @@ public class SecurityConfig {
 	@Bean
 	SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		http.authorizeHttpRequests((authz) -> authz.requestMatchers("/css/**", "/js/**", "/h2-console/**").permitAll()
-				/* .requestMatchers("/empleado/***").hasAnyRole("EMPLEADO") */
-				.requestMatchers("/admin/***").hasAnyRole("ADMIN").anyRequest().authenticated())
-				.formLogin((loginz) -> loginz.loginPage("/login")
+
+				.requestMatchers("/empleado/**").hasAnyRole("EMPLEADO", "ADMIN")
+
+				.requestMatchers("/admin/**").hasAnyRole("ADMIN")
+
+				.anyRequest().authenticated())
+
+				.formLogin((loginz) -> loginz.loginPage("/login").defaultSuccessUrl("/main")
 						.permitAll()/*
 									 * para cambiar la ruta .loginProcessingUrl("/ruta GetMapping") NO EL HTML, LA
 									 * RUTA DEL CONTROLADOR

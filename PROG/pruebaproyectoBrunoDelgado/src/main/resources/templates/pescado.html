@@ -16,9 +16,7 @@
 </head>
 
 <body>
-	<header>
-		<nav class="navbar navbar-expand-lg navbar-dark bg-danger" th:replace="~{fragmentos/nav::nav}">
-		</nav>
+	<header th:replace="~{fragmentos/header::header}">
 	</header>
 
 	<div class="container-fluid py-4">
@@ -36,7 +34,7 @@
 									<img th:src="${not (#strings.isEmpty(pescado.foto))} ? ${pescado.foto} : 'https://llerena.org/wp-content/uploads/2017/11/imagen-no-disponible.jpg'"
 										class="img-responsive icono-categoria" alt="imagen" />
 									<h5 class="card-title" th:text="${pescado.nombre}">Taza</h5>
-									<p class="card-text" th:text="${#numbers.formatDecimal(pescado.precio, 1, 2)+' €'}">
+									<p class="card-text" th:text="${#numbers.formatDecimal(pescado.precio, 1, 2)+' €/kg'}">
 										200leuros</p>
 										<div class="d-flex justify-content-between align-items-start">
 											<a href="#" th:href="@{/productoPescado/{id}(id=${pescado.id})}"> <button

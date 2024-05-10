@@ -35,7 +35,6 @@ public class Usuario implements UserDetails {
 	private String apellido;
 	private String dni;
 	private String email;
-	private String contrasenia;
 	private String password;
 	private int numPedidos;
 	private String direccion;
@@ -56,6 +55,10 @@ public class Usuario implements UserDetails {
 			role += "ADMIN";
 		} else if (esEmpleado) {
 			role += "EMPLEADO";
+		}
+
+		if (!esAdmin && !esEmpleado) {
+			role += "USER";
 		}
 
 		return List.of(new SimpleGrantedAuthority(role));

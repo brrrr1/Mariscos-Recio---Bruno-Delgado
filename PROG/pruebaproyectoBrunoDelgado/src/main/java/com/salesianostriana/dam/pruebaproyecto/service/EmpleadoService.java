@@ -13,10 +13,11 @@ public class EmpleadoService extends BaseServiceImpl<Empleado, Long, EmpleadoRep
 	public Usuario generarUsuario(Empleado e) {
 		Usuario u = new Usuario();
 		u.setNombre(e.getNombre());
+		u.setUsername(e.getNombre().toLowerCase() + "mrw");
 		u.setApellido(e.getApellido());
 		u.setDni(null); // Asegúrate de establecer el valor correcto si es necesario
 		u.setEmail(e.getNombre().toLowerCase() + e.getApellido().toLowerCase() + "@mariscosrecio.es");
-		u.setContrasenia(e.getNombre().toLowerCase() + "recio" + e.getApellido().toLowerCase());
+		u.setPassword(e.getNombre().toLowerCase() + "recio" + e.getApellido().toLowerCase());
 		u.setNumPedidos(0); // Asegúrate de establecer el valor correcto si es necesario
 		u.setDireccion(null); // Asegúrate de establecer el valor correcto si es necesario
 		u.setEsAdmin(false);
@@ -27,9 +28,9 @@ public class EmpleadoService extends BaseServiceImpl<Empleado, Long, EmpleadoRep
 
 	public Usuario generarUsuarioBuilder(Empleado e) {
 		Usuario u = new Usuario();
-		u.builder().nombre(e.getNombre()).apellido(e.getApellido()).dni(null)
-				.email(e.getNombre() + e.getApellido() + "@mariscosrecio.es")
-				.contrasenia(e.getNombre() + "recio" + e.getApellido()).numPedidos(0).direccion(null).esAdmin(false)
+		u.builder().nombre(e.getNombre()).username(e.getNombre().toLowerCase() + "mrw").apellido(e.getApellido())
+				.dni(null).email(e.getNombre() + e.getApellido() + "@mariscosrecio.es")
+				.password(e.getNombre() + "recio" + e.getApellido()).numPedidos(0).direccion(null).esAdmin(false)
 				.esEmpleado(true).build();
 
 		return u;

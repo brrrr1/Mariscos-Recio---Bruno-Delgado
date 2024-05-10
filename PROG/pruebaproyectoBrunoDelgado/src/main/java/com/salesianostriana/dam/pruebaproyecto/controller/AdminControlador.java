@@ -13,4 +13,9 @@ public class AdminControlador {
 		return "admin/adminIndex";
 	}
 
+	@GetMapping("/")
+	public String index() {
+		return "admin/adminIndex";
+	}
+
 }

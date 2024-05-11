@@ -4,39 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mariscos Recio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <style>
-        form{
-
-        }
-        body{
-            background-color: #dc3545;
-        }
-    </style>
+    <title>Login - Mariscos Recio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </head>
 
-<body class="bg-image" style="background-image: url('img/fondo-login.png');">
-    <div class="d-flex justify-content-center">
-        <form action="paigna.html">
-            <div class="mb-3 mt-3 pt-5" >
-                <label for="text" class="form-label text-white">Correo:</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-            </div>
-            <div class="mb-3">
-                <label for="pwd" class="form-label text-white">Contraseña:</label>
-                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
-            </div>
-            <div class="form-check mb-3 text-white">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" name="remember"> Recordar
-                </label>
-            </div>
+<body class="bg-light">
 
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow">
+                    <div class="card-body text-center">
+                        <img src="logo.png" class="img-fluid mb-4" alt="Logo">
+                        <form method="POST" action="#" th:action="@{/login}">
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Nombre de usuario</label>
+                                <input type="text" class="form-control" id="username"
+                                    placeholder="Ingresa tu nombre de usuario">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="password"
+                                    placeholder="Ingresa tu contraseña">
+                            </div>
+                            <button type="submit" class="btn btn-danger btn-block">Iniciar sesión</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+
+
+    <audio autoplay loop>
+        <source src="audio/mariscosRecio.mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+
 </body>
 
 </html>

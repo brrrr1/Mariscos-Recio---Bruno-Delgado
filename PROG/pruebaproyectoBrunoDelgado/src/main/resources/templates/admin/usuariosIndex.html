@@ -3,44 +3,84 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Usuarios</title>
+	<title>usuario</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
 </head>
 
 <body>
-	<div id="menu">
-		<a th:href="@{/admin/home}">Inicio</a> | <a th:href="@{uform}">Nuevo usuario</a>
+	<nav th:replace="~{fragmentos/navIndex::navIndex}"></nav>
+
+	<div class="container mt-5">
+		<div class="row">
+			<div class="col-md-10 offset-md-1">
+				<div class="d-flex justify-content-end mb-3">
+					<a th:href="@{uform}" class="btn btn-success">Nuevo producto</a>
+				</div>
+				<br /><br />
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Id</th>
+							<th>Nombre</th>
+							<th>Apellido</th>
+							<th>DNI</th>
+							<th>email</th>
+							<th>Nº de Pedidos</th>
+							<th>Dirección</th>
+							<th>Admin</th>
+							<th>Emnpleado</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="usuario : ${listaUsuarios}">
+							<td th:text="${usuario.id}">1</td>
+							<td th:text="${usuario.nombre}">Nombre</td>
+							<td th:text="${usuario.apellido}">Descripción</td>
+							<td th:text="${usuario.dni}">DNI</td>
+							<td th:text="${usuario.email}">email</td>
+							<td th:text="${usuario.numPedidos}">Nº de Pedidos</td>
+							<td th:text="${usuario.direccion}">direccion</td>
+							<td th:text="${usuario.esAdmin}">Admin</td>
+							<td th:text="${usuario.esEmpleado}">Empleado</td>
+							<td class="operaciones">
+								<a href="#" th:href="@{/admin/usuarios/editarUsuario/{id}(id=${usuario.id})}"
+									class="btn btn-primary">Editar</a>
+								<a href="#" id="borrarBtn${usuario.id}"
+									th:href="@{/admin/usuarios/borrarUsuario/{id}(id=${usuario.id})}"
+									class="btn btn-danger">Borrar</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
 	</div>
-	<br /><br />
-	<table border=1>
-		<thead>
-			<tr>
-				<th>Id</th>
-				<th>Nombre</th>
-				<th>Apellido</th>
-				<th>dni</th>
-				<th>email</th>
-				<th>Nº de Pedidos</th>
-				<th>Dirección</th>
-				<th>Admin</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr th:each="usuario : ${listaUsuarios}">
-				<td th:text="${usuario.id}">1</td>
-				<td th:text="${usuario.nombre}">Nombre</td>
-				<td th:text="${usuario.apellido}">Descripción</td>
-				<td th:text="${usuario.dni}">DNI</td>
-				<td th:text="${usuario.email}">email</td>
-				<td th:text="${usuario.numPedidos}">Nº de Pedidos</td>
-				<td th:text="${usuario.direccion}">direccion</td>
-				<td th:text="${usuario.esAdmin}">Admin</td>
-				<td>
-					<a href="#" th:href="@{/admin/usuarios/editarUsuario/{id}(id=${usuario.id})}">Editar</a> |
-					<a href="#" th:href="@{/admin/usuarios/borrarUsuario/{id}(id=${usuario.id})}">Borrar</a>
-				</td>
-			</tr>
-		</tbody>
-	</table>
+
+	<script>
+		function confirmarBorrado(event) {
+			let confirmacion = confirm('¿Estás seguro de que deseas borrar este elemento?');
+			if (!confirmacion) {
+				event.preventDefault();
+			}
+		}
+
+		function asociarEventListeners() {
+
+			let botonesBorrar = document.querySelectorAll('[id^="borrarBtn"]');
+
+			botonesBorrar.forEach(asociarEvento);
+		}
+
+		function asociarEvento(boton) {
+			boton.addEventListener('click', confirmarBorrado);
+		}
+
+		document.addEventListener('DOMContentLoaded', asociarEventListeners);
+	</script>
 </body>
 
 </html>

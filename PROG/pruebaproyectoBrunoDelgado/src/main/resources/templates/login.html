@@ -18,32 +18,36 @@
 			<div class="col-md-6 col-lg-4">
 				<div class="card shadow">
 					<div class="card-body text-center">
-						<img src="../../static/img/logo.png" th:src="@{/img/logo.png}" class="img-fluid mb-4" alt="Logo">
+						<img src="../../static/img/logo.png" th:src="@{/img/logo.png}" class="img-fluid mb-4"
+							alt="Logo">
 						<form method="POST" action="#" th:action="@{/login}">
 							<div class="mb-3">
 								<label for="username" class="form-label">Nombre de usuario</label>
-								<input type="text" id="username" name="username" placeholder="Ingresa tu nombre de usuario" required
-									autofocus>
+								<input type="text" id="username" name="username"
+									placeholder="Ingresa tu nombre de usuario" required autofocus>
 							</div>
 
 							<div class="mb-3">
 								<label for="password" class="form-label">Contraseña</label>
-								<input type="password" name="password" id="password" placeholder="Ingresa tu contraseña" required>
+								<input type="password" name="password" id="password" placeholder="Ingresa tu contraseña"
+									required>
 							</div>
 
-							<button type="submit" name="enviar" value="Enviar" class="btn btn-danger btn-block">Iniciar sesión</button>
-						
+							<button type="submit" name="enviar" value="Enviar" class="btn btn-danger btn-block">Iniciar
+								sesión</button>
+
+							
+
 						</form>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	
+
 	<audio autoplay loop>
-		
-	    <source src="../../static/audio/mariscosRecio.mp3" th:src="@{/audio/mariscosRecio.mp3}" type="audio/mpeg">
-	    Tu navegador no soporta la reproducción de audio.
+
+		<source src="../../static/audio/mariscosRecio.mp3" th:src="@{/audio/mariscosRecio.mp3}" type="audio/mpeg">
 	</audio>
 
 </body>

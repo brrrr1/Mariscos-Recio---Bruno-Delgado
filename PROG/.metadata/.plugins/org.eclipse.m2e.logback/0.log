@@ -16957,3 +16957,427 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact antlr:antlr:j
 2024-05-11 14:49:27,783 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2024-05-11 14:49:27,788 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2024-05-11 14:49:27,792 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 14:58:54,411 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-05-11 15:02:27,219 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 15:02:27,235 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 47 resources from src\main\resources to target\classes
+2024-05-11 15:02:27,261 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 15:02:34,984 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 15:02:34,991 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 15:02:34,996 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 15:03:12,502 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 15:03:12,510 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 15:03:12,513 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 15:05:30,016 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 15:05:30,025 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 15:05:30,028 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 15:05:36,322 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 15:05:36,329 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 15:05:36,333 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 15:05:51,305 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 15:05:51,312 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 15:05:51,316 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 15:06:02,686 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 15:06:02,693 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 15:06:02,696 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 15:06:11,449 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 15:06:11,456 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 15:06:11,461 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 15:06:21,902 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 15:06:21,909 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 15:06:21,912 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 15:08:52,594 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 15:08:52,601 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 15:08:52,605 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 15:09:08,575 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 15:09:08,582 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 15:09:08,586 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 15:09:34,869 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 15:09:34,877 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 15:09:34,881 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 15:09:47,674 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 15:09:47,680 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 15:09:47,684 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 15:10:09,213 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 15:10:09,220 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 15:10:09,224 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 15:11:04,222 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 15:11:04,230 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 15:11:04,234 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 15:12:23,668 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 15:12:23,677 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 15:12:23,681 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 15:12:25,795 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 15:12:25,802 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 15:12:25,805 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 15:13:16,454 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 15:13:16,461 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 15:13:16,464 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 15:13:25,303 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 15:13:25,310 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 15:13:25,314 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 15:14:09,345 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 15:14:09,352 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2024-05-11 15:14:09,356 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 15:14:17,485 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 15:14:17,491 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 15:14:17,495 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 15:14:40,418 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 15:14:40,425 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 15:14:40,428 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 15:45:13,995 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 15:45:14,003 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 15:45:14,007 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 15:46:02,516 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 15:46:02,523 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 15:46:02,526 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 15:46:09,726 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 15:46:09,733 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 15:46:09,736 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 15:52:37,590 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 15:52:37,597 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 15:52:37,600 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 15:53:09,608 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 15:53:09,615 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 15:53:09,618 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 16:25:22,269 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 16:25:22,280 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 53 resources from src\main\resources to target\classes
+2024-05-11 16:25:22,298 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 16:25:26,784 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 16:25:26,809 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 53 resources from src\main\resources to target\classes
+2024-05-11 16:25:26,832 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 16:25:47,877 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 16:25:47,887 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 53 resources from src\main\resources to target\classes
+2024-05-11 16:25:47,907 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 16:26:29,289 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 16:26:29,295 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 16:26:29,299 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 16:28:42,046 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 16:28:42,053 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 16:28:42,057 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 16:30:48,448 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 16:30:48,455 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 16:30:48,459 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 16:33:25,113 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 16:33:25,119 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 16:33:25,122 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 16:33:28,198 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 16:33:28,204 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 16:33:28,209 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 16:34:14,562 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 16:34:14,569 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 16:34:14,572 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 16:35:12,077 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 16:35:12,084 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 16:35:12,087 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 16:35:13,169 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 16:35:13,176 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 16:35:13,179 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 16:37:21,192 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 16:37:21,200 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 16:37:21,204 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 16:37:42,232 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 16:37:42,239 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 16:37:42,242 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:07:53,940 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:07:53,947 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:07:53,951 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:08:54,927 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:08:54,934 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:08:54,937 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:08:59,360 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:08:59,368 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:08:59,373 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:13:46,723 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:13:46,751 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 53 resources from src\main\resources to target\classes
+2024-05-11 17:13:46,772 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:14:40,053 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:14:40,061 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 53 resources from src\main\resources to target\classes
+2024-05-11 17:14:40,076 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:15:22,159 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:15:22,165 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:15:22,169 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:16:02,908 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:16:02,916 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:16:02,920 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:16:25,226 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:16:25,233 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:16:25,237 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:16:26,297 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:16:26,305 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:16:26,308 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:17:30,248 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:17:30,257 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 53 resources from src\main\resources to target\classes
+2024-05-11 17:17:30,272 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:17:44,623 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:17:44,633 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 53 resources from src\main\resources to target\classes
+2024-05-11 17:17:44,654 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:18:18,265 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:18:18,274 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 53 resources from src\main\resources to target\classes
+2024-05-11 17:18:18,289 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:18:28,433 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:18:28,441 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 53 resources from src\main\resources to target\classes
+2024-05-11 17:18:28,456 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:19:19,982 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:19:19,989 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:19:19,995 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:19:21,112 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:19:21,119 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:19:21,123 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:19:27,510 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:19:27,518 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:19:27,521 [Worker-62: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:19:37,458 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:19:37,466 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:19:37,470 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:20:00,539 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:20:00,546 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:20:00,549 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:20:34,267 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:20:34,275 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:20:34,279 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:21:28,115 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:21:28,122 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 54 resources from src\main\resources to target\classes
+2024-05-11 17:21:28,139 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:21:45,346 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:21:45,354 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 54 resources from src\main\resources to target\classes
+2024-05-11 17:21:45,368 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:23:21,151 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:23:21,163 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 54 resources from src\main\resources to target\classes
+2024-05-11 17:23:21,182 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:25:28,685 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:25:28,693 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 54 resources from src\main\resources to target\classes
+2024-05-11 17:25:28,712 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:25:31,356 [Worker-58: Launching pruebaproyectoBrunoDelgado - PruebaproyectoApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:25:31,366 [Worker-58: Launching pruebaproyectoBrunoDelgado - PruebaproyectoApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 54 resources from src\main\resources to target\classes
+2024-05-11 17:25:31,387 [Worker-58: Launching pruebaproyectoBrunoDelgado - PruebaproyectoApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:28:00,069 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:28:00,080 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:28:00,084 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:28:01,525 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:28:01,533 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:28:01,537 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:29:10,619 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:29:10,626 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:29:10,629 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:29:36,076 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:29:36,083 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:29:36,086 [Worker-59: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:29:39,573 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:29:39,580 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:29:39,583 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:31:28,879 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:31:28,886 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:31:28,890 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:32:30,795 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:32:30,805 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:32:30,809 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:33:23,365 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:33:23,373 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:33:23,376 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:33:31,530 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:33:31,536 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:33:31,540 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:35:29,037 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:35:29,052 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:35:29,056 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:36:03,266 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:36:03,273 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:36:03,276 [Worker-73: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:36:09,522 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:36:09,530 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:36:09,533 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:44:56,859 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:44:56,866 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:44:56,869 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:47:32,304 [Worker-77: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:47:32,312 [Worker-77: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:47:32,315 [Worker-77: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:47:43,554 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:47:43,561 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:47:43,565 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:48:17,273 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:48:17,280 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:48:17,284 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:48:41,712 [Worker-84: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:48:41,721 [Worker-84: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:48:41,724 [Worker-84: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:50:16,707 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:50:16,717 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 54 resources from src\main\resources to target\classes
+2024-05-11 17:50:16,734 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:53:51,802 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:53:51,810 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:53:51,814 [Worker-82: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:55:22,999 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:55:23,006 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:55:23,010 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:55:35,166 [Worker-75: Launching pruebaproyectoBrunoDelgado - PruebaproyectoApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:55:35,173 [Worker-75: Launching pruebaproyectoBrunoDelgado - PruebaproyectoApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:55:35,176 [Worker-75: Launching pruebaproyectoBrunoDelgado - PruebaproyectoApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:55:57,423 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:55:57,430 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:55:57,433 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:56:15,294 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:56:15,301 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:56:15,305 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:56:36,208 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:56:36,214 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:56:36,217 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:56:41,719 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:56:41,727 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:56:41,730 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:57:09,023 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:57:09,032 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:57:09,035 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:57:39,739 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:57:39,746 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:57:39,749 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:58:07,935 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:58:07,943 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:58:07,947 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 17:58:20,109 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 17:58:20,117 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 17:58:20,120 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:02:21,002 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 18:02:21,009 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:02:21,012 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:02:34,127 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 18:02:34,133 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:02:34,136 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:10:29,978 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 18:10:29,987 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 18:10:29,990 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:13:12,287 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 18:13:12,294 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:13:12,297 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:13:58,359 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 18:13:58,366 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:13:58,369 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:16:56,252 [Worker-104: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 18:16:56,259 [Worker-104: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:16:56,262 [Worker-104: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:17:48,662 [Worker-107: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 18:17:48,668 [Worker-107: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:17:48,672 [Worker-107: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:18:52,499 [Worker-104: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 18:18:52,507 [Worker-104: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:18:52,510 [Worker-104: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:19:14,542 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:19:14,552 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 55 resources from src\main\resources to target\classes
+2024-05-11 18:19:14,572 [Worker-101: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:20:08,502 [Worker-106: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 18:20:08,508 [Worker-106: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:20:08,511 [Worker-106: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:21:38,820 [Worker-97: Launching pruebaproyectoBrunoDelgado - PruebaproyectoApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 18:21:38,828 [Worker-97: Launching pruebaproyectoBrunoDelgado - PruebaproyectoApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:21:38,831 [Worker-97: Launching pruebaproyectoBrunoDelgado - PruebaproyectoApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:22:18,671 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:22:18,682 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 55 resources from src\main\resources to target\classes
+2024-05-11 18:22:18,701 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:22:26,597 [Worker-112: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:22:26,605 [Worker-112: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 55 resources from src\main\resources to target\classes
+2024-05-11 18:22:26,621 [Worker-112: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:22:39,234 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:22:39,243 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 55 resources from src\main\resources to target\classes
+2024-05-11 18:22:39,258 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:25:09,710 [Worker-114: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 18:25:09,718 [Worker-114: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:25:09,721 [Worker-114: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:25:20,951 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 18:25:20,960 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:25:20,963 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:25:28,127 [Worker-113: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 18:25:28,134 [Worker-113: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:25:28,138 [Worker-113: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:25:47,840 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 18:25:47,847 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:25:47,850 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:25:49,027 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 18:25:49,034 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:25:49,037 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:27:05,286 [Worker-113: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 18:27:05,293 [Worker-113: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:27:05,296 [Worker-113: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:27:16,365 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 18:27:16,371 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:27:16,375 [Worker-116: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:28:46,451 [Worker-114: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 18:28:46,459 [Worker-114: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:28:46,462 [Worker-114: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:31:01,687 [Worker-120: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 18:31:01,695 [Worker-120: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:31:01,699 [Worker-120: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:32:05,316 [Worker-126: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 18:32:05,323 [Worker-126: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:32:05,327 [Worker-126: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:33:58,060 [Worker-128: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 18:33:58,067 [Worker-128: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:33:58,071 [Worker-128: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:38:33,356 [Worker-131: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 18:38:33,365 [Worker-131: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:38:33,369 [Worker-131: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:39:25,511 [Worker-123: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 18:39:25,519 [Worker-123: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:39:25,522 [Worker-123: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:39:29,955 [Worker-127: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 18:39:29,963 [Worker-127: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:39:29,967 [Worker-127: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:39:48,993 [Worker-130: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 18:39:49,001 [Worker-130: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:39:49,005 [Worker-130: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:40:10,352 [Worker-127: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 18:40:10,360 [Worker-127: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:40:10,364 [Worker-127: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:41:46,370 [Worker-136: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 18:41:46,378 [Worker-136: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:41:46,382 [Worker-136: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:42:04,035 [Worker-135: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 18:42:04,042 [Worker-135: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:42:04,046 [Worker-135: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:42:34,386 [Worker-138: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:42:34,396 [Worker-138: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 55 resources from src\main\resources to target\classes
+2024-05-11 18:42:34,414 [Worker-138: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:42:54,842 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:42:54,854 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 55 resources from src\main\resources to target\classes
+2024-05-11 18:42:54,874 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:43:14,288 [Worker-136: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 18:43:14,296 [Worker-136: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:43:14,301 [Worker-136: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:47:32,965 [Worker-140: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:47:32,976 [Worker-140: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 55 resources from src\main\resources to target\classes
+2024-05-11 18:47:32,991 [Worker-140: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:48:09,217 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:48:09,229 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 55 resources from src\main\resources to target\classes
+2024-05-11 18:48:09,246 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:56:55,983 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:56:55,994 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 55 resources from src\main\resources to target\classes
+2024-05-11 18:56:56,015 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:57:09,195 [Worker-146: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:57:09,205 [Worker-146: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 55 resources from src\main\resources to target\classes
+2024-05-11 18:57:09,221 [Worker-146: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 18:59:32,611 [Worker-150: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 18:59:32,620 [Worker-150: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 55 resources from src\main\resources to target\classes
+2024-05-11 18:59:32,635 [Worker-150: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 19:00:31,126 [Worker-152: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 19:00:31,134 [Worker-152: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 55 resources from src\main\resources to target\classes
+2024-05-11 19:00:31,149 [Worker-152: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 19:06:41,481 [Worker-158: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 19:06:41,492 [Worker-158: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 19:06:41,494 [Worker-158: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 19:06:58,622 [Worker-160: Launching pruebaproyectoBrunoDelgado - PruebaproyectoApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 19:06:58,633 [Worker-160: Launching pruebaproyectoBrunoDelgado - PruebaproyectoApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 19:06:58,635 [Worker-160: Launching pruebaproyectoBrunoDelgado - PruebaproyectoApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 19:09:21,213 [Worker-166: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 19:09:21,221 [Worker-166: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 55 resources from src\main\resources to target\classes
+2024-05-11 19:09:21,236 [Worker-166: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 19:09:24,537 [Worker-163: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 19:09:24,558 [Worker-163: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 55 resources from src\main\resources to target\classes
+2024-05-11 19:09:24,582 [Worker-163: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 19:09:53,246 [Worker-163: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 19:09:53,254 [Worker-163: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 55 resources from src\main\resources to target\classes
+2024-05-11 19:09:53,268 [Worker-163: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 19:10:08,862 [Worker-165: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 19:10:08,869 [Worker-165: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 55 resources from src\main\resources to target\classes
+2024-05-11 19:10:08,883 [Worker-165: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources
+2024-05-11 19:11:18,939 [Worker-167: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-05-11 19:11:18,969 [Worker-167: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-05-11 19:11:18,974 [Worker-167: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\bruno\OneDrive\Escritorio\CLASE\prrr\PROG\pruebaproyectoBrunoDelgado\src\test\resources

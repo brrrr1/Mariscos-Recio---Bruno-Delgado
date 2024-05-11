@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariscos Recio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="librerias/granim.js-2.0.0/dist/granim.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        let start = new Date().getTime();
+
+        const originPosition = { x: 0, y: 0 };
+
+        const last = {
+            starTimestamp: start,
+            starPosition: originPosition,
+            mousePosition: originPosition
+        }
+
+        const config = {
+            starAnimationDuration: 1500,
+            minimumTimeBetweenStars: 250,
+            minimumDistanceBetweenStars: 75,
+            glowDuration: 75,
+            maximumGlowPointSpacing: 10,
+            colors: ["249 146 253", "252 254 255"],
+            sizes: ["1.4rem", "1rem", "0.6rem"],
+            animations: ["fall-1", "fall-2", "fall-3"]
+        }
+
+        let count = 0;
+
+        const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min,
+            selectRandom = items => items[rand(0, items.length - 1)];
+
+        const withUnit = (value, unit) => `${value}${unit}`,
+            px = value => withUnit(value, "px"),
+            ms = value => withUnit(value, "ms");
+
+        const calcDistance = (a, b) => {
+            const diffX = b.x - a.x,
+                diffY = b.y - a.y;
+
+            return Math.sqrt(Math.pow(diffX, 2) + Math.pow(diffY, 2));
+        }
+
+        const calcElapsedTime = (start, end) => end - start;
+
+        const appendElement = element => document.body.appendChild(element),
+            removeElement = (element, delay) => setTimeout(() => document.body.removeChild(element), delay);
+
+        const createStar = position => {
+            const star = document.createElement("span"),
+                color = selectRandom(config.colors);
+
+            star.className = "star fa-solid fa-sparkle";
+
+            star.style.left = px(position.x);
+            star.style.top = px(position.y);
+            star.style.fontSize = selectRandom(config.sizes);
+            star.style.color = `rgb(${color})`;
+            star.style.textShadow = `0px 0px 1.5rem rgb(${color} / 0.5)`;
+            star.style.animationName = config.animations[count++ % 3];
+            star.style.starAnimationDuration = ms(config.starAnimationDuration);
+
+            appendElement(star);
+
+            removeElement(star, config.starAnimationDuration);
+        }
+
+        const createGlowPoint = position => {
+            const glow = document.createElement("div");
+
+            glow.className = "glow-point";
+
+            glow.style.left = px(position.x);
+            glow.style.top = px(position.y);
+
+            appendElement(glow)
+
+            removeElement(glow, config.glowDuration);
+        }
+
+        const determinePointQuantity = distance => Math.max(
+            Math.floor(distance / config.maximumGlowPointSpacing),
+            1
+        );
+
+        /* --  
+        
+        The following is an explanation for the "createGlow" function below:
+        
+        I didn't cover this in my video, but I ran into an issue where moving the mouse really quickly caused gaps in the glow effect. Kind of like this:
+        
+        *   *       *       *    *      *    🖱️
+        
+        instead of:
+        
+        *************************************🖱️
+        
+        To solve this I sort of "backfilled" some additional glow points by evenly spacing them in between the current point and the last one. I found this approach to be more visually pleasing than one glow point spanning the whole gap.
+        
+        The "quantity" of points is based on the config property "maximumGlowPointSpacing".
+        
+        My best explanation for why this is happening is due to the mousemove event only firing every so often. I also don't think this fix was totally necessary, but it annoyed me that it was happening so I took on the challenge of trying to fix it.
+        
+        -- */
+        const createGlow = (last, current) => {
+            const distance = calcDistance(last, current),
+                quantity = determinePointQuantity(distance);
+
+            const dx = (current.x - last.x) / quantity,
+                dy = (current.y - last.y) / quantity;
+
+            Array.from(Array(quantity)).forEach((_, index) => {
+                const x = last.x + dx * index,
+                    y = last.y + dy * index;
+
+                createGlowPoint({ x, y });
+            });
+        }
+
+        const updateLastStar = position => {
+            last.starTimestamp = new Date().getTime();
+
+            last.starPosition = position;
+        }
+
+        const updateLastMousePosition = position => last.mousePosition = position;
+
+        const adjustLastMousePosition = position => {
+            if (last.mousePosition.x === 0 && last.mousePosition.y === 0) {
+                last.mousePosition = position;
+            }
+        };
+
+        const handleOnMove = e => {
+            const mousePosition = { x: e.clientX, y: e.clientY }
+
+            adjustLastMousePosition(mousePosition);
+
+            const now = new Date().getTime(),
+                hasMovedFarEnough = calcDistance(last.starPosition, mousePosition) >= config.minimumDistanceBetweenStars,
+                hasBeenLongEnough = calcElapsedTime(last.starTimestamp, now) > config.minimumTimeBetweenStars;
+
+            if (hasMovedFarEnough || hasBeenLongEnough) {
+                createStar(mousePosition);
+
+                updateLastStar(mousePosition);
+            }
+
+            createGlow(last.mousePosition, mousePosition);
+
+            updateLastMousePosition(mousePosition);
+        }
+
+        window.onmousemove = e => handleOnMove(e);
+
+        window.ontouchmove = e => handleOnMove(e.touches[0]);
+
+        document.body.onmouseleave = () => updateLastMousePosition(originPosition);
+    </script>
+    <style>
+        :root {
+            --glow-rgb: 239 42 201;
+        }
+
+        #recio {
+            padding: 0;
+            margin: 0;
+        }
+
+        #recio img {
+            width: 100%;
+            height: auto;
+        }
+
+
+        .botones {
+            padding-top: 100px;
+        }
+
+        .botones button {
+            font-size: 60px;
+            padding: 20px;
+            margin: 10px;
+            width: calc(50% - 20px);
+            height: 150px;
+            background-color: #dc3545;
+            /* Rojo */
+            border: none;
+            color: white;
+        }
+
+        #banner img {
+            margin-top: 100px;
+            margin-bottom: 100px;
+            width: 100%;
+            height: auto;
+        }
+
+        .botones-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .botones button:hover {
+            background-color: #dc3545;
+            /* Rojo sin cambio en hover */
+        }
+
+        .titulo-grande {
+            font-size: 3rem;
+        }
+
+        #btnScrollToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 24px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        #btnScrollToTop:hover {
+            background-color: #c82333;
+        }
+
+        footer {
+            width: 100%;
+        }
+
+        #canvas-basic {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .glow-point {
+            position: absolute;
+            box-shadow: 0rem 0rem 1.2rem 0.6rem rgb(var(--glow-rgb));
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            z-index: 2;
+            color: white;
+            font-size: 1rem;
+            animation-duration: 1500ms;
+            animation-fill-mode: forwards;
+            pointer-events: none;
+        }
+
+        @keyframes fall-1 {
+            0% {
+                transform: translate(0px, 0px) rotateX(45deg) rotateY(30deg) rotateZ(0deg) scale(0.25);
+                opacity: 0;
+            }
+
+            5% {
+                transform: translate(10px, -10px) rotateX(45deg) rotateY(30deg) rotateZ(0deg) scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(25px, 200px) rotateX(180deg) rotateY(270deg) rotateZ(90deg) scale(1);
+                opacity: 0;
+            }
+        }
+
+        @keyframes fall-2 {
+            0% {
+                transform: translate(0px, 0px) rotateX(-20deg) rotateY(10deg) scale(0.25);
+                opacity: 0;
+            }
+
+            10% {
+                transform: translate(-10px, -5px) rotateX(-20deg) rotateY(10deg) scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(-10px, 160px) rotateX(-90deg) rotateY(45deg) scale(0.25);
+                opacity: 0;
+            }
+        }
+
+        @keyframes fall-3 {
+            0% {
+                transform: translate(0px, 0px) rotateX(0deg) rotateY(45deg) scale(0.5);
+                opacity: 0;
+            }
+
+            15% {
+                transform: translate(7px, 5px) rotateX(0deg) rotateY(45deg) scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(20px, 120px) rotateX(-180deg) rotateY(-90deg) scale(0.5);
+                opacity: 0;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="logo.png" alt="Logo" width="50" height="50">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pescado</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Marisco</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Lotes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Merchandising</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sobre-nosotros">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#trabaja-con-nosotros">Trabaja Con Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#oferta-semana">Oferta de la Semana</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Carrito</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Cuenta</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4 bg-light p-4">
+                    <img src="logo.png" alt="Imagen Cuadrada" class="img-fluid mx-auto d-block">
+                    <div class="text-center">
+                        <h1>Mariscos Recio</h1>
+                        <h3>El mar al mejor precio</h3>
+                        <p>Ubicados en la Avenida del Paraíso 7, somos la mejor pescadería de España. Con premios
+                            como el bogavante de oro y el honor de distribuir marisco a la casa real, estamos
+                            emocionados de abrirnos
+                            a
+                            todos nuestros clientes con esta tienda online.</p>
+                    </div>
+                </div>
+                <div class="col-lg-8 bg-danger" id="recio">
+                    <img src="presentacion.png" alt="Imagen Rectangular" class="img-fluid mx-auto d-block">
+                </div>
+            </div>
+        </div>
+
+        <div id="banner" class="container-fluid" data-aos="fade-right">
+            <img src="banner completo.png" alt="Banner rojo">
+        </div>
+
+        <div class="container botones text-center mt-5">
+            <div class="botones-container">
+
+                <button onclick="window.location.href='pagina_pescado.html'" class="btn btn-lg">Pescado</button>
+                <button onclick="window.location.href='pagina_marisco.html'" class="btn btn-lg">Marisco</button>
+                <button onclick="window.location.href='pagina_lotes.html'" class="btn btn-lg">Lotes</button>
+                <button onclick="window.location.href='merch.html'" class="btn btn-lg">Merchandising</button>
+            </div>
+        </div>
+
+        <div id="banner" class="container-fluid" data-aos="fade-left">
+            <img src="banner completo.png" alt="Banner rojo">
+        </div>
+
+
+
+        <section class="container my-5" id="sobre-nosotros">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h2 class="fw-bold titulo-grande">Sobre Nosotros</h2>
+                    <p class="fs-4">Mariscos Recio es la empresa líder en el sector del congelado. Con nuestra moderna y
+                        amplia
+                        flota de
+                        camiones servimos a primerísima hora de la mañana pescados y mariscos fresquísimos y de primera
+                        calidad.
+                    </p>
+                    <img src="laqueseavecina1-a.jpg" alt="Sobre Nosotros" class="img-fluid" style="width: 100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h2 class="fw-bold titulo-grande">Bogavante De Oro</h2>
+                    <p class="fs-4">Mariscos Recio y su emperador Antonio Recio han sido galardonados con el Bogavante
+                        de Oro al
+                        mayorista del año y la mejor pescadería/marisquería de España.
+                    </p>
+                    <img src="bogavantedeoro.jpg" alt="Sobre Nosotros" class="img-fluid" style="width: 100%;">
+                    <img src="recio balon de oro.webp" alt="Sobre Nosotros" class="img-fluid" style="width: 100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h2 class="fw-bold titulo-grande">El Imperio Recio</h2>
+                    <p class="fs-4">Mariscos Recio Enterprises engloba toda la división del pescado y marisco, desde su
+                        comercialización en todo el continente europeo hasta el I+D+i.
+                    </p>
+                    <img src="recioenterprise.jpg" alt="El Imperio Recio" class="img-fluid" style="width: 100%;">
+                    <p class="fs-4">Mariscos Recio Enterprises acaba de cerrar un acuerdo de globalización para
+                        expandirse por el
+                        mercado nipón.
+                    </p>
+                    <img src="negocio-frustrado-japones_MDSVID20110711_0115_3.png" alt="El Imperio Recio"
+                        class="img-fluid" style="width: 100%;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h2 class="fw-bold titulo-grande">Antonio, el fundador</h2>
+                    <p class="fs-4">Antonio Recio Matamoros (7 de mayo de 1966) es el fundador de Mariscos Recio.
+                    </p>
+                    <img src="marisco-recio--644x362.jpg" alt="Antonio Recio" class="img-fluid" style="width: 100%;">
+                    <p class="fs-4">Aún teniendo una infancia dificil Antonio se antepuso a todas las adversidades y
+                        reveses de
+                        la vida y levantó el Imperio Recio desde la nada.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div id="banner" class="container-fluid" data-aos="fade-right">
+            <img src="banner completo.png" alt="Banner rojo">
+        </div>
+
+
+        <section class="container my-5" id="trabaja-con-nosotros">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h2 class="fw-bold fs-1">Trabaja con Nosotros</h2>
+                    <p><u>Puesto vacante:</u> Pescadero</p>
+                    <p><u>Requisitos:</u> Aprenderse el nombre del género y tener ganas de trabajar.</p>
+                    <p><u>Sueldo:</u> 500€ brutos</p>
+                    <p><u>Horario:</u> Media jornada (12 horas)</p>
+                    <div class="card p-3">
+                        <form>
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="apellido" class="form-label">Apellido</label>
+                                <input type="text" class="form-control" id="apellido" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="dni" class="form-label">DNI</label>
+                                <input type="text" class="form-control" id="dni" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="correo" class="form-label">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="correo" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="telefono" class="form-label">Teléfono</label>
+                                <input type="tel" class="form-control" id="telefono" required>
+                            </div>
+                            <button type="submit" class="btn btn-danger">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="banner" class="container-fluid">
+            <img src="banner completo.png" alt="Banner rojo">
+        </div>
+
+    </main>
+
+
+
+    <section class="container my-5" id="oferta-semana">
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <h2 class="fw-bold titulo-grande">Oferta de la semana</h2>
+                <img src="oferta.png" alt="Sobre Nosotros" class="img-fluid" style="width: 100%;">
+            </div>
+        </div>
+        <button id="btnScrollToTop" onclick="window.scrollTo(0, 0);" title="Volver arriba">&#8679;</button>
+
+    </section>
+
+    <footer class="text-center py-4 bg-danger text-white">
+        <div class="container">
+            <h5><span><img src=""></span> Derechos de autor © 2024 Mariscos Recio Enterprises.
+                Todos los derechos reservados.<span><img src=""></span></h5>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+
+</html>

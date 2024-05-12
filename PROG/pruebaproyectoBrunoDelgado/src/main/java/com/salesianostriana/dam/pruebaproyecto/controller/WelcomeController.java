@@ -11,4 +11,9 @@ public class WelcomeController {
 		return "login";
 	}
 
+	@GetMapping("/")
+	public String principal() {
+		return "main";
+	}
+
 }

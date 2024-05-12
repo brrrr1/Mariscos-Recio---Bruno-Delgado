@@ -13,6 +13,8 @@
   <script src="librerias/granim.js-2.0.0/dist/granim.min.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
   <style>
     #recio {
       padding: 0;
@@ -97,7 +99,22 @@
       left: 0;
     }
   </style>
-  
+
+  <script>
+    // Obtener el cuerpo del documento
+    const body = document.querySelector('body');
+
+    // Cambiar el cursor al pasar sobre el cuerpo de la página
+    body.addEventListener('mouseover', function () {
+      body.style.cursor = "url('/logo.png'), auto";
+    });
+
+    // Restaurar el cursor por defecto al salir del cuerpo de la página
+    body.addEventListener('mouseout', function () {
+      body.style.cursor = "auto";
+    });
+  </script>
+
 </head>
 
 <body>

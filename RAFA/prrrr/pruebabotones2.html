@@ -1,42 +1,82 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Botón con Degradado</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
-  <script src="librerias/granim.js-2.0.0/dist/granim.min.js"></script>
+<style>
+/* ... (otros estilos existentes) ... */
+
+.botones button {
+    font-size: 24px; 
+    padding: 15px 30px; 
+    margin: 10px;
+    width: calc(50% - 20px); 
+    height: auto; 
+    background-color: #dc3545; /* Color danger de Bootstrap */
+    border: none;
+    color: white;
+    border-radius: 5px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+    transition: all 0.3s ease; 
+    text-align: center; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.botones button:hover {
+    background-color: #c82333; /* Tono danger más oscuro al pasar el ratón */
+    transform: translateY(-2px); 
+}
+
+/* Estilos específicos para cada botón (manteniendo tus imágenes) */
+.btn-pescado {
+    background-image: url("imagen-pescado.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.btn-marisco {
+    background-image: url("imagen-marisco.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.botones-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
+  grid-template-rows: 1fr 1fr;    /* Dos filas de igual altura */
+  gap: 20px;                      /* Espacio entre botones */
+}
+
+.btn-pescado, .btn-marisco {
+  grid-row: 1; /* Primera fila */
+}
+
+.btn-lotes, .btn-merch {
+  grid-row: 2; /* Segunda fila */
+}
+
+/* Los botones de lotes y merch también serán de color danger */
+.btn-lotes, .btn-merch {
+    background-color: #dc3545; /* Color danger de Bootstrap */
+}
+
+*/
+</style>
 </head>
-
 <body>
-  <div class="container mt-5">
-    <button id="degradadoButton" class="btn btn-primary">Botón con Degradado</button>
+
+<div class="container botones text-center mt-5">
+  <div class="botones-container">
+    <button onclick="window.location.href='/pescado'" th:action="pescado"
+      class="btn btn-lg btn-pescado">Pescado</button>
+    <button onclick="window.location.href='/marisco'" th:action="marisco"
+      class="btn btn-lg btn-marisco">Marisco</button>
+    <button onclick="window.location.href='/lotes'" th:action="lotes"
+      class="btn btn-lg btn-lotes">Lotes</button>
+    <button onclick="window.location.href='/merch'" th:action="merch"
+      class="btn btn-lg btn-merch">Merchandising</button>
   </div>
+</div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var granimInstance = new Granim({
-        element: '#degradadoButton',
-        direction: 'diagonal',
-        opacity: [1, 1],
-        isPausedWhenNotInView: true,
-        states: {
-          "default-state": {
-            gradients: [
-              ['#4b6cb7', '#182848'],
-              ['#2c3e50', '#3498db']
-            ],
-            transitionSpeed: 7000 // Tiempo de transición en milisegundos
-          }
-        }
-      });
-    });
-  </script>
 </body>
-
 </html>

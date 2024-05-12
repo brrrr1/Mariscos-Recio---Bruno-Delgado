@@ -1,15 +1,20 @@
 package com.salesianostriana.dam.pruebaproyecto.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
+import com.salesianostriana.dam.pruebaproyecto.model.Usuario;
 import com.salesianostriana.dam.pruebaproyecto.service.LoteService;
 import com.salesianostriana.dam.pruebaproyecto.service.MariscoService;
 import com.salesianostriana.dam.pruebaproyecto.service.MerchService;
 import com.salesianostriana.dam.pruebaproyecto.service.PescadoService;
+import com.salesianostriana.dam.pruebaproyecto.service.UsuarioService;
 
 @Controller
 
@@ -25,6 +30,12 @@ public class MainController {
 
 	@Autowired
 	private PescadoService servicioPescado;
+
+	@Autowired
+	private UsuarioService servicioUsuario;
+
+	@Autowired
+	private PasswordEncoder passwordEncoder;
 
 	@GetMapping("/main")
 	public String controlador(Model model) {
@@ -103,6 +114,22 @@ public class MainController {
 			return "redirect:/admin/marisco/listaMarisco";
 		}
 
+	}
+
+	@GetMapping("/register")
+	public String registro(Model model) {
+		Usuario usuario = new Usuario();
+		model.addAttribute("usuario", usuario);
+		return "register";
+	}
+
+	@PostMapping("/registrarUsuario")
+	public String submit(@ModelAttribute("usuario") Usuario usuario, Model model) {
+		String encodedPassword = passwordEncoder.encode(usuario.getPassword());
+		usuario.setPassword(encodedPassword);
+		servicioUsuario.save(usuario);
+		model.addAttribute("usuario", usuario);
+		return "main";
 	}
 
 }

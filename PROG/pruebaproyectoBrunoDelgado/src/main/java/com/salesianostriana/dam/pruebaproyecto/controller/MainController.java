@@ -9,11 +9,14 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.salesianostriana.dam.pruebaproyecto.model.Favoritos;
+import com.salesianostriana.dam.pruebaproyecto.model.Producto;
 import com.salesianostriana.dam.pruebaproyecto.model.Usuario;
 import com.salesianostriana.dam.pruebaproyecto.service.LoteService;
 import com.salesianostriana.dam.pruebaproyecto.service.MariscoService;
 import com.salesianostriana.dam.pruebaproyecto.service.MerchService;
 import com.salesianostriana.dam.pruebaproyecto.service.PescadoService;
+import com.salesianostriana.dam.pruebaproyecto.service.ProductoService;
 import com.salesianostriana.dam.pruebaproyecto.service.UsuarioService;
 
 @Controller
@@ -33,6 +36,9 @@ public class MainController {
 
 	@Autowired
 	private UsuarioService servicioUsuario;
+
+	@Autowired
+	private ProductoService servicioProducto;
 
 	@Autowired
 	private PasswordEncoder passwordEncoder;
@@ -130,6 +136,26 @@ public class MainController {
 		servicioUsuario.save(usuario);
 		model.addAttribute("usuario", usuario);
 		return "main";
+	}
+
+	@PostMapping("/addFavorito/{usuarioId}/{productoId}")
+	public String addFavorito(@PathVariable Long usuarioId, @PathVariable Long productoId) {
+		// Obtener el usuario y el producto de la base de datos
+		Usuario usuario = servicioUsuario.findById(usuarioId)
+				.orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
+		Producto producto = servicioProducto.findById(productoId)
+				.orElseThrow(() -> new RuntimeException("Producto no encontrado"));
+
+		producto.setLikes(producto.getLikes() + 1);
+
+		// Crear la asociación en la tabla de favoritos
+		Favoritos favorito = new Favoritos(usuario, producto);
+		usuario.getFavoritos().add(favorito);
+
+		// Guardar los cambios en la base de datos
+		servicioUsuario.save(usuario);
+
+		return "redirect:/main";
 	}
 
 }

@@ -44,6 +44,15 @@
 			</div>
 		</div>
 	</div>
+	
+	
+	<form th:action="@{/addFavorito/{usuarioId}/{productoId}}" method="post" id="favoritosForm" style="display: none;">
+									<button type="submit" id="favoritosBtn" class="btn btn-outline-light me-4">
+										Cerrar Sesión
+									</button>
+								</form>
+								<a href="#" onclick="document.getElementById('favoritosForm').submit(); return false;"
+									class="nav-link text-decoration-none">Me gusta</a>
 
 	<footer th:replace="~{fragmentos/footer::footer}">
 	</footer>

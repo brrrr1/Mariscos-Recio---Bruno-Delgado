@@ -44,7 +44,7 @@ public class SecurityConfig {
 		http.authorizeHttpRequests((authz) -> authz
 				.requestMatchers("/css/**", "/js/**", "/h2-console/**", "/audio/**", "img/**").permitAll()
 
-				.requestMatchers("/empleado/**").hasAnyRole("EMPLEADO", "ADMIN")
+				.requestMatchers("/empleado/**", "/addFavorito/**").hasAnyRole("EMPLEADO", "ADMIN")
 
 				.requestMatchers("/admin/**").hasAnyRole("ADMIN")
 

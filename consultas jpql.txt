@@ -1,0 +1,81 @@
+SQL -> SELECT * FROM country
+
+JPQL -> SELECT c FROM Country c
+
+Es un findAll();
+
+Lista de paises con mas de 50000000 habitantes
+
+SELECT c FROM Country WHERE c.poblacion > 50000000
+
+En el repositorio:
+@Query("select a from Alumno a where a.curso is null")
+public List<Alumno> encuentraAlumnoSinCurso();
+
+Se puede hacer así también:
+@Query("""
+	SELECT a FROM Alumno a
+	WHERE a.curso IS NULL""")
+public List<Alumno> encuentraAlumnoSinCurso(); 
+
+
+@Query("""
+	SELECT a FROM Alumno a
+	WHERE a.fecha_nacimiento >= ?1 
+	AND a.cursoId = ?2
+	""")
+public List<Alumno> encontrar...(LocalDate f, Long id);
+
+o 
+
+@Query("""
+	SELECT a FROM Alumno a
+	WHERE a.fecha_nacimiento = :fechaNacimiento""")
+public LIst<Alumno> encontrar...
+
+
+CON HERENCIA
+CLASE MADRE USUSARIO
+CLASES HOJAS TRABAJADOR Y CLIENTE
+
+SELECT u FROM Usuario u 
+WHERE TYPE(u) = Cliente
+
+
+
+
+Ventas que incluyen un determinado producto
+
+@Query("""
+SELECT v FROM Venta v LEFT JOIN v.LineasVenta ldv
+WHERE ldv.producto = ?1
+""")
+List<Ventas> ventasConProducto(Producto p);
+
+
+
+
+Para ver si están en una lista coleccion
+SELECT c1, c2 FROM Country c1, Country c2WHERE c2 MEMBER OF c1.neighbors
+
+Por ejemplo
+SELECT u, p FROM Usuario u WHERE p MEMBER OF u.favoritos
+
+
+
+
+Se pueden usar upper(u.nombre), fechas, contar, funciones matemáticas
+
+
+
+@Query("""
+	SELECT p, v FROM Producto p, Venta v (inventada esta linea, luismi no la ha puesto)
+	CASE WHEN count(V)>0 THEN true
+	ELSE false
+""")
+public boolean hayVentasEnProducto(9;
+
+VER TODOS LOS PRODUCTOS POR ENVIAR
+
+SELECT p FROM Pedido p
+WHERE CAST(p.estado as String) = "porEnviar";

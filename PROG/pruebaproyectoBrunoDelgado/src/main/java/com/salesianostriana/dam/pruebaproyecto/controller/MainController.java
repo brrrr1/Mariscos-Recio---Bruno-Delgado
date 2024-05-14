@@ -1,6 +1,7 @@
 package com.salesianostriana.dam.pruebaproyecto.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -138,24 +139,32 @@ public class MainController {
 		return "main";
 	}
 
-	@PostMapping("/addFavorito/{usuarioId}/{productoId}")
-	public String addFavorito(@PathVariable Long usuarioId, @PathVariable Long productoId) {
-		// Obtener el usuario y el producto de la base de datos
-		Usuario usuario = servicioUsuario.findById(usuarioId)
-				.orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
-		Producto producto = servicioProducto.findById(productoId)
+	@PostMapping("/addFavorito/{usuario_id}/{producto_id}")
+	public String addFavorito(@PathVariable Long usuario_id, @PathVariable Long producto_id,
+			@AuthenticationPrincipal Usuario usuario) {
+		/*
+		 * Usuario usuario = servicioUsuario.findById(usuario_id) .orElseThrow(() -> new
+		 * RuntimeException("Usuario no encontrado"));
+		 */
+		Producto producto = servicioProducto.findById(producto_id)
 				.orElseThrow(() -> new RuntimeException("Producto no encontrado"));
-
 		producto.setLikes(producto.getLikes() + 1);
-
-		// Crear la asociación en la tabla de favoritos
 		Favoritos favorito = new Favoritos(usuario, producto);
+		// favorito.addToUsuario(usuario);
 		usuario.getFavoritos().add(favorito);
-
-		// Guardar los cambios en la base de datos
 		servicioUsuario.save(usuario);
 
 		return "redirect:/main";
+	}
+
+	@GetMapping("/login")
+	public String index() {
+		return "login";
+	}
+
+	@GetMapping("/")
+	public String principal() {
+		return "main";
 	}
 
 }

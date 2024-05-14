@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Ejemplo de un CRUD completo</title>
+<style type="text/css">
+#formulario {
+	width: 500px;
+	padding-top: 20px;
+}
+
+#formulario input {
+	margin-top: 10px;
+	display: block;
+}
+
+input[type="text"], input[type="email"]  {
+	width: 100%;
+}
+</style>
+</head>
+<body>
+	<div id="menu">
+		<a th:href="@{/list}">Inicio</a> | <a th:href="@{/nuevo}">Nuevo
+			alumno</a> | <a th:href="@{/nuevocurso}">Nuevo Curso</a>|<a th:href ="@{/listcursos}"> Lista de Cursos</a>
+	
+	</div>
+	<div id="formulario">
+		<form th:action="${curso.id != 0} ? @{/editarcurso/submit} : @{/nuevocurso/submit}" th:object="${curso}" method="post">
+			<input th:if="${curso.id != 0}" type="hidden" name="id" th:field="*{id}" />
+			<input type="text" name="nombre" th:field="*{nombre}"
+				placeholder="Nombre" /> 
+			<input type="text" name="tutor"
+				th:field="*{tutor}" placeholder="Tutor" /> 
+			
+			<input type="submit" name="enviar" value="Enviar" />
+		</form>
+	</div>
+</body>
+</html>

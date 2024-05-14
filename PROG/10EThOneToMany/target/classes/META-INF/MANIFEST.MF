@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: delgado.hebru24_tria
+Build-Jdk: 17.0.10
+Implementation-Title: Th07RepresentarAsociacionOneToMany_v2
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.salesianostriana.dam
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/Th07RepresentarAsociacionOneToMany_v2
+Created-By: Maven Integration for Eclipse
+

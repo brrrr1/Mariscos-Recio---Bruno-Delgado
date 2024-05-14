@@ -19,9 +19,14 @@ public interface UsuarioRepositorio extends JpaRepository<Usuario, Long> {
 	public List<Usuario> encontrarAdmin();
 
 	@Query("""
-			SELECT u FROM Usuario u
-			WHERE u.esEmpleado = true
+			    SELECT u FROM Usuario u
+			    WHERE u.esEmpleado = true
 			""")
 	public List<Usuario> encontrarEmpleados();
+
+	/*
+	 * @Query(""" SELECT u, p FROM Usuario u, P WHERE p MEMBER OF u.favoritos """)
+	 * public List<Producto> listaFavoritos();
+	 */
 
 }

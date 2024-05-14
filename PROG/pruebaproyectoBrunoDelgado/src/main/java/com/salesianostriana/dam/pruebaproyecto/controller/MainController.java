@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.salesianostriana.dam.pruebaproyecto.model.Favoritos;
-import com.salesianostriana.dam.pruebaproyecto.model.Producto;
 import com.salesianostriana.dam.pruebaproyecto.model.Usuario;
+import com.salesianostriana.dam.pruebaproyecto.service.FavoritosService;
 import com.salesianostriana.dam.pruebaproyecto.service.LoteService;
 import com.salesianostriana.dam.pruebaproyecto.service.MariscoService;
 import com.salesianostriana.dam.pruebaproyecto.service.MerchService;
@@ -43,6 +43,9 @@ public class MainController {
 
 	@Autowired
 	private PasswordEncoder passwordEncoder;
+
+	@Autowired
+	private FavoritosService servicioFavoritos;
 
 	@GetMapping("/main")
 	public String controlador(Model model) {
@@ -139,22 +142,35 @@ public class MainController {
 		return "main";
 	}
 
-	@PostMapping("/addFavorito/{usuario_id}/{producto_id}")
-	public String addFavorito(@PathVariable Long usuario_id, @PathVariable Long producto_id,
-			@AuthenticationPrincipal Usuario usuario) {
-		/*
-		 * Usuario usuario = servicioUsuario.findById(usuario_id) .orElseThrow(() -> new
-		 * RuntimeException("Usuario no encontrado"));
-		 */
-		Producto producto = servicioProducto.findById(producto_id)
-				.orElseThrow(() -> new RuntimeException("Producto no encontrado"));
-		producto.setLikes(producto.getLikes() + 1);
-		Favoritos favorito = new Favoritos(usuario, producto);
-		// favorito.addToUsuario(usuario);
-		usuario.getFavoritos().add(favorito);
-		servicioUsuario.save(usuario);
+//	@PostMapping("/addFavorito/{usuario_id}/{producto_id}")
+	//// public String addFavorito(@PathVariable Long usuario_id, @PathVariable Long
+	//// producto_id,
+	//// @AuthenticationPrincipal Usuario usuario) {
+	///// *
+	//// * Usuario usuario = servicioUsuario.findById(usuario_id) .orElseThrow(() ->
+	//// new
+	//// * RuntimeException("Usuario no encontrado"));
+	//// */
+	// Producto producto = servicioProducto.findById(producto_id)
+	// .orElseThrow(() -> new RuntimeException("Producto no encontrado"));
+	// producto.setLikes(producto.getLikes() + 1);
+	// Favoritos favorito = new Favoritos(usuario, producto);
+	// favorito.addToUsuario(usuario);
+	// usuario.getFavoritos().add(favorito);
+	// servicioUsuario.save(usuario);
 
-		return "redirect:/main";
+	// return "redirect:/main";
+	// }
+
+	@GetMapping("/agregarAFavoritos/{productoId}")
+	@ResponseBody
+	public String addProductoToFavoritos(@AuthenticationPrincipal Usuario usuario, @PathVariable long productoId) {
+		boolean added = servicioFavoritos.toggleFavorito(usuario, productoId);
+		if (added) {
+			return "Producto añadido a favoritos y likes aumentados";
+		} else {
+			return "Producto eliminado de favoritos y likes disminuidos";
+		}
 	}
 
 	@GetMapping("/login")
@@ -165,6 +181,13 @@ public class MainController {
 	@GetMapping("/")
 	public String principal() {
 		return "main";
+	}
+
+	@GetMapping("/favoritos")
+	public String listarMasFavoritos(Model model) {
+		model.addAttribute("listaMasFavoritos", servicioProducto.mostrarMasFavoritos());
+
+		return "pruebaLikes";
 	}
 
 }

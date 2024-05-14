@@ -23,7 +23,7 @@ import lombok.ToString;
 public class ProductoPorUnidad extends Producto {
 
 	private int stock;
-	// private double descuento;
+	private double descuento;
 
 	public ProductoPorUnidad(long id, String nombre, String descripcion, int likes, String foto, double precio,
 			int stock, List<LineaDePedido> LineasDePedido) {
@@ -31,8 +31,8 @@ public class ProductoPorUnidad extends Producto {
 		this.stock = stock;
 	}
 
-	/*
-	 * public double getPrecioFinal() { return super.getPrecio() + super.getPrecio()
-	 * * descuento; }
-	 */
+	public double getPrecioFinal() {
+		return super.getPrecio() - super.getPrecio() * (descuento / 100);
+	}
+
 }

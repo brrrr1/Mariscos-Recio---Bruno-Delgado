@@ -5,18 +5,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.salesianostriana.dam.pruebaproyecto.service.UsuarioService;
+import com.salesianostriana.dam.pruebaproyecto.repositorios.UsuarioRepositorio;
 
 @Controller
 public class MainDeMentira {
 
 	@Autowired
-	private UsuarioService servicio;
+	private UsuarioRepositorio usuarioRepositorio;
 
 	@GetMapping("/empleadosQuery")
 	public String verEmpleados(Model model) {
-		model.addAttribute("listaEmpleados", servicio.encontrarEmpleados());
+		model.addAttribute("listaEmpleados", usuarioRepositorio.encontrarEmpleados());
 		return "pruebaQuery";
-
 	}
 }

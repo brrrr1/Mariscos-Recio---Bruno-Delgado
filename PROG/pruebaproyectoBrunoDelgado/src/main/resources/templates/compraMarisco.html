@@ -42,10 +42,19 @@ xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 					<button type="button" class="btn btn-success btn-lg mb-3">Añadir al carrito</button>
 				</div>
 
-				<button type="button" class="btn btn-danger btn-lg">
-					<i class="bi bi-heart-fill me-2"></i>Me Gusta
-					<span class="badge bg-secondary" th:text="${marisco.likes}"></span>
-				</button>
+				<form id="favoritosForm" th:action="@{/agregarAFavoritos/{productoId}(productoId=${marisco.id})}" method="GET"
+								    style="display: none;">
+								    <button type="submit" id="likeButton" class="btn btn-danger btn-lg">
+								        <i class="bi bi-heart-fill me-2"></i>Me Gusta
+								        <span class="badge bg-secondary" id="likesCount" th:text="${marisco.likes}"></span>
+								    </button>
+								</form>
+								
+								<a href="#" onclick="document.getElementById('favoritosForm').submit(); return false;"
+								    class="btn btn-danger btn-lg">
+								    <i class="bi bi-heart-fill me-2"></i>Me Gusta
+								    <span class="badge bg-secondary" id="likesCount" th:text="${marisco.likes}"></span>
+								</a>
 
 			</div>
 		</div>

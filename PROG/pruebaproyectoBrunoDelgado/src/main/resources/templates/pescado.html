@@ -34,18 +34,18 @@
 									<img th:src="${not (#strings.isEmpty(pescado.foto))} ? ${pescado.foto} : 'https://llerena.org/wp-content/uploads/2017/11/imagen-no-disponible.jpg'"
 										class="img-responsive icono-categoria" alt="imagen" />
 									<h5 class="card-title" th:text="${pescado.nombre}">Taza</h5>
-									<p class="card-text" th:text="${#numbers.formatDecimal(pescado.precio, 1, 2)+' €/kg'}">
+									<p class="card-text"
+										th:text="${#numbers.formatDecimal(pescado.precio, 1, 2)+' €/kg'}">
 										200leuros</p>
-										<div class="d-flex justify-content-between align-items-start">
-											<a href="#" th:href="@{/productoPescado/{id}(id=${pescado.id})}"> <button
-													class="btn btn-danger"><i class="bi bi-cart-plus"></i>
-													Comprar</button></a>
+									<div class="d-flex justify-content-between align-items-start">
+										<a href="#" th:href="@{/productoPescado/{id}(id=${pescado.id})}"> <button
+												class="btn btn-danger"><i class="bi bi-cart-plus"></i>
+												Comprar</button></a>
+
+										<p class="card-text" th:text="${pescado.likes} +'❤️'"></p>
 										
-											<button type="button" class="btn btn-danger btn-lg">
-												<i class="bi bi-heart-fill me-2"></i>Me Gusta
-												<span class="badge bg-secondary" th:text="${pescado.likes}"></span>
-											</button>
-										</div>
+										
+									</div>
 								</div>
 							</div>
 						</div>
@@ -59,11 +59,11 @@
 	<footer th:replace="~{fragmentos/footer::footer}">
 
 	</footer>
-	
+
 	<script>
-	  AOS.init();
+		AOS.init();
 	</script>
-	
+
 </body>
 
 

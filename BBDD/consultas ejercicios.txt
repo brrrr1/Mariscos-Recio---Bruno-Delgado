@@ -1,0 +1,41 @@
+Producto
+-id
+-nombre:String
+-precio:double
+-desceunto:double
+-especial:boolean
+-categoria:Categoria
+
+Categoria
+-id
+-nombre
+
+
+3 productos más baratos:
+
+public List<Producto> findTop3ByPrecioAsc(Producto, producto){
+	return listaProductos;
+}
+
+
+
+Los productos especiales de la categoria con nombre 'Apple' que tengan descuento
+
+public List<Producto> findByEspecialTrueAndCategoriaNombreAndDescuentoIsNotNull(String categoriaNombre){
+	return listaProductos;
+}
+
+
+
+
+Los productos donde el nombre del mismo o el nombre de la categoria sea 'Ordenador'. Dan igual mayus/minus
+
+List<Producto> findByNombreOrCategoriaNombreAllIgnoreCase(String nombre, String categoriaNombre){
+	return listaProductos;
+}
+
+En el servicio:
+public List<Producto> buscarPorNombre(String nombre){
+	return findByNombreOrCategoriaNombreAllIgnoreCase(nombre, nombre);
+}
+

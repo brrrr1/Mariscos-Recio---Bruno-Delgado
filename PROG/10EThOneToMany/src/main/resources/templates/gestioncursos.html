@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Ejemplo de un CRUD completo</title>
+<style type="text/css">
+#formulario {
+	width: 500px;
+	padding-top: 20px;
+}
+
+#formulario input {
+	margin-top: 10px;
+	display: block;
+}
+
+input[type="text"], input[type="email"]  {
+	width: 100%;
+}
+</style>
+</head>
+<body>
+	<div id="menu">
+		<a th:href="@{/list}">Inicio</a> | <a th:href="@{/nuevo}">Nuevo
+			alumno</a> | <a th:href="@{/nuevocurso}">Nuevo Curso</a>|<a th:href ="@{/listcursos}"> Lista de Cursos</a>
+	
+	</div>
+	
+	<span th:text="${curso.nombre + ' ' + curso.tutor}"></span>
+	
+	<!-- En el formulario:
+		* El objeto modal que vamos a usar es un curso (debe estar en el modelo del controllador)
+		* Campo oculto si el id es distinto de cero
+		* En el each: la lista de alumnos que vamos a recorrer en el th:each 
+		debe ser la pasada al modelo también en el controller,
+		es decir, la que hemos buscado en el controlador con findAll
+		* En la lista (ul), el th:field debe ser la lista de alumnos que tenemos en el modelo, es decir, 
+		debe tener el mismo nombre que hemos dado al List en la clase modelo Curso puesto que este es el modal object
+		que estamos usando en el form. Podríamos usar también th:field="${curso.alumnos}". Ojo con esto.
+		* El th:value será el id del alumno que estamos marcando-->
+	<div id="formulario">
+		<form th:action="@{/configurarcurso/submit}" th:object="${curso}" method="post">
+			<input th:if="${curso.id != 0}" type="hidden" name="id" th:field="*{id}" />
+ 
+			<ul>
+				<li th:each="alumno : ${lista}">
+					<label th:text="${alumno.nombre+' ' +alumno.apellidos}"></label>
+					<input type="checkbox" th:field="*{alumnos}" th:value="${alumno.id}"/>
+					
+				</li> 
+			</ul>
+			<input type="submit" name="enviar" value="Enviar" />
+		</form>
+	</div>
+</body>
+</html>
+</html>

@@ -1,21 +1,13 @@
 package com.salesianostriana.dam.pruebaproyecto.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
-import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 @Data
 @NoArgsConstructor
@@ -33,10 +25,23 @@ public abstract class Producto {
 	private String foto;
 	private double precio;
 
+<<<<<<< HEAD
+	public void addLineaDePedido(LineaDePedido ldp) {
+		ldp.setPedido(this);
+		this.LineasDePedido.add(ldp);
+	}
+
+	public void removeLineaDePedido(LineaDePedido ldp) {
+		this.LineasDePedido.remove(ldp);
+		ldp.setPedido(null);
+
+	}
+=======
 	@ToString.Exclude
 	@EqualsAndHashCode.Exclude
 	// @Builder.Default
 	@OneToMany(mappedBy = "producto", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<LineaDePedido> LineasDePedido = new ArrayList<>();
+>>>>>>> favoritos
 
 }

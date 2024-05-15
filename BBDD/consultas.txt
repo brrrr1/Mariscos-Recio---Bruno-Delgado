@@ -1,0 +1,14 @@
+public List<Producto> findTop9ByLikesOrderByLikesDesc(Producto producto){
+	return listaPorLikes;
+}
+
+public List<Usuario> findTop1ByNumPedidosOrderByNumPedidosDesc(Usuario usuario){
+
+}
+
+public List<Producto producto> findByNombreContainsIgnoreCase(String nombre){
+	return listaProductos;
+}
+
+
+lista productosMeGusta

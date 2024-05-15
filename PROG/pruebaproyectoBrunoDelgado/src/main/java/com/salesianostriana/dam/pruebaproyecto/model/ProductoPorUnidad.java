@@ -27,7 +27,7 @@ public class ProductoPorUnidad extends Producto {
 
 	public ProductoPorUnidad(long id, String nombre, String descripcion, int likes, String foto, double precio,
 			int stock, List<LineaDePedido> LineasDePedido) {
-		super(id, nombre, descripcion, likes, foto, precio, LineasDePedido);
+		super(id, nombre, descripcion, likes, foto, precio/*, LineasDePedido*/);
 		this.stock = stock;
 	}
 

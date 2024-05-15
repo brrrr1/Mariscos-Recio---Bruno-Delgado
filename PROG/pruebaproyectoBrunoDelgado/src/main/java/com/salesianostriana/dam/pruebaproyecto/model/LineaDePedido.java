@@ -34,7 +34,7 @@ public class LineaDePedido {
 	 */
 
 	/* MÉTODOS HELPER */
-
+/*
 	public void addToPedido(Producto producto) {
 		this.producto = producto;
 		producto.getLineasDePedido().add(this);
@@ -44,5 +44,5 @@ public class LineaDePedido {
 		producto.getLineasDePedido().remove(this);
 		this.producto = null;
 	}
-
+*/
 }

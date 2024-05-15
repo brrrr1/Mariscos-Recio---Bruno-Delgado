@@ -40,6 +40,7 @@ public class Usuario implements UserDetails {
 	private String direccion;
 	private boolean esAdmin;
 	private boolean esEmpleado;
+//	private List<Producto> listaFavoritos;
 
 	@OneToMany(mappedBy = "usuario", fetch = FetchType.EAGER)
 	@Builder.Default

@@ -1,69 +1,68 @@
-		#recio {
-			padding: 0;
-			margin: 0;
-		}
+#recio {
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+}
 
-		#recio img {
-			width: 100%;
-			height: auto;
-		}
+#recio img {
+	width: 100%;
+	height: auto;
+}
 
 
-		.botones {
-			padding-top: 100px;
-		}
+.botones {
+	padding-top: 100px;
+}
 
-		.botones button {
-			font-size: 60px;
-			padding: 20px;
-			margin: 10px;
-			width: calc(50% - 20px);
-			height: 150px;
-			background-color: #dc3545;
-			border: none;
-			color: white;
-		}
+.botones button {
+	font-size: 60px;
+	padding: 20px;
+	margin: 10px;
+	width: calc(50% - 20px);
+	height: 150px;
+	background-color: #dc3545;
+	border: none;
+	color: white;
+}
 
-		#banner img {
-			margin-top: 100px;
-			margin-bottom: 100px;
-			width: 100%;
-			height: auto;
-		}
+#banner img {
+	width: 100%;
+	height: auto;
+}
 
-		.botones-container {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-		}
+.botones-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
 
-		.botones button:hover {
-			background-color: #dc3545;
-		}
+.botones button:hover {
+	background-color: #dc3545;
+}
 
-		.titulo-grande {
-			font-size: 3rem;
-		}
+.titulo-grande {
+	font-size: 3rem;
+}
 
-		#btnScrollToTop {
-			position: fixed;
-			bottom: 20px;
-			right: 20px;
-			font-size: 24px;
-			width: 50px;
-			height: 50px;
-			border-radius: 50%;
-			background-color: #dc3545;
-			color: white;
-			border: none;
-			cursor: pointer;
-			z-index: 1000;
-		}
+#btnScrollToTop {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	font-size: 24px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: #dc3545;
+	color: white;
+	border: none;
+	cursor: pointer;
+	z-index: 1000;
+}
 
-		#btnScrollToTop:hover {
-			background-color: #c82333;
-		}
+#btnScrollToTop:hover {
+	background-color: #c82333;
+}
 
-		footer {
-			width: 100%;
-		}
+footer {
+	width: 100%;
+}

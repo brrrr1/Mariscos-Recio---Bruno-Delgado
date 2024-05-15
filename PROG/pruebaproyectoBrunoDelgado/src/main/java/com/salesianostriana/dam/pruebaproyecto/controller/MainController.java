@@ -1,6 +1,7 @@
 package com.salesianostriana.dam.pruebaproyecto.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -13,6 +14,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.salesianostriana.dam.pruebaproyecto.model.Favoritos;
+import com.salesianostriana.dam.pruebaproyecto.model.Lote;
+import com.salesianostriana.dam.pruebaproyecto.model.Marisco;
+import com.salesianostriana.dam.pruebaproyecto.model.Merch;
+import com.salesianostriana.dam.pruebaproyecto.model.Pescado;
+import com.salesianostriana.dam.pruebaproyecto.model.Producto;
 import com.salesianostriana.dam.pruebaproyecto.model.Usuario;
 import com.salesianostriana.dam.pruebaproyecto.service.FavoritosService;
 import com.salesianostriana.dam.pruebaproyecto.service.LoteService;
@@ -51,6 +57,7 @@ public class MainController {
 
 	@GetMapping("/main")
 	public String controlador(Model model) {
+		model.addAttribute("listaMasFavoritos", servicioProducto.mostrarMasFavoritos());
 		return "main";
 	}
 
@@ -177,9 +184,21 @@ public class MainController {
 	@GetMapping("/agregarAFavoritos/{productoId}")
 	public String addProductoToFavoritos(@AuthenticationPrincipal Usuario usuario, @PathVariable Long productoId) {
 		servicioFavoritos.alternarFavorito(usuario, productoId);
+		Optional<Producto> productoOpt = servicioProducto.findById(productoId);
 
+		if (productoOpt.isPresent()) {
+			Producto producto = productoOpt.get();
+			if (producto instanceof Merch) {
+				return "redirect:/productoMerch/{productoId}";
+			} else if (producto instanceof Lote) {
+				return "redirect:/productoLote/{productoId}";
+			} else if (producto instanceof Marisco) {
+				return "redirect:/productoMarisco/{productoId}";
+			} else if (producto instanceof Pescado) {
+				return "redirect:/productoPescado/{productoId}";
+			}
+		}
 		return "redirect:/misFavoritos";
-
 	}
 
 	@GetMapping("/login")
@@ -204,14 +223,43 @@ public class MainController {
 		List<Favoritos> favoritosDelUsuario = servicioFavoritos.findByUsuario(usuario);
 		model.addAttribute("listaMisFavoritos", favoritosDelUsuario);
 
-		return "pruebaLikes";
+		return "misFavoritos";
 	}
 
 	@GetMapping("/masFavoritos")
 	public String listarMasFavoritos(Model model) {
 		model.addAttribute("listaMasFavoritos", servicioProducto.mostrarMasFavoritos());
 
-		return "pruebaLikes2";
+		return "masFavoritos";
+	}
+
+	@GetMapping("/perfil")
+	public String verPerfil(@AuthenticationPrincipal Usuario usuario, Model model) {
+
+		model.addAttribute("usuario", usuario);
+
+		return "perfil"; // nombre de la página Thymeleaf
+	}
+
+	/*
+	 * @PostMapping("/perfil/editar") public String
+	 * procesarFormularioEdicion(@AuthenticationPrincipal Usuario usuario) {
+	 * servicioUsuario.edit(usuario); return "redirect:/perfil"; }
+	 */
+
+	@GetMapping("/editarUsuario")
+	public String mostrarFormularioEdicion(@AuthenticationPrincipal Usuario usuario, Model model) {
+
+		model.addAttribute("usuario", usuario);
+		return "editarUsuarioForm";
+
+	}
+
+	@PostMapping("/editarUsuario/submit")
+	public String procesarFormularioEdicion(@ModelAttribute("usuario") @AuthenticationPrincipal Usuario usuario) {
+		servicioUsuario.edit(usuario);
+		return "redirect:/perfil";
+
 	}
 
 }

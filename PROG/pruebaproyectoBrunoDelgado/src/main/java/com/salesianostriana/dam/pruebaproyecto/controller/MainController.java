@@ -1,6 +1,10 @@
 package com.salesianostriana.dam.pruebaproyecto.controller;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,11 +13,19 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.salesianostriana.dam.pruebaproyecto.model.Favoritos;
+import com.salesianostriana.dam.pruebaproyecto.model.Lote;
+import com.salesianostriana.dam.pruebaproyecto.model.Marisco;
+import com.salesianostriana.dam.pruebaproyecto.model.Merch;
+import com.salesianostriana.dam.pruebaproyecto.model.Pescado;
+import com.salesianostriana.dam.pruebaproyecto.model.Producto;
 import com.salesianostriana.dam.pruebaproyecto.model.Usuario;
+import com.salesianostriana.dam.pruebaproyecto.service.FavoritosService;
 import com.salesianostriana.dam.pruebaproyecto.service.LoteService;
 import com.salesianostriana.dam.pruebaproyecto.service.MariscoService;
 import com.salesianostriana.dam.pruebaproyecto.service.MerchService;
 import com.salesianostriana.dam.pruebaproyecto.service.PescadoService;
+import com.salesianostriana.dam.pruebaproyecto.service.ProductoService;
 import com.salesianostriana.dam.pruebaproyecto.service.UsuarioService;
 
 @Controller
@@ -35,10 +47,17 @@ public class MainController {
 	private UsuarioService servicioUsuario;
 
 	@Autowired
+	private ProductoService servicioProducto;
+
+	@Autowired
 	private PasswordEncoder passwordEncoder;
+
+	@Autowired
+	private FavoritosService servicioFavoritos;
 
 	@GetMapping("/main")
 	public String controlador(Model model) {
+		model.addAttribute("listaMasFavoritos", servicioProducto.mostrarMasFavoritos());
 		return "main";
 	}
 
@@ -130,6 +149,117 @@ public class MainController {
 		servicioUsuario.save(usuario);
 		model.addAttribute("usuario", usuario);
 		return "main";
+	}
+
+//	@PostMapping("/addFavorito/{usuario_id}/{producto_id}")
+	//// public String addFavorito(@PathVariable Long usuario_id, @PathVariable Long
+	//// producto_id,
+	//// @AuthenticationPrincipal Usuario usuario) {
+	///// *
+	//// * Usuario usuario = servicioUsuario.findById(usuario_id) .orElseThrow(() ->
+	//// new
+	//// * RuntimeException("Usuario no encontrado"));
+	//// */
+	// Producto producto = servicioProducto.findById(producto_id)
+	// .orElseThrow(() -> new RuntimeException("Producto no encontrado"));
+	// producto.setLikes(producto.getLikes() + 1);
+	// Favoritos favorito = new Favoritos(usuario, producto);
+	// favorito.addToUsuario(usuario);
+	// usuario.getFavoritos().add(favorito);
+	// servicioUsuario.save(usuario);
+
+	// return "redirect:/main";
+	// }
+
+//	@GetMapping("/agregarAFavoritos/{productoId}")
+//	public String addProductoToFavoritos(@AuthenticationPrincipal Usuario usuario, @PathVariable Long productoId) {
+//		boolean added = servicioFavoritos.alternarFavorito(usuario, productoId);
+//		if (added) {
+//			return "redirect:/misFavoritos";
+//		} else {
+//			return "redirect:/misFavoritos";
+//		}
+//	}
+
+	@GetMapping("/agregarAFavoritos/{productoId}")
+	public String addProductoToFavoritos(@AuthenticationPrincipal Usuario usuario, @PathVariable Long productoId) {
+		servicioFavoritos.alternarFavorito(usuario, productoId);
+		Optional<Producto> productoOpt = servicioProducto.findById(productoId);
+
+		if (productoOpt.isPresent()) {
+			Producto producto = productoOpt.get();
+			if (producto instanceof Merch) {
+				return "redirect:/productoMerch/{productoId}";
+			} else if (producto instanceof Lote) {
+				return "redirect:/productoLote/{productoId}";
+			} else if (producto instanceof Marisco) {
+				return "redirect:/productoMarisco/{productoId}";
+			} else if (producto instanceof Pescado) {
+				return "redirect:/productoPescado/{productoId}";
+			}
+		}
+		return "redirect:/misFavoritos";
+	}
+
+	@GetMapping("/login")
+	public String index() {
+		return "login";
+	}
+
+	@GetMapping("/")
+	public String principal() {
+		return "main";
+	}
+
+//	@GetMapping("/favoritos")
+//	public String listarMasFavoritos(Model model) {
+//		model.addAttribute("listaMasFavoritos", servicioProducto.mostrarMasFavoritos());
+//
+//		return "pruebaLikes";
+//	}
+
+	@GetMapping("/misFavoritos")
+	public String listarMisFavoritos(@AuthenticationPrincipal Usuario usuario, Model model) {
+		List<Favoritos> favoritosDelUsuario = servicioFavoritos.findByUsuario(usuario);
+		model.addAttribute("listaMisFavoritos", favoritosDelUsuario);
+
+		return "misFavoritos";
+	}
+
+	@GetMapping("/masFavoritos")
+	public String listarMasFavoritos(Model model) {
+		model.addAttribute("listaMasFavoritos", servicioProducto.mostrarMasFavoritos());
+
+		return "masFavoritos";
+	}
+
+	@GetMapping("/perfil")
+	public String verPerfil(@AuthenticationPrincipal Usuario usuario, Model model) {
+
+		model.addAttribute("usuario", usuario);
+
+		return "perfil"; // nombre de la página Thymeleaf
+	}
+
+	/*
+	 * @PostMapping("/perfil/editar") public String
+	 * procesarFormularioEdicion(@AuthenticationPrincipal Usuario usuario) {
+	 * servicioUsuario.edit(usuario); return "redirect:/perfil"; }
+	 */
+
+	@GetMapping("/editarUsuario")
+	public String mostrarFormularioEdicion(@AuthenticationPrincipal Usuario usuario, Model model) {
+
+		model.addAttribute("usuario", usuario);
+		return "editarUsuarioForm";
+
+	}
+
+	@PostMapping("/editarUsuario/submit")
+	public String procesarFormularioEdicion(@ModelAttribute("usuario") @AuthenticationPrincipal Usuario usuario) {
+		servicioUsuario.edit(usuario);
+		return "redirect:/perfil";
+
 	}
 
 }

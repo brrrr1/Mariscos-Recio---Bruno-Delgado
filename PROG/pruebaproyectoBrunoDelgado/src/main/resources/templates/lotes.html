@@ -35,17 +35,34 @@
 									<img th:src="${not (#strings.isEmpty(lote.foto))} ? ${lote.foto} : 'https://llerena.org/wp-content/uploads/2017/11/imagen-no-disponible.jpg'"
 										class="img-responsive icono-categoria" alt="imagen" />
 									<h5 class="card-title" th:text="${lote.nombre}">Taza</h5>
-									<p class="card-text" th:text="${#numbers.formatDecimal(lote.precio, 1, 2)+' €'}">
-										200leuros</p>
+
+									<p class="card-text" th:if="${lote.descuento > 0.00}">
+										<span class="text-decoration-line-through"
+											th:text="${#numbers.formatDecimal(lote.precio, 1, 2) + ' €'}"></span>
+										<span th:text="${#numbers.formatDecimal(lote.precioFinal, 1, 2) + ' €'}"
+											class="text-danger"></span>
+										<br />
+										<span class="badge bg-success"
+											th:text="'Descuento: ' + ${#numbers.formatDecimal(lote.descuento, 1, 2) + ' %'}"></span>
+									<div class="alert alert-info mt-2" role="alert" th:if="${lote.descuento > 0.00}">
+										¡Producto con descuento!
+									</div>
+									</p>
+
+
+									<p class="card-text" th:unless="${lote.descuento > 0.00}"
+										th:text="${#numbers.formatDecimal(lote.precio, 1, 2) + ' €'}">
+										200leuros
+									</p>
+
+
 									<div class="d-flex justify-content-between align-items-start">
 										<a href="#" th:href="@{/productoLote/{id}(id=${lote.id})}"> <button
 												class="btn btn-danger"><i class="bi bi-cart-plus"></i>
 												Comprar</button></a>
 
-										<button type="button" class="btn btn-danger btn-lg">
-											<i class="bi bi-heart-fill me-2"></i>Me Gusta
-											<span class="badge bg-secondary" th:text="${lote.likes}"></span>
-										</button>
+												<p class="card-text" th:text="${lote.likes} +'❤️'"></p>
+												
 									</div>
 								</div>
 							</div>
@@ -59,11 +76,11 @@
 	<footer th:replace="~{fragmentos/footer::footer}">
 
 	</footer>
-	
+
 	<script>
-	  AOS.init();
+		AOS.init();
 	</script>
-	
+
 </body>
 
 

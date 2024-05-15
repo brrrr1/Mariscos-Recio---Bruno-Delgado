@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" xmlns:th="http://www.thymeleaf.org" 
-xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<html lang="es" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
 <head>
 	<meta charset="UTF-8">
@@ -42,10 +41,9 @@ xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 					<button type="button" class="btn btn-success btn-lg mb-3">Añadir al carrito</button>
 				</div>
 
-				<button type="button" class="btn btn-danger btn-lg">
-					<i class="bi bi-heart-fill me-2"></i>Me Gusta
-					<span class="badge bg-secondary" th:text="${marisco.likes}"></span>
-				</button>
+				<div th:replace="~{fragmentos/meGustaMarisco::meGustaMarisco}"></div>
+
+
 
 			</div>
 		</div>

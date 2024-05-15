@@ -1,19 +1,12 @@
-function confirmarBorrado(event) {
-	let confirmacion = confirm('¿Estás seguro de que deseas borrar este elemento?');
-	if (!confirmacion) {
-		event.preventDefault();
-	}
+function handleButtonClick(event) {
+	event.preventDefault();
+	const borrarLink = document.getElementById('confirmarBorradoLink');
+	borrarLink.href = event.target.href;
+
+	const borrarModal = new bootstrap.Modal(document.getElementById('borrarModal'));
+	borrarModal.show();
 }
 
-function asociarEventListeners() {
-
-	let botonesBorrar = document.querySelectorAll('[id^="borrarBtn"]');
-
-	botonesBorrar.forEach(asociarEvento);
-}
-
-function asociarEvento(boton) {
-	boton.addEventListener('click', confirmarBorrado);
-}
-
-document.addEventListener('DOMContentLoaded', asociarEventListeners);
+document.querySelectorAll('[id^="borrarBtn"]').forEach(function(button) {
+	button.addEventListener('click', handleButtonClick);
+});

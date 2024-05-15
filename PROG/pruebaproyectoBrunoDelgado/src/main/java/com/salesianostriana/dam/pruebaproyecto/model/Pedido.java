@@ -35,7 +35,9 @@ public class Pedido {
 	private LocalDate fechaPedido;
 
 	private String contenido;
-	private double precio;
+	private double precioFinal;
+
+	private boolean finalizada;
 
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "usuario_id") // nombre de la columna en la tabla Pedido que referencia a Usuario
@@ -57,12 +59,12 @@ public class Pedido {
 	 * MÉTODOS HELPER
 	 */
 
-	public void addToPedido(Usuario usuario) {
+	public void addLineaDePedido(Usuario usuario) {
 		this.usuario = usuario;
 		usuario.getPedidos().add(this);
 	}
 
-	public void removeFromPedido(Usuario usuario) {
+	public void removeLineaDePedido(Usuario usuario) {
 		usuario.getPedidos().remove(this);
 		this.usuario = null;
 	}

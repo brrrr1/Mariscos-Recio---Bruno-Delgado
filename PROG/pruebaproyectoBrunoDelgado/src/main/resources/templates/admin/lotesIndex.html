@@ -55,31 +55,43 @@
 						</tr>
 					</tbody>
 				</table>
-			</div>
-		</div>
-	</div>
 
-	<script>
-		function confirmarBorrado(event) {
-			let confirmacion = confirm('¿Estás seguro de que deseas borrar este elemento?');
-			if (!confirmacion) {
-				event.preventDefault();
-			}
-		}
+				<div class="modal fade" id="borrarModal" tabindex="-1" aria-labelledby="borrarModalLabel"
+					aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="borrarModalLabel">Confirmar borrado</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								¿Estás seguro de que deseas borrar este producto?
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary"
+									data-bs-dismiss="modal">Cancelar</button>
+								<a id="confirmarBorradoLink" href="#" class="btn btn-danger">Borrar</a>
+							</div>
+						</div>
+					</div>
+				</div>
 
-		function asociarEventListeners() {
+				<script>
+					function botonBorrar(event) {
+						event.preventDefault();
+						let borrarLink = document.getElementById('confirmarBorradoLink');
+						borrarLink.href = event.target.href;
 
-			let botonesBorrar = document.querySelectorAll('[id^="borrarBtn"]');
+						let borrarModal = new bootstrap.Modal(document.getElementById('borrarModal'));
+						borrarModal.show();
+					}
 
-			botonesBorrar.forEach(asociarEvento);
-		}
+					document.querySelectorAll('[id^="borrarBtn"]').forEach(function (button) {
+						button.addEventListener('click', botonBorrar);
+					});
 
-		function asociarEvento(boton) {
-			boton.addEventListener('click', confirmarBorrado);
-		}
-
-		document.addEventListener('DOMContentLoaded', asociarEventListeners);
-	</script>
+				</script>
 </body>
 
 </html>

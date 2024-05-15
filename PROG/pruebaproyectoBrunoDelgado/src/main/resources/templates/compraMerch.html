@@ -29,21 +29,58 @@
 			<div class="col-md-6">
 				<h2 class="fw-bold mb-5 fs-2" th:text="${merch.nombre}" placeholder="Nombre"></h2>
 				<p class="fs-5 mb-5" th:text="${merch.descripcion}" placeholder="Descripción"></p>
-				<p class="fs-5 mb-5" th:text="${#numbers.formatDecimal(merch.precio, 1, 2) + ' €'}"
-					placeholder="Precio"></p>
+
+
+				<p class="fs-5 mb-5" th:if="${merch.descuento > 0.00}">
+					<span class="text-decoration-line-through"
+						th:text="${#numbers.formatDecimal(merch.precio, 1, 2) + ' €'}"></span>
+				</p>
+
+				<p class="fs-5 mb-5" th:unless="${merch.descuento > 0.00}"
+					th:text="${#numbers.formatDecimal(merch.precio, 1, 2) + ' €'}"></p>
+
+
+				<p class="fs-5 mb-5 text-danger" th:if="${merch.descuento > 0.00}">
+					<span th:text="'Descuento: ' + ${#numbers.formatDecimal(merch.descuento, 1, 2) + ' %'}"></span>
+					<span th:text="'Precio final: ' + ${#numbers.formatDecimal(merch.precioFinal, 1, 2) + ' €'}"></span>
+				</p>
 
 				<div class="form-group mb-5">
 					<button type="button" class="btn btn-success btn-lg mb-3">Añadir al carrito</button>
 				</div>
 
-				<button type="button" class="btn btn-danger btn-lg">
-					<i class="bi bi-heart-fill me-2"></i>Me Gusta
-					<span class="badge bg-secondary" th:text="${merch.likes}"></span>
-				</button>
+
+				<!--
+				
+				<form id="favoritosForm" th:action="@{/agregarAFavoritos/{productoId}(productoId=${merch.id})}" method="GET"
+				    style="display: none;">
+				    <button type="submit" id="likeButton" class="btn btn-danger btn-lg">
+				        <i class="bi bi-heart-fill me-2"></i>Me Gusta
+				        <span class="badge bg-secondary" id="likesCount" th:text="${merch.likes}"></span>
+				    </button>
+				</form>
+				
+				<a href="#" onclick="document.getElementById('favoritosForm').submit(); return false;"
+				    class="btn btn-danger btn-lg">
+				    <i class="bi bi-heart-fill me-2"></i>Me Gusta
+				    <span class="badge bg-secondary" id="likesCount" th:text="${merch.likes}"></span>
+				</a>
+				
+				-->
+
+				<div th:replace="~{fragmentos/meGustaMerch::meGustaMerch}"></div>
 
 			</div>
 		</div>
 	</div>
+
+
+	<!--<form th:action="@{/agregarAFavoritos/{productoId}}" method="POST" id="favoritosForm"
+		style="display: none;">
+		<button type="submit" id="favoritosBtn" class="btn btn-outline-light me-4">Me gusta</button>
+	</form>
+	<a href="#" onclick="document.getElementById('favoritosForm').submit(); return false;"
+		class="nav-link text-decoration-none">Me gusta</a>-->
 
 	<footer th:replace="~{fragmentos/footer::footer}">
 	</footer>

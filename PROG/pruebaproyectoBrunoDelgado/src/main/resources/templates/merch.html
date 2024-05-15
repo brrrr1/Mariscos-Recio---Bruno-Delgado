@@ -15,8 +15,6 @@
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
-
-
 <body>
 	<header th:replace="~{fragmentos/header::header}">
 	</header>
@@ -36,18 +34,51 @@
 									<img th:src="${not (#strings.isEmpty(merch.foto))} ? ${merch.foto} : 'https://llerena.org/wp-content/uploads/2017/11/imagen-no-disponible.jpg'"
 										class="img-responsive icono-categoria card-img-top" alt="imagen" />
 									<h5 class="card-title" th:text="${merch.nombre}">Taza</h5>
-									<p class="card-text" th:text="${#numbers.formatDecimal(merch.precio, 1, 2)+' €'}">
-										200leuros</p>
-									<div class="d-flex justify-content-between align-items-start ">
-										<a href="#" th:href="@{/productoMerch/{id}(id=${merch.id})}"> <button
-												class="btn btn-danger"><i class="bi bi-cart-plus"></i>
-												Comprar</button></a>
 
-										<button type="button" class="btn btn-danger btn-lg">
-											<i class="bi bi-heart-fill me-2"></i>Me Gusta
-											<span class="badge bg-secondary" th:text="${merch.likes}"></span>
-										</button>
+
+
+									<p class="card-text" th:if="${merch.descuento > 0.00}">
+										<span class="text-decoration-line-through"
+											th:text="${#numbers.formatDecimal(merch.precio, 1, 2) + ' €'}"></span>
+										<span th:text="${#numbers.formatDecimal(merch.precioFinal, 1, 2) + ' €'}"
+											class="text-danger"></span>
+										<br />
+										<span class="badge bg-success"
+											th:text="'Descuento: ' + ${#numbers.formatDecimal(merch.descuento, 1, 2) + ' %'}"></span>
+									<div class="alert alert-info mt-2" role="alert" th:if="${merch.descuento > 0.00}">
+										¡Producto con descuento!
 									</div>
+									</p>
+
+
+									<p class="card-text" th:unless="${merch.descuento > 0.00}"
+										th:text="${#numbers.formatDecimal(merch.precio, 1, 2) + ' €'}">
+										200leuros
+									</p>
+
+									<div class="d-flex justify-content-between align-items-start ">
+                                        <a href="#" th:href="@{/productoMerch/{id}(id=${merch.id})}">
+                                            <button class="btn btn-danger"><i class="bi bi-cart-plus"></i> Comprar</button>
+                                        </a>
+
+										<p class="card-text" th:text="${merch.likes} +'❤️'"></p>
+										
+                                    </div>
+
+
+									<!--
+									<div class="d-flex justify-content-between align-items-start ">
+										<a href="#" th:href="@{/login}">
+											<button class="btn btn-warning"><i class="bi bi-cart-plus"></i>
+												Comprar</button>
+										</a>
+
+										<p class="card-text" th:text="${merch.likes} +'❤️'"></p>
+
+									</div>
+									-->
+				
+
 								</div>
 							</div>
 						</div>
@@ -57,16 +88,12 @@
 		</div>
 	</div>
 
-
 	<footer th:replace="~{fragmentos/footer::footer}">
-
 	</footer>
-	
+
 	<script>
-	  AOS.init();
+		AOS.init();
 	</script>
-
 </body>
-
 
 </html>

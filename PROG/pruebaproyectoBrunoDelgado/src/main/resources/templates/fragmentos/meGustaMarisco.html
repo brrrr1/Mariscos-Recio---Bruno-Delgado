@@ -1,0 +1,29 @@
+<div th:fragment="meGustaMarisco">
+
+
+	<div sec:authorize="hasRole('ROLE_USER')">
+
+		<div th:replace="~{fragmentos/likeConLoginMarisco::likeConLoginMarisco}"></div>
+
+	</div>
+
+	<div sec:authorize="hasRole('ROLE_ADMIN')">
+
+		<div th:replace="~{fragmentos/likeConLoginMarisco::likeConLoginMarisco}"></div>
+
+	</div>
+
+	<div sec:authorize="hasRole('ROLE_EMPLEADO')">
+
+		<div th:replace="~{fragmentos/divlikeConLoginMarisco::divlikeConLoginMarisco}"></div>
+
+	</div>
+
+	<div sec:authorize="isAnonymous()">
+
+
+		<div th:replace="~{fragmentos/likeSinLoginMarisco::likeSinLoginMarisco}"></div>
+
+	</div>
+
+</div>

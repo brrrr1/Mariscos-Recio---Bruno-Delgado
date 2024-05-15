@@ -89,4 +89,10 @@ public class Usuario implements UserDetails {
 		return true;
 	}
 
+	@OneToMany(mappedBy = "usuario", fetch = FetchType.EAGER)
+	@Builder.Default
+	@EqualsAndHashCode.Exclude
+	@ToString.Exclude
+	private List<Favoritos> favoritos = new ArrayList<>();
+
 }

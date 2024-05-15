@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Ejemplo de un CRUD completo</title>
+</head>
+<body>
+<div id="menu">
+	<a th:href="@{/list}">Inicio</a> | <a th:href="@{/nuevo}">Nuevo alumno</a> | <a th:href="@{/nuevocurso}">Nuevo Curso</a> |
+	<a th:href ="@{/listcursos}"> Lista de Cursos</a> 
+</div>
+<br /><br />
+<table border=1>
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Nombre</th>
+			<th>Tutor</th>
+			<th>Opciones</th>
+			
+		</tr>
+	</thead>
+	<tbody>
+		<tr th:each="curso : ${cursos}">
+			<td th:text="${curso.id}">1</td>
+			<td th:text="${curso.nombre}">Nombre</td>
+			<td th:text="${curso.tutor}">Tutor</td>		
+			<td>
+				<a href="#" th:href="@{/editarcurso/{id}(id=${curso.id})}">Editar</a> | 
+				<a href="#" th:href="@{/borrarcurso/{id}(id=${curso.id})}">Borrar</a>|
+				<a href="#" th:href="@{/configurarcurso/{id}(id=${curso.id})}">Configurar</a>
+				<a href="#" th:href="@{/listacursosconalumnos/{id}(id=${curso.id})}">Listado Alumnos</a>
+			</td>
+		</tr>
+
+	</tbody>
+</table>
+</body>
+</html>

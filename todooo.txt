@@ -1,0 +1,11 @@
+cambiar paginas de compra usar solo una
+
+hacer lista favoritos bien
+
+boton de me gusta y carrito distintos si no está iniciado
+
+borrar productos que la gente guarda
+
+texto alternativo
+
+carrito 

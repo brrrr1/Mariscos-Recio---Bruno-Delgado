@@ -1,0 +1,4 @@
+cambiar header admin
+descuentos
+mostrar productos con mas likes
+probar consultas jpql

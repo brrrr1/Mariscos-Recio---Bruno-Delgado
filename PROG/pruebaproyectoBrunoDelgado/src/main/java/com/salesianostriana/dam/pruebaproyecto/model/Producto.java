@@ -6,7 +6,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -14,9 +13,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Builder
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-public class Producto {
+public abstract class Producto {
 
 	@Id
 	@GeneratedValue
@@ -27,6 +25,7 @@ public class Producto {
 	private String foto;
 	private double precio;
 
+<<<<<<< HEAD
 	public void addLineaDePedido(LineaDePedido ldp) {
 		ldp.setPedido(this);
 		this.LineasDePedido.add(ldp);
@@ -37,5 +36,12 @@ public class Producto {
 		ldp.setPedido(null);
 
 	}
+=======
+	@ToString.Exclude
+	@EqualsAndHashCode.Exclude
+	// @Builder.Default
+	@OneToMany(mappedBy = "producto", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
+	private List<LineaDePedido> LineasDePedido = new ArrayList<>();
+>>>>>>> favoritos
 
 }

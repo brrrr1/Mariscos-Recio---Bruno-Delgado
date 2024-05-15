@@ -28,6 +28,11 @@ public class LineaDePedido {
 	@ManyToOne(fetch = FetchType.EAGER)
 	private Producto producto;
 
+	/*
+	 * public double getPrecioLineaDeVenta() { return producto.getPrecio() +
+	 * cantidad; }
+	 */
+
 	/* MÉTODOS HELPER */
 
 	public void addToPedido(Producto producto) {

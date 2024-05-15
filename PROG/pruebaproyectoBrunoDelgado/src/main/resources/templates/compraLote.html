@@ -29,17 +29,26 @@
 			<div class="col-md-6">
 				<h2 class="fw-bold mb-5 fs-2" th:text="${lote.nombre}" placeholder="Nombre"></h2>
 				<p class="fs-5 mb-5" th:text="${lote.descripcion}" placeholder="Descripción"></p>
-				<p class="fs-5 mb-5" th:text="${#numbers.formatDecimal(lote.precio, 1, 2) + ' €'}"
-					placeholder="Precio"></p>
+
+				<p class="fs-5 mb-5" th:if="${lote.descuento > 0.00}">
+					<span class="text-decoration-line-through"
+						th:text="${#numbers.formatDecimal(lote.precio, 1, 2) + ' €'}"></span>
+				</p>
+
+				<p class="fs-5 mb-5" th:unless="${lote.descuento > 0.00}"
+					th:text="${#numbers.formatDecimal(lote.precio, 1, 2) + ' €'}"></p>
+
+
+				<p class="fs-5 mb-5 text-danger" th:if="${lote.descuento > 0.00}">
+					<span th:text="'Descuento: ' + ${#numbers.formatDecimal(lote.descuento, 1, 2) + ' %'}"></span>
+					<span th:text="'Precio final: ' + ${#numbers.formatDecimal(lote.precioFinal, 1, 2) + ' €'}"></span>
+				</p>
 
 				<div class="form-group mb-5">
 					<button type="button" class="btn btn-success btn-lg mb-3">Añadir al carrito</button>
 				</div>
 
-				<button type="button" class="btn btn-danger btn-lg">
-					<i class="bi bi-heart-fill me-2"></i>Me Gusta
-					<span class="badge bg-secondary" th:text="${lote.likes}"></span>
-				</button>
+				<div th:replace="~{fragmentos/meGustaLotes::meGustaLotes}"></div>
 
 			</div>
 		</div>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Ejemplo de un CRUD completo</title>
+</head>
+<body>
+<div id="menu">
+	<a th:href="@{/list}">Inicio</a> | <a th:href="@{/nuevo}">Nuevo alumno</a> | <a th:href="@{/nuevocurso}">Nuevo Curso</a> |
+	<a th:href ="@{/listcursos}"> Lista de Cursos</a> 
+</div>
+<br /><br />
+
+<span th:text="${curso.nombre + ' ' + curso.tutor}"></span>
+
+<table border=1>
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Nombre</th>
+			<th>Apellidos</th>
+			<th>Email</th>
+			
+		</tr>
+	</thead>
+	<tbody>
+<!-- Recorremos el listado de alumnos de un curso concreto que es el atributo anotado
+con nuestra asociación OneToMany en nuestra entidad Curso y vamos
+pintando los datos de cada alumno en una fila-->	
+		<tr th:each="alumno : ${curso.alumnos}">
+			<td th:text="${alumno.id}">1</td>
+			<td th:text="${alumno.nombre}">Nombre</td>
+			<td th:text="${alumno.apellidos}">Apellidos</td>
+			<td th:text="${alumno.email}">Email</td>		
+
+		</tr>
+
+	</tbody>
+</table>
+</body>
+</html>

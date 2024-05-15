@@ -31,20 +31,19 @@
 				<p class="fs-5 mb-5" th:text="${pescado.descripcion}" placeholder="Descripción"></p>
 				<p class="fs-5 mb-5" th:text="${#numbers.formatDecimal(pescado.precio, 1, 2) + ' €/kg'}"
 					placeholder="Precio"></p>
-					<div class="form-group mb-5">
-					    <label for="peso" class="fs-5">Peso:</label>
-					    <input type="range" class="form-control-range" id="peso" min="1" th:max="${pescado.stock}" step="1">
-					    <span id="pesoValor" class="ml-2 fs-5">50</span>
-					</div>
+				<div class="form-group mb-5">
+					<label for="peso" class="fs-5">Peso:</label>
+					<input type="range" class="form-control-range" id="peso" min="1" th:max="${pescado.stock}" step="1">
+					<span id="pesoValor" class="ml-2 fs-5">50</span>
+				</div>
 
 				<div class="form-group mb-5">
 					<button type="button" class="btn btn-success btn-lg mb-3">Añadir al carrito</button>
 				</div>
+				
+				<div th:replace="~{fragmentos/meGustaPescado::meGustaPescado}"></div>
 
-				<button type="button" class="btn btn-danger btn-lg">
-					<i class="bi bi-heart-fill me-2"></i>Me Gusta
-					<span class="badge bg-secondary" th:text="${pescado.likes}"></span>
-				</button>
+
 
 			</div>
 		</div>
@@ -53,16 +52,16 @@
 	<footer th:replace="~{fragmentos/footer::footer}">
 	</footer>
 	<script>
-	    const pesoInput = document.getElementById('peso');
-	    const pesoValor = document.getElementById('pesoValor');
-	
-	    function actualizarValor() {
-	        pesoValor.textContent = pesoInput.value;
-	    }
-	
-	    pesoInput.addEventListener('input', actualizarValor);
-	
-	    actualizarValor();
+		const pesoInput = document.getElementById('peso');
+		const pesoValor = document.getElementById('pesoValor');
+
+		function actualizarValor() {
+			pesoValor.textContent = pesoInput.value;
+		}
+
+		pesoInput.addEventListener('input', actualizarValor);
+
+		actualizarValor();
 	</script>
 </body>
 

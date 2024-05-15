@@ -1,0 +1,39 @@
+
+
+Modificar cantidad:
+si la cantidad <= 0 elimina el producto de la linea de venta
+sino optional que si encuentra el producto modifica la cantidad y sino lo añade a la lineadeventa
+
+Eliminar producto:
+getCarrito
+busca producto a eliminar (optional de la linea de venta)
+si lo encuentro lo borra y se guarda el carrito.
+
+Buscar producto:
+getCarrito
+return carrito.getLineasDePedido()
+.stream()
+.filter(lv -> lv.getProdoucto().getId() == producto.getID())
+.findFirst
+
+Finalizar compra:
+getCarrito
+setFinalizado(true)
+setFechaDePedido(localDateTime.now());
+setImporteTotal(getImporteTotal(usuario));
+setEstado(porEnviar);
+guardar carrito
+
+getImporteTotal
+getLineasDePedido()
+.stream()
+.mapToDouble(LineaDePedido::getPrecioLineaDePedido)
+.sum();
+
+
+
+getProductosEnCarrito(Usuario usuario){
+return getCarrito(usuario)
+.getLineasDePedido()
+.stream
+.collect(Collectors.toMap(ldp -> ldp.getProducto(), ldp -> ldp.getCantidad()));

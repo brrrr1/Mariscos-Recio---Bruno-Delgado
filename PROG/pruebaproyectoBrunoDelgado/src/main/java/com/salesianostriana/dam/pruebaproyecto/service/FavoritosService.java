@@ -1,18 +1,5 @@
 package com.salesianostriana.dam.pruebaproyecto.service;
 
-<<<<<<< HEAD
-import org.springframework.stereotype.Service;
-
-import com.salesianostriana.dam.pruebaproyecto.base.BaseServiceImpl;
-import com.salesianostriana.dam.pruebaproyecto.model.ListaFavoritos;
-import com.salesianostriana.dam.pruebaproyecto.model.ListaFavoritosPK;
-import com.salesianostriana.dam.pruebaproyecto.repositorios.FavoritosRepositorio;
-
-@Service
-public class FavoritosService extends BaseServiceImpl<ListaFavoritos, ListaFavoritosPK, FavoritosRepositorio> {
-
-}
-=======
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -92,4 +79,3 @@ public class FavoritosService extends BaseServiceImpl<Favoritos, FavoritosPK, Fa
 	}
 
 }
->>>>>>> favoritos

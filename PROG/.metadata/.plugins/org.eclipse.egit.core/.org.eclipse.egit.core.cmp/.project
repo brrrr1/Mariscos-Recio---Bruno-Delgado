@@ -8,4 +8,26 @@
 	</buildSpec>
 	<natures>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>.settings/FavoritosRepositorio.java</name>
+			<type>1</type>
+			<locationURI>egit-internal:///C:/Users/bruno/OneDrive/Escritorio/CLASE/prrr/.git/$8$WORKTREE:o7/PROG/pruebaproyectoBrunoDelgado/src/main/java/com/salesianostriana/dam/pruebaproyecto/repositorios/FavoritosRepositorio.java</locationURI>
+		</link>
+		<link>
+			<name>.settings/FavoritosService.java</name>
+			<type>1</type>
+			<locationURI>egit-internal:///C:/Users/bruno/OneDrive/Escritorio/CLASE/prrr/.git/$8$WORKTREE:o7/PROG/pruebaproyectoBrunoDelgado/src/main/java/com/salesianostriana/dam/pruebaproyecto/service/FavoritosService.java</locationURI>
+		</link>
+		<link>
+			<name>.settings/basededatos.mv.db</name>
+			<type>1</type>
+			<locationURI>egit-internal:///C:/Users/bruno/OneDrive/Escritorio/CLASE/prrr/.git/$8$WORKTREE:o7/PROG/pruebaproyectoBrunoDelgado/db/basededatos.mv.db</locationURI>
+		</link>
+		<link>
+			<name>.settings/basededatos.trace.db</name>
+			<type>1</type>
+			<locationURI>egit-internal:///C:/Users/bruno/OneDrive/Escritorio/CLASE/prrr/.git/$8$WORKTREE:o7/PROG/pruebaproyectoBrunoDelgado/db/basededatos.trace.db</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>

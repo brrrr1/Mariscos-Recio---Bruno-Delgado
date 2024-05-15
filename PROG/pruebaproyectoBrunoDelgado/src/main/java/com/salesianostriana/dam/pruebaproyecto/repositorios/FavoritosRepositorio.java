@@ -1,13 +1,5 @@
 package com.salesianostriana.dam.pruebaproyecto.repositorios;
 
-<<<<<<< HEAD
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.salesianostriana.dam.pruebaproyecto.model.ListaFavoritos;
-import com.salesianostriana.dam.pruebaproyecto.model.ListaFavoritosPK;
-
-public interface FavoritosRepositorio extends JpaRepository<ListaFavoritos, ListaFavoritosPK> {
-=======
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -24,6 +16,5 @@ public interface FavoritosRepositorio extends JpaRepository<Favoritos, Favoritos
 	Favoritos findByUsuarioAndProducto(Usuario usuario, Producto producto);
 
 	List<Favoritos> findByUsuario(Usuario usuario);
->>>>>>> favoritos
 
 }

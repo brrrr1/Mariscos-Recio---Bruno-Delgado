@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos con más likes</title>
+    <title>Tus favoritos</title>
 </head>
 <body>
-    <h1>Productos con más likes</h1>
-    <div th:if="${not #lists.isEmpty(listaMasFavoritos)}">
+    <h1>Tus productos favoritos</h1>
+    <div>
         <ul>
-            <li th:each="producto : ${listaMasFavoritos}">
-                <span th:text="${producto.nombre}"></span> - 
-                <span th:text="${producto.likes}"></span> likes
+            <li th:each="favorito : ${listaMisFavoritos}">
+                <span th:text="${favorito.producto.nombre}"></span> - 
+                <span th:text="${favorito.producto.likes}"></span> likes
             </li>
         </ul>
     </div>

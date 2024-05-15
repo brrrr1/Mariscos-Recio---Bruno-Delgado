@@ -12,7 +12,6 @@ import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -22,9 +21,8 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Builder
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-public class Producto {
+public /* abstract */ class Producto {
 
 	@Id
 	@GeneratedValue
@@ -37,7 +35,7 @@ public class Producto {
 
 	@ToString.Exclude
 	@EqualsAndHashCode.Exclude
-	@Builder.Default
+	// @Builder.Default
 	@OneToMany(mappedBy = "producto", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<LineaDePedido> LineasDePedido = new ArrayList<>();
 

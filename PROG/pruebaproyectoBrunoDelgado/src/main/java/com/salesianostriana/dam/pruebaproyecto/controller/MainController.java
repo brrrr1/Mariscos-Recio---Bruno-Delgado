@@ -1,5 +1,7 @@
 package com.salesianostriana.dam.pruebaproyecto.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -9,8 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.salesianostriana.dam.pruebaproyecto.model.Favoritos;
 import com.salesianostriana.dam.pruebaproyecto.model.Usuario;
 import com.salesianostriana.dam.pruebaproyecto.service.FavoritosService;
 import com.salesianostriana.dam.pruebaproyecto.service.LoteService;
@@ -162,15 +164,22 @@ public class MainController {
 	// return "redirect:/main";
 	// }
 
+//	@GetMapping("/agregarAFavoritos/{productoId}")
+//	public String addProductoToFavoritos(@AuthenticationPrincipal Usuario usuario, @PathVariable Long productoId) {
+//		boolean added = servicioFavoritos.alternarFavorito(usuario, productoId);
+//		if (added) {
+//			return "redirect:/misFavoritos";
+//		} else {
+//			return "redirect:/misFavoritos";
+//		}
+//	}
+
 	@GetMapping("/agregarAFavoritos/{productoId}")
-	@ResponseBody
-	public String addProductoToFavoritos(@AuthenticationPrincipal Usuario usuario, @PathVariable long productoId) {
-		boolean added = servicioFavoritos.toggleFavorito(usuario, productoId);
-		if (added) {
-			return "Producto añadido a favoritos y likes aumentados";
-		} else {
-			return "Producto eliminado de favoritos y likes disminuidos";
-		}
+	public String addProductoToFavoritos(@AuthenticationPrincipal Usuario usuario, @PathVariable Long productoId) {
+		servicioFavoritos.alternarFavorito(usuario, productoId);
+
+		return "redirect:/misFavoritos";
+
 	}
 
 	@GetMapping("/login")
@@ -183,11 +192,26 @@ public class MainController {
 		return "main";
 	}
 
-	@GetMapping("/favoritos")
+//	@GetMapping("/favoritos")
+//	public String listarMasFavoritos(Model model) {
+//		model.addAttribute("listaMasFavoritos", servicioProducto.mostrarMasFavoritos());
+//
+//		return "pruebaLikes";
+//	}
+
+	@GetMapping("/misFavoritos")
+	public String listarMisFavoritos(@AuthenticationPrincipal Usuario usuario, Model model) {
+		List<Favoritos> favoritosDelUsuario = servicioFavoritos.findByUsuario(usuario);
+		model.addAttribute("listaMisFavoritos", favoritosDelUsuario);
+
+		return "pruebaLikes";
+	}
+
+	@GetMapping("/masFavoritos")
 	public String listarMasFavoritos(Model model) {
 		model.addAttribute("listaMasFavoritos", servicioProducto.mostrarMasFavoritos());
 
-		return "pruebaLikes";
+		return "pruebaLikes2";
 	}
 
 }

@@ -12,6 +12,7 @@ import lombok.Data;
 //@NoArgsConstructor
 @AllArgsConstructor
 @Entity
+//@IdCLass(LineaDeVentaPK)
 public class LineaDePedido {
 
 	@Id

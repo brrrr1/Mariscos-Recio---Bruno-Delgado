@@ -28,31 +28,7 @@ public class FavoritosService extends BaseServiceImpl<Favoritos, FavoritosPK, Fa
 	@Autowired
 	FavoritosRepositorio favoritosRepo;
 
-//	public boolean alternarFavorito(Usuario usuario, Long productoId) {
-//		Producto producto = productoRepo.findById(productoId)
-//				.orElseThrow(() -> new IllegalArgumentException("Producto no encontrado"));
-//
-//		Favoritos favoritoExistente = favoritosRepo.findByUsuarioAndProducto(usuario, producto);
-//		if (favoritoExistente != null) {
-//
-//			favoritosRepo.delete(favoritoExistente);
-//
-//			producto.setLikes(producto.getLikes() - 1);
-//			productoRepo.save(producto);
-//
-//			return false;
-//		} else {
-//
-//			Favoritos nuevoFavorito = new Favoritos(usuario, producto);
-//			favoritosRepo.save(nuevoFavorito);
-//
-//			producto.setLikes(producto.getLikes() + 1);
-//			productoRepo.save(producto);
-//
-//			return true;
-//		}
-//
-//	}
+
 
 	public void alternarFavorito(Usuario usuario, Long productoId) {
 		Producto producto = productoRepo.findById(productoId)
@@ -76,6 +52,18 @@ public class FavoritosService extends BaseServiceImpl<Favoritos, FavoritosPK, Fa
 
 		}
 
+	}
+	
+	public List<Favoritos> buscarFavoritosPorProducto(Producto p) {
+		return repository.buscarProductoFavorito(p);
+	}
+	
+	public void deleteAll(List<Favoritos> lista) {
+		repository.deleteAll(lista);
+	}
+	
+	public void deleteFavoritosProducto(Producto p) {
+		deleteAll(buscarFavoritosPorProducto(p));
 	}
 
 }

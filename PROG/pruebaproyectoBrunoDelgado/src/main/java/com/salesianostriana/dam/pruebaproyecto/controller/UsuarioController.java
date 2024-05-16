@@ -67,6 +67,8 @@ public class UsuarioController {
 
 	@PostMapping("/editarUsuario/submit")
 	public String procesarFormularioEdicion(@ModelAttribute("usuario") Usuario u) {
+		String encodedPassword = passwordEncoder.encode(u.getPassword());
+		 u.setPassword(encodedPassword);
 		servicioUsuario.edit(u);
 		return "redirect:/admin/usuarios/listaUsuarios";// Volvemos a redirigir la listado a través del controller
 		// para pintar la lista actualizada con la modificación hecha

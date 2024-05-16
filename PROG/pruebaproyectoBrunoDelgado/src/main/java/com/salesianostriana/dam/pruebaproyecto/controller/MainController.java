@@ -233,14 +233,35 @@ public class MainController {
 		return "masFavoritos";
 	}
 
+	@GetMapping("/perfil")
+	public String verPerfil(@AuthenticationPrincipal Usuario usuario, Model model) {
 
+		model.addAttribute("usuario", usuario);
+
+		return "perfil";
+	}
+
+	@GetMapping("/editarUsuario")
+	public String mostrarFormularioEdicion(@AuthenticationPrincipal Usuario usuario, Model model) {
+
+		model.addAttribute("usuario", usuario);
+		return "editarUsuarioForm";
+
+	}
+
+	@PostMapping("/editarUsuario/submit")
+	public String procesarFormularioEdicion(@ModelAttribute("usuario")  /*@AuthenticationPrincipal */ Usuario usuario) {
+		/*String encodedPassword = passwordEncoder.encode(usuario.getPassword());
+		 usuario.setPassword(encodedPassword);*/
+		servicioUsuario.save(usuario);
+		return "redirect:/perfil";
+
+	}
 
 	/*
 	 * @PostMapping("/perfil/editar") public String
 	 * procesarFormularioEdicion(@AuthenticationPrincipal Usuario usuario) {
 	 * servicioUsuario.edit(usuario); return "redirect:/perfil"; }
 	 */
-
-	
 
 }

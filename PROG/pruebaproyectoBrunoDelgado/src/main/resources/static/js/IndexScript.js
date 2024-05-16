@@ -1,12 +1,19 @@
-function handleButtonClick(event) {
-	event.preventDefault();
-	const borrarLink = document.getElementById('confirmarBorradoLink');
-	borrarLink.href = event.target.href;
+function botonBorrar(evento) {
+	evento.preventDefault();
+	let borrarLink = document.getElementById('confirmarBorradoLink');
+	borrarLink.href = evento.target.href;
 
-	const borrarModal = new bootstrap.Modal(document.getElementById('borrarModal'));
+	let borrarModal = new bootstrap.Modal(document.getElementById('borrarModal'));
 	borrarModal.show();
 }
 
-document.querySelectorAll('[id^="borrarBtn"]').forEach(function(button) {
-	button.addEventListener('click', handleButtonClick);
-});
+function addClickListener(button) {
+	button.addEventListener('click', botonBorrar);
+}
+
+function ponerBotonesAFuncionar() {
+	let buttons = document.querySelectorAll('[id^="borrarBtn"]');
+	buttons.forEach(addClickListener);
+}
+
+document.addEventListener('DOMContentLoaded', ponerBotonesAFuncionar);

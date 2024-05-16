@@ -233,13 +233,7 @@ public class MainController {
 		return "masFavoritos";
 	}
 
-	@GetMapping("/perfil")
-	public String verPerfil(@AuthenticationPrincipal Usuario usuario, Model model) {
 
-		model.addAttribute("usuario", usuario);
-
-		return "perfil"; // nombre de la página Thymeleaf
-	}
 
 	/*
 	 * @PostMapping("/perfil/editar") public String
@@ -247,19 +241,6 @@ public class MainController {
 	 * servicioUsuario.edit(usuario); return "redirect:/perfil"; }
 	 */
 
-	@GetMapping("/editarUsuario")
-	public String mostrarFormularioEdicion(@AuthenticationPrincipal Usuario usuario, Model model) {
-
-		model.addAttribute("usuario", usuario);
-		return "editarUsuarioForm";
-
-	}
-
-	@PostMapping("/editarUsuario/submit")
-	public String procesarFormularioEdicion(@ModelAttribute("usuario") @AuthenticationPrincipal Usuario usuario) {
-		servicioUsuario.edit(usuario);
-		return "redirect:/perfil";
-
-	}
+	
 
 }

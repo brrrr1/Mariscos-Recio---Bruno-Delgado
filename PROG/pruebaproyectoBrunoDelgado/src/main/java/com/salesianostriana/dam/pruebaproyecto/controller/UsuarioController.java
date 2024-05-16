@@ -1,6 +1,7 @@
 package com.salesianostriana.dam.pruebaproyecto.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,9 +20,9 @@ public class UsuarioController {
 	@Autowired
 	private UsuarioService servicioUsuario;
 
-	/*
-	 * @Autowired private PasswordEncoder passwordEncoder;
-	 */
+	
+	 @Autowired private PasswordEncoder passwordEncoder;
+	 
 
 	@GetMapping("/usuarios")
 	public String controladorUsuarios(Model model) {
@@ -44,10 +45,10 @@ public class UsuarioController {
 
 	@PostMapping("/addUsuario")
 	public String submit(@ModelAttribute("usuario") Usuario usuario, Model model) {
-		/*
-		 * String encodedPassword = passwordEncoder.encode(usuario.getPassword());
-		 * usuario.setPassword(encodedPassword);
-		 */
+		
+		 String encodedPassword = passwordEncoder.encode(usuario.getPassword());
+		 usuario.setPassword(encodedPassword);
+		 
 		servicioUsuario.save(usuario);
 		model.addAttribute("usuario", usuario);
 		return "redirect:/admin/usuarios/listaUsuarios";

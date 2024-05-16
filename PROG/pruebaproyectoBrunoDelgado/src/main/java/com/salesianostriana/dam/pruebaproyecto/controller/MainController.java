@@ -257,6 +257,24 @@ public class MainController {
 		return "redirect:/perfil";
 
 	}
+	
+	@GetMapping("/cambiarContrasena")
+	public String mostrarFormularioPassword(@AuthenticationPrincipal Usuario usuario, Model model) {
+
+		model.addAttribute("usuario", usuario);
+		return "cambiarPswd";
+
+	}
+	
+	@PostMapping("/perfil/editar")
+	public String procesarFormularioPassword(@ModelAttribute("usuario")  /*@AuthenticationPrincipal */ Usuario usuario) {
+
+		String encodedPassword = passwordEncoder.encode(usuario.getPassword());
+		usuario.setPassword(encodedPassword);
+		servicioUsuario.save(usuario);
+		return "redirect:/perfil";
+
+	}
 
 	/*
 	 * @PostMapping("/perfil/editar") public String

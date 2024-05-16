@@ -37,44 +37,44 @@
 									</div>
 								</div>
 								<div class="col-md-6 editable-field">
-									<label for="username" class="form-label">Nombre de Usuario:</label>
-									<input type="text" th:field="*{username}" class="form-control"
+									<input type="hidden" th:field="*{username}" class="form-control"
 										placeholder="Username" readonly>
 								</div>
 								<div class="col-md-6 editable-field">
-									<label for="nombre" class="form-label">Nombre:</label>
-									<input type="text" th:field="*{nombre}" class="form-control" placeholder="Nombre"
+									<input type="hidden" th:field="*{nombre}" class="form-control" placeholder="Nombre"
 										readonly>
 								</div>
 								<div class="col-md-6 editable-field">
-									<label for="apellido" class="form-label">Apellido:</label>
-									<input type="text" th:field="*{apellido}" class="form-control"
+									<input type="hidden" th:field="*{apellido}" class="form-control"
 										placeholder="Apellido" readonly>
 								</div>
 								<div class="col-md-6 editable-field">
-									<label for="dni" class="form-label">DNI:</label>
-									<input type="text" th:field="*{dni}" class="form-control" placeholder="DNI"
+									<input type="hidden" th:field="*{dni}" class="form-control" placeholder="DNI"
 										readonly>
 								</div>
 								<div class="col-md-12 editable-field">
-									<label for="email" class="form-label">Correo:</label>
-									<input type="email" th:field="*{email}" class="form-control" id="email"
+									<input type="hidden" th:field="*{email}" class="form-control" id="email"
 										placeholder="Enter email" name="email" readonly>
 								</div>
 								<div class="col-md-12 editable-field">
-									<label for="direccion" class="form-label">Dirección:</label>
-									<input type="text" th:field="*{direccion}" class="form-control"
+									<input type="hidden" th:field="*{direccion}" class="form-control"
 										placeholder="Dirección" readonly>
+								</div>
+								<div class="col-md-6 editable-field">
+									<label for="password" class="form-label">Contraseña:</label>
+									<input type="password" th:field="*{password}" class="form-control"
+										placeholder="Password">
 								</div>
 
 								<div class="col-md-12 text-center">
-									<a class="nav-link" th:href="@{/editarUsuario}">Editar</a>
+									<input type="submit" value="Submit" class="btn btn-warning">
 								</div>
+
+
+
 							</form>
-							<!-- Botón para editar contraseña -->
-							<div class="col-md-12 text-center mt-3">
-								<a class="btn btn-warning" th:href="@{/cambiarContrasena}">Editar contraseña</a>
-							</div>
+
+
 						</div>
 					</div>
 				</div>

@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-public abstract class Producto {
+public /*abstract*/ class Producto {
 
 	@Id
 	@GeneratedValue

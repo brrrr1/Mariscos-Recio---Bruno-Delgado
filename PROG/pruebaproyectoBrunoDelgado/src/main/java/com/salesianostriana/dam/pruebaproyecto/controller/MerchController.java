@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.salesianostriana.dam.pruebaproyecto.model.Merch;
 import com.salesianostriana.dam.pruebaproyecto.service.MerchService;
@@ -66,7 +67,8 @@ public class MerchController {
 
 	@GetMapping("/borrarMerch/{id}")
 	public String borrar(@PathVariable("id") long id) {
-		servicio.deleteById(id);
+		//servicio.deleteById(id);
+		servicio.deleteByIdConFavoritos(id);
 		return "redirect:/admin/merch/listaMerch";
 	}
 
@@ -80,6 +82,12 @@ public class MerchController {
 			return "redirect:/admin/merch/listaMerch";
 		}
 
+	}
+	
+	@GetMapping("/buscar/{busqueda}")
+	public String buscarPorNombre(Model model, @RequestParam("busqueda") String busqueda) {
+		model.addAttribute("listaMerch", servicio.buscarPorNombre(busqueda));
+		return "admin/merchIndex";
 	}
 
 }

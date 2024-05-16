@@ -42,7 +42,7 @@ public class Favoritos {
 		this.usuario = u;
 	}
 
-	public void removeFromAlumno(Usuario u) {
+	public void removeFromUsuario(Usuario u) {
 		u.getFavoritos().remove(this);
 		this.usuario = null;
 	}

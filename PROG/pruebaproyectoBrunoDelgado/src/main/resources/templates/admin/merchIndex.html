@@ -37,7 +37,9 @@
 					</thead>
 					<tbody>
 						<tr th:each="merch : ${listaMerch}">
-							<td> <img th:src="${not (#strings.isEmpty(merch.foto))} ? ${merch.foto} : 'https://llerena.org/wp-content/uploads/2017/11/imagen-no-disponible.jpg'" class="img-responsive icono-categoria card-img-top" alt="imagen" /></td>
+							<td> <img
+									th:src="${not (#strings.isEmpty(merch.foto))} ? ${merch.foto} : 'https://llerena.org/wp-content/uploads/2017/11/imagen-no-disponible.jpg'"
+									class="img-responsive icono-categoria card-img-top" alt="imagen" /></td>
 							<td th:text="${merch.id}">1</td>
 							<td th:text="${merch.nombre}">Nombre</td>
 							<td th:text="${merch.descripcion}">Descripción</td>
@@ -46,30 +48,36 @@
 							<td th:text="${merch.precio}">Precio</td>
 							<td th:text="${merch.stock}">Stock</td>
 							<td class="operaciones">
-								<a href="#" th:href="@{/admin/merch/editarMerch/{id}(id=${merch.id})}" class="btn btn-primary">Editar</a>
-								<a href="#" id="borrarBtn${merch.id}" th:href="@{/admin/merch/borrarMerch/{id}(id=${merch.id})}" class="btn btn-danger">Borrar</a>
+								<a href="#" th:href="@{/admin/merch/editarMerch/{id}(id=${merch.id})}"
+									class="btn btn-primary">Editar</a>
+
+								<a href="#" id="borrarBtn${merch.id}" th:href="@{/admin/merch/borrarMerch/{id}(id=${merch.id})}"
+									class="btn btn-danger">Borrar</a>
 							</td>
 						</tr>
 						<tr th:if="${merch != null} and ${merch.stock < 30}">
 							<td colspan="9" class="text-center text-warning">
-								¡Advertencia! Stock bajo: quedan menos de 30 unidades.
+								<p>¡Advertencia! Stock bajo: quedan menos de 30 unidades.</p>
 							</td>
 						</tr>
 					</tbody>
 				</table>
 
-				<div class="modal fade" id="borrarModal" tabindex="-1" aria-labelledby="borrarModalLabel" aria-hidden="true">
+				<div class="modal fade" id="borrarModal" tabindex="-1" aria-labelledby="borrarModalLabel"
+					aria-hidden="true">
 					<div class="modal-dialog">
 						<div class="modal-content">
 							<div class="modal-header">
 								<h5 class="modal-title" id="borrarModalLabel">Confirmar borrado</h5>
-								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-label="Close"></button>
 							</div>
 							<div class="modal-body">
 								¿Estás seguro de que deseas borrar este producto?
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+								<button type="button" class="btn btn-secondary"
+									data-bs-dismiss="modal">Cancelar</button>
 								<a id="confirmarBorradoLink" href="#" class="btn btn-danger">Borrar</a>
 							</div>
 						</div>
@@ -81,4 +89,5 @@
 </div>
 
 </body>
+
 </html>

@@ -1,8 +1,11 @@
 package com.salesianostriana.dam.pruebaproyecto.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.salesianostriana.dam.pruebaproyecto.base.BaseServiceImpl;
+import com.salesianostriana.dam.pruebaproyecto.exceptions.ProductoNotFoundException;
 import com.salesianostriana.dam.pruebaproyecto.model.Empleado;
 import com.salesianostriana.dam.pruebaproyecto.model.Usuario;
 import com.salesianostriana.dam.pruebaproyecto.repositorios.EmpleadoRepositorio;
@@ -26,15 +29,12 @@ public class EmpleadoService extends BaseServiceImpl<Empleado, Long, EmpleadoRep
 		return u;
 	}
 
-	public Usuario generarUsuarioBuilder(Empleado e) {
-		Usuario u = new Usuario();
-		u.builder().nombre(e.getNombre()).username(e.getNombre().toLowerCase() + "mrw").apellido(e.getApellido())
-				.dni(null).email(e.getNombre() + e.getApellido() + "@mariscosrecio.es")
-				.password(e.getNombre() + "recio" + e.getApellido()).numPedidos(0).direccion(null).esAdmin(false)
-				.esEmpleado(true).build();
-
-		return u;
-
+	public List<Empleado> buscarPorNombre(String busqueda) {
+		List<Empleado> result = this.repository.findByNombreContainsIgnoreCaseOrApellidoContainsIgnoreCase(busqueda, busqueda);
+		if (result.isEmpty()) {
+			throw new ProductoNotFoundException("No hay productos con ese criterio");
+		}
+		return result;
 	}
 
 }

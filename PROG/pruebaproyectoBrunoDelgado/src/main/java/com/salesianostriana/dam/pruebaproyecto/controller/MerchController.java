@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.salesianostriana.dam.pruebaproyecto.model.Merch;
 import com.salesianostriana.dam.pruebaproyecto.service.MerchService;
+import com.salesianostriana.dam.pruebaproyecto.service.ProdUnidadService;
 
 @Controller
 @RequestMapping("/admin/merch")
@@ -19,6 +20,9 @@ public class MerchController {
 
 	@Autowired
 	private MerchService servicio;
+	
+	@Autowired
+	private ProdUnidadService servicioProdUnidad;
 
 	@GetMapping("/merch")
 	public String controladorMerch(Model model) {
@@ -84,10 +88,12 @@ public class MerchController {
 
 	}
 	
-	@GetMapping("/buscar/{busqueda}")
-	public String buscarPorNombre(Model model, @RequestParam("busqueda") String busqueda) {
-		model.addAttribute("listaMerch", servicio.buscarPorNombre(busqueda));
-		return "admin/merchIndex";
+	@GetMapping("/buscarMerchIndex")
+	public String buscarMerchPorNombre(Model model, @RequestParam("busqueda") String busqueda) {
+	    model.addAttribute("listaMerch", servicioProdUnidad.buscarPorNombre(busqueda));
+	    return "admin/merchIndex";
 	}
+
+
 
 }

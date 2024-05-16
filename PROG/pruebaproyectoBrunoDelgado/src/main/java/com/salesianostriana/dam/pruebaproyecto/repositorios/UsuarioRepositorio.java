@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
+import com.salesianostriana.dam.pruebaproyecto.model.ProductoPorPeso;
 import com.salesianostriana.dam.pruebaproyecto.model.Usuario;
 
 public interface UsuarioRepositorio extends JpaRepository<Usuario, Long> {
@@ -29,4 +30,6 @@ public interface UsuarioRepositorio extends JpaRepository<Usuario, Long> {
 	 * public List<Producto> listaFavoritos();
 	 */
 
+	List<Usuario> findByNombreContainsIgnoreCaseOrApellidoContainsIgnoreCase(String nombre, String descripcion);
+	
 }

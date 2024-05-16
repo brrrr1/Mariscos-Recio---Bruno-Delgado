@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import com.salesianostriana.dam.pruebaproyecto.model.Empleado;
+import com.salesianostriana.dam.pruebaproyecto.model.Usuario;
 
 public interface EmpleadoRepositorio extends JpaRepository<Empleado, Long> {
 
@@ -19,5 +20,7 @@ public interface EmpleadoRepositorio extends JpaRepository<Empleado, Long> {
 			WHERE e.id = ?1
 			""")
 	public Empleado buscarPorId(long id);
+	
+	List<Empleado> findByNombreContainsIgnoreCaseOrApellidoContainsIgnoreCase(String nombre, String descripcion);
 
 }

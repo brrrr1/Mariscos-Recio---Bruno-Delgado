@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.salesianostriana.dam.pruebaproyecto.model.Usuario;
 import com.salesianostriana.dam.pruebaproyecto.service.UsuarioService;
@@ -80,4 +81,10 @@ public class UsuarioController {
 		return "redirect:/admin/usuarios/listaUsuarios";
 	}
 
+	@GetMapping("/buscarUsuario")
+	public String buscarUsuarioPorNombre(Model model, @RequestParam("busqueda") String busqueda) {
+	    model.addAttribute("listaUsuarios", servicioUsuario.buscarPorNombre(busqueda));
+	    return "admin/usuariosIndex";
+	}
+	
 }

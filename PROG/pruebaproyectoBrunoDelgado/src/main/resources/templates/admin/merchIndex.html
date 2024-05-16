@@ -15,6 +15,19 @@
 <body>
 	<nav th:replace="~{fragmentos/navIndex::navIndex}"></nav>
 	<div class="container mt-5">
+
+		<div class="row mb-4">
+			<div class="col-md-12">
+				<form class="d-flex justify-content-center" th:action="@{/admin/merch/buscarMerchIndex}" method="GET">
+					<input class="form-control me-2" type="search" placeholder="Buscar por nombre" aria-label="Search"
+						name="busqueda">
+					<button class="btn btn-outline-danger" type="submit">Buscar</button>
+				</form>
+
+
+			</div>
+		</div>
+
 		<div class="row">
 			<div class="col-md-10 offset-md-1">
 				<div class="d-flex justify-content-end mb-3">
@@ -51,7 +64,8 @@
 								<a href="#" th:href="@{/admin/merch/editarMerch/{id}(id=${merch.id})}"
 									class="btn btn-primary">Editar</a>
 
-								<a href="#" id="borrarBtn${merch.id}" th:href="@{/admin/merch/borrarMerch/{id}(id=${merch.id})}"
+								<a href="#" id="borrarBtn${merch.id}"
+									th:href="@{/admin/merch/borrarMerch/{id}(id=${merch.id})}"
 									class="btn btn-danger">Borrar</a>
 							</td>
 						</tr>

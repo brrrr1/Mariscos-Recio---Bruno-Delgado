@@ -11,6 +11,7 @@
 		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
 		crossorigin="anonymous"></script>
 	<link href="../../static/css/estiloProductos.css" th:href="@{/css/estiloProductos.css}" rel="stylesheet" />
+	<script src="../../static/js/spinnerPeso.js" th:src="@{/js/spinnerPeso.js}" defer></script>
 </head>
 
 <body>
@@ -51,18 +52,7 @@
 
 	<footer th:replace="~{fragmentos/footer::footer}">
 	</footer>
-	<script>
-		const pesoInput = document.getElementById('peso');
-		const pesoValor = document.getElementById('pesoValor');
 
-		function actualizarValor() {
-			pesoValor.textContent = pesoInput.value;
-		}
-
-		pesoInput.addEventListener('input', actualizarValor);
-
-		actualizarValor();
-	</script>
 </body>
 
 </html>

@@ -14,6 +14,8 @@
 </head>
 
 <body class="bg-danger">
+	<header th:replace="~{fragmentos/navIndex::navIndex}">
+	</header>
 	<div class="container mt-5">
 		<div class="row justify-content-center">
 			<div class="col-lg-8">
@@ -71,9 +73,17 @@
 						</div>
 					</div>
 				</div>
+				<div class="row mb-3">
+					<div class="col">
+						<a th:href="@{/admin/usuarios/listaUsuarios}" class="btn btn-dark">Volver</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
+	<footer th:replace="~{fragmentos/footer::footer}">
+	
+	</footer>
 </body>
 
 </html>

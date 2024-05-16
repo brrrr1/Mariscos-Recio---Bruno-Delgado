@@ -5,59 +5,91 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Formulario Empleado</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
 </head>
 
-<body>
-	<form th:action="${empleado.id != 0} ? @{submit} : @{addEmpleado}" th:object="${empleado}"
-		method="post">
-		<table>
-			<div class="row mb-3">
-				<div class="col">
-					<input th:if="${empleado.id != 0}" type="hidden" name="id" th:field="*{id}" />
+
+<body class="bg-danger">
+	<header th:replace="~{fragmentos/navIndex::navIndex}">
+	</header>
+	<div class="container mt-5">
+		<div class="row justify-content-center">
+			<div class="col-lg-8">
+				<div class="bg-white border border-danger rounded p-4">
+					<div class="row align-items-center">
+						<div class="col-md-4">
+							<img src="../../static/img/logo.png" th:src="@{/img/logo.png}" class="img-fluid mb-4"
+								alt="Logo">
+						</div>
+						<div class="col-md-8">
+							<form th:action="${empleado.id != 0} ? @{submit} : @{addEmpleado}" th:object="${empleado}"
+								method="post" class="row g-3">
+								<div class="row mb-3">
+									<div class="col">
+										<input th:if="${empleado.id != 0}" type="hidden" name="id" th:field="*{id}" />
+									</div>
+								</div>
+								<div class="col-md-6">
+									<label for="Nombre" class="form-label text-dark">Nombre:</label>
+									<input type="text" th:field="*{nombre}" class="form-control" placeholder="Nombre">
+								</div>
+								<div class="col-md-6">
+									<label for="Apellido" class="form-label text-dark">Apellido:</label>
+									<input type="text" th:field="*{apellido}" class="form-control"
+										placeholder="Apellido">
+								</div>
+								<div class="row mb-3">
+									<div class="col">
+										<label for="sueldo" class="form-label text-dark">Sueldo:</label>
+										<input type="number" name="sueldo" th:field="*{sueldo}" placeholder="Sueldo"
+											class="form-control">
+									</div>
+								</div>
+								<div class="mb-3 mt-3 pt-5">
+									<label for="fechaIngreso" class="form-label text-dark">Fecha de Ingreso:</label>
+									<input th:if="${empleado.id != 0}" type="text" th:field="*{fechaIngreso}"
+										id="fechaIngreso" name="fechaIngreso" readonly="readonly">
+									<input th:if="${empleado.id == 0}" type="date" th:field="*{fechaIngreso}"
+										class="form-control" id="fechaIngreso" placeholder="Fecha de Ingreso"
+										name="fechaIngreso">
+								</div>
+								<div class="mb-3 mt-3 pt-5">
+									<label for="fechaIngreso" class="form-label text-dark">Fecha de Salida:</label>
+									<input th:if="${empleado.id != 0}" type="text" th:field="*{fechaSalida}"
+										id="fechaSalida" name="fechaSalida" readonly="readonly">
+									<input th:if="${empleado.id == 0}" type="date" th:field="*{fechaSalida}"
+										class="form-control" id="fechaSalida" placeholder="Fecha de Salida"
+										name="fechaSalida">
+								</div>
+								<div class="row mb-3">
+									<div class="col">
+										<label for="Foto" class="form-label text-dark">Foto:</label>
+										<input type="text" class="form-control" placeholder="Foto" th:field="*{foto}">
+									</div>
+								</div>
+								<div class="col-md-12 text-center">
+									<input type="submit" value="Submit" class="btn btn-danger">
+								</div>
+							</form>
+						</div>
+					</div>
 				</div>
-				</div>
-			<div class="row mb-3">
-				<div class="col">
-					<label for="Nombre" class="form-label text-white">Nombre:</label>
-					<input type="text" th:field="*{nombre}" class="form-control" placeholder="Nombre">
-				</div>
-				<div class="col">
-					<label for="Apellido" class="form-label text-white">Apellido:</label>
-					<input type="text" th:field="*{apellido}" class="form-control" placeholder="Apellido">
+				<div class="row mb-3">
+					<div class="col">
+						<a th:href="@{/admin/empleados/listaEmpleados}" class="btn btn-dark">Volver</a>
+					</div>
 				</div>
 			</div>
-			<div class="row mb-3">
-				<div class="col">
-					<label for="sueldo" class="form-label text-white">Sueldo:</label>
-					<input type="number" name="sueldo" th:field="*{sueldo}" placeholder="Sueldo">
-				</div>
-			</div>
-			<div class="mb-3 mt-3 pt-5">
-			    <label for="fechaIngreso" class="form-label text-white">Fecha de Ingreso:</label>
-				<input th:if="${empleado.id != 0}" type="text" th:field="*{fechaIngreso}" id="fechaIngreso" name="fechaIngreso" readonly="readonly">
-				<input th:if="${empleado.id == 0}" type="date" th:field="*{fechaIngreso}" class="form-control" id="fechaIngreso" placeholder="Fecha de Ingreso" name="fechaIngreso">
-			
-			</div>
-			<div class="mb-3 mt-3 pt-5">
-			    <label for="fechaIngreso" class="form-label text-white">Fecha de Salida:</label>
-				<input th:if="${empleado.id != 0}" type="text" th:field="*{fechaSalida}" id="fechaSalida" name="fechaSalida" readonly="readonly">
-				<input th:if="${empleado.id == 0}" type="date" th:field="*{fechaSalida}" class="form-control" id="fechaSalida" placeholder="Fecha de Salida" name="fechaSalida">
-			
-			</div>
-			
-			<div class="row mb-3">
-				<div class="col">
-					<label for="Foto" class="form-label text-white">Foto:</label>
-					<input type="text" class="form-control" placeholder="Foto" th:field="*{foto}">
-				</div>
-			</div>
-			
-			
-				<tr>
-					<td><input type="submit" value="Submit" /></td>
-				</tr>
-		</table>
-	</form>
+		</div>
+	</div>
+	<footer th:replace="~{fragmentos/footer::footer}">
+	
+	</footer>
 </body>
 
 </html>

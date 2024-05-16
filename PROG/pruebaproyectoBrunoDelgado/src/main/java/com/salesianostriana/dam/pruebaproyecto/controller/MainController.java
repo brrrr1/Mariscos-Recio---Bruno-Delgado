@@ -263,7 +263,7 @@ public class MainController {
 		/*String encodedPassword = passwordEncoder.encode(usuario.getPassword());
 		 usuario.setPassword(encodedPassword);*/
 		servicioUsuario.save(usuario);
-		return "redirect:/perfil";
+		return "perfil";
 
 	}
 	

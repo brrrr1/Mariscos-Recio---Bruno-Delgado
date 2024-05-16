@@ -23,85 +23,103 @@
 						name="busqueda">
 					<button class="btn btn-outline-danger" type="submit">Buscar</button>
 				</form>
+			</div>
+		</div>
 
-
+		<div class="row">
+			<div class="col-md-12 d-flex justify-content-end mb-3">
+				<a th:href="@{mform}" class="btn btn-success">Nuevo producto</a>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-md-10 offset-md-1">
-				<div class="d-flex justify-content-end mb-3">
-					<a th:href="@{mform}" class="btn btn-success">Nuevo producto</a>
-				</div>
-				<br /><br />
-				<table class="table">
-					<thead>
+				<table class="table table-striped w-75 mx-auto">
+					<thead class="table-dark text-center">
 						<tr>
 							<th>Foto</th>
 							<th>Id</th>
 							<th>Nombre</th>
 							<th>Descripción</th>
 							<th>Likes</th>
-							<th>Foto</th>
 							<th>Precio</th>
 							<th>Stock</th>
 							<th>Operaciones</th>
 						</tr>
 					</thead>
-					<tbody>
+					<tbody class="text-center">
 						<tr th:each="merch : ${listaMerch}">
-							<td> <img
-									th:src="${not (#strings.isEmpty(merch.foto))} ? ${merch.foto} : 'https://llerena.org/wp-content/uploads/2017/11/imagen-no-disponible.jpg'"
-									class="img-responsive icono-categoria card-img-top" alt="imagen" /></td>
+							<td>
+								<img th:src="${not (#strings.isEmpty(merch.foto))} ? ${merch.foto} : 'https://llerena.org/wp-content/uploads/2017/11/imagen-no-disponible.jpg'"
+									class="img-thumbnail" alt="imagen" style="max-width: 100px;" />
+							</td>
 							<td th:text="${merch.id}">1</td>
 							<td th:text="${merch.nombre}">Nombre</td>
-							<td th:text="${merch.descripcion}">Descripción</td>
+							<td class="py-3" th:text="${merch.descripcion}">Descripción</td>
 							<td th:text="${merch.likes}">Likes</td>
-							<td th:text="${merch.foto}">Foto (URL)</td>
 							<td th:text="${merch.precio}">Precio</td>
-							<td th:text="${merch.stock}">Stock</td>
-							<td class="operaciones">
-								<a href="#" th:href="@{/admin/merch/editarMerch/{id}(id=${merch.id})}"
-									class="btn btn-primary">Editar</a>
-
-								<a href="#" id="borrarBtn${merch.id}"
-									th:href="@{/admin/merch/borrarMerch/{id}(id=${merch.id})}"
-									class="btn btn-danger">Borrar</a>
+							<td>
+								<span
+									th:classappend="${merch.stock < 31} ? 'text-danger' : (${merch.stock <= 74} ? 'text-warning' : 'text-success')"
+									class="fw-bold">
+									<span th:text="${merch.stock}"></span>
+								</span>
 							</td>
-						</tr>
-						<tr th:if="${merch != null} and ${merch.stock < 30}">
-							<td colspan="9" class="text-center text-warning">
-								<p>¡Advertencia! Stock bajo: quedan menos de 30 unidades.</p>
+
+							<td>
+								<a th:href="@{/admin/merch/editarMerch/{id}(id=${merch.id})}"
+									class="btn btn-primary btn-sm mb-2">Editar</a>
+								<button class="btn btn-danger btn-sm" data-bs-toggle="modal"
+									th:data-bs-target="'#borrarModal' + ${merch.id}">Borrar</button>
+
+								<div class="modal fade" th:id="'borrarModal' + ${merch.id}" tabindex="-1"
+									aria-labelledby="borrarModalLabel" aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="borrarModalLabel">Confirmar borrado</h5>
+												<button type="button" class="btn-close" data-bs-dismiss="modal"
+													aria-label="Close"></button>
+											</div>
+											<div class="modal-body">
+												¿Estás seguro de que deseas borrar este producto?
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary"
+													data-bs-dismiss="modal">Cancelar</button>
+												<a th:href="@{/admin/merch/borrarMerch/{id}(id=${merch.id})}"
+													class="btn btn-danger">Borrar</a>
+											</div>
+										</div>
+									</div>
+								</div>
 							</td>
 						</tr>
 					</tbody>
 				</table>
+			</div>
+		</div>
 
-				<div class="modal fade" id="borrarModal" tabindex="-1" aria-labelledby="borrarModalLabel"
-					aria-hidden="true">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="borrarModalLabel">Confirmar borrado</h5>
-								<button type="button" class="btn-close" data-bs-dismiss="modal"
-									aria-label="Close"></button>
-							</div>
-							<div class="modal-body">
-								¿Estás seguro de que deseas borrar este producto?
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary"
-									data-bs-dismiss="modal">Cancelar</button>
-								<a id="confirmarBorradoLink" href="#" class="btn btn-danger">Borrar</a>
-							</div>
-						</div>
-					</div>
+		<div class="row">
+			<div class="col-md-10 offset-md-1">
+				<div class="legend">
+					<p class="text-center">Leyenda de colores:</p>
+					<ul class="list-unstyled d-flex justify-content-center">
+						<li class="me-3">
+							<span class="badge bg-danger me-1">Rojo:</span>Menos de 31 unidades
+						</li>
+						<li class="me-3">
+							<span class="badge bg-warning me-1">Amarillo:</span>Entre 31 y 74 unidades
+						</li>
+						<li class="me-3">
+							<span class="badge bg-success me-1">Verde:</span>75 o más unidades
+						</li>
+					</ul>
 				</div>
-</body>
-</div>
-</div>
-</div>
+			</div>
+		</div>
 
+	</div>
 </body>
 
 </html>

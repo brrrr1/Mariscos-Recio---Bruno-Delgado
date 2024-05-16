@@ -68,12 +68,15 @@ public class LotesController {
 		return "redirect:/admin/lotes/listaLotes";
 
 	}
-
+	
 	@GetMapping("/borrarLote/{id}")
 	public String borrar(@PathVariable("id") long id) {
-		servicioLote.deleteById(id);
+		//servicio.deleteById(id);
+		servicioProdUnidad.deleteByIdConFavoritos(id);
 		return "redirect:/admin/lotes/listaLotes";
 	}
+
+
 
 	@GetMapping("/productoLote/{id}")
 	public String mostrarPaginaProductoLote(@PathVariable("id") long id, Model model) {

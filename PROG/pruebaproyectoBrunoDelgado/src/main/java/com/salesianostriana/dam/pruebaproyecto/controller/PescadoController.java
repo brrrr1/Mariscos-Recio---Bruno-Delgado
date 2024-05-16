@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.salesianostriana.dam.pruebaproyecto.model.Pescado;
 import com.salesianostriana.dam.pruebaproyecto.service.PescadoService;
 import com.salesianostriana.dam.pruebaproyecto.service.ProdPesoService;
-import com.salesianostriana.dam.pruebaproyecto.service.ProdUnidadService;
 
 @Controller
 @RequestMapping("/admin/pescado")
@@ -71,12 +70,15 @@ public class PescadoController {
 		servicioPescado.edit(p);
 		return "redirect:/admin/pescado/listaPescado";
 	}
-
+	
 	@GetMapping("/borrarPescado/{id}")
 	public String borrar(@PathVariable("id") long id) {
-		servicioPescado.deleteById(id);
+		//servicio.deleteById(id);
+		servicioProdPeso.deleteByIdConFavoritos(id);
 		return "redirect:/admin/pescado/listaPescado";
 	}
+
+
 
 	@GetMapping("/productoPescado/{id}")
 	public String mostrarPaginaProductoPescado(@PathVariable("id") long id, Model model) {

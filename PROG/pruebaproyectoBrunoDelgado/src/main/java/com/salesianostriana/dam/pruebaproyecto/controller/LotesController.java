@@ -8,15 +8,20 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.salesianostriana.dam.pruebaproyecto.model.Lote;
 import com.salesianostriana.dam.pruebaproyecto.service.LoteService;
+import com.salesianostriana.dam.pruebaproyecto.service.ProdUnidadService;
 
 @Controller
 @RequestMapping("/admin/lotes")
 public class LotesController {
 	@Autowired
 	private LoteService servicioLote;
+	
+	@Autowired
+	private ProdUnidadService servicioProdUnidad;
 
 	@GetMapping("/lotes")
 	public String controladorLotes(Model model) {
@@ -80,5 +85,13 @@ public class LotesController {
 			return "redirect:/admin/lotes/listaLotes";
 		}
 
+	}
+	
+
+	
+	@GetMapping("/buscarLotesIndex")
+	public String buscarLotePorNombre(Model model, @RequestParam("busqueda") String busqueda) {
+	    model.addAttribute("listaLotes", servicioProdUnidad.buscarPorNombre(busqueda));
+	    return "admin/lotesIndex";
 	}
 }

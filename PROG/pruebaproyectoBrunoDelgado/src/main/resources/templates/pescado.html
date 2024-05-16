@@ -21,6 +21,17 @@
 
 	<div class="container-fluid py-4">
 		<div class="container">
+
+			<div class="row mb-4">
+				<div class="col-md-12">
+					<form class="d-flex justify-content-center" th:action="@{/buscarPescado}" method="GET">
+						<input class="form-control me-2" type="search" placeholder="Buscar por nombre"
+							aria-label="Search" name="busqueda">
+						<button class="btn btn-outline-danger" type="submit">Buscar</button>
+					</form>
+				</div>
+			</div>
+
 			<div class="row">
 				<aside class="col-md-3">
 					<!-- Aside para filtros -->
@@ -43,8 +54,8 @@
 												Comprar</button></a>
 
 										<p class="card-text" th:text="${pescado.likes} +'❤️'"></p>
-										
-										
+
+
 									</div>
 								</div>
 							</div>

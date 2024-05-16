@@ -8,9 +8,12 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.salesianostriana.dam.pruebaproyecto.model.Pescado;
 import com.salesianostriana.dam.pruebaproyecto.service.PescadoService;
+import com.salesianostriana.dam.pruebaproyecto.service.ProdPesoService;
+import com.salesianostriana.dam.pruebaproyecto.service.ProdUnidadService;
 
 @Controller
 @RequestMapping("/admin/pescado")
@@ -18,6 +21,10 @@ public class PescadoController {
 
 	@Autowired
 	private PescadoService servicioPescado;
+	
+	
+	@Autowired
+	private ProdPesoService servicioProdPeso;
 
 	@GetMapping("/pescado")
 	public String controladorPescado(Model model) {
@@ -81,5 +88,11 @@ public class PescadoController {
 			return "redirect:/admin/pescado/listaPescado";
 		}
 
+	}
+	
+	@GetMapping("/buscarPescadoIndex")
+	public String buscarPescadoPorNombre(Model model, @RequestParam("busqueda") String busqueda) {
+	    model.addAttribute("listaPescado", servicioProdPeso.buscarPorNombre(busqueda));
+	    return "admin/pescadoIndex";
 	}
 }

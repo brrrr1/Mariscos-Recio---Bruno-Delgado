@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.salesianostriana.dam.pruebaproyecto.model.Favoritos;
 import com.salesianostriana.dam.pruebaproyecto.model.Lote;
@@ -25,6 +26,8 @@ import com.salesianostriana.dam.pruebaproyecto.service.LoteService;
 import com.salesianostriana.dam.pruebaproyecto.service.MariscoService;
 import com.salesianostriana.dam.pruebaproyecto.service.MerchService;
 import com.salesianostriana.dam.pruebaproyecto.service.PescadoService;
+import com.salesianostriana.dam.pruebaproyecto.service.ProdPesoService;
+import com.salesianostriana.dam.pruebaproyecto.service.ProdUnidadService;
 import com.salesianostriana.dam.pruebaproyecto.service.ProductoService;
 import com.salesianostriana.dam.pruebaproyecto.service.UsuarioService;
 
@@ -54,6 +57,12 @@ public class MainController {
 
 	@Autowired
 	private FavoritosService servicioFavoritos;
+	
+	@Autowired
+	private ProdUnidadService servicioProdUnidad;
+	
+	@Autowired
+	private ProdPesoService servicioProdPeso;
 
 	@GetMapping("/main")
 	public String controlador(Model model) {
@@ -275,7 +284,32 @@ public class MainController {
 		return "redirect:/perfil";
 
 	}
-
+	
+	@GetMapping("/buscarMerch")
+	public String buscarMerchPorNombre(Model model, @RequestParam("busqueda") String busqueda) {
+	    model.addAttribute("listaMerch", servicioProdUnidad.buscarPorNombre(busqueda));
+	    return "merch";
+	}
+	
+	@GetMapping("/buscarLote")
+	public String buscarLotePorNombre(Model model, @RequestParam("busqueda") String busqueda) {
+	    model.addAttribute("listaLotes", servicioProdUnidad.buscarPorNombre(busqueda));
+	    return "lotes";
+	}
+	
+	@GetMapping("/buscarPescado")
+	public String buscarPescadoPorNombre(Model model, @RequestParam("busqueda") String busqueda) {
+	    model.addAttribute("listaPescado", servicioProdPeso.buscarPorNombre(busqueda));
+	    return "pescado";
+	}
+	
+	@GetMapping("/buscarMarisco")
+	public String buscarMariscoPorNombre(Model model, @RequestParam("busqueda") String busqueda) {
+	    model.addAttribute("listaMarisco", servicioProdPeso.buscarPorNombre(busqueda));
+	    return "marisco";
+	}
+	
+ 
 	/*
 	 * @PostMapping("/perfil/editar") public String
 	 * procesarFormularioEdicion(@AuthenticationPrincipal Usuario usuario) {

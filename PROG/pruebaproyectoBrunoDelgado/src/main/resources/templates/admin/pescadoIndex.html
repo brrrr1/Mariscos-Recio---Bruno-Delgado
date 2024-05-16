@@ -15,83 +15,108 @@
 <body>
 	<nav th:replace="~{fragmentos/navIndex::navIndex}"></nav>
 	<div class="container mt-5">
-		
 		<div class="row mb-4">
 			<div class="col-md-12">
-				<form class="d-flex justify-content-center" th:action="@{/admin/pescado/buscarPescadoIndex}" method="GET">
+				<form class="d-flex justify-content-center" th:action="@{/admin/pescado/buscarPescadoIndex}"
+					method="GET">
 					<input class="form-control me-2" type="search" placeholder="Buscar por nombre" aria-label="Search"
 						name="busqueda">
 					<button class="btn btn-outline-danger" type="submit">Buscar</button>
 				</form>
-		
-		
 			</div>
 		</div>
-		
+
+		<div class="row mb-3">
+			<div class="col-md-12 d-flex justify-content-end">
+				<a th:href="@{pescadoForm}" class="btn btn-success">Nuevo producto</a>
+			</div>
+		</div>
+
 		<div class="row">
 			<div class="col-md-10 offset-md-1">
-				<div class="d-flex justify-content-end mb-3">
-					<a th:href="@{pescadoForm}" class="btn btn-success">Nuevo producto</a>
-				</div>
-				<br /><br />
-				<table class="table">
-					<thead>
+				<table class="table table-striped">
+					<thead class="table-dark text-center">
 						<tr>
 							<th>Foto</th>
 							<th>Id</th>
 							<th>Nombre</th>
 							<th>Descripción</th>
 							<th>Likes</th>
-							<th>Foto</th>
 							<th>Precio</th>
 							<th>Stock</th>
 							<th>Operaciones</th>
 						</tr>
 					</thead>
-					<tbody>
+					<tbody class="text-center">
 						<tr th:each="pescado : ${listaPescado}">
-							<td> <img
-									th:src="${not (#strings.isEmpty(pescado.foto))} ? ${pescado.foto} : 'https://llerena.org/wp-content/uploads/2017/11/imagen-no-disponible.jpg'"
-									class="img-responsive icono-categoria card-img-top" alt="imagen" /></td>
+							<td>
+								<img th:src="${not (#strings.isEmpty(pescado.foto))} ? ${pescado.foto} : 'https://llerena.org/wp-content/uploads/2017/11/imagen-no-disponible.jpg'"
+									class="img-thumbnail" alt="imagen" style="max-width: 100px;" />
+							</td>
 							<td th:text="${pescado.id}">1</td>
 							<td th:text="${pescado.nombre}">Nombre</td>
-							<td th:text="${pescado.descripcion}">Descripción</td>
+							<td class="py-3" th:text="${pescado.descripcion}">Descripción</td>
 							<td th:text="${pescado.likes}">Likes</td>
-							<td th:text="${pescado.foto}">Foto (URL)</td>
 							<td th:text="${pescado.precio}">Precio</td>
-							<td th:text="${pescado.stock}">Stock</td>
-							<td class="operaciones">
-								<a href="#" th:href="@{/admin/pescado/editarPescado/{id}(id=${pescado.id})}"
-									class="btn btn-primary">Editar</a>
-								<a href="#" id="borrarBtn${pescado.id}"
-									th:href="@{/admin/pescado/borrarPescado/{id}(id=${pescado.id})}"
-									class="btn btn-danger">Borrar</a>
+							<td>
+								<span
+									th:classappend="${pescado.stock < 25} ? 'text-danger' : (${pescado.stock <= 50} ? 'text-warning' : 'text-success')"
+									class="fw-bold">
+									<span th:text="${pescado.stock}"></span>
+								</span>
+							</td>
+							<td>
+								<a th:href="@{/admin/pescado/editarPescado/{id}(id=${pescado.id})}"
+									class="btn btn-primary btn-sm mb-2">Editar</a>
+								<button class="btn btn-danger btn-sm" data-bs-toggle="modal"
+									th:data-bs-target="'#borrarModal' + ${pescado.id}">Borrar</button>
+
+								<div class="modal fade" th:id="'borrarModal' + ${pescado.id}" tabindex="-1"
+									aria-labelledby="borrarModalLabel" aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="borrarModalLabel">Confirmar borrado</h5>
+												<button type="button" class="btn-close" data-bs-dismiss="modal"
+													aria-label="Close"></button>
+											</div>
+											<div class="modal-body">
+												¿Estás seguro de que deseas borrar este producto?
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary"
+													data-bs-dismiss="modal">Cancelar</button>
+												<a th:href="@{/admin/pescado/borrarPescado/{id}(id=${pescado.id})}"
+													class="btn btn-danger">Borrar</a>
+											</div>
+										</div>
+									</div>
+								</div>
 							</td>
 						</tr>
 					</tbody>
 				</table>
-
-				<div class="modal fade" id="borrarModal" tabindex="-1" aria-labelledby="borrarModalLabel"
-					aria-hidden="true">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="borrarModalLabel">Confirmar borrado</h5>
-								<button type="button" class="btn-close" data-bs-dismiss="modal"
-									aria-label="Close"></button>
-							</div>
-							<div class="modal-body">
-								¿Estás seguro de que deseas borrar este producto?
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary"
-									data-bs-dismiss="modal">Cancelar</button>
-								<a id="confirmarBorradoLink" href="#" class="btn btn-danger">Borrar</a>
-							</div>
-						</div>
-					</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-10 offset-md-1">
+				<div class="legend">
+					<p class="text-center">Leyenda de colores:</p>
+					<ul class="list-unstyled d-flex justify-content-center">
+						<li class="me-3">
+							<span class="badge bg-danger me-1">Rojo:</span>Menos de 25 kg disponibles
+						</li>
+						<li class="me-3">
+							<span class="badge bg-warning me-1">Amarillo:</span>Entre 26 y 50 kg disponibles
+						</li>
+						<li class="me-3">
+							<span class="badge bg-success me-1">Verde:</span>51 o más kg disponibles
+						</li>
+					</ul>
 				</div>
-
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>

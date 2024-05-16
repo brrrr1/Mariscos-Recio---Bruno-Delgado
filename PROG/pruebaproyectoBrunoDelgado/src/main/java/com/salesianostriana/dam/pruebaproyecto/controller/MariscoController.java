@@ -69,12 +69,14 @@ public class MariscoController {
 		servicioMarisco.edit(m);
 		return "redirect:/admin/marisco/listaMarisco";
 	}
-
+	
 	@GetMapping("/borrarMarisco/{id}")
 	public String borrar(@PathVariable("id") long id) {
-		servicioMarisco.deleteById(id);
+		//servicio.deleteById(id);
+		servicioProdPeso.deleteByIdConFavoritos(id);
 		return "redirect:/admin/marisco/listaMarisco";
 	}
+
 
 	@GetMapping("/productoMarisco/{id}")
 	public String mostrarPaginaProductoMarisco(@PathVariable("id") long id, Model model) {

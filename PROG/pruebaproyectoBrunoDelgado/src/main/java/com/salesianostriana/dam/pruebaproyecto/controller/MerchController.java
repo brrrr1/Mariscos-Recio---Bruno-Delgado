@@ -72,7 +72,7 @@ public class MerchController {
 	@GetMapping("/borrarMerch/{id}")
 	public String borrar(@PathVariable("id") long id) {
 		//servicio.deleteById(id);
-		servicio.deleteByIdConFavoritos(id);
+		servicioProdUnidad.deleteByIdConFavoritos(id);
 		return "redirect:/admin/merch/listaMerch";
 	}
 

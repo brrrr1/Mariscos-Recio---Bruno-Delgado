@@ -9,6 +9,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 	<title>Formulario Lotes</title>
 	<link href="../../static/css/estiloForm.css" th:href="@{/css/estiloForm.css}" rel="stylesheet" />
+	<script src="../../static/js/validarProductoForm.js" th:src="@{/js/validarProductoForm.js}" defer></script>
 </head>
 
 <body>
@@ -16,7 +17,11 @@
 	</header>
 	<div class="d-flex justify-content-center" id="lotesForm">
 		<img src="../../static/img/logo.png" th:src="@{/img/logo.png}" alt="Logo">
-		<form th:action="${lote.id != 0} ? @{submit} : @{addLote}" th:object="${lote}" method="post">
+		<form th:action="${lote.id != 0} ? @{submit} : @{addLote}" th:object="${lote}" method="post"
+			onsubmit="return validarFormulario()">
+			<div id="errorMessage" class="alert alert-danger" style="display: none;">
+				Por favor, rellena todos los campos y recuerda no poner números negativos.
+			</div>
 			<div class="row mb-3">
 				<div class="col">
 					<input th:if="${lote.id != 0}" type="hidden" name="id" th:field="*{id}" />
@@ -63,19 +68,19 @@
 					<input type="number" class="form-control" placeholder="Unidades" th:field="*{stock}">
 				</div>
 			</div>
+
+
+			<div id="errorMensaje" class="row mb-3"></div>
 			<button type="submit" class="btn btn-primary">Submit</button>
 			<div class="row mb-3">
 				<div class="col">
-					<a th:href="@{/admin/lotes/listaLotes}" class="btn btn-dark">Volver</a>
+					<a th:href="@{/admin/merch/listaMerch}" class="btn btn-dark">Volver</a>
 				</div>
 			</div>
 		</form>
-
-
-
 	</div>
 	<footer th:replace="~{fragmentos/footer::footer}">
-	
+
 	</footer>
 </body>
 

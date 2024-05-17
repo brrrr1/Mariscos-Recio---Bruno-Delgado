@@ -46,15 +46,21 @@ public class UsuarioController {
 
 	@PostMapping("/addUsuario")
 	public String submit(@ModelAttribute("usuario") Usuario usuario, Model model) {
+		boolean usernameExists = servicioUsuario.buscarUsername(usuario.getUsername());
 		
+		if(usernameExists) {
+			return "usernameRepetido";
+		} else {
 		 String encodedPassword = passwordEncoder.encode(usuario.getPassword());
 		 usuario.setPassword(encodedPassword);
 		 
 		servicioUsuario.save(usuario);
 		model.addAttribute("usuario", usuario);
 		return "redirect:/admin/usuarios/listaUsuarios";
+		}
 	}
-
+	
+	
 	@GetMapping("/editarUsuario/{id}")
 	public String mostrarFormularioEdicion(@PathVariable("id") long id, Model model) {
 		if (servicioUsuario.findById(id).isPresent()) {

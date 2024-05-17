@@ -12,11 +12,20 @@ insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype
 insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype, descuento) values (5, 'Cena de Gala', 'Si quiere una cena de gala, llévese una cigala. Este lote contiene 4kg de cigala que le permitirán alimentar a hasta 5 personas.', 37, 'http://dummyimage.com/243x100.png/dddddd/000000', 150, 3, 'L', 5);
 
 
-insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype) values (6, 'Lubina', 'Si quiere una cena muy fina...¡Llévese una lubina!', 75, 'https://www.lavanguardia.com/files/article_main_microformat/uploads/2018/12/14/5e9981374ee6b.jpeg', 22, 100, 'PESC');
+insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype) values (6, 'Lubina', 'Si quiere una cena muy fina...¡Llévese una lubina!', 75, 'https://mariskito.com/1567-medium_default/lubina-salvaje.jpg', 22, 100, 'PESC');
+insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype) values (9, 'Rape', 'El rape común o rape blanco es una especie de pez lofiforme de la familia Lophiidae distribuido por el noreste del océano Atlántico, el mar Mediterráneo y el mar Negro.​', 200, 'https://mardamorosa.com/210-tm_large_default/rape-blanco.jpg', 16.38, 80, 'PESC');
 insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype) values (7, 'Bogavante', 'Si quiere una cena elegante... ¡Llévese un bogavante!', 120, 'https://www.gastronomiavasca.net/uploads/image/file/3235/w700_bogavante.jpg', 75, 130, 'MAR');
 insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype) values (8, 'Benjamín', '¡Saluda a Benjamín!', 3333, 'https://images7.memedroid.com/images/UPLOADED604/5fcf0d4b15b19.jpeg', 1000000, 100, 'PESC');
+insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype) values (10, 'Quisquillas', '¡Que alegría! ¡Que ilusión! Las quisquillas en promoción.', 145, 'https://www.pescaderiamunicio.es/wp-content/uploads/pescaderia-municio_0026_45-Quisquilla-de-motril.jpg', 50, 19, 'MAR');
+insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype) values (11, 'Mero', 'Si quiere plato ligero... ¡Pídase un buen mero!', 40, 'https://coyomar.es/wp-content/uploads/2020/10/mero.jpg', 57, 160, 'PESC');
+insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype) values (12, 'Almejas', 'Si quiere una cena sin quejas...¡Llévese unas almejas!', 74, 'https://marefish.es/wp-content/uploads/2024/02/Almeja-Marron.jpg', 55, 183, 'MAR');
+insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype) values (13, 'Calamar', 'Si quiere una cena espectacular...¡Llévese un calamar!', 82, 'https://mariscosgallego.es/wp-content/uploads/2022/08/calamar.jpeg', 28, 73, 'PESC');
+insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype) values (14, 'Carabineros', 'Si quiere una cena sin peros...¡Compre carabineros!', 11, 'https://mariscodospuntocero.com/wp-content/uploads/2017/11/CARABINERO.jpg', 130, 13, 'MAR');
+insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype) values (15, 'Langostinos', 'Si quiere plantar un buen pino...¡Coma langostinos!', 62, 'https://www.aquamargold.com/wp-content/uploads/2021/06/AdobeStock_32391707-scaled.jpeg', 12.50, 45, 'MAR');
+insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype) values (16, 'Centollo', 'Si está cansado del pollo...¡Coma un buen Centollo!. Zapatero recibió un Centollazo del mismo origen que el que usted puede comprar aquí', 203, 'https://mariscosgallego.es/wp-content/uploads/2020/06/centollodaria.jpg', 11.88, 60, 'MAR');
+insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype) values (17, 'Sardinas', 'Para una cena divina... ¡Compre varias sardinas!', 190, 'https://media.pescoandgo.es/product/sardina-entera-sin-tripa-1kg-1822-unidades-800x800.jpg', 3.99, 120, 'PESC');
 
-ALTER SEQUENCE producto_seq RESTART WITH (58);
+ALTER SEQUENCE producto_seq RESTART WITH (67);
 
 
 

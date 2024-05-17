@@ -15,6 +15,7 @@
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<link href="../../static/css/estiloMain.css" th:href="@{/css/estiloMain.css}" rel="stylesheet" />
 	<link href="../../static/css/estiloTarjetas.css" th:href="@{/css/estiloTarjetas.css}" rel="stylesheet" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
 
 	<!-- Descripción, textos alternativos de imagenes (descripcion de productos?) -->
@@ -110,7 +111,7 @@
 										<div
 											th:if="${producto.getClass().getSimpleName() == 'Marisco' || producto.getClass().getSimpleName() == 'Pescado'}">
 											<p class="card-text"
-												th:text="${#numbers.formatDecimal(producto.precio, 1, 2) + ' €'}">
+												th:text="${#numbers.formatDecimal(producto.precio, 1, 2) + ' €/kg'}">
 											</p>
 										</div>
 
@@ -166,25 +167,25 @@
 
 		<section class="container my-5" id="sobre-nosotros">
 			<div class="row">
-				<div class="col-md-6 mb-4 text-center"> <!-- Utiliza col-md-* para tamaños medianos -->
+				<div class="col-md-6 mb-4 text-center">
 					<h2 class="fw-bold titulo-grande">Sobre Nosotros</h2>
 					<p class="fs-4">Mariscos Recio es la empresa líder en el sector del congelado. Con nuestra moderna
 						y amplia flota de camiones servimos a primerísima hora de la mañana pescados y mariscos
 						fresquísimos y de primera calidad.</p>
 				</div>
-				<div class="col-md-6 mb-4 text-center"> <!-- Utiliza col-md-* para tamaños medianos -->
+				<div class="col-md-6 mb-4 text-center"> 
 					<img src="../../static/img/laqueseavecina1-a.jpg" th:src="@{/img/laqueseavecina1-a.jpg}"
 						alt="Antonio Recio junto un cartel publicitario" class="img-fluid" style="width: 100%;">
 				</div>
 			</div>
 
 			<div class="row">
-				<div class="col-md-6 mb-4 text-center"> <!-- Utiliza col-md-* para tamaños medianos -->
+				<div class="col-md-6 mb-4 text-center"> 
 					<h2 class="fw-bold titulo-grande">Bogavante De Oro</h2>
 					<p class="fs-4">Mariscos Recio y su emperador Antonio Recio han sido galardonados con el Bogavante
 						de Oro al mayorista del año y la mejor pescadería/marisquería de España.</p>
 				</div>
-				<div class="col-md-6 mb-4 text-center"> <!-- Utiliza col-md-* para tamaños medianos -->
+				<div class="col-md-6 mb-4 text-center"> 
 					<img src="../../static/img/bogavantedeoro.jpg" th:src="@{/img/bogavantedeoro.jpg}"
 						alt="Bogavante de Oro" class="img-fluid" style="width: 100%;">
 				</div>
@@ -218,13 +219,13 @@
 
 
 			<div class="row">
-				<div class="col-md-6 mb-4 text-center"> <!-- Utiliza col-md-* para tamaños medianos -->
+				<div class="col-md-6 mb-4 text-center"> 
 					<h2 class="fw-bold titulo-grande">Antonio, el fundador</h2>
 					<p class="fs-4"> Antonio Recio Matamoros (7 de mayo de 1966) es el fundador de Mariscos Recio. Aún
 						teniendo una infancia difícil Antonio se antepuso a todas las adversidades y reveses de la vida
 						y levantó el Imperio Recio desde la nada.</p>
 				</div>
-				<div class="col-md-6 mb-4 text-center"> <!-- Utiliza col-md-* para tamaños medianos -->
+				<div class="col-md-6 mb-4 text-center"> 
 					<img src="../../static/img/marisco-recio--644x362.jpg" th:src="@{/img/marisco-recio--644x362.jpg}"
 						alt="Antonio Recio posando en la pescadería" class="img-fluid" style="width: 100%;">
 				</div>

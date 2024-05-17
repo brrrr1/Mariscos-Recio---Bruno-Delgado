@@ -28,6 +28,8 @@
 #banner img {
 	width: 100%;
 	height: auto;
+	padding-top: 100px;
+	padding-bottom: 12px;
 }
 
 .botones-container {

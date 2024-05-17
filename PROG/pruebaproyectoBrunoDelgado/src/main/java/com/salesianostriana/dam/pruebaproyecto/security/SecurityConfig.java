@@ -51,7 +51,8 @@ public class SecurityConfig {
 				.anyRequest().permitAll())
 
 				.formLogin((loginz) -> loginz.loginPage("/login").defaultSuccessUrl("/main").permitAll())
-				.logout((logoutz) -> logoutz.logoutUrl("/logout").logoutSuccessUrl("/main").permitAll());
+				.logout((logoutz) -> logoutz.logoutUrl("/logout").logoutSuccessUrl("/main").permitAll())
+				.exceptionHandling(exceptionHandling -> exceptionHandling.accessDeniedPage("/error"));
 
 		http.csrf(csrfz -> csrfz.disable());
 		http.headers(headersz -> headersz.frameOptions(frameOptionsz -> frameOptionsz.disable()));

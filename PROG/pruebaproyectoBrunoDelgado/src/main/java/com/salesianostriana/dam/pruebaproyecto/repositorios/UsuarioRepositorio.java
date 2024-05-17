@@ -30,6 +30,6 @@ public interface UsuarioRepositorio extends JpaRepository<Usuario, Long> {
 	 * public List<Producto> listaFavoritos();
 	 */
 
-	List<Usuario> findByNombreContainsIgnoreCaseOrApellidoContainsIgnoreCase(String nombre, String descripcion);
+	List<Usuario> findByNombreContainsIgnoreCaseOrApellidoContainsIgnoreCase(String nombre, String apellido);
 	
 }

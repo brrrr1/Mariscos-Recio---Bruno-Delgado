@@ -315,6 +315,12 @@ public class MainController {
 	    return "cambioDatos";
 	}
 	
+	@GetMapping("/error")
+	public String controlador() {
+
+		return "error";
+	}
+	
  
 	/*
 	 * @PostMapping("/perfil/editar") public String

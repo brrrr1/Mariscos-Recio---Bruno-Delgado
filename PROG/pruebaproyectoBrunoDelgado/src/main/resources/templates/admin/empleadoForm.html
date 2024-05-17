@@ -52,18 +52,14 @@
 								</div>
 								<div class="mb-3 mt-3 pt-5">
 									<label for="fechaIngreso" class="form-label text-dark">Fecha de Ingreso:</label>
-									<input th:if="${empleado.id != 0}" type="text" th:field="*{fechaIngreso}"
-										id="fechaIngreso" name="fechaIngreso" readonly="readonly">
-									<input th:if="${empleado.id == 0}" type="date" th:field="*{fechaIngreso}"
-										class="form-control" id="fechaIngreso" placeholder="Fecha de Ingreso"
+									<input type="date" th:field="*{fechaIngreso}"
+										class="form-control" placeholder="Fecha de Ingreso"
 										name="fechaIngreso">
 								</div>
 								<div class="mb-3 mt-3 pt-5">
-									<label for="fechaIngreso" class="form-label text-dark">Fecha de Salida:</label>
-									<input th:if="${empleado.id != 0}" type="text" th:field="*{fechaSalida}"
-										id="fechaSalida" name="fechaSalida" readonly="readonly">
-									<input th:if="${empleado.id == 0}" type="date" th:field="*{fechaSalida}"
-										class="form-control" id="fechaSalida" placeholder="Fecha de Salida"
+									<label for="fechaSalida" class="form-label text-dark">Fecha de Salida:</label>
+									<input type="date" th:field="*{fechaSalida}"
+										class="form-control"placeholder="Fecha de Salida"
 										name="fechaSalida">
 								</div>
 								<div class="row mb-3">

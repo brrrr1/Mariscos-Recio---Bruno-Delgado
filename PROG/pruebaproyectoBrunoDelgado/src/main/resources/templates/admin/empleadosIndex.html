@@ -11,6 +11,7 @@
 		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
 		crossorigin="anonymous"></script>
 	<script src="../../static/js/IndexScript.js" th:src="@{/js/IndexScript.js}" defer></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
 <body>
@@ -62,10 +63,14 @@
 							<td th:text="${#temporals.format(empleado.fechaSalida)}">Fecha de Salida</td>
 							<td class="operaciones">
 								<a href="#" th:href="@{/admin/empleados/editarEmpleado/{id}(id=${empleado.id})}"
-									class="btn btn-primary">Editar</a>
+									class="btn btn-white">
+									<i class="bi bi-pencil"></i>
+									Editar</a>
 								<a href="#" id="borrarBtn${empleado.id}"
 									th:href="@{/admin/empleados/borrarEmpleado/{id}(id=${empleado.id})}"
-									class="btn btn-danger">Borrar</a>
+									class="btn btn-dark">
+									<i class="bi bi-trash"></i>
+									Borrar</a>
 							</td>
 						</tr>
 					</tbody>
@@ -86,7 +91,9 @@
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary"
 									data-bs-dismiss="modal">Cancelar</button>
-								<a id="confirmarBorradoLink" href="#" class="btn btn-danger">Borrar</a>
+								<a id="confirmarBorradoLink" href="#" class="btn btn-dark">
+									<i class="bi bi-trash"></i>
+									Borrar</a>
 							</div>
 						</div>
 					</div>

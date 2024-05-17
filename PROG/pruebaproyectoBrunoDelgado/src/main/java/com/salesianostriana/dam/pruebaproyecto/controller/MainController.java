@@ -153,11 +153,22 @@ public class MainController {
 
 	@PostMapping("/registrarUsuario")
 	public String submit(@ModelAttribute("usuario") Usuario usuario, Model model) {
-		String encodedPassword = passwordEncoder.encode(usuario.getPassword());
-		usuario.setPassword(encodedPassword);
-		servicioUsuario.save(usuario);
-		model.addAttribute("usuario", usuario);
-		return "main";
+		
+		boolean usernameExists = servicioUsuario.buscarUsername(usuario.getUsername());
+		
+		if(usernameExists) {
+			return "usernameRepetido";
+		} else {
+			String encodedPassword = passwordEncoder.encode(usuario.getPassword());
+			usuario.setPassword(encodedPassword);
+			servicioUsuario.save(usuario);
+			model.addAttribute("usuario", usuario);
+			return "main";
+		}
+		
+		
+		
+		
 	}
 
 //	@PostMapping("/addFavorito/{usuario_id}/{producto_id}")

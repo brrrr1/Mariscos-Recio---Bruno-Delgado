@@ -21,4 +21,9 @@ public class UsuarioService extends BaseServiceImpl<Usuario, Long, UsuarioReposi
 		return result;
 	}
 	
+	
+	public boolean buscarUsername(String username) {
+		return this.repository.existsByUsername(username);
+	}
+	
 }

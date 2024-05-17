@@ -319,7 +319,7 @@ public class MainController {
 	}
 	
 	@GetMapping("/error")
-	public String controlador() {
+	public String controladorErrores() {
 
 		return "error";
 	}

@@ -57,10 +57,10 @@ public class MainController {
 
 	@Autowired
 	private FavoritosService servicioFavoritos;
-	
+
 	@Autowired
 	private ProdUnidadService servicioProdUnidad;
-	
+
 	@Autowired
 	private ProdPesoService servicioProdPeso;
 
@@ -259,14 +259,16 @@ public class MainController {
 	}
 
 	@PostMapping("/editarUsuario/submit")
-	public String procesarFormularioEdicion(@ModelAttribute("usuario")  /*@AuthenticationPrincipal */ Usuario usuario) {
-		/*String encodedPassword = passwordEncoder.encode(usuario.getPassword());
-		 usuario.setPassword(encodedPassword);*/
+	public String procesarFormularioEdicion(@ModelAttribute("usuario") /* @AuthenticationPrincipal */ Usuario usuario) {
+		/*
+		 * String encodedPassword = passwordEncoder.encode(usuario.getPassword());
+		 * usuario.setPassword(encodedPassword);
+		 */
 		servicioUsuario.save(usuario);
 		return "redirect:/cambioDatos";
 
 	}
-	
+
 	@GetMapping("/cambiarContrasena")
 	public String mostrarFormularioPassword(@AuthenticationPrincipal Usuario usuario, Model model) {
 
@@ -274,9 +276,10 @@ public class MainController {
 		return "cambiarPswd";
 
 	}
-	
+
 	@PostMapping("/perfil/editar")
-	public String procesarFormularioPassword(@ModelAttribute("usuario")  /*@AuthenticationPrincipal */ Usuario usuario) {
+	public String procesarFormularioPassword(
+			@ModelAttribute("usuario") /* @AuthenticationPrincipal */ Usuario usuario) {
 
 		String encodedPassword = passwordEncoder.encode(usuario.getPassword());
 		usuario.setPassword(encodedPassword);
@@ -284,35 +287,35 @@ public class MainController {
 		return "redirect:/cambioDatos";
 
 	}
-	
+
 	@GetMapping("/buscarMerch")
 	public String buscarMerchPorNombre(Model model, @RequestParam("busqueda") String busqueda) {
-	    model.addAttribute("listaMerch", servicioProdUnidad.buscarPorNombre(busqueda));
-	    return "merch";
+		model.addAttribute("listaMerch", servicioProdUnidad.buscarPorNombre(busqueda));
+		return "merch";
 	}
-	
+
 	@GetMapping("/buscarLote")
 	public String buscarLotePorNombre(Model model, @RequestParam("busqueda") String busqueda) {
-	    model.addAttribute("listaLotes", servicioProdUnidad.buscarPorNombre(busqueda));
-	    return "lotes";
+		model.addAttribute("listaLotes", servicioProdUnidad.buscarPorNombre(busqueda));
+		return "lotes";
 	}
-	
+
 	@GetMapping("/buscarPescado")
 	public String buscarPescadoPorNombre(Model model, @RequestParam("busqueda") String busqueda) {
-	    model.addAttribute("listaPescado", servicioProdPeso.buscarPorNombre(busqueda));
-	    return "pescado";
+		model.addAttribute("listaPescado", servicioProdPeso.buscarPorNombre(busqueda));
+		return "pescado";
 	}
-	
+
 	@GetMapping("/buscarMarisco")
 	public String buscarMariscoPorNombre(Model model, @RequestParam("busqueda") String busqueda) {
-	    model.addAttribute("listaMarisco", servicioProdPeso.buscarPorNombre(busqueda));
-	    return "marisco";
+		model.addAttribute("listaMarisco", servicioProdPeso.buscarPorNombre(busqueda));
+		return "marisco";
 	}
-	
+
 	@GetMapping("/cambioDatos")
 	public String cambioDatos() {
-	    
-	    return "cambioDatos";
+
+		return "cambioDatos";
 	}
 	
 	@GetMapping("/error")

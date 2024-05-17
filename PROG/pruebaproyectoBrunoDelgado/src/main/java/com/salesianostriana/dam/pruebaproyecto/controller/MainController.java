@@ -263,7 +263,7 @@ public class MainController {
 		/*String encodedPassword = passwordEncoder.encode(usuario.getPassword());
 		 usuario.setPassword(encodedPassword);*/
 		servicioUsuario.save(usuario);
-		return "perfil";
+		return "redirect:/cambioDatos";
 
 	}
 	
@@ -281,7 +281,7 @@ public class MainController {
 		String encodedPassword = passwordEncoder.encode(usuario.getPassword());
 		usuario.setPassword(encodedPassword);
 		servicioUsuario.save(usuario);
-		return "redirect:/perfil";
+		return "redirect:/cambioDatos";
 
 	}
 	
@@ -307,6 +307,12 @@ public class MainController {
 	public String buscarMariscoPorNombre(Model model, @RequestParam("busqueda") String busqueda) {
 	    model.addAttribute("listaMarisco", servicioProdPeso.buscarPorNombre(busqueda));
 	    return "marisco";
+	}
+	
+	@GetMapping("/cambioDatos")
+	public String cambioDatos() {
+	    
+	    return "cambioDatos";
 	}
 	
  

@@ -9,8 +9,10 @@ insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype
 insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype, descuento) values (2, 'Taza Mariscos Recio', 'Brillante y resistente taza de porcelana para disfrutar de un ColaCao con magdalenas como dios manda.', 234, 'https://i.ebayimg.com/images/g/CLEAAOSwyeRk~jxq/s-l1600.jpg', 6, 60, 'MER', 0);
 insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype, descuento) values (3, 'Llavero Mariscos Recio', 'Llavero de acero inoxidable con algunas de las frases celebres del comercio.', 112, 'https://i.ebayimg.com/images/g/YtIAAOSwGrVcm2AM/s-l1600.jpg', 3, 100, 'MER', 0);
 insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype, descuento) values (4, 'Imán Nevera Mariscos Recio', 'Imán decorativo con el logo de la empresa que le hará recordar nuestro delicioso género siempre que abra la nevera', 80, 'https://i.ebayimg.com/images/g/zXUAAOSwy69iMOvP/s-l1200.webp', 2, 45, 'MER', 0);
-insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype, descuento) values (5, 'Cena de Gala', 'Si quiere una cena de gala, llévese una cigala. Este lote contiene 4kg de cigala que le permitirán alimentar a hasta 5 personas.', 37, 'http://dummyimage.com/243x100.png/dddddd/000000', 150, 3, 'L', 5);
-
+insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype, descuento) values (5, 'Cena de Gala', 'Si quiere una cena de gala, llévese una cigala. Este lote contiene 4kg de cigala que le permitirán alimentar a hasta 5 personas.', 37, 'https://i.imgur.com/xIlGy1z.png', 125, 3, 'L', 5);
+insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype, descuento) values (19, 'Cena Elegante', 'Si quiere una cena elegante... ¡Llévese un bogavante! Este lote contiene 3kg de Bogavante para deleitar a toda la sala.', 50, 'https://i.imgur.com/7gs7OyC.png', 180, 3, 'L', 30);
+insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype, descuento) values (20, 'Cena Muy Fina', 'Si quiere una cena muy fina...¡Llévese una lubina! Este lote contiene 5kg de Lubina para una cena numerosa.', 102, 'https://i.imgur.com/3pUNyep.png', 70, 6, 'L', 0);
+insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype, descuento) values (21, 'Cena Divina', 'Para una cena divina... ¡Compre varias sardinas! Este lote contiene 25kg de Sardinas para abastecer hasta el Poblado Tongoliki.', 123, 'https://i.imgur.com/8FSeeDX.png', 60, 1, 'L', 0);
 
 insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype) values (6, 'Lubina', 'Si quiere una cena muy fina...¡Llévese una lubina!', 75, 'https://mariskito.com/1567-medium_default/lubina-salvaje.jpg', 22, 100, 'PESC');
 insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype) values (9, 'Rape', 'El rape común o rape blanco es una especie de pez lofiforme de la familia Lophiidae distribuido por el noreste del océano Atlántico, el mar Mediterráneo y el mar Negro.​', 200, 'https://mardamorosa.com/210-tm_large_default/rape-blanco.jpg', 16.38, 80, 'PESC');
@@ -24,8 +26,9 @@ insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype
 insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype) values (15, 'Langostinos', 'Si quiere plantar un buen pino...¡Coma langostinos!', 62, 'https://www.aquamargold.com/wp-content/uploads/2021/06/AdobeStock_32391707-scaled.jpeg', 12.50, 45, 'MAR');
 insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype) values (16, 'Centollo', 'Si está cansado del pollo...¡Coma un buen Centollo!. Zapatero recibió un Centollazo del mismo origen que el que usted puede comprar aquí', 203, 'https://mariscosgallego.es/wp-content/uploads/2020/06/centollodaria.jpg', 11.88, 60, 'MAR');
 insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype) values (17, 'Sardinas', 'Para una cena divina... ¡Compre varias sardinas!', 190, 'https://media.pescoandgo.es/product/sardina-entera-sin-tripa-1kg-1822-unidades-800x800.jpg', 3.99, 120, 'PESC');
+insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype) values (18, 'Gambas', '¡Sorprenda usted a su pareja con gambas en Nochevieja!', 42, 'https://blancamar.es/wp-content/uploads/2022/01/gamba-arrocera_01-scaled-1.jpg', 40, 50, 'MAR');
 
-ALTER SEQUENCE producto_seq RESTART WITH (67);
+ALTER SEQUENCE producto_seq RESTART WITH (71);
 
 
 

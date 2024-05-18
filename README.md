@@ -35,7 +35,10 @@ Ubicados en la Avenida del Paraíso 7, somos la mejor pescadería de España. Co
 - - Editar
 -  - Username, dirección, correo...
 - Gestión completada de todos los empleados
-- - Añadir
-- - Eliminar
-- - Editar
+- - Añadir (añade también su usuario)
+- - Eliminar (elimina también su usuario)
+- - Editar (edita también su usuario)
 - - - Sueldo, Foto, Información...
+- - Dar de baja (establece su fecha de salida y le quita permisos de empleado a su usuario)
+
+*Todas las funcionalidades que repercuten a los usuarios de los empleados también ocurren en el otro orden (editas un usuario y se editar la información del empleado etc)*

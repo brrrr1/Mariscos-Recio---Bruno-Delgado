@@ -99,6 +99,13 @@ public class UsuarioController {
 
 	@GetMapping("/borrarUsuario/{id}")
 	public String borrar(@PathVariable("id") long id) {
+		Usuario u = servicioUsuario.buscarPorId(id);
+		if(u.isEsEmpleado()) {
+			List<Empleado> listaIguales = servicioEmpleado.buscarPorNombreYApellido(u.getNombre(), u.getApellido());
+			for (Empleado empleado : listaIguales) {
+				servicioEmpleado.delete(empleado);
+			}
+		}
 		servicioUsuario.deleteById(id);
 		return "redirect:/admin/usuarios/listaUsuarios";
 	}

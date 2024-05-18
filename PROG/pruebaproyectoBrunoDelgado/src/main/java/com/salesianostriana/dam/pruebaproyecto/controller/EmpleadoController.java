@@ -68,8 +68,15 @@ public class EmpleadoController {
 
 	@PostMapping("/editarEmpleado/submit")
 	public String procesarFormularioEdicion(@ModelAttribute("empleado") Empleado e) {
-
 		servicioEmpleado.edit(e);
+		
+		List<Usuario> listaEmpleados = servicioUsuario.buscarPorNombreYApellido(e.getNombre(), e.getApellido());
+		for (Usuario usuario : listaEmpleados) {
+			usuario.setNombre(e.getNombre());
+			usuario.setApellido(e.getApellido());
+			servicioUsuario.edit(usuario);
+		}
+		
 		return "redirect:/admin/empleados/listaEmpleados";
 
 	}

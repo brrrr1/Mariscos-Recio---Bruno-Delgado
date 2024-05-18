@@ -93,8 +93,10 @@
 									aria-label="Close"></button>
 							</div>
 							<div class="modal-body">
-								¿Estás seguro de que deseas borrar este empleado? Esto también borrará su usuario.
-								Recuerda que puedes darle de baja (mantiene su usuario pero deja de acceder a pantallas para empleados).
+								<p>¿Estás seguro de que deseas borrar este empleado?</p>
+								<p>Esto también borrará su usuario.</p>
+								<p>Recuerda que puedes darle de baja (mantiene su usuario pero deja de acceder a pantallas
+								para empleados).</p>
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary"
@@ -102,6 +104,32 @@
 								<a id="confirmarBorradoLink" href="#" class="btn btn-dark">
 									<i class="bi bi-trash"></i>
 									Borrar</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="modal fade" id="bajaModal" tabindex="-1" aria-labelledby="bajaModalLabel"
+					aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="borrarModalLabel">Confirmar baja</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<p>¿Estás seguro de que deseas dar de baja a este empleado?</p> 
+								<p>Esto no borrará su usuario pero
+								no le permitirá entrar a pantallas para empleados.</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary"
+									data-bs-dismiss="modal">Cancelar</button>
+								<a id="confirmarBajaLink" href="#" class="btn btn-danger">
+									<i class="bi bi-arrow-down-square-fill"></i>
+									Dar de baja
+								</a>
 							</div>
 						</div>
 					</div>

@@ -40,8 +40,8 @@
 								</div>
 								<div class="col-md-6">
 									<label for="Username" class="form-label">Nombre de Usuario:</label>
-									<input type="text" th:field="*{username}" class="form-control" placeholder="Username"
-										required>
+									<input type="text" th:field="*{username}" class="form-control"
+										placeholder="Username" required>
 								</div>
 								<div class="col-md-6">
 									<label for="Nombre" class="form-label">Nombre:</label>
@@ -50,8 +50,8 @@
 								</div>
 								<div class="col-md-6">
 									<label for="Apellido" class="form-label">Apellido:</label>
-									<input type="text" th:field="*{apellido}" class="form-control" placeholder="Apellido"
-										required>
+									<input type="text" th:field="*{apellido}" class="form-control"
+										placeholder="Apellido" required>
 								</div>
 								<div class="col-md-6">
 									<label for="DNI" class="form-label">DNI:</label>
@@ -64,15 +64,26 @@
 										placeholder="Enter email" name="email" required>
 								</div>
 								<div class="col-md-12">
-									<label for="pwd" class="form-label">Contraseña:</label>
-									<input type="password" th:field="*{password}" class="form-control" id="pwd"
+									<input type="hidden" th:field="*{password}" class="form-control" id="pwd"
 										placeholder="Enter password" name="pwd" required>
 									<i class="bi bi-eye" id="verPwd"></i>
 								</div>
 								<div class="col-md-12">
 									<label for="direccion" class="form-label">Dirección:</label>
-									<input type="text" th:field="*{direccion}" class="form-control" placeholder="Dirección"
-										required>
+									<input type="text" th:field="*{direccion}" class="form-control"
+										placeholder="Dirección" required>
+								</div>
+								<div class="col-md-12">
+									<input type="checkbox" th:field="*{esAdmin}" th:value="${esAdmin}"
+										class="form-check-input">
+									<label class="form-check-label" th:for="${#ids.prev('esAdmin')}"
+										th:text="Admin"></label>
+								</div>
+								<div class="col-md-12">
+									<input type="checkbox" th:field="*{esEmpleado}" th:value="${esEmpleado}"
+										class="form-check-input">
+									<label class="form-check-label" th:for="${#ids.prev('esEmpleado')}"
+										th:text="Empleado"></label>
 								</div>
 								<div class="col-md-12 text-center">
 									<input type="submit" value="Enviar" class="btn btn-danger">

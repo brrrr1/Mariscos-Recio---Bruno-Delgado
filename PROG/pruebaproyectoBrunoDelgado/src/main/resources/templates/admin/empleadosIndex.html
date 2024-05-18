@@ -73,6 +73,11 @@
 									class="btn btn-dark">
 									<i class="bi bi-trash"></i>
 									Borrar</a>
+								<a href="#" id="bajaBtn${empleado.id}"
+									th:href="@{/admin/empleados/darDeBaja/{id}(id=${empleado.id})}"
+									class="btn btn-danger">
+									<i class="bi bi-arrow-down-square-fill"></i>
+									Dar de baja</a>
 							</td>
 						</tr>
 					</tbody>
@@ -88,7 +93,8 @@
 									aria-label="Close"></button>
 							</div>
 							<div class="modal-body">
-								¿Estás seguro de que deseas borrar este producto?
+								¿Estás seguro de que deseas borrar este empleado? Esto también borrará su usuario.
+								Recuerda que puedes darle de baja (mantiene su usuario pero deja de acceder a pantallas para empleados).
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary"

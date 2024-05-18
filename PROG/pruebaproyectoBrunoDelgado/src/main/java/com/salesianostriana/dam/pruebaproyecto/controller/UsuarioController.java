@@ -1,5 +1,7 @@
 package com.salesianostriana.dam.pruebaproyecto.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -11,7 +13,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.salesianostriana.dam.pruebaproyecto.model.Empleado;
 import com.salesianostriana.dam.pruebaproyecto.model.Usuario;
+import com.salesianostriana.dam.pruebaproyecto.service.EmpleadoService;
 import com.salesianostriana.dam.pruebaproyecto.service.UsuarioService;
 
 @Controller
@@ -20,6 +24,9 @@ public class UsuarioController {
 
 	@Autowired
 	private UsuarioService servicioUsuario;
+	
+	@Autowired
+	private EmpleadoService servicioEmpleado;
 
 	
 	 @Autowired private PasswordEncoder passwordEncoder;
@@ -74,6 +81,15 @@ public class UsuarioController {
 
 	@PostMapping("/editarUsuario/submit")
 	public String procesarFormularioEdicion(@ModelAttribute("usuario") Usuario u) {
+		if(u.isEsEmpleado()) {
+			List<Empleado> listaIguales = servicioEmpleado.buscarPorNombreYApellido(u.getNombre(), u.getApellido());
+			for (Empleado e : listaIguales) {
+				e.setNombre(u.getNombre());
+				e.setApellido(u.getApellido());
+				servicioEmpleado.edit(e);
+			}
+			
+		}
 		String encodedPassword = passwordEncoder.encode(u.getPassword());
 		 u.setPassword(encodedPassword);
 		servicioUsuario.edit(u);

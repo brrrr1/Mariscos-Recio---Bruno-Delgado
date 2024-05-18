@@ -1,6 +1,9 @@
 package com.salesianostriana.dam.pruebaproyecto.service;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -35,6 +38,24 @@ public class EmpleadoService extends BaseServiceImpl<Empleado, Long, EmpleadoRep
 			throw new ProductoNotFoundException("No hay productos con ese criterio");
 		}
 		return result;
+	}
+	
+	public List<Empleado> buscarPorNombreYApellido(String nombre, String apellido) {
+		List<Empleado> result = this.repository.findByNombreContainsIgnoreCaseOrApellidoContainsIgnoreCase(nombre, apellido);
+		if (result.isEmpty()) {
+			throw new ProductoNotFoundException("No hay productos con ese criterio");
+		}
+		return result;
+	}
+	
+	public Empleado buscarPorId(Long id) {
+		return repository.buscarPorId(id);
+	}
+	
+	public void darDeBaja(Empleado e) {
+		e.setFechaSalida(LocalDate.now());
+		
+		
 	}
 
 }

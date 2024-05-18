@@ -30,6 +30,5 @@ function validateForm() {
 		}
 	}
 
-	// Si pasa todas las validaciones, puedes enviar el formulario aquí
 	document.getElementById('registroForm').submit();
 }

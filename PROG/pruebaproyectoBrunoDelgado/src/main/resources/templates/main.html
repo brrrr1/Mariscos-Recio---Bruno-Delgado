@@ -52,17 +52,20 @@
 				alt="Logo Mariscos Recio" class="img-fluid mx-auto d-block">
 		</div>
 
-		<div class="container botones text-center mt-5">
+		<div class="container2 botones text-center mt-5">
 			<div class="botones-container">
 				<button onclick="window.location.href='/pescado'" th:action="pescado"
-					class="btn btn-lg">Pescado</button>
+					class="btn2 btn-lg">Pescado</button>
 				<button onclick="window.location.href='/marisco'" th:action="marisco"
-					class="btn btn-lg">Marisco</button>
-				<button onclick="window.location.href='/lotes'" th:action="lotes" class="btn btn-lg">Lotes</button>
+					class="btn2 btn-lg">Marisco</button>
+				<button onclick="window.location.href='/lotes'" th:action="lotes" class="btn2 btn-lg">Lotes</button>
 				<button onclick="window.location.href='/merch'" th:action="merch"
-					class="btn btn-lg">Merchandising</button>
+					class="btn2 btn-lg">Merchandising</button>
 			</div>
 		</div>
+
+
+
 
 		<div id="banner" class="container-fluid" data-aos="fade-left">
 			<img src="../../static/img/banner completo.png" th:src="@{/img/banner completo.png}"
@@ -262,7 +265,7 @@
 			backSpeed: 80,
 			loop: false
 		})
-		
+
 		let typed4 = new Typed(".mov4", {
 			strings: ["Antonio.", "Antonio, lo", "Antonio, el dictador", "Antonio, el fundador"],
 			typeSpeed: 300,

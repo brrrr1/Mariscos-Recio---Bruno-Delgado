@@ -117,142 +117,34 @@ footer {
 	transform: scale(0.9);
 }
 
-.Btn {
-	width: 45px;
-	height: 45px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border: none;
-	background-color: transparent;
-	position: relative;
-	/* overflow: hidden; */
-	border-radius: 7px;
+.btn3 {
+	display: grid;
+	place-items: center;
+	background: #e3edf7;
+	padding: 1.4em;
+	border-radius: 10px;
+	box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+		-6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+	border: 1px solid rgba(0, 0, 0, 0);
 	cursor: pointer;
-	transition: all .3s;
+	transition: transform 0.5s;
 }
 
-.svgContainer {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: transparent;
-	backdrop-filter: blur(0px);
-	letter-spacing: 0.8px;
-	border-radius: 10px;
-	transition: all .3s;
-	border: 1px solid rgba(156, 156, 156, 0.466);
+.btn3:hover {
+	box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+		inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+		-0.5px -0.5px 0px rgba(255, 255, 255, 1),
+		0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+		0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	transform: translateY(0.5em);
 }
 
-.BG {
-	position: absolute;
-	content: "";
-	width: 100%;
-	height: 100%;
-	background: #181818;
-	z-index: -1;
-	border-radius: 10px;
-	pointer-events: none;
-	transition: all .3s;
+.btn3 svg {
+	transition: transform 0.5s;
 }
 
-.Btn:hover .BG {
-	transform: rotate(35deg);
-	transform-origin: bottom;
-}
-
-.Btn:hover .svgContainer {
-	background-color: rgba(156, 156, 156, 0.466);
-	backdrop-filter: blur(4px);
-}
-
-.Btn {
-	width: 45px;
-	height: 45px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border: none;
-	background-color: transparent;
-	position: relative;
-	/* overflow: hidden; */
-	border-radius: 7px;
-	cursor: pointer;
-	transition: all .3s;
-}
-
-.svgContainer {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: transparent;
-	backdrop-filter: blur(0px);
-	letter-spacing: 0.8px;
-	border-radius: 10px;
-	transition: all .3s;
-	border: 1px solid rgba(156, 156, 156, 0.466);
-}
-
-.BG {
-	position: absolute;
-	content: "";
-	width: 100%;
-	height: 100%;
-	background: #181818;
-	z-index: -1;
-	border-radius: 10px;
-	pointer-events: none;
-	transition: all .3s;
-}
-
-.Btn:hover .BG {
-	transform: rotate(35deg);
-	transform-origin: bottom;
-}
-
-.Btn:hover .svgContainer {
-	background-color: rgba(156, 156, 156, 0.466);
-	backdrop-filter: blur(4px);
-}
-
-.btn {
-	display: inline-block;
-	padding: 0.9rem 1.8rem;
-	font-size: 16px;
-	font-weight: 700;
-	color: white;
-	border: 3px solid rgb(252, 70, 100);
-	cursor: pointer;
-	position: relative;
-	background-color: transparent;
-	text-decoration: none;
-	overflow: hidden;
-	z-index: 1;
-	font-family: inherit;
-}
-
-.btn::before {
-	content: "";
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	color: rgb(0, 0, 0);
-	background-color: rgb(252, 70, 100);
-	transform: translateX(-100%);
-	transition: all .3s;
-	z-index: -1;
-}
-
-.btn:hover::before {
-	transform: translateX(0);
-}
-
-.card .btn-danger {
-	color: black;
+.btn3:hover svg {
+	transform: scale(0.9) rotate(360deg);
+	fill: #333333;
 }

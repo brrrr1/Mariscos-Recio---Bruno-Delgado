@@ -15,10 +15,11 @@
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<link href="../../static/css/estiloMain.css" th:href="@{/css/estiloMain.css}" rel="stylesheet" />
 	<link href="../../static/css/estiloTarjetas.css" th:href="@{/css/estiloTarjetas.css}" rel="stylesheet" />
+	<link href="../../static/css/botonCompra.css" th:href="@{/css/botonCompra.css}" rel="stylesheet" />
+	<link href="../../static/css/botonGithub.css" th:href="@{/css/botonGithub.css}" rel="stylesheet" />
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-	<!-- Descripción, textos alternativos de imagenes (descripcion de productos?) -->
 
 
 </head>
@@ -52,17 +53,20 @@
 				alt="Logo Mariscos Recio" class="img-fluid mx-auto d-block">
 		</div>
 
-		<div class="container botones text-center mt-5">
+		<div class="container2 botones text-center mt-5">
 			<div class="botones-container">
 				<button onclick="window.location.href='/pescado'" th:action="pescado"
-					class="btn btn-lg">Pescado</button>
+					class="btn2 btn-lg">Pescado</button>
 				<button onclick="window.location.href='/marisco'" th:action="marisco"
-					class="btn btn-lg">Marisco</button>
-				<button onclick="window.location.href='/lotes'" th:action="lotes" class="btn btn-lg">Lotes</button>
+					class="btn2 btn-lg">Marisco</button>
+				<button onclick="window.location.href='/lotes'" th:action="lotes" class="btn2 btn-lg">Lotes</button>
 				<button onclick="window.location.href='/merch'" th:action="merch"
-					class="btn btn-lg">Merchandising</button>
+					class="btn2 btn-lg">Merchandising</button>
 			</div>
 		</div>
+
+
+
 
 		<div id="banner" class="container-fluid" data-aos="fade-left">
 			<img src="../../static/img/banner completo.png" th:src="@{/img/banner completo.png}"
@@ -262,7 +266,7 @@
 			backSpeed: 80,
 			loop: false
 		})
-		
+
 		let typed4 = new Typed(".mov4", {
 			strings: ["Antonio.", "Antonio, lo", "Antonio, el dictador", "Antonio, el fundador"],
 			typeSpeed: 300,

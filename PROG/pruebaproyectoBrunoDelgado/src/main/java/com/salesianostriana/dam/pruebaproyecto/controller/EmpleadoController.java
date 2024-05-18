@@ -1,5 +1,8 @@
 package com.salesianostriana.dam.pruebaproyecto.controller;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.salesianostriana.dam.pruebaproyecto.model.Empleado;
+import com.salesianostriana.dam.pruebaproyecto.model.Usuario;
 import com.salesianostriana.dam.pruebaproyecto.service.EmpleadoService;
 import com.salesianostriana.dam.pruebaproyecto.service.UsuarioService;
 
@@ -64,22 +68,58 @@ public class EmpleadoController {
 
 	@PostMapping("/editarEmpleado/submit")
 	public String procesarFormularioEdicion(@ModelAttribute("empleado") Empleado e) {
-
 		servicioEmpleado.edit(e);
+		
+		List<Usuario> listaEmpleados = servicioUsuario.buscarPorNombreYApellido(e.getNombre(), e.getApellido());
+		for (Usuario usuario : listaEmpleados) {
+			usuario.setNombre(e.getNombre());
+			usuario.setApellido(e.getApellido());
+			servicioUsuario.edit(usuario);
+		}
+		
 		return "redirect:/admin/empleados/listaEmpleados";
 
 	}
 
 	@GetMapping("/borrarEmpleado/{id}")
 	public String borrar(@PathVariable("id") long id) {
+		
+		Empleado e = servicioEmpleado.buscarPorId(id);
+		List<Usuario> listaEmpleados = servicioUsuario.buscarPorNombreYApellido(e.getNombre(), e.getApellido());
+		
+		for (Usuario usuario : listaEmpleados) {
+			servicioUsuario.delete(usuario);
+		}
 		servicioEmpleado.deleteById(id);
+		
 		return "redirect:/admin/empleados/listaEmpleados";
 	}
-	
+
 	@GetMapping("/buscarEmpleado")
 	public String buscarEmpleadoPorNombre(Model model, @RequestParam("busqueda") String busqueda) {
-	    model.addAttribute("listaEmpleados", servicioEmpleado.buscarPorNombre(busqueda));
-	    return "admin/empleadosIndex";
+		model.addAttribute("listaEmpleados", servicioEmpleado.buscarPorNombre(busqueda));
+		return "admin/empleadosIndex";
+	}
+
+	@GetMapping("/darDeBaja/{id}")
+	public String darDeBaja(@PathVariable("id") long id) {
+		
+		Empleado e = servicioEmpleado.buscarPorId(id);
+		servicioEmpleado.darDeBaja(e);
+		
+
+		List<Usuario> listaEmpleados = servicioUsuario.buscarPorNombreYApellido(e.getNombre(), e.getApellido());
+		for (Usuario u : listaEmpleados) {
+			u.setEsEmpleado(false);
+			
+			servicioEmpleado.edit(e);
+			
+			servicioUsuario.edit(u);
+		}
+
+		
+		
+		return "redirect:/admin/empleados/listaEmpleados";
 	}
 
 }

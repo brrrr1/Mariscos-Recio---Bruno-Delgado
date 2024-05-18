@@ -1,6 +1,7 @@
 package com.salesianostriana.dam.pruebaproyecto.repositorios;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -22,5 +23,14 @@ public interface EmpleadoRepositorio extends JpaRepository<Empleado, Long> {
 	public Empleado buscarPorId(long id);
 	
 	List<Empleado> findByNombreContainsIgnoreCaseOrApellidoContainsIgnoreCase(String nombre, String descripcion);
+	
+	
+	@Query("""
+			SELECT e FROM Empleado e
+			WHERE e.id = ?1
+			""")
+	public Empleado buscarPorId(Long id);
+		
+	
 
 }

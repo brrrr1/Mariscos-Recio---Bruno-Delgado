@@ -21,9 +21,24 @@ public class UsuarioService extends BaseServiceImpl<Usuario, Long, UsuarioReposi
 		return result;
 	}
 	
+	public List<Usuario> buscarPorNombreYApellido(String nombre, String apellido) {
+		List<Usuario> result = this.repository.findByNombreContainsIgnoreCaseOrApellidoContainsIgnoreCase(nombre, apellido);
+		if (result.isEmpty()) {
+			throw new ProductoNotFoundException("No hay productos con ese criterio");
+		}
+		return result;
+	}
+	
 	
 	public boolean buscarUsername(String username) {
 		return this.repository.existsByUsername(username);
 	}
+	
+	public Usuario buscarPorId(Long id) {
+		return repository.buscarPorId(id);
+	}
+	
+	
+	
 	
 }

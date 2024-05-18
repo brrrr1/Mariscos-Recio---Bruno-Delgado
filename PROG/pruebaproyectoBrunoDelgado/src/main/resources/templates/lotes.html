@@ -17,6 +17,7 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 	<link href="../../static/css/botonCompra.css" th:href="@{/css/botonCompra.css}" rel="stylesheet" />
 	<link href="../../static/css/botonGithub.css" th:href="@{/css/botonGithub.css}" rel="stylesheet" />
+	<link href="../../static/css/botonBuscar.css" th:href="@{/css/botonBuscar.css}" rel="stylesheet" />
 </head>
 
 <body>
@@ -25,16 +26,24 @@
 
 	<div class="container-fluid py-4">
 		<div class="container">
-			
+
 			<div class="row mb-4">
-			                <div class="col-md-12">
-			                    <form class="d-flex justify-content-center" th:action="@{/buscarLote}" method="GET">
-			                        <input class="form-control me-2" type="search" placeholder="Buscar por nombre" aria-label="Search"
-			                            name="busqueda">
-			                        <button class="btn btn-outline-danger" type="submit">Buscar</button>
-			                    </form>
-			                </div>
-			            </div>
+				<div class="col-md-12">
+					<form class="d-flex justify-content-center" th:action="@{/buscarLote}" method="GET">
+						<input class="form-control me-2" type="search" placeholder="Buscar por nombre"
+							aria-label="Search" name="busqueda">
+						<button class="button" type="submit">
+							<span>
+								<svg viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M9.145 18.29c-5.042 0-9.145-4.102-9.145-9.145s4.103-9.145 9.145-9.145 9.145 4.103 9.145 9.145-4.102 9.145-9.145 9.145zm0-15.167c-3.321 0-6.022 2.702-6.022 6.022s2.702 6.022 6.022 6.022 6.023-2.702 6.023-6.022-2.702-6.022-6.023-6.022zm9.263 12.443c-.817 1.176-1.852 2.188-3.046 2.981l5.452 5.453 3.014-3.013-5.42-5.421z">
+									</path>
+								</svg>
+							</span>
+						</button>
+					</form>
+				</div>
+			</div>
 			<div class="row">
 				<aside class="col-md-3">
 					<!-- Aquí se deja el aside vacío -->
@@ -75,8 +84,8 @@
 												class="btn btn-danger"><i class="bi bi-cart-plus"></i>
 												Comprar</button></a>
 
-												<p class="card-text" th:text="${lote.likes} +'❤️'"></p>
-												
+										<p class="card-text" th:text="${lote.likes} +'❤️'"></p>
+
 									</div>
 								</div>
 							</div>

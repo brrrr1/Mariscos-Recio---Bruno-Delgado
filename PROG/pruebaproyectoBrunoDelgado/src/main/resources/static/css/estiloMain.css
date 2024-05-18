@@ -86,7 +86,7 @@ footer {
 	overflow: hidden;
 	transition: all 0.3s;
 	border-radius: 12px;
-	background-color: rgb(255, 128, 128);
+	background-color:#ff5c5c;
 	font-weight: bolder;
 	box-shadow: 0 2px 0 2px #000;
 }

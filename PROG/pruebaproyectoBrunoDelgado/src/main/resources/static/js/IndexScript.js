@@ -18,6 +18,21 @@ function ponerBotonesAFuncionar() {
 
 document.addEventListener('DOMContentLoaded', ponerBotonesAFuncionar);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function botonBaja(evento) {
 	evento.preventDefault();
 	let bajaLink = document.getElementById('confirmarBajaLink');

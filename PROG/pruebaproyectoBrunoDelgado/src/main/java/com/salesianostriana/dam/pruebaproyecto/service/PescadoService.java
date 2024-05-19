@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.salesianostriana.dam.pruebaproyecto.base.BaseServiceImpl;
-import com.salesianostriana.dam.pruebaproyecto.model.Pescado;
+import com.salesianostriana.dam.pruebaproyecto.exceptions.ProductoNotFoundException;
 import com.salesianostriana.dam.pruebaproyecto.model.Pescado;
 import com.salesianostriana.dam.pruebaproyecto.repositorios.PescadoRepositorio;
 
@@ -39,5 +39,13 @@ public class PescadoService extends BaseServiceImpl<Pescado, Long, PescadoReposi
 		public List<Pescado> ordenarPrecioMenor(){
 			return this.repository.ordernarPrecioMenor();
 			}
+		
+		public List<Pescado> buscarPorNombre(String busqueda) {
+			List<Pescado> result = this.repository.findByNombreContainsIgnoreCaseOrDescripcionContainsIgnoreCase(busqueda, busqueda);
+			if (result.isEmpty()) {
+				throw new ProductoNotFoundException("No hay productos con ese criterio");
+			}
+			return result;
+		}
 	
 }

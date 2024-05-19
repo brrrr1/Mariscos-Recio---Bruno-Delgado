@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.salesianostriana.dam.pruebaproyecto.base.BaseServiceImpl;
+import com.salesianostriana.dam.pruebaproyecto.exceptions.ProductoNotFoundException;
 import com.salesianostriana.dam.pruebaproyecto.model.Marisco;
 import com.salesianostriana.dam.pruebaproyecto.repositorios.MariscoRepositorio;
 
@@ -38,5 +39,13 @@ public class MariscoService extends BaseServiceImpl<Marisco, Long, MariscoReposi
 		public List<Marisco> ordenarPrecioMenor(){
 			return this.repository.ordernarPrecioMenor();
 			}
+		
+		public List<Marisco> buscarPorNombre(String busqueda) {
+			List<Marisco> result = this.repository.findByNombreContainsIgnoreCaseOrDescripcionContainsIgnoreCase(busqueda, busqueda);
+			if (result.isEmpty()) {
+				throw new ProductoNotFoundException("No hay productos con ese criterio");
+			}
+			return result;
+		}
 	
 }

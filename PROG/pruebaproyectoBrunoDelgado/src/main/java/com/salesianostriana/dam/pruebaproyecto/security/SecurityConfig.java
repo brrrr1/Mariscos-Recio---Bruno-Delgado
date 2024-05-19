@@ -42,11 +42,11 @@ public class SecurityConfig {
 	@Bean
 	SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		http.authorizeHttpRequests((authz) -> authz
-				.requestMatchers("/css/**", "/js/**", "/h2-console/**", "/audio/**", "img/**", "/perfil/**", "/buscar/**", "/video/**").permitAll()
+				.requestMatchers("/css/**", "/js/**", "/audio/**", "img/**", "/perfil/**", "/buscar/**", "/video/**").permitAll()
 
 				.requestMatchers("/empleado/**", "/addFavorito/**").hasAnyRole("EMPLEADO", "ADMIN")
 
-				.requestMatchers("/admin/**").hasAnyRole("ADMIN")
+				.requestMatchers("/admin/**",  "/h2-console/**").hasAnyRole("ADMIN")
 
 				.anyRequest().permitAll())
 

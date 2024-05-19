@@ -26,8 +26,6 @@ import com.salesianostriana.dam.pruebaproyecto.service.LoteService;
 import com.salesianostriana.dam.pruebaproyecto.service.MariscoService;
 import com.salesianostriana.dam.pruebaproyecto.service.MerchService;
 import com.salesianostriana.dam.pruebaproyecto.service.PescadoService;
-import com.salesianostriana.dam.pruebaproyecto.service.ProdPesoService;
-import com.salesianostriana.dam.pruebaproyecto.service.ProdUnidadService;
 import com.salesianostriana.dam.pruebaproyecto.service.ProductoService;
 import com.salesianostriana.dam.pruebaproyecto.service.UsuarioService;
 
@@ -58,11 +56,6 @@ public class MainController {
 	@Autowired
 	private FavoritosService servicioFavoritos;
 
-	@Autowired
-	private ProdUnidadService servicioProdUnidad;
-
-	@Autowired
-	private ProdPesoService servicioProdPeso;
 
 	@GetMapping("/main")
 	public String controlador(Model model) {
@@ -301,25 +294,25 @@ public class MainController {
 
 	@GetMapping("/buscarMerch")
 	public String buscarMerchPorNombre(Model model, @RequestParam("busqueda") String busqueda) {
-		model.addAttribute("listaMerch", servicioProdUnidad.buscarPorNombre(busqueda));
+		model.addAttribute("listaMerch", servicioMerch.buscarPorNombre(busqueda));
 		return "merch";
 	}
 
 	@GetMapping("/buscarLote")
 	public String buscarLotePorNombre(Model model, @RequestParam("busqueda") String busqueda) {
-		model.addAttribute("listaLotes", servicioProdUnidad.buscarPorNombre(busqueda));
+		model.addAttribute("listaLotes", servicioLote.buscarPorNombre(busqueda));
 		return "lotes";
 	}
 
 	@GetMapping("/buscarPescado")
 	public String buscarPescadoPorNombre(Model model, @RequestParam("busqueda") String busqueda) {
-		model.addAttribute("listaPescado", servicioProdPeso.buscarPorNombre(busqueda));
+		model.addAttribute("listaPescado", servicioPescado.buscarPorNombre(busqueda));
 		return "pescado";
 	}
 
 	@GetMapping("/buscarMarisco")
 	public String buscarMariscoPorNombre(Model model, @RequestParam("busqueda") String busqueda) {
-		model.addAttribute("listaMarisco", servicioProdPeso.buscarPorNombre(busqueda));
+		model.addAttribute("listaMarisco", servicioMarisco.buscarPorNombre(busqueda));
 		return "marisco";
 	}
 

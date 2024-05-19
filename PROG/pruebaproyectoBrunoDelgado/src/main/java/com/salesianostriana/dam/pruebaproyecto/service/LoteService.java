@@ -7,8 +7,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.salesianostriana.dam.pruebaproyecto.base.BaseServiceImpl;
-
-import com.salesianostriana.dam.pruebaproyecto.model.Lote;
+import com.salesianostriana.dam.pruebaproyecto.exceptions.ProductoNotFoundException;
 import com.salesianostriana.dam.pruebaproyecto.model.Lote;
 import com.salesianostriana.dam.pruebaproyecto.repositorios.LoteRepositorio;
 
@@ -48,6 +47,14 @@ public class LoteService extends BaseServiceImpl<Lote, Long, LoteRepositorio> {
 	
 	public List<Lote> ordenarPrecioMenor(){
 		return this.repository.ordernarPrecioMenor();
+	}
+	
+	public List<Lote> buscarPorNombre(String busqueda) {
+		List<Lote> result = this.repository.findByNombreContainsIgnoreCaseOrDescripcionContainsIgnoreCase(busqueda, busqueda);
+		if (result.isEmpty()) {
+			throw new ProductoNotFoundException("No hay productos con ese criterio");
+		}
+		return result;
 	}
 	
 }

@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
+import com.salesianostriana.dam.pruebaproyecto.model.Merch;
 import com.salesianostriana.dam.pruebaproyecto.model.Pescado;
 
 
@@ -46,5 +47,7 @@ public interface PescadoRepositorio extends JpaRepository<Pescado, Long> {
 			ORDER BY p.precio ASC
 			""")
 	List<Pescado> ordernarPrecioMenor();
+	
+	List<Pescado> findByNombreContainsIgnoreCaseOrDescripcionContainsIgnoreCase(String nombre, String descripcion);
 	
 }

@@ -6,10 +6,10 @@ package com.salesianostriana.dam.pruebaproyecto.service;
 
 import java.util.List;
 
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
 import com.salesianostriana.dam.pruebaproyecto.base.BaseServiceImpl;
+import com.salesianostriana.dam.pruebaproyecto.exceptions.ProductoNotFoundException;
 import com.salesianostriana.dam.pruebaproyecto.model.Merch;
 import com.salesianostriana.dam.pruebaproyecto.repositorios.MerchRepositorio;
 
@@ -53,7 +53,13 @@ public class MerchService extends BaseServiceImpl<Merch, Long, MerchRepositorio>
 		return this.repository.ordernarPrecioMenor();
 		}
 	
-	
+	public List<Merch> buscarPorNombre(String busqueda) {
+		List<Merch> result = this.repository.findByNombreContainsIgnoreCaseOrDescripcionContainsIgnoreCase(busqueda, busqueda);
+		if (result.isEmpty()) {
+			throw new ProductoNotFoundException("No hay productos con ese criterio");
+		}
+		return result;
+	}
 	
 }
 

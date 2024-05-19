@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import com.salesianostriana.dam.pruebaproyecto.model.Merch;
+import com.salesianostriana.dam.pruebaproyecto.model.ProductoPorUnidad;
 
 public interface MerchRepositorio extends JpaRepository<Merch, Long> {
 
@@ -62,4 +63,5 @@ public interface MerchRepositorio extends JpaRepository<Merch, Long> {
 			ORDER BY m.precio ASC
 			""")
 	List<Merch> ordernarPrecioMenor();
+
 }

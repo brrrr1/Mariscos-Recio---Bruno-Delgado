@@ -12,4 +12,5 @@ public interface ProdUnidadRepositorio extends JpaRepository<ProductoPorUnidad, 
 
 	List<ProductoPorUnidad> findByNombreContainsIgnoreCaseOrDescripcionContainsIgnoreCase(String nombre, String descripcion);
 	
+	
 }

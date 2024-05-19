@@ -18,8 +18,7 @@
 </head>
 
 <body class="bg-danger">
-	<header th:replace="~{fragmentos/navIndex::navIndex}">
-	</header>
+	<header th:replace="~{fragmentos/navIndex::navIndex}"></header>
 	<div class="container mt-5">
 		<div class="row justify-content-center">
 			<div class="col-lg-8">
@@ -30,31 +29,31 @@
 								alt="Logo">
 						</div>
 						<div class="col-md-8">
-							<form th:action="${usuario.id != 0} ? @{submit} : @{addUsuario}"
-								th:object="${usuario}" method="post" class="row g-3">
+							<form th:action="${usuario.id != 0} ? @{submit} : @{addUsuario}" th:object="${usuario}"
+								method="post" class="row g-3">
 								<div class="row mb-3">
 									<div class="col">
 										<input th:if="${usuario.id != 0}" type="hidden" name="id" th:field="*{id}" />
 									</div>
 								</div>
 								<div class="col-md-6">
-									<label for="Username" class="form-label">Nombre de Usuario:</label>
-									<input type="text" th:field="*{username}" class="form-control"
+									<label for="username" class="form-label">Nombre de Usuario:</label>
+									<input type="text" th:field="*{username}" class="form-control" id="username"
 										placeholder="Username" required>
 								</div>
 								<div class="col-md-6">
-									<label for="Nombre" class="form-label">Nombre:</label>
-									<input type="text" th:field="*{nombre}" class="form-control" placeholder="Nombre"
-										required>
+									<label for="nombre" class="form-label">Nombre:</label>
+									<input type="text" th:field="*{nombre}" class="form-control" id="nombre"
+										placeholder="Nombre" required>
 								</div>
 								<div class="col-md-6">
-									<label for="Apellido" class="form-label">Apellido:</label>
-									<input type="text" th:field="*{apellido}" class="form-control"
+									<label for="apellido" class="form-label">Apellido:</label>
+									<input type="text" th:field="*{apellido}" class="form-control" id="apellido"
 										placeholder="Apellido" required>
 								</div>
 								<div class="col-md-6">
-									<label for="DNI" class="form-label">DNI:</label>
-									<input type="text" th:field="*{dni}" class="form-control" placeholder="DNI"
+									<label for="dni" class="form-label">DNI:</label>
+									<input type="text" th:field="*{dni}" class="form-control" id="dni" placeholder="DNI"
 										required>
 								</div>
 								<div class="col-md-12">
@@ -70,20 +69,17 @@
 								</div>
 								<div class="col-md-12">
 									<label for="direccion" class="form-label">Dirección:</label>
-									<input type="text" th:field="*{direccion}" class="form-control"
+									<input type="text" th:field="*{direccion}" class="form-control" id="direccion"
 										placeholder="Dirección" required>
 								</div>
 								<div class="col-md-12">
-									<input type="checkbox" th:field="*{esAdmin}" th:value="${esAdmin}"
-										class="form-check-input">
-									<label class="form-check-label" th:for="${#ids.prev('esAdmin')}"
-										th:text="Admin"></label>
+									<input type="checkbox" th:field="*{esAdmin}" class="form-check-input" id="esAdmin">
+									<label class="form-check-label" for="esAdmin">Admin</label>
 								</div>
 								<div class="col-md-12">
-									<input type="checkbox" th:field="*{esEmpleado}" th:value="${esEmpleado}"
-										class="form-check-input">
-									<label class="form-check-label" th:for="${#ids.prev('esEmpleado')}"
-										th:text="Empleado"></label>
+									<input type="checkbox" th:field="*{esEmpleado}" class="form-check-input"
+										id="esEmpleado">
+									<label class="form-check-label" for="esEmpleado">Empleado</label>
 								</div>
 								<div class="col-md-12 text-center">
 									<input type="submit" value="Enviar" class="btn btn-danger">
@@ -100,8 +96,7 @@
 			</div>
 		</div>
 	</div>
-	<footer th:replace="~{fragmentos/footer::footer}">
-	</footer>
+	<footer th:replace="~{fragmentos/footer::footer}"></footer>
 </body>
 
 </html>

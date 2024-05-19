@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
 			}
 		});
 
-
 		let dniEntrada = form.querySelector('input[name="dni"]');
 		let dniFormato = /^[0-9]{8}[A-Za-z]$/;
 		if (!dniFormato.test(dniEntrada.value)) {

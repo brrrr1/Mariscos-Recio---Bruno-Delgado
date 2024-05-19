@@ -19,6 +19,15 @@ Ubicados en la Avenida del Paraíso 7, somos la mejor pescadería de España. Co
 - - Username, dirección, correo...
 - Ver los productos con más likes en la tienda
 - Buscar productos por su nombre
+- Filtrar los productos según los siguientes criterios:
+- - Orden Alfabético (A-Z)
+- - Orden Alfabético (A-Z)
+- - Likes (Mayor a menor)
+- - Likes (Menor a mayor)
+- - Precio (Mayor a menor)
+- - Precio (Menor a mayor)
+- - Descuento (Mayor a menor)
+- - Descuento (Menor a mayor)
 - Conocer más sobre la empresa
 
 

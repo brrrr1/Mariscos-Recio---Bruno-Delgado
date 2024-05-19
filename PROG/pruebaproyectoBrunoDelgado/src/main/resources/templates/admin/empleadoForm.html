@@ -47,6 +47,11 @@
 									<input type="text" th:field="*{apellido}" class="form-control"
 										placeholder="Apellido" id="apellido">
 								</div>
+								<div class="col-md-6">
+									<label for="DNI" class="form-label text-dark">DNI:</label>
+									<input type="text" th:field="*{dni}" class="form-control"
+										placeholder="DNI" id="dni">
+								</div>
 								<div class="row mb-3">
 									<div class="col">
 										<label for="sueldo" class="form-label text-dark">Sueldo:</label>
@@ -72,9 +77,9 @@
 									</div>
 								</div>
 								<div class="col-md-12 text-center">
-									<input type="submit" value="Submit" class="btn btn-danger">
+									<input type="submit" value="Enviar" class="btn btn-danger">
 									<div id="error-message" class="text-danger"></div>
-									<!-- Aquí se mostrará el mensaje de error -->
+									
 								</div>
 							</form>
 						</div>

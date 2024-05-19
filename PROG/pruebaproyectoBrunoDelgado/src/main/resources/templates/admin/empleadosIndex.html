@@ -46,6 +46,7 @@
 							<th>Id</th>
 							<th>Nombre</th>
 							<th>Apellido</th>
+							<th>DNI</th>
 							<th>Sueldo</th>
 							<th>Fecha de Ingreso</th>
 							<th>Fecha de Salida</th>
@@ -60,6 +61,7 @@
 							<td th:text="${empleado.id}">1</td>
 							<td th:text="${empleado.nombre}">Nombre</td>
 							<td th:text="${empleado.apellido}">Apellido</td>
+							<td th:text="${empleado.dni}">DNI</td>
 							<td th:text="${empleado.sueldo}">Sueldo</td>
 							<td th:text="${#temporals.format(empleado.fechaIngreso)}">Fecha de Ingreso</td>
 							<td th:text="${#temporals.format(empleado.fechaSalida)}">Fecha de Salida</td>

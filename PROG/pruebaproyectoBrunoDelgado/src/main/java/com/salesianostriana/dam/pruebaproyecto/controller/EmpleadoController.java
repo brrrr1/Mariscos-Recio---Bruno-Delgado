@@ -74,6 +74,14 @@ public class EmpleadoController {
 		for (Usuario usuario : listaEmpleados) {
 			usuario.setNombre(e.getNombre());
 			usuario.setApellido(e.getApellido());
+			usuario.setUsername(e.getNombre().toLowerCase() + "mrw");
+			usuario.setDni(e.getDni());
+			usuario.setEmail(e.getNombre().toLowerCase() + e.getApellido().toLowerCase() + "@mariscosrecio.es");
+			usuario.setPassword(e.getNombre().toLowerCase() + "recio" + e.getApellido().toLowerCase());
+			usuario.setNumPedidos(0);
+			usuario.setDireccion(null);
+			usuario.setEsAdmin(false);
+			usuario.setEsEmpleado(true);
 			servicioUsuario.edit(usuario);
 		}
 		

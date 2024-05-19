@@ -24,13 +24,12 @@ public class UsuarioController {
 
 	@Autowired
 	private UsuarioService servicioUsuario;
-	
+
 	@Autowired
 	private EmpleadoService servicioEmpleado;
 
-	
-	 @Autowired private PasswordEncoder passwordEncoder;
-	 
+	@Autowired
+	private PasswordEncoder passwordEncoder;
 
 	@GetMapping("/usuarios")
 	public String controladorUsuarios(Model model) {
@@ -54,20 +53,19 @@ public class UsuarioController {
 	@PostMapping("/addUsuario")
 	public String submit(@ModelAttribute("usuario") Usuario usuario, Model model) {
 		boolean usernameExists = servicioUsuario.buscarUsername(usuario.getUsername());
-		
-		if(usernameExists) {
+
+		if (usernameExists) {
 			return "usernameRepetido";
 		} else {
-		 String encodedPassword = passwordEncoder.encode(usuario.getPassword());
-		 usuario.setPassword(encodedPassword);
-		 
-		servicioUsuario.save(usuario);
-		model.addAttribute("usuario", usuario);
-		return "redirect:/admin/usuarios/listaUsuarios";
+			String encodedPassword = passwordEncoder.encode(usuario.getPassword());
+			usuario.setPassword(encodedPassword);
+
+			servicioUsuario.save(usuario);
+			model.addAttribute("usuario", usuario);
+			return "redirect:/admin/usuarios/listaUsuarios";
 		}
 	}
-	
-	
+
 	@GetMapping("/editarUsuario/{id}")
 	public String mostrarFormularioEdicion(@PathVariable("id") long id, Model model) {
 		if (servicioUsuario.findById(id).isPresent()) {
@@ -81,26 +79,39 @@ public class UsuarioController {
 
 	@PostMapping("/editarUsuario/submit")
 	public String procesarFormularioEdicion(@ModelAttribute("usuario") Usuario u) {
-		if(u.isEsEmpleado()) {
+
+		Usuario usuarioExistente = servicioUsuario.buscarPorId(u.getId());
+
+
+		if (u.getPassword() == null || u.getPassword().isEmpty()) {
+			u.setPassword(usuarioExistente.getPassword());
+		} else {
+			
+			String encodedPassword = passwordEncoder.encode(u.getPassword());
+			u.setPassword(encodedPassword);
+		}
+
+
+		servicioUsuario.save(u);
+
+
+		if (u.isEsEmpleado()) {
 			List<Empleado> listaIguales = servicioEmpleado.buscarPorNombreYApellido(u.getNombre(), u.getApellido());
 			for (Empleado e : listaIguales) {
 				e.setNombre(u.getNombre());
 				e.setApellido(u.getApellido());
+				e.setDni(u.getDni());
 				servicioEmpleado.edit(e);
 			}
-			
 		}
-		String encodedPassword = passwordEncoder.encode(u.getPassword());
-		 u.setPassword(encodedPassword);
-		servicioUsuario.edit(u);
-		return "redirect:/admin/usuarios/listaUsuarios";// Volvemos a redirigir la listado a través del controller
-		// para pintar la lista actualizada con la modificación hecha
+
+		return "redirect:/admin/usuarios/listaUsuarios";
 	}
 
 	@GetMapping("/borrarUsuario/{id}")
 	public String borrar(@PathVariable("id") long id) {
 		Usuario u = servicioUsuario.buscarPorId(id);
-		if(u.isEsEmpleado()) {
+		if (u.isEsEmpleado()) {
 			List<Empleado> listaIguales = servicioEmpleado.buscarPorNombreYApellido(u.getNombre(), u.getApellido());
 			for (Empleado empleado : listaIguales) {
 				servicioEmpleado.delete(empleado);
@@ -112,8 +123,8 @@ public class UsuarioController {
 
 	@GetMapping("/buscarUsuario")
 	public String buscarUsuarioPorNombre(Model model, @RequestParam("busqueda") String busqueda) {
-	    model.addAttribute("listaUsuarios", servicioUsuario.buscarPorNombre(busqueda));
-	    return "admin/usuariosIndex";
+		model.addAttribute("listaUsuarios", servicioUsuario.buscarPorNombre(busqueda));
+		return "admin/usuariosIndex";
 	}
-	
+
 }

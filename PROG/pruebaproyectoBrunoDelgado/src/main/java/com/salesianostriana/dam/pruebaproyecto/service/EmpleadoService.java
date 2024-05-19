@@ -20,11 +20,11 @@ public class EmpleadoService extends BaseServiceImpl<Empleado, Long, EmpleadoRep
 		u.setNombre(e.getNombre());
 		u.setUsername(e.getNombre().toLowerCase() + "mrw");
 		u.setApellido(e.getApellido());
-		u.setDni(null); // Asegúrate de establecer el valor correcto si es necesario
+		u.setDni(e.getDni());
 		u.setEmail(e.getNombre().toLowerCase() + e.getApellido().toLowerCase() + "@mariscosrecio.es");
 		u.setPassword(e.getNombre().toLowerCase() + "recio" + e.getApellido().toLowerCase());
-		u.setNumPedidos(0); // Asegúrate de establecer el valor correcto si es necesario
-		u.setDireccion(null); // Asegúrate de establecer el valor correcto si es necesario
+		u.setNumPedidos(0);
+		u.setDireccion(null);
 		u.setEsAdmin(false);
 		u.setEsEmpleado(true);
 

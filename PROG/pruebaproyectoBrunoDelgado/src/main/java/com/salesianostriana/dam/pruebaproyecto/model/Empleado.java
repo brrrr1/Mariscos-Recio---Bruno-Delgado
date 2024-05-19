@@ -30,6 +30,7 @@ public class Empleado {
 	private long id;
 	private String nombre;
 	private String apellido;
+	private String dni;
 	private double sueldo;
 	private String foto;
 	@DateTimeFormat(pattern = "dd-MM-yyyy")

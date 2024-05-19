@@ -1,6 +1,6 @@
-insert into empleado (id, nombre, apellido, sueldo, foto, fecha_ingreso, fecha_salida) values (1, 'Rosario', 'Parrales', '200', 'https://i.imgur.com/UhWAG9g.png', '2010-08-02', '2014-03-10');
-insert into empleado (id, nombre, apellido, sueldo, foto, fecha_ingreso, fecha_salida) values (2, 'Coque', 'Calatrava', '300', 'https://pbs.twimg.com/profile_images/3680406347/2dbbdb6aee547a6a800c5ef6b07be668_400x400.jpeg', '2011-05-05', '2018-06-15');
-insert into empleado (id, nombre, apellido, sueldo, foto, fecha_ingreso, fecha_salida) values (3, 'Ongombo', 'Ongombo', '45', 'https://i.imgur.com/5MkcGRk.png', '2017-10-04', '2021-01-08');
+insert into empleado (id, nombre, apellido, dni, sueldo, foto, fecha_ingreso, fecha_salida) values (1, 'Rosario', 'Parrales', '36581975H', '200', 'https://i.imgur.com/UhWAG9g.png', '2010-08-02', '2014-03-10');
+insert into empleado (id, nombre, apellido, dni, sueldo, foto, fecha_ingreso, fecha_salida) values (2, 'Coque', 'Calatrava', '63813546R', '300', 'https://pbs.twimg.com/profile_images/3680406347/2dbbdb6aee547a6a800c5ef6b07be668_400x400.jpeg', '2011-05-05', '2018-06-15');
+insert into empleado (id, nombre, apellido, dni, sueldo, foto, fecha_ingreso, fecha_salida) values (3, 'Ongombo', 'Ongombo', null, '45', 'https://i.imgur.com/5MkcGRk.png', '2017-10-04', '2021-01-08');
 
 
 ALTER SEQUENCE empleado_seq RESTART WITH (53);

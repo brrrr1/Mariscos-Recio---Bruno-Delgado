@@ -47,7 +47,52 @@
 
 			<div class="row">
 				<aside class="col-md-3">
-					<!-- Aside para filtros -->
+
+					<p class="d-inline-flex gap-1">
+						<a class="btn4 btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button"
+							aria-expanded="false" aria-controls="collapseExample">
+							<button class="btn4">
+								<span class="icon">
+									<svg viewBox="0 0 175 80" width="40" height="40">
+										<rect width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+										<rect y="30" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+										<rect y="60" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+									</svg>
+								</span>
+								<span class="text">Filtros</span>
+							</button>
+						</a>
+
+					<div class="collapse" id="collapseExample">
+						<div class="card card-body">
+							<a th:href="@{/mariscoOrdenAZ}">
+								<button id="bottone1"><strong>A-Z</strong></button>
+							</a>
+							<a th:href="@{/mariscoOrdenZA}">
+								<button id="bottone1"><strong>Z-A</strong></button>
+							</a>
+							<a th:href="@{/mariscoOrdenLikesMayor}">
+								<button id="bottone1"><strong>Likes<i class="bi bi-arrow-down"></i></strong></button>
+							</a>
+							<a th:href="@{/mariscoOrdenLikesMenor}">
+								<button id="bottone1"><strong>Likes<i class="bi bi-arrow-up"></i></strong></button>
+							</a>
+
+
+							<a th:href="@{/mariscoOrdenPrecioMayor}">
+								<button id="bottone1"><strong>Precio<i class="bi bi-arrow-down"></i></strong></button>
+							</a>
+
+							<a th:href="@{/mariscoOrdenPrecioMenor}">
+								<button id="bottone1"><strong>Precio<i class="bi bi-arrow-up"></i></strong></button>
+							</a>
+
+							<a th:href="@{/marisco}">
+								<button id="bottone1"><strong>Restablecer</strong></button>
+							</a>
+						</div>
+					</div>
+
 				</aside>
 				<div class="col-md-9">
 					<h1 class="text-center mb-5">Marisco</h1>

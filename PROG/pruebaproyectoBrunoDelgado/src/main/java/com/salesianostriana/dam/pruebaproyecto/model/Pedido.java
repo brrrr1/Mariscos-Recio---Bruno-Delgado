@@ -19,10 +19,11 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Data
-//@NoArgsConstructor
+@NoArgsConstructor
 @AllArgsConstructor
 @Entity
 public class Pedido {
@@ -51,7 +52,6 @@ public class Pedido {
 
 	@ToString.Exclude
 	@EqualsAndHashCode.Exclude
-	@Builder.Default
 	@OneToMany(mappedBy = "pedido", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<LineaDePedido> LineasDePedido = new ArrayList<>();
 

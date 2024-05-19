@@ -26,7 +26,7 @@ public class ProductoPorPeso extends Producto {
 
 	public ProductoPorPeso(long id, String nombre, String descripcion, int likes, String foto, double precio,
 			double stock, List<LineaDePedido> LineasDePedido) {
-		super(id, nombre, descripcion, likes, foto, precio/*, LineasDePedido*/);
+		super(id, nombre, descripcion, likes, foto, precio, LineasDePedido);
 		this.stock = stock;
 	}
 

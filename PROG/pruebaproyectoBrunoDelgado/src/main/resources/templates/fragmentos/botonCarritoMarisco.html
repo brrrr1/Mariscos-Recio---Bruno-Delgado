@@ -1,0 +1,45 @@
+<div th:fragment="botonCarritoMarisco">
+
+
+	<div sec:authorize="hasRole('ROLE_USER')">
+
+		<div class="form-group mb-5">
+			<a th:href="@{/anadirALP/{id}(id=${marisco.id})}">
+				<button type="button" class="btn btn-success btn-lg mb-3">Añadir al carrito</button>
+			</a>
+		</div>
+
+	</div>
+
+	<div sec:authorize="hasRole('ROLE_ADMIN')">
+
+		<div class="form-group mb-5">
+			<a th:href="@{/anadirALP/{id}(id=${marisco.id})}">
+				<button type="button" class="btn btn-success btn-lg mb-3">Añadir al carrito</button>
+			</a>
+		</div>
+
+	</div>
+
+	<div sec:authorize="hasRole('ROLE_EMPLEADO')">
+
+		<div class="form-group mb-5">
+			<a th:href="@{/anadirALP/{id}(id=${marisco.id})}">
+				<button type="button" class="btn btn-success btn-lg mb-3">Añadir al carrito</button>
+			</a>
+		</div>
+
+	</div>
+
+	<div sec:authorize="isAnonymous()">
+
+
+		<div class="form-group mb-5">
+			<a th:href="@{/login}">
+				<button type="button" class="btn btn-warning btn-lg mb-3">Añadir al carrito</button>
+			</a>
+		</div>
+
+	</div>
+
+</div>

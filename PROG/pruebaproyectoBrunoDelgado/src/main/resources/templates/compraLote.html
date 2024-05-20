@@ -47,9 +47,7 @@
 					<span th:text="'Precio final: ' + ${#numbers.formatDecimal(lote.precioFinal, 1, 2) + ' €'}"></span>
 				</p>
 
-				<div class="form-group mb-5">
-					<button type="button" class="btn btn-success btn-lg mb-3">Añadir al carrito</button>
-				</div>
+				<div th:replace="~{fragmentos/botonCarritoLote::botonCarritoLote}"></div>
 
 				<div th:replace="~{fragmentos/meGustaLotes::meGustaLotes}"></div>
 

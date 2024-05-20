@@ -263,7 +263,7 @@ public class MainController {
 	}
 
 	@PostMapping("/editarUsuario/submit")
-	public String procesarFormularioEdicion(@ModelAttribute("usuario") /* @AuthenticationPrincipal */ Usuario usuario) {
+	public String procesarFormularioEdicion(@ModelAttribute("usuario") @AuthenticationPrincipal  Usuario usuario) {
 		/*
 		 * String encodedPassword = passwordEncoder.encode(usuario.getPassword());
 		 * usuario.setPassword(encodedPassword);

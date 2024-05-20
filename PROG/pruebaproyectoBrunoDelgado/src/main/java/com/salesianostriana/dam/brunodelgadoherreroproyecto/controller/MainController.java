@@ -219,7 +219,9 @@ public class MainController {
 
 	@GetMapping("/editarUsuario")
 	public String mostrarFormularioEdicion(@AuthenticationPrincipal Usuario usuario, Model model) {
-
+		if(usuario.isEsAdmin()) {
+			return "editarAdmin";
+		}
 		model.addAttribute("usuario", usuario);
 		return "editarUsuarioForm";
 

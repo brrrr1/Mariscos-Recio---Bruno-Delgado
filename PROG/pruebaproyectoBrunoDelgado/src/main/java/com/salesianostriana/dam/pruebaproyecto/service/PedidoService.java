@@ -31,6 +31,10 @@ public class PedidoService extends BaseServiceImpl<Pedido, Long, PedidoRepositor
 		
 		return pedido.getLineasDePedido().stream().mapToDouble(ldp -> ldp.getSubtotal()).sum();
 	}
+	
+public void limpiarCarrito(Pedido p) {
+	p.getLineasDePedido().clear();
+}
 }
 
 

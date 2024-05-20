@@ -34,21 +34,23 @@ public class CarritoControlador {
 
 	@GetMapping("/anadirALP/{id}")
 	public String anadirALP(@PathVariable("id") long id, Model model) {
+		
 		Producto producto = productoServicio.findById(id).get();
 		ldpService.anadirOActualizarLineaDePedido(producto);
 		model.addAttribute("lineaDePedido", ldpService.findAll());
-		return "lineaDePedido";
+		return "carrito";
 	}
 
 	@GetMapping("/borrarDeLp/{id}")
 	public String borrarDeLp(@PathVariable("id") long id, Model model) {
 		Optional<LineaDePedido> optionalLineaDePedido = ldpService.findById(id);
 
-		if (optionalLineaDePedido.isPresent()) { 
-			LineaDePedido lineaDePedido = optionalLineaDePedido.get();
-
-
-			ldpService.deleteById(id);
+		if (optionalLineaDePedido.isPresent()) {
+			Producto aEliminar = optionalLineaDePedido.get().getProducto();
+			optionalLineaDePedido.get().removeFromProducto(aEliminar);
+			ldpService.edit(optionalLineaDePedido.get());
+		} else {
+			
 		}
 
 		return "redirect:/carrito";
@@ -57,6 +59,17 @@ public class CarritoControlador {
 	@GetMapping("/carrito")
 	public String anadirALP(Model model) {
 		model.addAttribute("lineaDePedido", ldpService.findAll());
+		return "carrito";
+	}
+
+	@GetMapping("/limpiarCarrito")
+	public String limpiar(Model model) {
+//		List<LineaDePedido> aLimpiar = ldpService.findAll();
+//		for (LineaDePedido lineaDePedido : aLimpiar) {
+//			ldpService.delete(lineaDePedido);
+//		}
+		Pedido pedido = new Pedido();
+		pedidoServicio.limpiarCarrito(pedido);
 		return "lineaDePedido";
 	}
 
@@ -67,21 +80,33 @@ public class CarritoControlador {
 		pedido.setEstado(null);
 		pedido.setUsuario(usuario);
 		pedido.setFechaPedido(LocalDate.now());
+		pedido.setFinalizado(true);
+		
+	
 
 		double precioFinalPedido = pedidoServicio.calcularPrecio(pedido);
 		pedido.setPrecioFinal(precioFinalPedido);
-		
-		
-		List <LineaDePedido> lista = ldpService.findAll();
-		
-		for (LineaDePedido lineaDePedido : lista) {
-			ldpService.delete(lineaDePedido);
-		}
 
+//		List<LineaDePedido> lista = ldpService.findAll();
+//
+//		for (LineaDePedido lineaDePedido : lista) {
+//			ldpService.delete(lineaDePedido);
+//		}
+		usuario.setNumPedidos(usuario.getNumPedidos()+1);
+		pedido.addPedido(usuario);
 
+		pedidoServicio.save(pedido);
 		model.addAttribute("pedido", pedido);
 
 		return "pedidoFinalizado";
+	}
+
+	@GetMapping("/reducirCantidad/{id}")
+	public String reducirCantidad(@PathVariable("id") long id, Model model) {
+		Producto producto = productoServicio.findById(id).get();
+		ldpService.reducirCantidadOEliminarLineaDePedido(producto);
+		model.addAttribute("lineaDePedido", ldpService.findAll());
+		return "carrito";
 	}
 
 }

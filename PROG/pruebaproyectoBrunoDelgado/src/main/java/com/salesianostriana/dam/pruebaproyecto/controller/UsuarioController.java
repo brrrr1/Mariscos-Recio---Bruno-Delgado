@@ -101,7 +101,10 @@ public class UsuarioController {
 				e.setNombre(u.getNombre());
 				e.setApellido(u.getApellido());
 				e.setDni(u.getDni());
+				u.setEmail(u.getNombre().toLowerCase()+"recio"+u.getApellido().toLowerCase()+"@mariscosrecio.es");
+				u.setUsername(u.getNombre().toLowerCase()+"mrw");
 				servicioEmpleado.edit(e);
+				servicioUsuario.edit(u);
 			}
 		}
 

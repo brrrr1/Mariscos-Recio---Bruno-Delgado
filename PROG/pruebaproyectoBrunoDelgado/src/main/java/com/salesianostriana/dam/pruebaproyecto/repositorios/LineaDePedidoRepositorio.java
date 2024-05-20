@@ -19,7 +19,7 @@ public interface LineaDePedidoRepositorio extends JpaRepository<LineaDePedido, L
 	 		SELECT lp FROM LineaDePedido lp
 	 		WHERE lp.producto.id = ?1
 	 		""")
-	 LineaDePedido buscarLp(Long id);
+	Optional <LineaDePedido> buscarLp(Long id);
 	 
 	 
 

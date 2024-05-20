@@ -24,11 +24,14 @@
 	<header th:replace="~{fragmentos/header::header}"></header>
 
 	<div class="container-fluid py-4">
-		<div class="container">
-			<div class="row">
+		<div class="container d-flex justify-content-center">
+			<div class="row justify-content-center">
 				<div class="col-md-9">
 					<h1 class="text-center mb-5">CARRITO</h1>
 				</div>
+				<a th:href="@{/limpiarCarrito}">
+					<button class="button2 py-0">Limpiar carrito</button>
+				</a>
 
 				<table class="table">
 					<thead>
@@ -52,34 +55,57 @@
 							<td th:text="${ldp.producto.precio}"></td>
 							<td th:text="${ldp.cantidad}"></td>
 							<td th:text="${ldp.subtotal}"></td>
-							<td><a th:href="@{/borrarDeLp/{id}(id=${ldp.producto.id})}">
-									<button class="bin-button">
-										<svg class="bin-top" viewBox="0 0 39 7" fill="none"
+							<td>
+								<a th:href="@{/anadirALP/{id}(id=${ldp.producto.id})}">
+									<button title="Añadir" class="cssbuttons-io-button">
+										<svg height="25" width="25" viewBox="0 0 24 24"
 											xmlns="http://www.w3.org/2000/svg">
-											<line y1="5" x2="39" y2="5" stroke="white" stroke-width="4"></line>
-											<line x1="12" y1="1.5" x2="26.0357" y2="1.5" stroke="white"
-												stroke-width="3"></line>
+											<path d="M0 0h24v24H0z" fill="none"></path>
+											<path d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z" fill="currentColor"></path>
 										</svg>
-										<svg class="bin-bottom" viewBox="0 0 33 39" fill="none"
-											xmlns="http://www.w3.org/2000/svg">
-											<mask id="path-1-inside-1_8_19" fill="white">
-												<path
-													d="M0 0H33V35C33 37.2091 31.2091 39 29 39H4C1.79086 39 0 37.2091 0 35V0Z">
-												</path>
-											</mask>
-											<path
-												d="M0 0H33H0ZM37 35C37 39.4183 33.4183 43 29 43H4C-0.418278 43 -4 39.4183 -4 35H4H29H37ZM4 43C-0.418278 43 -4 39.4183 -4 35V0H4V35V43ZM37 0V35C37 39.4183 33.4183 43 29 43V35V0H37Z"
-												fill="white" mask="url(#path-1-inside-1_8_19)"></path>
-											<path d="M12 6L12 29" stroke="white" stroke-width="4"></path>
-											<path d="M21 6V29" stroke="white" stroke-width="4"></path>
-										</svg>
+										<span>Añadir</span>
 									</button>
 								</a>
 							</td>
+							<td>
+								<a th:href="@{/reducirCantidad/{id}(id=${ldp.producto.id})}">
+									<button title="Eliminar" class="cssbuttons-io-button">
+										<svg height="25" width="25" viewBox="0 0 24 24"
+											xmlns="http://www.w3.org/2000/svg">
+											<path d="M0 0h24v24H0z" fill="none"></path>
+											<path d="M19 13H5v-2h14v2z" fill="currentColor"></path>
+										</svg>
+										<span>Eliminar</span>
+									</button>
+								</a>
+							</td>
+<!--							<td><a th:href="@{/borrarDeLp/{id}(id=${ldp.id})}">-->
+<!--									<button class="bin-button">-->
+<!--										<svg class="bin-top" viewBox="0 0 39 7" fill="none"-->
+<!--											xmlns="http://www.w3.org/2000/svg">-->
+<!--											<line y1="5" x2="39" y2="5" stroke="white" stroke-width="4"></line>-->
+<!--											<line x1="12" y1="1.5" x2="26.0357" y2="1.5" stroke="white"-->
+<!--												stroke-width="3"></line>-->
+<!--										</svg>-->
+<!--										<svg class="bin-bottom" viewBox="0 0 33 39" fill="none"-->
+<!--											xmlns="http://www.w3.org/2000/svg">-->
+<!--											<mask id="path-1-inside-1_8_19" fill="white">-->
+<!--												<path-->
+<!--													d="M0 0H33V35C33 37.2091 31.2091 39 29 39H4C1.79086 39 0 37.2091 0 35V0Z">-->
+<!--												</path>-->
+<!--											</mask>-->
+<!--											<path-->
+<!--												d="M0 0H33H0ZM37 35C37 39.4183 33.4183 43 29 43H4C-0.418278 43 -4 39.4183 -4 35H4H29H37ZM4 43C-0.418278 43 -4 39.4183 -4 35V0H4V35V43ZM37 0V35C37 39.4183 33.4183 43 29 43V35V0H37Z"-->
+<!--												fill="white" mask="url(#path-1-inside-1_8_19)"></path>-->
+<!--											<path d="M12 6L12 29" stroke="white" stroke-width="4"></path>-->
+<!--											<path d="M21 6V29" stroke="white" stroke-width="4"></path>-->
+<!--										</svg>-->
+<!--									</button>-->
+<!--								</a>-->
+<!--							</td>-->
 						</tr>
 					</tbody>
 				</table>
-
 
 				<div class="btn-conteiner">
 					<a th:href="@{/finalizarPedido}" class="btn-content" href="#">
@@ -102,11 +128,12 @@
 						</span>
 					</a>
 				</div>
-
-
 				<script>
 					AOS.init();
 				</script>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>

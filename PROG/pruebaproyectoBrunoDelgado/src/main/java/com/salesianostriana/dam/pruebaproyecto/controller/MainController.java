@@ -250,7 +250,7 @@ public class MainController {
 	public String verPerfil(@AuthenticationPrincipal Usuario usuario, Model model) {
 
 		model.addAttribute("usuario", usuario);
-
+		model.addAttribute("pedidos", usuario.getPedidos());
 		return "perfil";
 	}
 

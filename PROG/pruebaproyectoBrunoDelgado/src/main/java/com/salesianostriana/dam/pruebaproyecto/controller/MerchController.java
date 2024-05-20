@@ -85,8 +85,12 @@ public class MerchController {
 //		servicioProdUnidad.save(servicioProdUnidad.findById(id).get());
 		
 //		servicioProdUnidad.findById(id).get().getLineasDePedido().
+		if(servicioLdp.buscarProductoEnLp(id).isPresent()) {
+			return "noBorrar";
+		}
 		
-		servicioLdp.buscarProductoEnLp(id).removeFromProducto(servicioProdUnidad.findById(id).get());
+		
+		
 		
 		servicioLdp.deleteById(id);
 		

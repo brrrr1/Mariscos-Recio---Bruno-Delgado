@@ -152,8 +152,7 @@ public class MainController {
 		if(usernameExists) {
 			return "usernameRepetido";
 		} else {
-			String encodedPassword = passwordEncoder.encode(usuario.getPassword());
-			usuario.setPassword(encodedPassword);
+			servicioUsuario.codificarContra(usuario);
 			servicioUsuario.save(usuario);
 			model.addAttribute("usuario", usuario);
 			return "main";
@@ -248,8 +247,7 @@ public class MainController {
 	public String procesarFormularioPassword(
 			@ModelAttribute("usuario") /* @AuthenticationPrincipal */ Usuario usuario) {
 
-		String encodedPassword = passwordEncoder.encode(usuario.getPassword());
-		usuario.setPassword(encodedPassword);
+		servicioUsuario.codificarContra(usuario);
 		servicioUsuario.save(usuario);
 		return "redirect:/cambioDatos";
 

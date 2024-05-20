@@ -23,21 +23,26 @@
 	<header th:replace="~{fragmentos/header::header}">
 	</header>
 	<div class="text-center">
-		
+
 		<h3>Así te tengo</h3>
-		
+
 		<video autoplay loop>
 			<source src="../../static/video/baile.mp4" th:src="@{/video/baile.mp4}"
-				alt="Video de Elvis Pelvis y la hija de Lola Flores" class="img-fluid w-100 mx-auto" style="max-width: 800px;">
+				alt="Video de Elvis Pelvis y la hija de Lola Flores" class="img-fluid w-100 mx-auto"
+				style="max-width: 800px;">
 		</video>
 	</div>
 	<div class="container-fluid py-4">
 		<div class="container">
 
 			<h1>No se ha encontrado ningún producto con los parámetros recibidos.</h1>
-			
+
 
 		</div>
+	</div>
+
+	<div class="d-flex justify-content-center mt-3">
+		<a class="btn btn-danger btn-lg" th:href="@{/main}">Volver atrás</a>
 	</div>
 
 	<footer th:replace="~{fragmentos/footer::footer}">

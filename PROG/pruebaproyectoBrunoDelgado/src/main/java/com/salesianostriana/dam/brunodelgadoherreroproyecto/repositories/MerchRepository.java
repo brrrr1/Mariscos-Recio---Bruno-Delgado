@@ -1,4 +1,4 @@
-package com.salesianostriana.dam.brunodelgadoherreroproyecto.repositorios;
+package com.salesianostriana.dam.brunodelgadoherreroproyecto.repositories;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Merch;
 
 
-public interface MerchRepositorio extends JpaRepository<Merch, Long> {
+public interface MerchRepository extends JpaRepository<Merch, Long> {
 
 	
 	List<Merch> findByNombreContainsIgnoreCaseOrDescripcionContainsIgnoreCase(String nombre, String descripcion);

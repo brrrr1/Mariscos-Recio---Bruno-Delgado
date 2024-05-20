@@ -21,7 +21,7 @@ import com.salesianostriana.dam.brunodelgadoherreroproyecto.service.PedidoServic
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.service.ProductoService;
 
 @Controller
-public class CarritoControlador {
+public class CarritoController {
 
 	@Autowired
 	private LineaDePedidoService ldpService;

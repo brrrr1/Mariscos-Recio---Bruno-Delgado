@@ -13,10 +13,10 @@ import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Pedido;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Producto;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.ProductoPorUnidad;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Usuario;
-import com.salesianostriana.dam.brunodelgadoherreroproyecto.repositorios.LineaDePedidoRepositorio;
+import com.salesianostriana.dam.brunodelgadoherreroproyecto.repositories.LineaDePedidoRepository;
 
 @Service
-public class LineaDePedidoService extends BaseServiceImpl<LineaDePedido, Long, LineaDePedidoRepositorio> {
+public class LineaDePedidoService extends BaseServiceImpl<LineaDePedido, Long, LineaDePedidoRepository> {
 
 	@Autowired
 	private PedidoService pedidoServicio;

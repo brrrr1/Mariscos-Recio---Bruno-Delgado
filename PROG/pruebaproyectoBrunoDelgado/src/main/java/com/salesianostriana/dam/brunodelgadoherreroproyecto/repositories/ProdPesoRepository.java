@@ -1,4 +1,4 @@
-package com.salesianostriana.dam.brunodelgadoherreroproyecto.repositorios;
+package com.salesianostriana.dam.brunodelgadoherreroproyecto.repositories;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.ProductoPorPes
 
 
 
-public interface ProdPesoRepositorio extends JpaRepository<ProductoPorPeso, Long> {
+public interface ProdPesoRepository extends JpaRepository<ProductoPorPeso, Long> {
 
 	List<ProductoPorPeso> findByNombreContainsIgnoreCaseOrDescripcionContainsIgnoreCase(String nombre, String descripcion);
 	

@@ -10,7 +10,7 @@ import com.salesianostriana.dam.brunodelgadoherreroproyecto.service.EmpleadoServ
 
 @Controller
 @RequestMapping("/empleados")
-public class PedidoControlador {
+public class PedidoController {
 
 	@Autowired
 	private EmpleadoService servicioEmpleado;

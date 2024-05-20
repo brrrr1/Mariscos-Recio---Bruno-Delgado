@@ -1,4 +1,4 @@
-package com.salesianostriana.dam.brunodelgadoherreroproyecto.repositorios;
+package com.salesianostriana.dam.brunodelgadoherreroproyecto.repositories;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.Query;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Empleado;
 
 
-public interface EmpleadoRepositorio extends JpaRepository<Empleado, Long> {
+public interface EmpleadoRepository extends JpaRepository<Empleado, Long> {
 
 	@Query("""
 			SELECT e FROM Empleado e

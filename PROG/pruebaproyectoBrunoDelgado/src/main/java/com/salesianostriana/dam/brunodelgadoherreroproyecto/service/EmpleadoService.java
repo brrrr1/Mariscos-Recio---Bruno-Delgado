@@ -10,10 +10,10 @@ import com.salesianostriana.dam.brunodelgadoherreroproyecto.base.BaseServiceImpl
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.exceptions.ProductoNotFoundException;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Empleado;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Usuario;
-import com.salesianostriana.dam.brunodelgadoherreroproyecto.repositorios.EmpleadoRepositorio;
+import com.salesianostriana.dam.brunodelgadoherreroproyecto.repositories.EmpleadoRepository;
 
 @Service
-public class EmpleadoService extends BaseServiceImpl<Empleado, Long, EmpleadoRepositorio> {
+public class EmpleadoService extends BaseServiceImpl<Empleado, Long, EmpleadoRepository> {
 
 	public Usuario generarUsuario(Empleado e) {
 		Usuario u = new Usuario();

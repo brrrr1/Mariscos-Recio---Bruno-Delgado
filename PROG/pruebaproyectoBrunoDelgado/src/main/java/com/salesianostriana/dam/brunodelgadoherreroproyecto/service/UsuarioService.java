@@ -10,10 +10,10 @@ import com.salesianostriana.dam.brunodelgadoherreroproyecto.base.BaseServiceImpl
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.exceptions.ProductoNotFoundException;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Empleado;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Usuario;
-import com.salesianostriana.dam.brunodelgadoherreroproyecto.repositorios.UsuarioRepositorio;
+import com.salesianostriana.dam.brunodelgadoherreroproyecto.repositories.UsuarioRepository;
 
 @Service
-public class UsuarioService extends BaseServiceImpl<Usuario, Long, UsuarioRepositorio> {
+public class UsuarioService extends BaseServiceImpl<Usuario, Long, UsuarioRepository> {
 
 	@Autowired
 	private PasswordEncoder passwordEncoder;

@@ -1,4 +1,4 @@
-package com.salesianostriana.dam.brunodelgadoherreroproyecto.repositorios;
+package com.salesianostriana.dam.brunodelgadoherreroproyecto.repositories;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Producto;
 
-public interface ProductoRepositorio extends JpaRepository<Producto, Long> {
+public interface ProductoRepository extends JpaRepository<Producto, Long> {
 
 	/*
 	 * @Query(""" SELECT p FROM Producto p

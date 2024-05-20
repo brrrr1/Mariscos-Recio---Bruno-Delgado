@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.base.BaseServiceImpl;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.exceptions.ProductoNotFoundException;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Pescado;
-import com.salesianostriana.dam.brunodelgadoherreroproyecto.repositorios.PescadoRepositorio;
+import com.salesianostriana.dam.brunodelgadoherreroproyecto.repositories.PescadoRepository;
 
 @Service
-public class PescadoService extends BaseServiceImpl<Pescado, Long, PescadoRepositorio> {
+public class PescadoService extends BaseServiceImpl<Pescado, Long, PescadoRepository> {
 
 	public List<Pescado> ordenarAlfabeticoAZ(){
 		return this.repository.ordenarAlfabeticoAZ();

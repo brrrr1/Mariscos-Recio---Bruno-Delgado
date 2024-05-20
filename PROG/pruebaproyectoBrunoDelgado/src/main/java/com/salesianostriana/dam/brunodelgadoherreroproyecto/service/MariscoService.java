@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.base.BaseServiceImpl;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.exceptions.ProductoNotFoundException;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Marisco;
-import com.salesianostriana.dam.brunodelgadoherreroproyecto.repositorios.MariscoRepositorio;
+import com.salesianostriana.dam.brunodelgadoherreroproyecto.repositories.MariscoRepository;
 
 @Service
-public class MariscoService extends BaseServiceImpl<Marisco, Long, MariscoRepositorio> {
+public class MariscoService extends BaseServiceImpl<Marisco, Long, MariscoRepository> {
 
 	public List<Marisco> ordenarAlfabeticoAZ(){
 		return this.repository.ordenarAlfabeticoAZ();

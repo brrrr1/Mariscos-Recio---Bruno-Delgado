@@ -12,10 +12,10 @@ import org.springframework.stereotype.Service;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.base.BaseServiceImpl;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.exceptions.ProductoNotFoundException;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.ProductoPorUnidad;
-import com.salesianostriana.dam.brunodelgadoherreroproyecto.repositorios.ProdUnidadRepositorio;
+import com.salesianostriana.dam.brunodelgadoherreroproyecto.repositories.ProdUnidadRepository;
 
 @Service
-public class ProdUnidadService extends BaseServiceImpl<ProductoPorUnidad, Long, ProdUnidadRepositorio> {
+public class ProdUnidadService extends BaseServiceImpl<ProductoPorUnidad, Long, ProdUnidadRepository> {
 	
 	@Autowired
 	private FavoritosService favServicio;

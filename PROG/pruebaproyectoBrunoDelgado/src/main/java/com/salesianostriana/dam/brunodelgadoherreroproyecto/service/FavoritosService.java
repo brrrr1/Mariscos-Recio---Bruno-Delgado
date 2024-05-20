@@ -10,23 +10,23 @@ import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Favoritos;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.FavoritosPK;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Producto;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Usuario;
-import com.salesianostriana.dam.brunodelgadoherreroproyecto.repositorios.FavoritosRepositorio;
-import com.salesianostriana.dam.brunodelgadoherreroproyecto.repositorios.ProductoRepositorio;
+import com.salesianostriana.dam.brunodelgadoherreroproyecto.repositories.FavoritosRepository;
+import com.salesianostriana.dam.brunodelgadoherreroproyecto.repositories.ProductoRepository;
 
 import jakarta.persistence.EntityNotFoundException;
 
 @Service
-public class FavoritosService extends BaseServiceImpl<Favoritos, FavoritosPK, FavoritosRepositorio> {
+public class FavoritosService extends BaseServiceImpl<Favoritos, FavoritosPK, FavoritosRepository> {
 
 	public List<Favoritos> findByUsuario(Usuario usuario) {
 		return favoritosRepo.findByUsuario(usuario);
 	}
 
 	@Autowired
-	private ProductoRepositorio productoRepo;
+	private ProductoRepository productoRepo;
 
 	@Autowired
-	FavoritosRepositorio favoritosRepo;
+	FavoritosRepository favoritosRepo;
 
 
 

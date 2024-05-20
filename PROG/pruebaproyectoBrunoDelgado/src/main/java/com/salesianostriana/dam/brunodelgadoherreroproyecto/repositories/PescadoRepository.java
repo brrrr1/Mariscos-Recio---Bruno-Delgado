@@ -1,4 +1,4 @@
-package com.salesianostriana.dam.brunodelgadoherreroproyecto.repositorios;
+package com.salesianostriana.dam.brunodelgadoherreroproyecto.repositories;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.Query;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Pescado;
 
 
-public interface PescadoRepositorio extends JpaRepository<Pescado, Long> {
+public interface PescadoRepository extends JpaRepository<Pescado, Long> {
 
 	@Query("""
 			SELECT p FROM Pescado p

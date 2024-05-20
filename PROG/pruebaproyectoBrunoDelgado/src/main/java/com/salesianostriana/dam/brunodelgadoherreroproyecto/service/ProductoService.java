@@ -8,14 +8,13 @@ import org.springframework.stereotype.Service;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.base.BaseServiceImpl;
 
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Producto;
-
-import com.salesianostriana.dam.brunodelgadoherreroproyecto.repositorios.ProductoRepositorio;
+import com.salesianostriana.dam.brunodelgadoherreroproyecto.repositories.ProductoRepository;
 
 @Service
-public class ProductoService extends BaseServiceImpl<Producto, Long, ProductoRepositorio> {
+public class ProductoService extends BaseServiceImpl<Producto, Long, ProductoRepository> {
 
 	@Autowired
-	private ProductoRepositorio repo;
+	private ProductoRepository repo;
 	
 
 

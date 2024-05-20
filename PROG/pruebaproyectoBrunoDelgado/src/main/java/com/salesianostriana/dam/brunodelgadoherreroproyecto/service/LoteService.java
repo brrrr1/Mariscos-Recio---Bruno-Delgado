@@ -9,10 +9,10 @@ import org.springframework.stereotype.Service;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.base.BaseServiceImpl;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.exceptions.ProductoNotFoundException;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Lote;
-import com.salesianostriana.dam.brunodelgadoherreroproyecto.repositorios.LoteRepositorio;
+import com.salesianostriana.dam.brunodelgadoherreroproyecto.repositories.LoteRepository;
 
 @Service
-public class LoteService extends BaseServiceImpl<Lote, Long, LoteRepositorio> {
+public class LoteService extends BaseServiceImpl<Lote, Long, LoteRepository> {
 
 	public List<Lote> ordenarAlfabeticoAZ(){
 		return this.repository.ordenarAlfabeticoAZ();

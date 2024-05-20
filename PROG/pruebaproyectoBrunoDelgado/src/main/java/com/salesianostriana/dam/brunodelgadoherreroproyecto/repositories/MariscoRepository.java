@@ -1,4 +1,4 @@
-package com.salesianostriana.dam.brunodelgadoherreroproyecto.repositorios;
+package com.salesianostriana.dam.brunodelgadoherreroproyecto.repositories;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Marisco;
 
 
 
-public interface MariscoRepositorio extends JpaRepository<Marisco, Long> {
+public interface MariscoRepository extends JpaRepository<Marisco, Long> {
 	
 	@Query("""
 			SELECT m FROM Marisco m

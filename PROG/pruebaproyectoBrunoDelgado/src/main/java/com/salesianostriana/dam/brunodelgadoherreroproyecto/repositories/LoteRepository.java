@@ -1,4 +1,4 @@
-package com.salesianostriana.dam.brunodelgadoherreroproyecto.repositorios;
+package com.salesianostriana.dam.brunodelgadoherreroproyecto.repositories;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Lote;
 
 
-public interface LoteRepositorio extends JpaRepository<Lote, Long> {
+public interface LoteRepository extends JpaRepository<Lote, Long> {
 
 	List<Lote> findByNombreContainsIgnoreCaseOrDescripcionContainsIgnoreCase(String nombre, String descripcion);
 

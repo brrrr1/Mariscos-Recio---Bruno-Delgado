@@ -8,11 +8,10 @@ import com.salesianostriana.dam.brunodelgadoherreroproyecto.base.BaseServiceImpl
 
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Pedido;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Usuario;
-
-import com.salesianostriana.dam.brunodelgadoherreroproyecto.repositorios.PedidoRepositorio;
+import com.salesianostriana.dam.brunodelgadoherreroproyecto.repositories.PedidoRepository;
 
 @Service
-public class PedidoService extends BaseServiceImpl<Pedido, Long, PedidoRepositorio> {
+public class PedidoService extends BaseServiceImpl<Pedido, Long, PedidoRepository> {
 	
 
 

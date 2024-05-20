@@ -1,4 +1,4 @@
-package com.salesianostriana.dam.brunodelgadoherreroproyecto.repositorios;
+package com.salesianostriana.dam.brunodelgadoherreroproyecto.repositories;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.FavoritosPK;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Producto;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Usuario;
 
-public interface FavoritosRepositorio extends JpaRepository<Favoritos, FavoritosPK> {
+public interface FavoritosRepository extends JpaRepository<Favoritos, FavoritosPK> {
 
 	boolean existsByUsuarioAndProducto(Usuario usuario, Producto producto);
 

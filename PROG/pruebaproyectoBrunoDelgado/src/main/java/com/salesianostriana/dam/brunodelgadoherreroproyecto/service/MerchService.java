@@ -11,10 +11,10 @@ import org.springframework.stereotype.Service;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.base.BaseServiceImpl;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.exceptions.ProductoNotFoundException;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Merch;
-import com.salesianostriana.dam.brunodelgadoherreroproyecto.repositorios.MerchRepositorio;
+import com.salesianostriana.dam.brunodelgadoherreroproyecto.repositories.MerchRepository;
 
 @Service
-public class MerchService extends BaseServiceImpl<Merch, Long, MerchRepositorio> {
+public class MerchService extends BaseServiceImpl<Merch, Long, MerchRepository> {
 	
 	
 

@@ -1,4 +1,4 @@
-package com.salesianostriana.dam.brunodelgadoherreroproyecto.repositorios;
+package com.salesianostriana.dam.brunodelgadoherreroproyecto.repositories;
 
 
 import java.util.Optional;
@@ -11,7 +11,7 @@ import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.LineaDePedido;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Producto;
 
 
-public interface LineaDePedidoRepositorio extends JpaRepository<LineaDePedido, Long>{
+public interface LineaDePedidoRepository extends JpaRepository<LineaDePedido, Long>{
 	
 	 Optional<LineaDePedido> findByProducto(Producto producto);
 	 

@@ -34,7 +34,7 @@ public class CarritoControlador {
 	private ProductoService productoServicio;
 
 	@GetMapping("/anadirALP/{id}")
-	public String anadirALP(@PathVariable("id") long id, Model model) {
+	public String anadirALP(@PathVariable("id") Long id, Model model) {
 		
 		Producto producto = productoServicio.findById(id).get();
 		ldpService.anadirOActualizarLineaDePedido(producto);
@@ -43,14 +43,8 @@ public class CarritoControlador {
 	}
 
 	@GetMapping("/borrarDeLp/{id}")
-	public String borrarDeLp(@PathVariable("id") long id, Model model) {
-		Optional<LineaDePedido> optionalLineaDePedido = ldpService.findById(id);
-
-		if (optionalLineaDePedido.isPresent()) {
-			Producto aEliminar = optionalLineaDePedido.get().getProducto();
-			optionalLineaDePedido.get().removeFromProducto(aEliminar);
-			ldpService.edit(optionalLineaDePedido.get());
-		} 
+	public String borrarDeLp(@PathVariable("id") Long id, Model model) {
+		ldpService.borrarProductoDeLp(id);
 
 		return "redirect:/carrito";
 	}
@@ -63,10 +57,7 @@ public class CarritoControlador {
 
 	@GetMapping("/limpiarCarrito")
 	public String limpiar(Model model) {
-//		List<LineaDePedido> aLimpiar = ldpService.findAll();
-//		for (LineaDePedido lineaDePedido : aLimpiar) {
-//			ldpService.delete(lineaDePedido);
-//		}
+
 		Pedido pedido = new Pedido();
 		pedidoServicio.limpiarCarrito(pedido);
 		return "carrito";
@@ -74,40 +65,11 @@ public class CarritoControlador {
 
 	@GetMapping("/finalizarPedido")
 	public String finalizarPedido(Model model, @AuthenticationPrincipal Usuario usuario) {
+
 		Pedido pedido = new Pedido();
-		pedido.setLineasDePedido(ldpService.findAll());
-		pedido.setEstado(null);
-		pedido.setUsuario(usuario);
-		pedido.setFechaPedido(LocalDate.now());
-		pedido.setFinalizado(true);
 		
-		List <LineaDePedido> Lineas = pedido.getLineasDePedido();
+		ldpService.finalizarPedido(usuario, pedido);
 		
-		for (LineaDePedido ldp : Lineas) {
-			Producto p = ldp.getProducto();
-			int cantidad = ldp.getCantidad();
-					
-			if(p instanceof ProductoPorUnidad) {
-				
-				int nuevoStock = ((ProductoPorUnidad) p).getStock()-cantidad;
-				((ProductoPorUnidad) p).setStock(nuevoStock);
-				
-			}
-		}
-		
-	
-
-		double precioFinalPedido = pedidoServicio.calcularPrecio(pedido);
-		pedido.setPrecioFinal(precioFinalPedido);
-
-//		List<LineaDePedido> lista = ldpService.findAll();
-//
-//		for (LineaDePedido lineaDePedido : lista) {
-//			ldpService.delete(lineaDePedido);
-//		}
-		usuario.setNumPedidos(usuario.getNumPedidos()+1);
-		pedido.addPedido(usuario);
-
 		pedidoServicio.save(pedido);
 		model.addAttribute("pedido", pedido);
 
@@ -115,7 +77,7 @@ public class CarritoControlador {
 	}
 
 	@GetMapping("/reducirCantidad/{id}")
-	public String reducirCantidad(@PathVariable("id") long id, Model model) {
+	public String reducirCantidad(@PathVariable("id") Long id, Model model) {
 		Producto producto = productoServicio.findById(id).get();
 		ldpService.reducirCantidadOEliminarLineaDePedido(producto);
 		model.addAttribute("lineaDePedido", ldpService.findAll());

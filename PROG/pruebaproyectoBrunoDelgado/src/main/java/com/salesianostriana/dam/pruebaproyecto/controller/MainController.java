@@ -152,8 +152,7 @@ public class MainController {
 		if(usernameExists) {
 			return "usernameRepetido";
 		} else {
-			String encodedPassword = passwordEncoder.encode(usuario.getPassword());
-			usuario.setPassword(encodedPassword);
+			servicioUsuario.codificarContra(usuario);
 			servicioUsuario.save(usuario);
 			model.addAttribute("usuario", usuario);
 			return "main";
@@ -164,35 +163,6 @@ public class MainController {
 		
 	}
 
-//	@PostMapping("/addFavorito/{usuario_id}/{producto_id}")
-	//// public String addFavorito(@PathVariable Long usuario_id, @PathVariable Long
-	//// producto_id,
-	//// @AuthenticationPrincipal Usuario usuario) {
-	///// *
-	//// * Usuario usuario = servicioUsuario.findById(usuario_id) .orElseThrow(() ->
-	//// new
-	//// * RuntimeException("Usuario no encontrado"));
-	//// */
-	// Producto producto = servicioProducto.findById(producto_id)
-	// .orElseThrow(() -> new RuntimeException("Producto no encontrado"));
-	// producto.setLikes(producto.getLikes() + 1);
-	// Favoritos favorito = new Favoritos(usuario, producto);
-	// favorito.addToUsuario(usuario);
-	// usuario.getFavoritos().add(favorito);
-	// servicioUsuario.save(usuario);
-
-	// return "redirect:/main";
-	// }
-
-//	@GetMapping("/agregarAFavoritos/{productoId}")
-//	public String addProductoToFavoritos(@AuthenticationPrincipal Usuario usuario, @PathVariable Long productoId) {
-//		boolean added = servicioFavoritos.alternarFavorito(usuario, productoId);
-//		if (added) {
-//			return "redirect:/misFavoritos";
-//		} else {
-//			return "redirect:/misFavoritos";
-//		}
-//	}
 
 	@GetMapping("/agregarAFavoritos/{productoId}")
 	public String addProductoToFavoritos(@AuthenticationPrincipal Usuario usuario, @PathVariable Long productoId) {
@@ -224,12 +194,7 @@ public class MainController {
 		return "main";
 	}
 
-//	@GetMapping("/favoritos")
-//	public String listarMasFavoritos(Model model) {
-//		model.addAttribute("listaMasFavoritos", servicioProducto.mostrarMasFavoritos());
-//
-//		return "pruebaLikes";
-//	}
+
 
 	@GetMapping("/misFavoritos")
 	public String listarMisFavoritos(@AuthenticationPrincipal Usuario usuario, Model model) {
@@ -264,10 +229,7 @@ public class MainController {
 
 	@PostMapping("/editarUsuario/submit")
 	public String procesarFormularioEdicion(@ModelAttribute("usuario") @AuthenticationPrincipal  Usuario usuario) {
-		/*
-		 * String encodedPassword = passwordEncoder.encode(usuario.getPassword());
-		 * usuario.setPassword(encodedPassword);
-		 */
+
 		servicioUsuario.save(usuario);
 		return "redirect:/cambioDatos";
 
@@ -285,8 +247,7 @@ public class MainController {
 	public String procesarFormularioPassword(
 			@ModelAttribute("usuario") /* @AuthenticationPrincipal */ Usuario usuario) {
 
-		String encodedPassword = passwordEncoder.encode(usuario.getPassword());
-		usuario.setPassword(encodedPassword);
+		servicioUsuario.codificarContra(usuario);
 		servicioUsuario.save(usuario);
 		return "redirect:/cambioDatos";
 
@@ -329,12 +290,6 @@ public class MainController {
 	}
 	
 	
-	
- 
-	/*
-	 * @PostMapping("/perfil/editar") public String
-	 * procesarFormularioEdicion(@AuthenticationPrincipal Usuario usuario) {
-	 * servicioUsuario.edit(usuario); return "redirect:/perfil"; }
-	 */
+
 
 }

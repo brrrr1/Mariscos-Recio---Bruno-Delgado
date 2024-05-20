@@ -56,5 +56,7 @@ public class EmpleadoService extends BaseServiceImpl<Empleado, Long, EmpleadoRep
 		
 		
 	}
+	
+	
 
 }

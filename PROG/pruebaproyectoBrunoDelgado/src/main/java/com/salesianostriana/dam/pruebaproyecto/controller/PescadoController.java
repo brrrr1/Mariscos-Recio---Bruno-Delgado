@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.salesianostriana.dam.pruebaproyecto.model.Pescado;
+import com.salesianostriana.dam.pruebaproyecto.service.LineaDePedidoService;
 import com.salesianostriana.dam.pruebaproyecto.service.PescadoService;
 import com.salesianostriana.dam.pruebaproyecto.service.ProdPesoService;
 
@@ -24,6 +25,9 @@ public class PescadoController {
 	
 	@Autowired
 	private ProdPesoService servicioProdPeso;
+	
+	@Autowired
+	private LineaDePedidoService servicioLdp;
 
 	@GetMapping("/pescado")
 	public String controladorPescado(Model model) {
@@ -73,7 +77,11 @@ public class PescadoController {
 	
 	@GetMapping("/borrarPescado/{id}")
 	public String borrar(@PathVariable("id") long id) {
-		//servicio.deleteById(id);
+		
+		if(servicioLdp.buscarProductoEnLp(id).isPresent()) {
+			return "noBorrar";
+		}
+		
 		servicioProdPeso.deleteByIdConFavoritos(id);
 		return "redirect:/admin/pescado/listaPescado";
 	}

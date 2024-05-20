@@ -80,11 +80,7 @@ public class MerchController {
 
 	@GetMapping("/borrarMerch/{id}")
 	public String borrar(@PathVariable("id") long id) {
-		//servicio.deleteById(id);
-//		servicioProdUnidad.findById(id).get().setLineasDePedido(null);
-//		servicioProdUnidad.save(servicioProdUnidad.findById(id).get());
-		
-//		servicioProdUnidad.findById(id).get().getLineasDePedido().
+
 		if(servicioLdp.buscarProductoEnLp(id).isPresent()) {
 			return "noBorrar";
 		}

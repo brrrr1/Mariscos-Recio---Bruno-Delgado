@@ -51,3 +51,12 @@ Ubicados en la Avenida del Paraíso 7, somos la mejor pescadería de España. Co
 - - Dar de baja (establece su fecha de salida y le quita permisos de empleado a su usuario)
 
 *Todas las funcionalidades que repercuten a los usuarios de los empleados también ocurren en el otro orden (editas un usuario y se edita la información del empleado etc)*
+
+## Por implementar:
+- Ventas físicas
+- Compra realista de productos al peso
+- No he conseguido que el cliente indique el peso que quiere del producto y se calcule el precio total según el precio/kg.
+- Sistema de envíos/estados de pedido
+- Sistema de gestión de los pedidos por parte de los empleados.
+- Administración de dinero(ingresos, gastos)...
+- Lógicas de negocio como otorgar descuentos a ciertos clientes.

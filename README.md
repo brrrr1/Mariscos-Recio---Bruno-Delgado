@@ -1,7 +1,7 @@
 # Mariscos Recio
 ### El mar al mejor precio
 
-![Logo Mariscos Recio](PROG/pruebaproyectoBrunoDelgado/src/main/resources/static/img/logo.png)
+![Logo Mariscos Recio](PROG/BrunoDelgadoHerreroProyecto/src/main/resources/static/img/logo.png)
 
 Ubicados en la Avenida del Paraíso 7, somos la mejor pescadería de España. Con premios como el bogavante de oro y el honor de distribuir marisco a la casa real, estamos emocionados de abrirnos a todos nuestros clientes con esta tienda online.
 

@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import com.salesianostriana.dam.pruebaproyecto.model.LineaDePedido;
 import com.salesianostriana.dam.pruebaproyecto.model.Pedido;
 import com.salesianostriana.dam.pruebaproyecto.model.Producto;
+import com.salesianostriana.dam.pruebaproyecto.model.ProductoPorUnidad;
 import com.salesianostriana.dam.pruebaproyecto.model.Usuario;
 import com.salesianostriana.dam.pruebaproyecto.repositorios.LineaDePedidoRepositorio;
 import com.salesianostriana.dam.pruebaproyecto.service.LineaDePedidoService;
@@ -81,6 +82,20 @@ public class CarritoControlador {
 		pedido.setUsuario(usuario);
 		pedido.setFechaPedido(LocalDate.now());
 		pedido.setFinalizado(true);
+		
+		List <LineaDePedido> Lineas = pedido.getLineasDePedido();
+		
+		for (LineaDePedido ldp : Lineas) {
+			Producto p = ldp.getProducto();
+			int cantidad = ldp.getCantidad();
+					
+			if(p instanceof ProductoPorUnidad) {
+				
+				int nuevoStock = ((ProductoPorUnidad) p).getStock()-cantidad;
+				((ProductoPorUnidad) p).setStock(nuevoStock);
+				
+			}
+		}
 		
 	
 

@@ -69,8 +69,16 @@ public class UsuarioController {
 	@GetMapping("/editarUsuario/{id}")
 	public String mostrarFormularioEdicion(@PathVariable("id") long id, Model model) {
 		if (servicioUsuario.findById(id).isPresent()) {
-			model.addAttribute("usuario", servicioUsuario.findById(id).get());
-			return "admin/usuarioForm";
+			
+			if(servicioUsuario.findById(id).get().isEsAdmin()) {
+				return "editarAdmin";
+			}else {
+				model.addAttribute("usuario", servicioUsuario.findById(id).get());
+				return "admin/usuarioForm";
+			}
+			
+			
+			
 		} else {
 			return "redirect:admin/usuarios/listaUsuarios";
 		}
@@ -82,18 +90,15 @@ public class UsuarioController {
 
 		Usuario usuarioExistente = servicioUsuario.buscarPorId(u.getId());
 
-
 		if (u.getPassword() == null || u.getPassword().isEmpty()) {
 			u.setPassword(usuarioExistente.getPassword());
 		} else {
-			
+
 			String encodedPassword = passwordEncoder.encode(u.getPassword());
 			u.setPassword(encodedPassword);
 		}
 
-
 		servicioUsuario.save(u);
-
 
 		if (u.isEsEmpleado()) {
 			List<Empleado> listaIguales = servicioEmpleado.buscarPorNombreYApellido(u.getNombre(), u.getApellido());
@@ -101,8 +106,8 @@ public class UsuarioController {
 				e.setNombre(u.getNombre());
 				e.setApellido(u.getApellido());
 				e.setDni(u.getDni());
-				u.setEmail(u.getNombre().toLowerCase()+"recio"+u.getApellido().toLowerCase()+"@mariscosrecio.es");
-				u.setUsername(u.getNombre().toLowerCase()+"mrw");
+				u.setEmail(u.getNombre().toLowerCase() + "recio" + u.getApellido().toLowerCase() + "@mariscosrecio.es");
+				u.setUsername(u.getNombre().toLowerCase() + "mrw");
 				servicioEmpleado.edit(e);
 				servicioUsuario.edit(u);
 			}
@@ -113,15 +118,22 @@ public class UsuarioController {
 
 	@GetMapping("/borrarUsuario/{id}")
 	public String borrar(@PathVariable("id") long id) {
+
 		Usuario u = servicioUsuario.buscarPorId(id);
-		if (u.isEsEmpleado()) {
-			List<Empleado> listaIguales = servicioEmpleado.buscarPorNombreYApellido(u.getNombre(), u.getApellido());
-			for (Empleado empleado : listaIguales) {
-				servicioEmpleado.delete(empleado);
+
+		if (u.isEsAdmin()) {
+			return "borrarAdmin";
+		} else {
+			if (u.isEsEmpleado()) {
+				List<Empleado> listaIguales = servicioEmpleado.buscarPorNombreYApellido(u.getNombre(), u.getApellido());
+				for (Empleado empleado : listaIguales) {
+					servicioEmpleado.delete(empleado);
+				}
 			}
+			servicioUsuario.deleteById(id);
+			return "redirect:/admin/usuarios/listaUsuarios";
 		}
-		servicioUsuario.deleteById(id);
-		return "redirect:/admin/usuarios/listaUsuarios";
+
 	}
 
 	@GetMapping("/buscarUsuario")

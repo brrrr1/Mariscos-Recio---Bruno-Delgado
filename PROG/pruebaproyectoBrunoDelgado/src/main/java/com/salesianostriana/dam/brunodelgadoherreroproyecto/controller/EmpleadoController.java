@@ -1,7 +1,6 @@
 package com.salesianostriana.dam.brunodelgadoherreroproyecto.controller;
 
-import java.util.List;
-import java.util.Optional;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Empleado;
-import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Usuario;
+
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.service.EmpleadoService;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.service.UsuarioService;
 

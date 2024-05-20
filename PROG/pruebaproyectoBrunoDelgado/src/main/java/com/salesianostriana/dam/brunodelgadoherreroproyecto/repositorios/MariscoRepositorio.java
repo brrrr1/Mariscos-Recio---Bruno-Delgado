@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Marisco;
-import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Pescado;
+
 
 
 public interface MariscoRepositorio extends JpaRepository<Marisco, Long> {

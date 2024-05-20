@@ -1,8 +1,7 @@
 package com.salesianostriana.dam.brunodelgadoherreroproyecto.controller;
 
-import java.time.LocalDate;
-import java.util.List;
-import java.util.Optional;
+
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -11,12 +10,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.LineaDePedido;
+
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Pedido;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Producto;
-import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.ProductoPorUnidad;
+
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Usuario;
-import com.salesianostriana.dam.brunodelgadoherreroproyecto.repositorios.LineaDePedidoRepositorio;
+
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.service.LineaDePedidoService;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.service.PedidoService;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.service.ProductoService;

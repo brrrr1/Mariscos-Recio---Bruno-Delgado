@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Lote;
-import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Merch;
+
 
 public interface LoteRepositorio extends JpaRepository<Lote, Long> {
 

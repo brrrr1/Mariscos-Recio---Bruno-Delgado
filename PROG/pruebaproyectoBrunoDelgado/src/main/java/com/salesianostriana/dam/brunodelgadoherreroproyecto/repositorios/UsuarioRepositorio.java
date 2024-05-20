@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.ProductoPorPeso;
+
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Usuario;
 
 public interface UsuarioRepositorio extends JpaRepository<Usuario, Long> {

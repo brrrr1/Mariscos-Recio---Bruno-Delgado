@@ -1,9 +1,9 @@
 package com.salesianostriana.dam.brunodelgadoherreroproyecto.controller;
 
-import java.util.List;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Empleado;
+
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Usuario;
-import com.salesianostriana.dam.brunodelgadoherreroproyecto.service.EmpleadoService;
+
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.service.UsuarioService;
 
 @Controller
@@ -25,11 +25,7 @@ public class UsuarioController {
 	@Autowired
 	private UsuarioService servicioUsuario;
 
-	@Autowired
-	private EmpleadoService servicioEmpleado;
 
-	@Autowired
-	private PasswordEncoder passwordEncoder;
 
 	@GetMapping("/usuarios")
 	public String controladorUsuarios(Model model) {

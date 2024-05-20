@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.base.BaseServiceImpl;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.exceptions.ProductoNotFoundException;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Empleado;
-import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.ProductoPorPeso;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Usuario;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.repositorios.UsuarioRepositorio;
 

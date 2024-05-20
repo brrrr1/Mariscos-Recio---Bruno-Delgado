@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Merch;
-import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.ProductoPorUnidad;
+
 
 public interface MerchRepositorio extends JpaRepository<Merch, Long> {
 

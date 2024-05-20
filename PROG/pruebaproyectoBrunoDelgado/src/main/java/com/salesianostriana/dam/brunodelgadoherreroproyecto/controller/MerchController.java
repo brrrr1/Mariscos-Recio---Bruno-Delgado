@@ -14,7 +14,7 @@ import com.salesianostriana.dam.brunodelgadoherreroproyecto.model.Merch;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.service.LineaDePedidoService;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.service.MerchService;
 import com.salesianostriana.dam.brunodelgadoherreroproyecto.service.ProdUnidadService;
-import com.salesianostriana.dam.brunodelgadoherreroproyecto.service.ProductoService;
+
 
 @Controller
 @RequestMapping("/admin/merch")
@@ -26,8 +26,7 @@ public class MerchController {
 	@Autowired
 	private ProdUnidadService servicioProdUnidad;
 	
-	@Autowired
-	private ProductoService servicioProducto;
+
 	
 	@Autowired
 	private LineaDePedidoService servicioLdp;

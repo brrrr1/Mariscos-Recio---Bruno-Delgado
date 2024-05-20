@@ -17,13 +17,7 @@ public class FavoritosController {
 
 	@Autowired
 	private FavoritosService servicioFavoritos;
-	/*
-	 * @PostMapping("/addFavorito") public String
-	 * aniadirAFavoritos(@ModelAttribute("favorito") Favoritos favorito, Model
-	 * model) { favorito.addToUsuario(null) return
-	 * "redirect:/admin/empleados/listaEmpleados"; }
-	 * 
-	 */
+
 	
 	@GetMapping("/borrar")
 	public String borrarFavorito(Model model, Producto p) {

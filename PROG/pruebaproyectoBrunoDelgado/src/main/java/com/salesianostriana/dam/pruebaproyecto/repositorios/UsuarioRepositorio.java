@@ -34,10 +34,10 @@ public interface UsuarioRepositorio extends JpaRepository<Usuario, Long> {
 	
 	boolean existsByUsername(String username);
 	
-	@Query("""
-			SELECT u FROM Usuario u
-			WHERE u.id = ?1
-			""")
-	public Usuario buscarPorId(Long id);
+//	@Query("""
+//			SELECT u FROM Usuario u
+//			WHERE u.id = ?1
+//			""")
+//	public Usuario buscarPorId(Long id);
 	
 }

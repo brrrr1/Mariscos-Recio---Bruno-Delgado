@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.salesianostriana.dam.pruebaproyecto.model.Marisco;
+import com.salesianostriana.dam.pruebaproyecto.service.LineaDePedidoService;
 import com.salesianostriana.dam.pruebaproyecto.service.MariscoService;
 import com.salesianostriana.dam.pruebaproyecto.service.ProdPesoService;
 
@@ -23,6 +24,9 @@ public class MariscoController {
 	
 	@Autowired
 	private ProdPesoService servicioProdPeso;
+	
+	@Autowired
+	private LineaDePedidoService servicioLdp;
 
 	@GetMapping("/marisco")
 	public String controladorMarisco(Model model) {
@@ -72,7 +76,11 @@ public class MariscoController {
 	
 	@GetMapping("/borrarMarisco/{id}")
 	public String borrar(@PathVariable("id") long id) {
-		//servicio.deleteById(id);
+		
+		if(servicioLdp.buscarProductoEnLp(id).isPresent()) {
+			return "noBorrar";
+		}
+		
 		servicioProdPeso.deleteByIdConFavoritos(id);
 		return "redirect:/admin/marisco/listaMarisco";
 	}

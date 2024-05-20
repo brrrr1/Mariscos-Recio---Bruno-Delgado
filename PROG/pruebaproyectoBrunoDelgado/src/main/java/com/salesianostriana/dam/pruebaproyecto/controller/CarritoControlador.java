@@ -71,7 +71,7 @@ public class CarritoControlador {
 //		}
 		Pedido pedido = new Pedido();
 		pedidoServicio.limpiarCarrito(pedido);
-		return "lineaDePedido";
+		return "carrito";
 	}
 
 	@GetMapping("/finalizarPedido")

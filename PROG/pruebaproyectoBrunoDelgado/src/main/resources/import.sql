@@ -3,7 +3,7 @@ insert into empleado (id, nombre, apellido, dni, sueldo, foto, fecha_ingreso, fe
 insert into empleado (id, nombre, apellido, dni, sueldo, foto, fecha_ingreso, fecha_salida) values (3, 'Ongombo', 'Ongombo', null, '45', 'https://i.imgur.com/5MkcGRk.png', '2017-10-04', '2021-01-08');
 
 
-ALTER SEQUENCE empleado_seq RESTART WITH (53);
+ALTER SEQUENCE empleado_seq RESTART WITH 1000;
 
 insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype, descuento) values (1, 'Camiseta Mariscos Recio', 'Camiseta de hombre talla M con el logo de la empresa para demostrar al mundo que comes el mejor marisco.', 500, 'https://d2j6dbq0eux0bg.cloudfront.net/images/48014374/2085608477.jpg', 15, 300, 'MER', 50);
 insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype, descuento) values (2, 'Taza Mariscos Recio', 'Brillante y resistente taza de porcelana para disfrutar de un ColaCao con magdalenas como dios manda.', 234, 'https://i.ebayimg.com/images/g/CLEAAOSwyeRk~jxq/s-l1600.jpg', 6, 60, 'MER', 0);
@@ -31,7 +31,7 @@ insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype
 insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype) values (17, 'Sardinas', 'Para una cena divina... ¡Compre varias sardinas!', 190, 'https://media.pescoandgo.es/product/sardina-entera-sin-tripa-1kg-1822-unidades-800x800.jpg', 3.99, 120, 'PESC');
 insert into producto (id, nombre, descripcion, likes, foto, precio, stock, dtype) values (18, 'Gambas', '¡Sorprenda usted a su pareja con gambas en Nochevieja!', 42, 'https://blancamar.es/wp-content/uploads/2022/01/gamba-arrocera_01-scaled-1.jpg', 40, 50, 'MAR');
 
-ALTER SEQUENCE producto_seq RESTART WITH (71);
+ALTER SEQUENCE producto_seq RESTART WITH 1000;
 
 
 
@@ -43,4 +43,4 @@ insert into usuario (id, username, nombre, apellido, dni, email, password, num_p
 insert into usuario (id, username, nombre, apellido, dni, email, password, num_pedidos, direccion, es_admin, es_empleado) values (5, 'coquemrw', 'Coque','Calatrava', '63813546R', 'coquecalatrava@mariscosrecio.es', '{bcrypt}$2y$10$nq5WX.3.QYJOavpX8oZSneBVeBhWIuWHNX8fRIHjB764tkacl8SmK', '0', 'Mirador de Montepinar 7 Portería', false, true);
 
 
-ALTER SEQUENCE usuario_seq RESTART WITH (55);
+ALTER SEQUENCE usuario_seq RESTART WITH 1000;

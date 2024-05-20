@@ -81,16 +81,50 @@ public class UsuarioService extends BaseServiceImpl<Usuario, Long, UsuarioReposi
 	public String borrarUsuario(Long id) {
 		Usuario u = findById(id).get();
 
-		
-			if (u.isEsEmpleado()) {
-				List<Empleado> listaIguales = servicioEmpleado.buscarPorNombreYApellido(u.getNombre(), u.getApellido());
-				for (Empleado empleado : listaIguales) {
-					servicioEmpleado.delete(empleado);
-				}
+		if (u.isEsEmpleado()) {
+			List<Empleado> listaIguales = servicioEmpleado.buscarPorNombreYApellido(u.getNombre(), u.getApellido());
+			for (Empleado empleado : listaIguales) {
+				servicioEmpleado.delete(empleado);
 			}
-			deleteById(id);
-			return "redirect:/admin/usuarios/listaUsuarios";
 		}
+		deleteById(id);
+		return "redirect:/admin/usuarios/listaUsuarios";
+	}
+
+	public void editarUsuarioDeUnEmpleado(Empleado e) {
+		List<Usuario> listaEmpleados = buscarPorNombreYApellido(e.getNombre(), e.getApellido());
+		for (Usuario usuario : listaEmpleados) {
+			usuario.setNombre(e.getNombre());
+			usuario.setApellido(e.getApellido());
+			usuario.setUsername(e.getNombre().toLowerCase() + "mrw");
+			usuario.setDni(e.getDni());
+			usuario.setEmail(e.getNombre().toLowerCase() + e.getApellido().toLowerCase() + "@mariscosrecio.es");
+			usuario.setPassword(e.getNombre().toLowerCase() + "recio" + e.getApellido().toLowerCase());
+			usuario.setNumPedidos(0);
+			usuario.setDireccion(null);
+			usuario.setEsAdmin(false);
+			usuario.setEsEmpleado(true);
+			edit(usuario);
+		}
+	}
+
+	public void borrarUsuariosDeUnEmpleado(Empleado e) {
+		List<Usuario> listaEmpleados = buscarPorNombreYApellido(e.getNombre(), e.getApellido());
+
+		for (Usuario usuario : listaEmpleados) {
+			delete(usuario);
+		}
+	}
 	
+	public void cambiarUsuarioTrasBaja(Empleado e) {
+		List<Usuario> listaEmpleados = buscarPorNombreYApellido(e.getNombre(), e.getApellido());
+		for (Usuario u : listaEmpleados) {
+			u.setEsEmpleado(false);
+			
+			servicioEmpleado.edit(e);
+			
+			edit(u);
+		}
+	}
 
 }

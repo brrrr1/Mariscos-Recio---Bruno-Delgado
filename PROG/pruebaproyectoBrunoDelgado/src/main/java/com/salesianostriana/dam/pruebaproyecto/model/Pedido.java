@@ -19,10 +19,11 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Data
-//@NoArgsConstructor
+@NoArgsConstructor
 @AllArgsConstructor
 @Entity
 public class Pedido {
@@ -37,7 +38,7 @@ public class Pedido {
 	private String contenido;
 	private double precioFinal;
 
-	private boolean finalizada;
+	private boolean finalizado;
 
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "usuario_id") // nombre de la columna en la tabla Pedido que referencia a Usuario
@@ -51,7 +52,6 @@ public class Pedido {
 
 	@ToString.Exclude
 	@EqualsAndHashCode.Exclude
-	@Builder.Default
 	@OneToMany(mappedBy = "pedido", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<LineaDePedido> LineasDePedido = new ArrayList<>();
 
@@ -59,12 +59,12 @@ public class Pedido {
 	 * MÉTODOS HELPER
 	 */
 
-	public void addLineaDePedido(Usuario usuario) {
+	public void addPedido(Usuario usuario) {
 		this.usuario = usuario;
 		usuario.getPedidos().add(this);
 	}
 
-	public void removeLineaDePedido(Usuario usuario) {
+	public void removePedido(Usuario usuario) {
 		usuario.getPedidos().remove(this);
 		this.usuario = null;
 	}
@@ -78,5 +78,9 @@ public class Pedido {
 		this.LineasDePedido.remove(ldp);
 		ldp.setPedido(null);
 
+	}
+	
+	public void limpiarCarrito() {
+		this.getLineasDePedido().clear();
 	}
 }

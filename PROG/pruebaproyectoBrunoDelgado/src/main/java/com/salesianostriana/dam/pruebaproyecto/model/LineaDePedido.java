@@ -7,43 +7,46 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
-//@NoArgsConstructor
+@NoArgsConstructor
 @AllArgsConstructor
 @Entity
-//@IdCLass(LineaDeVentaPK)
 public class LineaDePedido {
 
-	@Id
-	@GeneratedValue
-	private long id;
+    @Id
+    @GeneratedValue
+    private long id;
 
-	private double precio;
-	private int cantidad;
-	private double subtotal;
+    private double precio;
+    private int cantidad;
+    private double subtotal;
 
-	@ManyToOne(fetch = FetchType.EAGER)
-	private Pedido pedido;
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Pedido pedido;
 
-	@ManyToOne(fetch = FetchType.EAGER)
-	private Producto producto;
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Producto producto;
 
-	/*
-	 * public double getPrecioLineaDeVenta() { return producto.getPrecio() +
-	 * cantidad; }
-	 */
+    public void getPrecioLineaDeVenta() {
+        setSubtotal(producto.getPrecio() * cantidad);
+    }
 
-	/* MÉTODOS HELPER */
-/*
-	public void addToPedido(Producto producto) {
-		this.producto = producto;
-		producto.getLineasDePedido().add(this);
-	}
+    /* MÉTODOS HELPER */
+    public void addToProducto(Producto producto) {
+        this.producto = producto;
+        producto.getLineasDePedido().add(this);
+    }
 
-	public void removeFromPedido(Producto producto) {
-		producto.getLineasDePedido().remove(this);
-		this.producto = null;
-	}
-*/
+    public void removeFromProducto(Producto producto) {
+        producto.getLineasDePedido().remove(this);
+        this.producto = null;
+    }
+    
+
+    
+    
+    
+    
 }

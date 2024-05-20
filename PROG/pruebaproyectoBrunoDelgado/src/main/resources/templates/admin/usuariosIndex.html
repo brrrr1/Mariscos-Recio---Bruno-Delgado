@@ -42,6 +42,7 @@
 					<thead>
 						<tr>
 							<th>Id</th>
+							<th>Nombre de Usuario</th>
 							<th>Nombre</th>
 							<th>Apellido</th>
 							<th>DNI</th>
@@ -55,6 +56,7 @@
 					<tbody>
 						<tr th:each="usuario : ${listaUsuarios}">
 							<td th:text="${usuario.id}">1</td>
+							<td th:text="${usuario.username}">username</td>
 							<td th:text="${usuario.nombre}">Nombre</td>
 							<td th:text="${usuario.apellido}">Descripción</td>
 							<td th:text="${usuario.dni}">DNI</td>

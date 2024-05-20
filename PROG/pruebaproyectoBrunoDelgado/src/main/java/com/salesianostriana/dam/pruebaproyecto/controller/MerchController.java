@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.salesianostriana.dam.pruebaproyecto.model.Merch;
+import com.salesianostriana.dam.pruebaproyecto.service.LineaDePedidoService;
 import com.salesianostriana.dam.pruebaproyecto.service.MerchService;
 import com.salesianostriana.dam.pruebaproyecto.service.ProdUnidadService;
+import com.salesianostriana.dam.pruebaproyecto.service.ProductoService;
 
 @Controller
 @RequestMapping("/admin/merch")
@@ -23,7 +25,14 @@ public class MerchController {
 	
 	@Autowired
 	private ProdUnidadService servicioProdUnidad;
-
+	
+	@Autowired
+	private ProductoService servicioProducto;
+	
+	@Autowired
+	private LineaDePedidoService servicioLdp;
+	
+	
 	@GetMapping("/merch")
 	public String controladorMerch(Model model) {
 		model.addAttribute("listaMerch", servicio.findAll());
@@ -72,6 +81,19 @@ public class MerchController {
 	@GetMapping("/borrarMerch/{id}")
 	public String borrar(@PathVariable("id") long id) {
 		//servicio.deleteById(id);
+//		servicioProdUnidad.findById(id).get().setLineasDePedido(null);
+//		servicioProdUnidad.save(servicioProdUnidad.findById(id).get());
+		
+//		servicioProdUnidad.findById(id).get().getLineasDePedido().
+		if(servicioLdp.buscarProductoEnLp(id).isPresent()) {
+			return "noBorrar";
+		}
+		
+		
+		
+		
+		servicioLdp.deleteById(id);
+		
 		servicioProdUnidad.deleteByIdConFavoritos(id);
 		return "redirect:/admin/merch/listaMerch";
 	}

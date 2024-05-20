@@ -50,9 +50,7 @@ public class CarritoControlador {
 			Producto aEliminar = optionalLineaDePedido.get().getProducto();
 			optionalLineaDePedido.get().removeFromProducto(aEliminar);
 			ldpService.edit(optionalLineaDePedido.get());
-		} else {
-			
-		}
+		} 
 
 		return "redirect:/carrito";
 	}
@@ -71,7 +69,7 @@ public class CarritoControlador {
 //		}
 		Pedido pedido = new Pedido();
 		pedidoServicio.limpiarCarrito(pedido);
-		return "lineaDePedido";
+		return "carrito";
 	}
 
 	@GetMapping("/finalizarPedido")

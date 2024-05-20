@@ -39,11 +39,7 @@
 					<span th:text="'Descuento: ' + ${#numbers.formatDecimal(merch.descuento, 1, 2) + ' %'}"></span>
 					<span th:text="'Precio final: ' + ${#numbers.formatDecimal(merch.precioFinal, 1, 2) + ' €'}"></span>
 				</p>
-				<div class="form-group mb-5">
-					<a th:href="@{/anadirALP/{id}(id=${merch.id})}">
-						<button type="button" class="btn btn-success btn-lg mb-3">Añadir al carrito</button>
-					</a>
-				</div>
+				<div th:replace="~{fragmentos/botonCarritoMerch::botonCarritoMerch}"></div>
 				<div th:replace="~{fragmentos/meGustaMerch::meGustaMerch}"></div>
 			</div>
 		</div>

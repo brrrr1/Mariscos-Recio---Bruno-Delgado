@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Página con todos los lotes">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mariscos Recio - Productos</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+	<link href="../../static/css/estiloTarjetas.css" th:href="@{/css/estiloTarjetas.css}" rel="stylesheet" />
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+	<link href="../../static/css/botonCompra.css" th:href="@{/css/botonCompra.css}" rel="stylesheet" />
+	<link href="../../static/css/botonGithub.css" th:href="@{/css/botonGithub.css}" rel="stylesheet" />
+	<link href="../../static/css/botonBuscar.css" th:href="@{/css/botonBuscar.css}" rel="stylesheet" />
+	<link rel="icon" href="../static/img/cara.png" th:href="@{/img/cara.png}" type="image/x-icon">
+</head>
+
+<body>
+	<header th:replace="~{fragmentos/header::header}">
+	</header>
+
+	<div class="container-fluid py-4">
+		<div class="container">
+
+			<div class="row mb-4">
+				<div class="col-md-12">
+					<form class="d-flex justify-content-center" th:action="@{/buscarLote}" method="GET">
+						<input class="form-control me-2" type="search" placeholder="Buscar por nombre"
+							aria-label="Search" name="busqueda">
+						<button class="button" type="submit">
+							<span>
+								<svg viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M9.145 18.29c-5.042 0-9.145-4.102-9.145-9.145s4.103-9.145 9.145-9.145 9.145 4.103 9.145 9.145-4.102 9.145-9.145 9.145zm0-15.167c-3.321 0-6.022 2.702-6.022 6.022s2.702 6.022 6.022 6.022 6.023-2.702 6.023-6.022-2.702-6.022-6.023-6.022zm9.263 12.443c-.817 1.176-1.852 2.188-3.046 2.981l5.452 5.453 3.014-3.013-5.42-5.421z">
+									</path>
+								</svg>
+							</span>
+						</button>
+					</form>
+				</div>
+			</div>
+			<div class="row">
+				<aside class="col-md-3">
+
+					<p class="d-inline-flex gap-1">
+						<a class="btn4 btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button"
+							aria-expanded="false" aria-controls="collapseExample">
+							<button class="btn4">
+								<span class="icon">
+									<svg viewBox="0 0 175 80" width="40" height="40">
+										<rect width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+										<rect y="30" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+										<rect y="60" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+									</svg>
+								</span>
+								<span class="text">Filtros</span>
+							</button>
+						</a>
+
+					<div class="collapse" id="collapseExample">
+						<div class="card card-body">
+							<a th:href="@{/loteOrdenAZ}">
+								<button id="bottone1"><strong>A-Z</strong></button>
+							</a>
+							<a th:href="@{/loteOrdenZA}">
+								<button id="bottone1"><strong>Z-A</strong></button>
+							</a>
+							<a th:href="@{/loteOrdenLikesMayor}">
+								<button id="bottone1"><strong>Likes<i class="bi bi-arrow-down"></i></strong></button>
+							</a>
+							<a th:href="@{/loteOrdenLikesMenor}">
+								<button id="bottone1"><strong>Likes<i class="bi bi-arrow-up"></i></strong></button>
+							</a>
+
+							<a th:href="@{/loteOrdenDescMayor}">
+								<button id="bottone1"><strong>Descuento<i
+											class="bi bi-arrow-down"></i></strong></button>
+							</a>
+
+							<a th:href="@{/loteOrdenDescMenor}">
+								<button id="bottone1"><strong>Descuento<i class="bi bi-arrow-up"></i></strong></button>
+							</a>
+
+							<a th:href="@{/loteOrdenPrecioMayor}">
+								<button id="bottone1"><strong>Precio<i class="bi bi-arrow-down"></i></strong></button>
+							</a>
+
+							<a th:href="@{/loteOrdenPrecioMenor}">
+								<button id="bottone1"><strong>Precio<i class="bi bi-arrow-up"></i></strong></button>
+							</a>
+							
+							<a th:href="@{/lotes}">
+								<button id="bottone1"><strong>Restablecer</strong></button>
+							</a>
+						</div>
+					</div>
+
+				</aside>
+
+				<div class="col-md-9">
+					<h1 class="text-center mb-5">Lotes</h1>
+					<div class="row">
+						<div class="col-md-4" data-aos="flip-left" th:each="lote : ${listaLotes}" id="tarjeta">
+							<div class="card mb-4">
+								<div class="card-body">
+									<img th:src="${not (#strings.isEmpty(lote.foto))} ? ${lote.foto} : 'https://llerena.org/wp-content/uploads/2017/11/imagen-no-disponible.jpg'"
+										class="img-responsive icono-categoria" alt="imagen" />
+									<h5 class="card-title" th:text="${lote.nombre}">Taza</h5>
+
+									<p class="card-text" th:if="${lote.descuento > 0.00}">
+										<span class="text-decoration-line-through"
+											th:text="${#numbers.formatDecimal(lote.precio, 1, 2) + ' €'}"></span>
+										<span th:text="${#numbers.formatDecimal(lote.precioFinal, 1, 2) + ' €'}"
+											class="text-danger"></span>
+										<br />
+										<span class="badge bg-success"
+											th:text="'Descuento: ' + ${#numbers.formatDecimal(lote.descuento, 1, 2) + ' %'}"></span>
+									<div class="alert alert-info mt-2" role="alert" th:if="${lote.descuento > 0.00}">
+										¡Producto con descuento!
+									</div>
+									</p>
+
+
+									<p class="card-text" th:unless="${lote.descuento > 0.00}"
+										th:text="${#numbers.formatDecimal(lote.precio, 1, 2) + ' €'}">
+										200leuros
+									</p>
+
+
+									<div class="d-flex justify-content-between align-items-start">
+										<a href="#" th:href="@{/productoLote/{id}(id=${lote.id})}"> <button
+												class="btn btn-danger"><i class="bi bi-cart-plus"></i>
+												Comprar</button></a>
+
+										<p class="card-text" th:text="${lote.likes} +'❤️'"></p>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer th:replace="~{fragmentos/footer::footer}">
+
+	</footer>
+
+	<script>
+		AOS.init();
+	</script>
+
+</body>
+
+
+</html>

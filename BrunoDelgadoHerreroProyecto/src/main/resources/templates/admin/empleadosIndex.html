@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Página de gestión de empleados">
+	<title>Empleados - Admin
+	</title>
+	<link rel="icon" href="../static/img/cara.png" th:href="@{/img/cara.png}" type="image/x-icon">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+	<script src="../../static/js/IndexScript.js" th:src="@{/js/IndexScript.js}" defer></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+	<link href="../../static/css/botonGithub.css" th:href="@{/css/botonGithub.css}" rel="stylesheet" />
+</head>
+
+<body>
+	<nav th:replace="~{fragmentos/navIndex::navIndex}"></nav>
+
+	<div class="container mt-5">
+
+		<div class="row mb-4">
+			<div class="col-md-12">
+				<form class="d-flex justify-content-center" th:action="@{/admin/empleados/buscarEmpleado}" method="GET">
+					<input class="form-control me-2" type="search" placeholder="Buscar por nombre" aria-label="Search"
+						name="busqueda">
+					<button class="btn btn-outline-danger" type="submit">Buscar</button>
+				</form>
+
+
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-10 offset-md-1">
+				<div class="d-flex justify-content-end mb-3">
+					<a th:href="@{eform}" class="btn btn-success">Nuevo empleado</a>
+				</div>
+				<br /><br />
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Foto</th>
+							<th>Id</th>
+							<th>Nombre</th>
+							<th>Apellido</th>
+							<th>DNI</th>
+							<th>Sueldo</th>
+							<th>Fecha de Ingreso</th>
+							<th>Fecha de Salida</th>
+							<th>Operaciones</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="empleado : ${listaEmpleados}">
+							<td> <img
+									th:src="${not (#strings.isEmpty(empleado.foto))} ? ${empleado.foto} : 'https://llerena.org/wp-content/uploads/2017/11/imagen-no-disponible.jpg'"
+									class="img-responsive icono-categoria card-img-top" alt="imagen" /></td>
+							<td th:text="${empleado.id}">1</td>
+							<td th:text="${empleado.nombre}">Nombre</td>
+							<td th:text="${empleado.apellido}">Apellido</td>
+							<td th:text="${empleado.dni}">DNI</td>
+							<td th:text="${empleado.sueldo}">Sueldo</td>
+							<td th:text="${#temporals.format(empleado.fechaIngreso)}">Fecha de Ingreso</td>
+							<td th:text="${#temporals.format(empleado.fechaSalida)}">Fecha de Salida</td>
+							<td class="operaciones">
+								<a href="#" th:href="@{/admin/empleados/editarEmpleado/{id}(id=${empleado.id})}"
+									class="btn btn-white">
+									<i class="bi bi-pencil"></i>
+									Editar</a>
+								<a href="#" id="borrarBtn${empleado.id}"
+									th:href="@{/admin/empleados/borrarEmpleado/{id}(id=${empleado.id})}"
+									class="btn btn-dark">
+									<i class="bi bi-trash"></i>
+									Borrar</a>
+								<a href="#" id="bajaBtn${empleado.id}"
+									th:href="@{/admin/empleados/darDeBaja/{id}(id=${empleado.id})}"
+									class="btn btn-danger">
+									<i class="bi bi-arrow-down-square-fill"></i>
+									Dar de baja</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="modal fade" id="borrarModal" tabindex="-1" aria-labelledby="borrarModalLabel"
+					aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="borrarModalLabel">Confirmar borrado</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<p>¿Estás seguro de que deseas borrar este empleado?</p>
+								<p>Esto también borrará su usuario.</p>
+								<p>Recuerda que puedes darle de baja (mantiene su usuario pero deja de acceder a
+									pantallas
+									para empleados).</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary"
+									data-bs-dismiss="modal">Cancelar</button>
+								<a id="confirmarBorradoLink" href="#" class="btn btn-dark">
+									<i class="bi bi-trash"></i>
+									Borrar</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="modal fade" id="bajaModal" tabindex="-1" aria-labelledby="bajaModalLabel"
+					aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="borrarModalLabel">Confirmar baja</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<p>¿Estás seguro de que deseas dar de baja a este empleado?</p>
+								<p>Esto no borrará su usuario pero
+									no le permitirá entrar a pantallas para empleados.</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary"
+									data-bs-dismiss="modal">Cancelar</button>
+								<a id="confirmarBajaLink" href="#" class="btn btn-danger">
+									<i class="bi bi-arrow-down-square-fill"></i>
+									Dar de baja
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+</body>
+
+
+</html>

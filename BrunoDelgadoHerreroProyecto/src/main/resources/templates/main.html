@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="../static/img/cara.png" th:href="@{/img/cara.png}" type="image/x-icon">
+
+	<title>Mariscos Recio</title>
+	<meta name="description" content="Portal web de la pescadería Mariscos Recio">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<link href="../../static/css/estiloMain.css" th:href="@{/css/estiloMain.css}" rel="stylesheet" />
+	<link href="../../static/css/estiloTarjetas.css" th:href="@{/css/estiloTarjetas.css}" rel="stylesheet" />
+	<link href="../../static/css/botonCompra.css" th:href="@{/css/botonCompra.css}" rel="stylesheet" />
+	<link href="../../static/css/botonGithub.css" th:href="@{/css/botonGithub.css}" rel="stylesheet" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+
+</head>
+
+<body>
+	<header th:replace="~{fragmentos/header::header}">
+	</header>
+	<main>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-4 bg-light p-4">
+					<img src="../../static/img/logo.png" th:src="@{/img/logo.png}" class="img-fluid mx-auto d-block">
+					<div class="text-center">
+						<h1>Mariscos Recio</h1>
+						<h3>El mar al mejor precio</h3>
+						<p>Ubicados en la Avenida del Paraíso 7, somos la mejor pescadería de España. Con premios
+							como el bogavante de oro y el honor de distribuir marisco a la casa real, estamos
+							emocionados de abrirnos a todos nuestros clientes con esta tienda online.</p>
+					</div>
+				</div>
+				<div class="col-lg-8 bg-danger" id="recio">
+					<img src="../../static/img/presentacion.png" th:src="@{/img/presentacion.png}"
+						alt="Imagen de presentación formada por 3 fotos de Antonio Recio"
+						class="img-fluid mx-auto d-block">
+				</div>
+			</div>
+		</div>
+
+		<div id="banner" class="container-fluid" data-aos="fade-right">
+			<img src="../../static/img/banner completo.png" th:src="@{/img/banner completo.png}"
+				alt="Logo Mariscos Recio" class="img-fluid mx-auto d-block">
+		</div>
+
+		<div class="container2 botones text-center mt-5">
+			<div class="botones-container">
+				<button onclick="window.location.href='/pescado'" th:action="pescado"
+					class="btn2 btn-lg">Pescado</button>
+				<button onclick="window.location.href='/marisco'" th:action="marisco"
+					class="btn2 btn-lg">Marisco</button>
+				<button onclick="window.location.href='/lotes'" th:action="lotes" class="btn2 btn-lg">Lotes</button>
+				<button onclick="window.location.href='/merch'" th:action="merch"
+					class="btn2 btn-lg">Merchandising</button>
+			</div>
+		</div>
+
+
+
+
+		<div id="banner" class="container-fluid" data-aos="fade-left">
+			<img src="../../static/img/banner completo.png" th:src="@{/img/banner completo.png}"
+				alt="Banner con el logo de Mariscos Recio" class="img-fluid mx-auto d-block">
+		</div>
+
+
+		<div class="container-fluid py-4">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-9">
+						<h1 class="text-center mb-5">Los productos que más gustan</h1>
+						<div class="row">
+							<div class="col-md-4 mb-4" data-aos="flip-left" th:each="producto : ${listaMasFavoritos}">
+								<div class="card">
+									<div class="card-body">
+										<img th:src="${not (#strings.isEmpty(producto.foto))} ? ${producto.foto} : 'https://llerena.org/wp-content/uploads/2017/11/imagen-no-disponible.jpg'"
+											class="img-responsive icono-categoria card-img-top" alt="imagen" />
+										<h5 class="card-title" th:text="${producto.nombre}">Taza</h5>
+
+
+										<div
+											th:if="${producto.getClass().getSimpleName() == 'Merch' || producto.getClass().getSimpleName() == 'Lote'}">
+											<p class="card-text" th:if="${producto.descuento > 0.00}">
+												<span class="text-decoration-line-through"
+													th:text="${#numbers.formatDecimal(producto.precio, 1, 2) + ' €'}"></span>
+												<span
+													th:text="${#numbers.formatDecimal(producto.precioFinal, 1, 2) + ' €'}"
+													class="text-danger"></span>
+												<br />
+												<span class="badge bg-success"
+													th:text="'Descuento: ' + ${#numbers.formatDecimal(producto.descuento, 1, 2) + ' %'}"></span>
+											<div class="alert alert-info mt-2" role="alert"
+												th:if="${producto.descuento > 0.00}">
+												¡Producto con descuento!
+											</div>
+											</p>
+
+											<p class="card-text" th:unless="${producto.descuento > 0.00}"
+												th:text="${#numbers.formatDecimal(producto.precio, 1, 2) + ' €'}">
+												200leuros
+											</p>
+										</div>
+
+
+										<div
+											th:if="${producto.getClass().getSimpleName() == 'Marisco' || producto.getClass().getSimpleName() == 'Pescado'}">
+											<p class="card-text"
+												th:text="${#numbers.formatDecimal(producto.precio, 1, 2) + ' €/kg'}">
+											</p>
+										</div>
+
+
+
+										<div class="d-flex justify-content-between align-items-start">
+											<a th:if="${producto.getClass().getSimpleName() == 'Merch'}"
+												th:href="@{/productoMerch/{id}(id=${producto.id})}">
+												<button class="btn btn-danger"><i class="bi bi-cart-plus"></i>
+													Comprar</button>
+											</a>
+
+											<a th:if="${producto.getClass().getSimpleName() == 'Lote'}"
+												th:href="@{/productoLote/{id}(id=${producto.id})}">
+												<button class="btn btn-danger"><i class="bi bi-cart-plus"></i>
+													Comprar</button>
+											</a>
+
+											<a th:if="${producto.getClass().getSimpleName() == 'Marisco'}"
+												th:href="@{/productoMarisco/{id}(id=${producto.id})}">
+												<button class="btn btn-danger"><i class="bi bi-cart-plus"></i>
+													Comprar</button>
+											</a>
+
+											<a th:if="${producto.getClass().getSimpleName() == 'Pescado'}"
+												th:href="@{/productoPescado/{id}(id=${producto.id})}">
+												<button class="btn btn-danger"><i class="bi bi-cart-plus"></i>
+													Comprar</button>
+											</a>
+
+											<p class="card-text"
+												th:text="${producto.getClass().getSimpleName() == 'Merch' ? producto.likes + '❤️' :
+										                                producto.getClass().getSimpleName() == 'Lote' ? producto.likes + '❤️' :
+										                                producto.getClass().getSimpleName() == 'Marisco' ? producto.likes + '❤️' :
+										                                producto.getClass().getSimpleName() == 'Pescado' ? producto.likes + '❤️' : ''}">
+											</p>
+										</div>
+
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="banner" class="container-fluid" data-aos="fade-right">
+			<img src="../../static/img/banner completo.png" th:src="@{/img/banner completo.png}"
+				alt="Banner con el logo de Mariscos Recio" class="img-fluid mx-auto d-block">
+		</div>
+
+		<section class="container my-5" id="sobre-nosotros">
+			<div class="row">
+				<div class="col-md-6 mb-4 text-center">
+					<h2><span class="fw-bold titulo-grande mov"></span></h2>
+					<p class="fs-4"> Mariscos Recio es la empresa líder en el sector del congelado. Con nuestra moderna
+						y amplia flota de camiones servimos a primerísima hora de la mañana pescados y mariscos
+						fresquísimos y de primera calidad.</p>
+				</div>
+				<div class="col-md-6 mb-4 text-center">
+					<img src="../../static/img/laqueseavecina1-a.jpg" th:src="@{/img/laqueseavecina1-a.jpg}"
+						alt="Antonio Recio junto un cartel publicitario" class="img-fluid" style="width: 100%;">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6 mb-4 text-center">
+					<h2><span class="fw-bold titulo-grande mov2"></span></h2>
+					<p class="fs-4">Mariscos Recio y su emperador Antonio Recio han sido galardonados con el Bogavante
+						de Oro al mayorista del año y la mejor pescadería/marisquería de España.</p>
+				</div>
+				<div class="col-md-6 mb-4 text-center">
+					<img src="../../static/img/bogavantedeoro.jpg" th:src="@{/img/bogavantedeoro.jpg}"
+						alt="Bogavante de Oro" class="img-fluid" style="width: 100%;">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-6 mb-4 text-start">
+					<h2><span class="fw-bold titulo-grande mov3"></span></h2>
+					<p class="fs-4">Mariscos Recio Enterprises engloba toda la división del pescado y marisco, desde su
+						comercialización en todo el continente europeo hasta el I+D+i.</p>
+
+				</div>
+				<div class="col-lg-6 mb-4 text-lg-end">
+					<img src="../../static/img/recioenterprise.jpg" th:src="@{/img/recioenterprise.jpg}"
+						alt="El Imperio Recio" class="img-fluid" style="width: 100%;">
+
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-6 mb-4 text-start">
+					<p class="fs-4">Mariscos Recio Enterprises acaba de cerrar un acuerdo de globalización para
+						expandirse por el mercado nipón.</p>
+				</div>
+				<div class="col-lg-6 mb-4 text-lg-end">
+					<img src="../../static/img/reciojapon.png" th:src="@{/img/reciojapon.png}"
+						alt="Antonio Recio cerrando un negocio con unos inversores japoneses." class="img-fluid"
+						style="width: 100%;">
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="col-md-6 mb-4 text-center">
+					<h2><span class="fw-bold titulo-grande mov4"></span></h2>
+					<p class="fs-4"> Antonio Recio Matamoros (7 de mayo de 1966) es el fundador de Mariscos Recio. Aún
+						teniendo una infancia difícil Antonio se antepuso a todas las adversidades y reveses de la vida
+						y levantó el Imperio Recio desde la nada.</p>
+				</div>
+				<div class="col-md-6 mb-4 text-center">
+					<img src="../../static/img/marisco-recio--644x362.jpg" th:src="@{/img/marisco-recio--644x362.jpg}"
+						alt="Antonio Recio posando en la pescadería" class="img-fluid" style="width: 100%;">
+				</div>
+			</div>
+
+
+		</section>
+	</main>
+
+	<button id="btnScrollToTop" onclick="window.scrollTo(0, 0);" title="Volver arriba">&#8679;</button>
+
+	<footer th:replace="~{fragmentos/footer::footer}">
+
+	</footer>
+
+	<script>
+		let typed = new Typed(".mov", {
+			strings: ["Sobra", "Sobro", "Sobre", "Sobre nus", "Sobre nis", "Sobre nosotros"],
+			typeSpeed: 30,
+			backSpeed: 8,
+			loop: false
+		})
+
+		let typed2 = new Typed(".mov2", {
+			strings: ["Bova", "Goba", "Bogavanta", "Balón de", "Bogavante de Oro"],
+			typeSpeed: 300,
+			backSpeed: 80,
+			loop: false
+		})
+
+		let typed3 = new Typed(".mov3", {
+			strings: ["El i", "El Impotente", "El Imperio Rancio", "El Imperio Recio"],
+			typeSpeed: 300,
+			backSpeed: 80,
+			loop: false
+		})
+
+		let typed4 = new Typed(".mov4", {
+			strings: ["Antonio.", "Antonio, lo", "Antonio, el dictador", "Antonio, el fundador"],
+			typeSpeed: 300,
+			backSpeed: 80,
+			loop: false
+		})
+
+
+	</script>
+
+	<script>
+		AOS.init();
+	</script>
+
+</body>
+
+
+</html>

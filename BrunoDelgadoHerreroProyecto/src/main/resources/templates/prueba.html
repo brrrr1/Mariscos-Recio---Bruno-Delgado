@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Empleados</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+	<link href="../../static/css/botonGithub.css" th:href="@{/css/botonGithub.css}" rel="stylesheet" />
+	<link href="../../static/css/botonGithub.css" th:href="@{/css/botonGithub.css}" rel="stylesheet" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+	<header th:replace="~{fragmentos/header::header}">
+	</header>
+	<div class="container my-auto">
+		<h1 class="text-center display-4">Página de Empleados</h1>
+		<p class="mt-4 fs-5">
+			Al principio tenía en mente poder gestionar el estado de los pedidos/envíos, además de poder realizar
+			pedidos en tienda física.
+			Al hacer un pedido este pasaría a tener el estado “en preparación”. Los trabajadores (y el admin) pasarían a
+			recibir ese pedido como pendiente. Serían ellos los que tendrían que enviarlo (estado “enviado”) y el
+			cliente después el que debería confirmar la entrega. Pasaría entonces el pedido al estado “completado”.
+		</p>
+		<p class="mt-4 fs-5">
+			En caso de ser un pedido en tienda física, el estado del pedido sería “completado” en cuanto se realizara la
+			transacción.
+		</p>
+		<p class="mt-4 fs-5">
+			Por eso está la ventana de empleado en la que se iban a ver todos los pedidos, y se iban a poder filtrar
+			según su estado para enviarlos, etc.
+		</p>
+	</div>
+
+
+
+
+
+	</footer>
+</body>
+
+</html>

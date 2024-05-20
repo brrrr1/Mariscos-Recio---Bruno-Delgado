@@ -1,0 +1,28 @@
+<header th:fragment="header">
+
+	<div sec:authorize="hasRole('ROLE_USER')">
+
+		<nav th:replace="~{fragmentos/nav::nav}"></nav>
+
+	</div>
+
+	<div sec:authorize="hasRole('ROLE_ADMIN')">
+
+		<nav th:replace="~{fragmentos/nav2::nav2}"></nav>
+
+	</div>
+
+	<div sec:authorize="hasRole('ROLE_EMPLEADO')">
+
+		<nav th:replace="~{fragmentos/nav3::nav3}"></nav>
+
+	</div>
+
+	<div sec:authorize="isAnonymous()">
+
+
+		<nav th:replace="~{fragmentos/nav4::nav4}"></nav>
+
+	</div>
+
+</header>

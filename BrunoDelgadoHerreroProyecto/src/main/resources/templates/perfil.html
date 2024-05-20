@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Página de perfil del usuario">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Perfil de Usuario</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+		</script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+	<link href="../../static/css/botonGithub.css" th:href="@{/css/botonGithub.css}" rel="stylesheet" />
+	<link rel="icon" href="../static/img/cara.png" th:href="@{/img/cara.png}" type="image/x-icon">
+</head>
+
+<header th:replace="~{fragmentos/header::header}">
+</header>
+
+<body class="bg-danger">
+	<div class="container mt-5">
+		<div class="row justify-content-center">
+			<div class="col-lg-8">
+				<div class="bg-white border border-danger rounded p-4">
+					<div class="row align-items-center">
+						<h1>
+							Bienvenido, <span sec:authentication="name">Usuario</span>
+						</h1>
+						<div class="col-md-4">
+							<img src="../../static/img/logo.png" th:src="@{/img/logo.png}" class="img-fluid mb-4"
+								alt="Logo">
+						</div>
+						<div class="col-md-8">
+							<form th:action="@{/perfil/editar}" method="post" th:object="${usuario}" class="row g-3"
+								id="perfilForm">
+								<div class="row mb-3">
+									<div class="col">
+										<input th:if="${usuario.id != 0}" type="hidden" name="id" th:field="*{id}" />
+									</div>
+								</div>
+								<div class="col-md-6 editable-field">
+									<label for="username" class="form-label">Nombre de Usuario:</label>
+									<input type="text" th:field="*{username}" class="form-control"
+										placeholder="Username" readonly>
+								</div>
+								<div class="col-md-6 editable-field">
+									<label for="nombre" class="form-label">Nombre:</label>
+									<input type="text" th:field="*{nombre}" class="form-control" placeholder="Nombre"
+										readonly>
+								</div>
+								<div class="col-md-6 editable-field">
+									<label for="apellido" class="form-label">Apellido:</label>
+									<input type="text" th:field="*{apellido}" class="form-control"
+										placeholder="Apellido" readonly>
+								</div>
+								<div class="col-md-6 editable-field">
+									<label for="dni" class="form-label">DNI:</label>
+									<input type="text" th:field="*{dni}" class="form-control" placeholder="DNI"
+										readonly>
+								</div>
+								<div class="col-md-12 editable-field">
+									<label for="email" class="form-label">Correo:</label>
+									<input type="email" th:field="*{email}" class="form-control" id="email"
+										placeholder="Enter email" name="email" readonly>
+								</div>
+								<div class="col-md-12 editable-field">
+									<label for="direccion" class="form-label">Dirección:</label>
+									<input type="text" th:field="*{direccion}" class="form-control"
+										placeholder="Dirección" readonly>
+								</div>
+
+								<div class="row mb-3">
+									<div class="col">
+										<input  type="hidden" name="id" th:field="*{password}" />
+									</div>
+								</div>
+
+								<div class="col-md-12 text-center">
+									<a class="nav-link" th:href="@{/editarUsuario}">
+<!--										<button class="editBtn">-->
+<!--											<svg height="1em" viewBox="0 0 512 512">-->
+<!--												<path-->
+<!--													d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z">-->
+<!--												</path>-->
+<!--											</svg>-->
+<!--										</button>-->
+										Editar información
+
+									</a>
+								</div>
+							</form>
+							<!-- Botón para editar contraseña -->
+							<div class="col-md-12 text-center mt-3">
+								<a class="btn btn-warning" th:href="@{/cambiarContrasena}">Editar contraseña</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<h1 class="mt-5 text-center text-white">Mis Pedidos</h1>
+				<div class="bg-white border border-danger rounded p-4 mt-3">
+					<table class="table table-bordered">
+						<thead class="table-danger">
+							<tr>
+								<th>Id</th>
+								<th>Fecha</th>
+								<th>Precio</th>
+								<th>Usuario</th>
+								<th>Productos</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="pedido : ${pedidos}">
+								<td th:text="${pedido.id}"></td>
+								<td th:text="${pedido.fechaPedido}"></td>
+								<td th:text="${pedido.precioFinal}"></td>
+								<td th:text="${pedido.usuario.nombre}"></td>
+								<td>
+									<ul>
+										<li th:each="ldp : ${pedido.lineasDePedido}" th:text="${ldp.producto.nombre}">
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer th:replace="~{fragmentos/footer::footer}">
+	</footer>
+</body>
+
+</html>

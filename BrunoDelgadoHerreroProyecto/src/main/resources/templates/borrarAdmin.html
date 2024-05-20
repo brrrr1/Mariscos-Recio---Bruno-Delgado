@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="UTF-8">
+	<meta name="description" content="Página de errores">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariscos Recio</title>
+    <meta name="description" content="Portal web de la pescadería Mariscos Recio">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+	<link href="../../static/css/botonGithub.css" th:href="@{/css/botonGithub.css}" rel="stylesheet" />
+	<link rel="icon" href="../static/img/cara.png" th:href="@{/img/cara.png}" type="image/x-icon">
+</head>
+
+<body>
+    <header th:replace="~{fragmentos/header::header}">
+    </header>
+    <main>
+        <div class="container mt-5">
+            <div class="alert alert-warning fs-4 fw-bold" role="alert">
+                <h1>No se puede borrar al admin.
+                </h1>
+            </div>
+            <div class="text-center">
+                <video autoplay loop>
+                    <source src="../../static/video/borrarAdmin.mp4" th:src="@{/video/borrarAdmin.mp4}"
+                        type="video/mp4">
+                        Tu navegador no soporta la etiqueta de video.
+                </video>
+            </div>
+            <div class="d-flex justify-content-center mt-3">
+                <a class="btn btn-danger btn-lg" th:href="@{/main}">Volver al inicio</a>
+            </div>
+        </div>
+    </main>
+    <footer th:replace="~{fragmentos/footer::footer}">
+    </footer>
+</body>
+
+</html>

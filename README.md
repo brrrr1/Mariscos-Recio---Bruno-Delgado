@@ -60,3 +60,7 @@ Ubicados en la Avenida del Paraíso 7, somos la mejor pescadería de España. Co
 - Sistema de gestión de los pedidos por parte de los empleados.
 - Administración de dinero(ingresos, gastos)...
 - Lógicas de negocio como otorgar descuentos a ciertos clientes.
+
+- Carrito
+- -  El carrito añade a la base de datos y crea pedidos pero no se puede limpiar bien y se muestra un carrito para todos los usuarios. Es lo mejor que he conseguido hacer ;(
+- - Como se crea un carrito para todos los usuarios, se dejan de poder borrar usuarios en cuanto se abre el carrito

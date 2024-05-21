@@ -55,7 +55,7 @@ Ubicados en la Avenida del Paraíso 7, somos la mejor pescadería de España. Co
 
 *Todas las funcionalidades que repercuten a los usuarios de los empleados también ocurren en el otro orden (editas un usuario y se edita la información del empleado etc)*
 
-## Funcionalidad Administrador (No me ha dado tiempo)
+## Funcionalidad Empleados (No me ha dado tiempo)
 
 - Gestión del estado de todos los pedidos
 - - Ver todos los pedidos

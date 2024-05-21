@@ -78,7 +78,7 @@ public class EmpleadoController {
 	@GetMapping("/borrarEmpleado/{id}")
 	public String borrar(@PathVariable("id") long id) {
 		
-		Empleado e = servicioEmpleado.buscarPorId(id);
+		Empleado e = servicioEmpleado.findById(id).get();
 		
 		servicioUsuario.borrarUsuariosDeUnEmpleado(e);
 		
@@ -96,7 +96,7 @@ public class EmpleadoController {
 	@GetMapping("/darDeBaja/{id}")
 	public String darDeBaja(@PathVariable("id") long id) {
 		
-		Empleado e = servicioEmpleado.buscarPorId(id);
+		Empleado e = servicioEmpleado.findById(id).get();
 		servicioEmpleado.darDeBaja(e);
 		
 

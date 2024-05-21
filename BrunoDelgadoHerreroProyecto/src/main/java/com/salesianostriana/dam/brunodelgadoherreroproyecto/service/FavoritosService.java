@@ -30,6 +30,7 @@ public class FavoritosService extends BaseServiceImpl<Favoritos, FavoritosPK, Fa
 
 
 
+	//Método que busca un producto, comprueba si el usuario lo tiene en favorito. Si lo tiene lo quita y si no lo añade.
 	public void alternarFavorito(Usuario usuario, Long productoId) {
 		Producto producto = productoRepo.findById(productoId)
 				.orElseThrow(() -> new EntityNotFoundException("Producto no encontrado"));
@@ -53,7 +54,7 @@ public class FavoritosService extends BaseServiceImpl<Favoritos, FavoritosPK, Fa
 		}
 
 	}
-	
+	//Método que llama a la consulta que busca los favoritos en los que se encuentra un producto
 	public List<Favoritos> buscarFavoritosPorProducto(Producto p) {
 		return repository.buscarProductoFavorito(p);
 	}

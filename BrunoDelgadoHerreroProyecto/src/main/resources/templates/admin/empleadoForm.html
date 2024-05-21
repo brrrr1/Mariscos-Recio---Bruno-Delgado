@@ -36,6 +36,10 @@
 										<input th:if="${empleado.id != 0}" type="hidden" name="id" th:field="*{id}" />
 									</div>
 								</div>
+								
+
+								
+								
 								<div class="col-md-6">
 									<label for="nombre" class="form-label text-dark">Nombre:</label>
 									<input type="text" th:field="*{nombre}" class="form-control" placeholder="Nombre"
@@ -46,7 +50,7 @@
 									<input type="text" th:field="*{apellido}" class="form-control"
 										placeholder="Apellido" id="apellido">
 								</div>
-								<div class="col-md-6">
+								<div th:unless="${empleado.id != 0}"  class="col-md-6">
 									<label for="dni" class="form-label text-dark">DNI:</label>
 									<input type="text" th:field="*{dni}" class="form-control" placeholder="DNI"
 										id="dni">
@@ -58,12 +62,15 @@
 											class="form-control" id="sueldo">
 									</div>
 								</div>
-								<div class="mb-3 mt-3 pt-5">
+
+
+
+								<div th:unless="${empleado.id != 0}" class="mb-3 mt-3 pt-5">
 									<label for="fechaIngreso" class="form-label text-dark">Fecha de Ingreso:</label>
 									<input type="date" th:field="*{fechaIngreso}" class="form-control"
 										placeholder="Fecha de Ingreso" name="fechaIngreso" id="fechaIngreso">
 								</div>
-								<div class="mb-3 mt-3 pt-5">
+								<div th:unless="${empleado.id != 0}" class="mb-3 mt-3 pt-5">
 									<label for="fechaSalida" class="form-label text-dark">Fecha de Salida:</label>
 									<input type="date" th:field="*{fechaSalida}" class="form-control"
 										placeholder="Fecha de Salida" name="fechaSalida" id="fechaSalida">
@@ -73,6 +80,11 @@
 										<label for="foto" class="form-label text-dark">Foto:</label>
 										<input type="text" class="form-control" placeholder="Foto" th:field="*{foto}"
 											id="foto">
+									</div>
+								</div>
+								<div class="row mb-3">
+									<div class="col">
+										<p>Ten en cuenta que si relizas cambios al empleado todas las credenciales de su usuario (menos la contraseña) cambiarán acorde a los cambios realizados</p>
 									</div>
 								</div>
 								<div class="col-md-12 text-center">

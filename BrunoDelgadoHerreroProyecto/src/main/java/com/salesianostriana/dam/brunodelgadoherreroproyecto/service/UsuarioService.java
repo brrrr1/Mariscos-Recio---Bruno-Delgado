@@ -21,6 +21,7 @@ public class UsuarioService extends BaseServiceImpl<Usuario, Long, UsuarioReposi
 	@Autowired
 	private EmpleadoService servicioEmpleado;
 
+	//Método para la barra de búsqueda, devuelve lista de todo lo que encuentre con una palabra
 	public List<Usuario> buscarPorNombre(String busqueda) {
 		List<Usuario> result = this.repository.findByNombreContainsIgnoreCaseOrApellidoContainsIgnoreCase(busqueda,
 				busqueda);
@@ -29,7 +30,7 @@ public class UsuarioService extends BaseServiceImpl<Usuario, Long, UsuarioReposi
 		}
 		return result;
 	}
-
+	//Método para la barra de búsqueda, devuelve lista de todo lo que encuentre con el nombre y el apellido
 	public List<Usuario> buscarPorNombreYApellido(String nombre, String apellido) {
 		List<Usuario> result = this.repository.findByNombreContainsIgnoreCaseOrApellidoContainsIgnoreCase(nombre,
 				apellido);
@@ -39,6 +40,7 @@ public class UsuarioService extends BaseServiceImpl<Usuario, Long, UsuarioReposi
 		return result;
 	}
 
+	//Boleano que devuelve true si en la base de datos ya existe el nombre que le pasamos
 	public boolean buscarUsername(String username) {
 		return this.repository.existsByUsername(username);
 	}
@@ -52,6 +54,7 @@ public class UsuarioService extends BaseServiceImpl<Usuario, Long, UsuarioReposi
 		usuario.setPassword(encodedPassword);
 	}
 
+	//Para evitar algunos petes de id cannot be null uso este metodo que le vuelve a asignar su contraseña si se la encuentra como null, sino solo la encripta
 	public void establecerContra(Usuario u) {
 		Usuario usuarioExistente = this.repository.findById(u.getId()).get();
 		if (u.getPassword() == null || u.getPassword().isEmpty()) {
@@ -62,6 +65,7 @@ public class UsuarioService extends BaseServiceImpl<Usuario, Long, UsuarioReposi
 		}
 	}
 
+	//Método que si el usuario a editar es empleado edita tambien la informacion de su empleado
 	public void editarEmpleado(Usuario u) {
 		if (u.isEsEmpleado()) {
 			List<Empleado> listaIguales = servicioEmpleado.buscarPorNombreYApellido(u.getNombre(), u.getApellido());
@@ -77,6 +81,8 @@ public class UsuarioService extends BaseServiceImpl<Usuario, Long, UsuarioReposi
 		}
 	}
 
+	
+	//Método que borra un usuario y si es empleado borra también su empleado
 	public String borrarUsuario(Long id) {
 		Usuario u = findById(id).get();
 
@@ -90,6 +96,8 @@ public class UsuarioService extends BaseServiceImpl<Usuario, Long, UsuarioReposi
 		return "redirect:/admin/usuarios/listaUsuarios";
 	}
 
+	
+	//Método que busca el usuario de un empleado y se lo edita respecto a los cambios que se le hagan al empleado
 	public void editarUsuarioDeUnEmpleado(Empleado e) {
 		List<Usuario> listaEmpleados = buscarPorNombreYApellido(e.getNombre(), e.getApellido());
 		for (Usuario usuario : listaEmpleados) {
@@ -98,7 +106,7 @@ public class UsuarioService extends BaseServiceImpl<Usuario, Long, UsuarioReposi
 			usuario.setUsername(e.getNombre().toLowerCase() + "mrw");
 			usuario.setDni(e.getDni());
 			usuario.setEmail(e.getNombre().toLowerCase() + e.getApellido().toLowerCase() + "@mariscosrecio.es");
-			usuario.setPassword(e.getNombre().toLowerCase() + "recio" + e.getApellido().toLowerCase());
+//			usuario.setPassword(e.getNombre().toLowerCase() + "recio" + e.getApellido().toLowerCase());
 			usuario.setNumPedidos(0);
 			usuario.setDireccion(null);
 			usuario.setEsAdmin(false);
@@ -107,6 +115,8 @@ public class UsuarioService extends BaseServiceImpl<Usuario, Long, UsuarioReposi
 		}
 	}
 
+	
+	//Método que cuando borras un empleado también borra su usuario
 	public void borrarUsuariosDeUnEmpleado(Empleado e) {
 		List<Usuario> listaEmpleados = buscarPorNombreYApellido(e.getNombre(), e.getApellido());
 
@@ -115,6 +125,8 @@ public class UsuarioService extends BaseServiceImpl<Usuario, Long, UsuarioReposi
 		}
 	}
 	
+	
+	//Método que cambia la información del usuario de un empleado cuando se le da de baja
 	public void cambiarUsuarioTrasBaja(Empleado e) {
 		List<Usuario> listaEmpleados = buscarPorNombreYApellido(e.getNombre(), e.getApellido());
 		for (Usuario u : listaEmpleados) {
@@ -123,6 +135,24 @@ public class UsuarioService extends BaseServiceImpl<Usuario, Long, UsuarioReposi
 			servicioEmpleado.edit(e);
 			
 			edit(u);
+		}
+	}
+	
+	//Método que comprueba sin un username existe en la bd.
+	public boolean usernameExists(Usuario usuario) {
+		if (buscarUsername(usuario.getUsername())) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	//Método que comprueba si el username que se introduce en el usuario es igual que el username del usuario que está usando la aplicación
+	public boolean comprobarNombreDeUsuario(Usuario usuarioFormulario, Usuario usuarioLogged) {
+		if(usuarioFormulario.getUsername().equals(usuarioLogged.getUsername())) {
+			return true;
+		}else {
+			return false;
 		}
 	}
 

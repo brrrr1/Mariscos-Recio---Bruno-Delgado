@@ -15,6 +15,8 @@ import com.salesianostriana.dam.brunodelgadoherreroproyecto.repositories.Emplead
 @Service
 public class EmpleadoService extends BaseServiceImpl<Empleado, Long, EmpleadoRepository> {
 
+	
+	//Método que genera un usuario para los nuevos empleados
 	public Usuario generarUsuario(Empleado e) {
 		Usuario u = new Usuario();
 		u.setNombre(e.getNombre());
@@ -31,6 +33,7 @@ public class EmpleadoService extends BaseServiceImpl<Empleado, Long, EmpleadoRep
 		return u;
 	}
 
+	//Método que busca un empleado por su nombre
 	public List<Empleado> buscarPorNombre(String busqueda) {
 		List<Empleado> result = this.repository.findByNombreContainsIgnoreCaseOrApellidoContainsIgnoreCase(busqueda, busqueda);
 		if (result.isEmpty()) {
@@ -39,6 +42,7 @@ public class EmpleadoService extends BaseServiceImpl<Empleado, Long, EmpleadoRep
 		return result;
 	}
 	
+	//Método que busca un empleado por su nombre y apellido
 	public List<Empleado> buscarPorNombreYApellido(String nombre, String apellido) {
 		List<Empleado> result = this.repository.findByNombreContainsIgnoreCaseOrApellidoContainsIgnoreCase(nombre, apellido);
 		if (result.isEmpty()) {
@@ -47,10 +51,8 @@ public class EmpleadoService extends BaseServiceImpl<Empleado, Long, EmpleadoRep
 		return result;
 	}
 	
-	public Empleado buscarPorId(Long id) {
-		return repository.buscarPorId(id);
-	}
-	
+
+	//Método que cambia la fecha de salida de un empleado a la del momento en el que se le da de baja
 	public void darDeBaja(Empleado e) {
 		e.setFechaSalida(LocalDate.now());
 		

@@ -27,7 +27,7 @@ public class ProdUnidadService extends BaseServiceImpl<ProductoPorUnidad, Long, 
 		}
 		return result;
 	}
-	
+	//Método que borra un producto y si está en algún favorito borra el favorito
 	public void deleteByIdConFavoritos(Long id) {
 		Optional<ProductoPorUnidad> optProducto = findById(id);
 		

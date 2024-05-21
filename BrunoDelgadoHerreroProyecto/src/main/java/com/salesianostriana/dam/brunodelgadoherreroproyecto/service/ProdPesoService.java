@@ -26,6 +26,7 @@ public class ProdPesoService extends BaseServiceImpl<ProductoPorPeso, Long, Prod
 		return result;
 	}
 	
+	//Método que borra un producto y si está en algún favorito borra el favorito
 	public void deleteByIdConFavoritos(Long id) {
 		Optional<ProductoPorPeso> optProducto = findById(id);
 		

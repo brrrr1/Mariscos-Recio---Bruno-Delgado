@@ -211,7 +211,8 @@ public class MainController {
 
 	@GetMapping("/perfil")
 	public String verPerfil(@AuthenticationPrincipal Usuario usuario, Model model) {
-
+		
+		
 		model.addAttribute("usuario", usuario);
 		model.addAttribute("pedidos", usuario.getPedidos());
 		return "perfil";
@@ -228,10 +229,17 @@ public class MainController {
 	}
 
 	@PostMapping("/editarUsuario/submit")
-	public String procesarFormularioEdicion(@ModelAttribute("usuario") @AuthenticationPrincipal  Usuario usuario) {
-
-		servicioUsuario.save(usuario);
-		return "redirect:/cambioDatos";
+	public String procesarFormularioEdicion(@ModelAttribute("usuario") Usuario usuarioFormulario , @AuthenticationPrincipal  Usuario usuarioLogged) {
+		
+		if(!servicioUsuario.usernameExists(usuarioFormulario)) {
+			servicioUsuario.save(usuarioLogged);
+			return "redirect:/cambioDatos";
+		}if(servicioUsuario.comprobarNombreDeUsuario(usuarioFormulario, usuarioLogged)){
+			servicioUsuario.save(usuarioLogged);
+			return "redirect:/cambioDatos";
+		}
+		else {
+			return "usernameRepetido";}
 
 	}
 

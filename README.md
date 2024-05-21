@@ -76,6 +76,6 @@ Ubicados en la Avenida del Paraíso 7, somos la mejor pescadería de España. Co
 - - Como se crea un carrito para todos los usuarios, se dejan de poder borrar usuarios en cuanto se abre el carrito
  
 ## Credenciales que puedes utilizar
-**ADMIN:** username: admin password: admin 
-**USUARIO:** username: user password: 1234 
-**EMPLEADO:** username: rosariomrw password: rosariorecioparrales 
+- **ADMIN:** username: admin password: admin 
+- **USUARIO:** username: user password: 1234 
+- **EMPLEADO:** username: rosariomrw password: rosariorecioparrales 

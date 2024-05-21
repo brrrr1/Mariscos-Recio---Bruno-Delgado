@@ -15,8 +15,10 @@ Ubicados en la Avenida del Paraíso 7, somos la mejor pescadería de España. Co
 - - Marisco
 - - Pescado
 - Añadir productos a una lista de favoritos
-- Ver y editar la información personal
-- - Username, dirección, correo...
+- Página de perfil donde puede:
+- - Ver y editar la información personal
+- - - Username, dirección, correo...
+- - Ver sus pedidos (no funciona del todo bien por los problemas con el carrito) 
 - Ver los productos con más likes en la tienda
 - Buscar productos por su nombre
 - Filtrar los productos según los siguientes criterios:
@@ -29,6 +31,7 @@ Ubicados en la Avenida del Paraíso 7, somos la mejor pescadería de España. Co
 - - Descuento (Mayor a menor)
 - - Descuento (Menor a mayor)
 - Conocer más sobre la empresa
+
 
 
 ## Funcionalidad Administrador
@@ -52,6 +55,13 @@ Ubicados en la Avenida del Paraíso 7, somos la mejor pescadería de España. Co
 
 *Todas las funcionalidades que repercuten a los usuarios de los empleados también ocurren en el otro orden (editas un usuario y se edita la información del empleado etc)*
 
+## Funcionalidad Empleados (No me ha dado tiempo)
+
+- Gestión del estado de todos los pedidos
+- - Ver todos los pedidos
+- - - Filtrar por estado 
+- - Enviar pedidos por preparar 
+
 ## Por implementar:
 - Ventas físicas
 - Compra realista de productos al peso
@@ -64,3 +74,8 @@ Ubicados en la Avenida del Paraíso 7, somos la mejor pescadería de España. Co
 - Carrito
 - -  El carrito añade a la base de datos y crea pedidos pero no se puede limpiar bien y se muestra un carrito para todos los usuarios. Es lo mejor que he conseguido hacer ;(
 - - Como se crea un carrito para todos los usuarios, se dejan de poder borrar usuarios en cuanto se abre el carrito
+ 
+## Credenciales que puedes utilizar
+- **ADMIN:** username: admin password: admin 
+- **USUARIO:** username: user password: 1234 
+- **EMPLEADO:** username: rosariomrw password: rosariorecioparrales 

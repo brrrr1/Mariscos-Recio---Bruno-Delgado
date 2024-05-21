@@ -26,6 +26,7 @@ public class LineaDePedidoService extends BaseServiceImpl<LineaDePedido, Long, L
 		this.repository.save(ldp);
 	}
 
+	//Si ya está ese producto en el carrito suma la cantidad y si no lo añade
 	public void anadirOActualizarLineaDePedido(Producto producto) {
 		Optional<LineaDePedido> lineaExistente = this.repository.findByProducto(producto);
 		if (lineaExistente.isPresent()) {
@@ -47,6 +48,7 @@ public class LineaDePedidoService extends BaseServiceImpl<LineaDePedido, Long, L
 		return this.repository.buscarLp(id);
 	}
 
+	//Para reducir la cantidad de un producto en el carrito (hasta 1 porque sino borra la linea de pedido de la bd y hay conflictos)
 	public void reducirCantidadOEliminarLineaDePedido(Producto producto) {
 		Optional<LineaDePedido> lineaExistente = this.repository.findByProducto(producto);
 		if (lineaExistente.isPresent()) {
@@ -60,6 +62,7 @@ public class LineaDePedidoService extends BaseServiceImpl<LineaDePedido, Long, L
 		}
 	}
 
+	//Elimina un producto del carrito
 	public void borrarProductoDeLp(Long id) {
 		Optional<LineaDePedido> optionalLineaDePedido = findById(id);
 
@@ -71,6 +74,7 @@ public class LineaDePedidoService extends BaseServiceImpl<LineaDePedido, Long, L
 
 	}
 
+	//Setea la información del pedido, resta el stock de los productos por unidades y guarda en la bd
 	public void finalizarPedido(Usuario usuario, Pedido pedido) {
 		
 		pedido.setLineasDePedido(findAll());
